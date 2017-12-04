@@ -1,0 +1,38 @@
+package com.hive.HiveClient;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import org.apache.log4j.Logger;
+
+public class HiveGroupBy {
+	Connection con;
+	Statement st;
+	ResultSet rs;
+	private static String driverName = "org.apache.hive.jdbc.HiveDriver";
+	static Logger logger = Logger.getLogger(HiveGroupBy.class);
+
+	public void test() throws ClassNotFoundException, SQLException {
+		Class.forName(driverName);
+		con = DriverManager.getConnection("jdbc:hive2://192.168.1.146:10000/bizruntime2", "", "");
+		String sql = "FROM users us INSERT OVERWRITE TABLE user_details select us.age,us.position GROUP BY gender";
+		st = con.createStatement();
+		rs = st.executeQuery(sql);
+		logger.info("Data Retrived Group By City successfully.");
+		while (rs.next()) {
+			logger.info(String.valueOf(rs.getString(1) + "/t" + rs.getString(2) + "/t" + rs.getString(3) + "/t"
+					+ rs.getString(4) + "/t" + rs.getInt(5)));
+
+		}
+		con.close();
+	}
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		HiveGroupBy retrieve = new HiveGroupBy();
+		retrieve.test();
+	}
+
+}

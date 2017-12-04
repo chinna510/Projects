@@ -1,0 +1,8 @@
+package SparkAccumulator;
+
+import java.io.Serializable;
+
+public class Statistics implements Serializable{
+	 public static final StatisticsAccumulatorParam PARAM_INSTANCE = new StatisticsAccumulatorParam();
+	
+}

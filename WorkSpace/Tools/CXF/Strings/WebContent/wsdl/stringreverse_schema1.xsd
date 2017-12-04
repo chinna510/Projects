@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:tns="http://string.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://string.com/" version="1.0">
+<xs:element name="reverse" type="tns:reverse"/>
+<xs:element name="reverseResponse" type="tns:reverseResponse"/>
+<xs:complexType name="reverse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="reverseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

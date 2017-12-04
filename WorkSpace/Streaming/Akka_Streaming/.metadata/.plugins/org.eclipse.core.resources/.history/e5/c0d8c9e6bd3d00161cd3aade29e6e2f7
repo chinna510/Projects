@@ -1,0 +1,58 @@
+package com.akka.stream;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.CompletionStage;
+
+import akka.NotUsed;
+import akka.actor.ActorSystem;
+import akka.event.Logging;
+import akka.event.LoggingAdapter;
+import akka.japi.function.Function;
+import akka.stream.ActorAttributes;
+import akka.stream.ActorMaterializer;
+import akka.stream.ActorMaterializerSettings;
+import akka.stream.Materializer;
+import akka.stream.Supervision;
+import akka.stream.javadsl.Flow;
+import akka.stream.javadsl.Sink;
+import akka.stream.javadsl.Source;
+
+public class Restart {
+
+	ActorSystem system = ActorSystem.create("ErrorHandling");
+
+	LoggingAdapter log = Logging.getLogger(system, this);
+
+	final Function<Throwable, Supervision.Directive> decider = exc -> {
+		if (exc instanceof ArithmeticException)
+			return Supervision.restart();
+		else
+			return Supervision.stop();
+	};
+
+	final Materializer mat = ActorMaterializer.create(system);
+
+	void handle() {
+
+		Flow<Integer, Integer, NotUsed> flow = Flow.of(Integer.class).scan(0, (acc, elem) -> {
+			if (elem < 0)
+				throw new IllegalArgumentException("Negative Values Not Allowed!");
+			else
+				return acc + elem;
+		}).withAttributes(ActorAttributes.withSupervisionStrategy(decider));
+		final Source<Integer, NotUsed> source = Source.from(Arrays.asList(0, 1, 2, 3, 4, 5)).via(flow);
+
+		CompletionStage<List<Integer>> result = source.grouped(1000).runWith(Sink.<List<Integer>>head(), mat);
+		result.thenAcceptAsync(f -> {
+			log.info("" + f);
+		});
+
+	}
+
+	public static void main(String[] args) {
+
+		Restart su = new Restart();
+		su.handle();
+	}
+}

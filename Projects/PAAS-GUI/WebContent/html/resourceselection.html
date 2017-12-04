@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>resources selection</title>
+
+<link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<link rel="stylesheet" href="../css/table/table.css">
+
+</head>
+
+<body>
+
+<div ng-app="myresourceselection" ng-controller="MainCtrl" ng-init="selectResourceSelection()">
+		 <div  class="container"> 
+		 
+		<div class="page-headr" align="center">
+				<h1>PAAS-Resources Selection</h1>
+			</div>
+			
+			<button ng-click="toggleModal()" class="btn btn-primary">Add Rules</button>
+
+			<modal title="Add Resources Selection Rule" visible="showModal">
+
+			<form role="form">
+			
+			
+				<div class="form-group">
+					<label for="rank">Rank</label> 
+				    <input type="number" class="form-control" id="rank" value="1" min="0" max="60" ng-model="field.rank"/>
+				</div>
+
+
+				<div class="form-group">
+					<label for="name">Name</label> <input type="text"
+						class="form-control" id="name" placeholder="Name" ng-model="field.name"/>
+				</div>
+				
+				<div class="form-group">
+					<label for="container-types">Container Types</label> <input type="text"
+						class="form-control" id="container-types" placeholder="All" ng-model="field.container_types"/>
+				</div>
+				
+				<div class="form-group">
+					<label for="environment-types">Environment Types</label> <input type="text"
+						class="form-control" id="environment-types" placeholder="Environment Types" ng-model="field.environment_types"/>
+				</div>
+				
+				
+				
+				<div class="form-group">
+					<label for="host_groups">Host Groups</label> <input type="text"
+						class="form-control" id="host_groups" placeholder="Host Groups" ng-model="field.host_groups"/>
+				</div>
+				
+				
+				
+				<!-- <div class="form-group">
+					<label for="host-groups">Host Groups</label> <input type="text"
+						class="form-control" id="host-groups" placeholder="Host Groups" ng-model="host_groups"/>
+				</div> -->
+
+				<div class="form-group">
+					<label for="placement">Placement</label> <select
+						class="form-control" id="placement" ng-model="field.placement">
+						<option value="availableMemory">availableMemory</option>
+						<option value="sequential">sequential</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="minimum">Minimum</label> 
+						 <input type="number" class="form-control" id="minimum" value="1" min="0" max="60" ng-model="field.minimum"/>
+				</div>
+
+				<div class="modal-footer" style="background: #ccefff">
+					<div class="bootstrap-dialog-footer">
+						<div class="bootstrap-dialog-footer-buttons">
+							<button type="button"class="btn btn-danger btn-nirmata col-xs-2"data-dismiss="modal">Cancel</button>
+							<button class="btn btn-primary btn-nirmata" data-dismiss="modal" ng-click="regResourceSelection()">Add</button>
+						</div>
+					</div>
+				</div>
+
+			</form>
+			</modal>
+		</div>
+
+		<hr />
+
+		<div class="container">
+			<table border="1" cellpadding="10">
+				<tr>
+					<th>Rank</th>
+					<th>Name</th>
+					<th>Container Types</th>
+					<th>Environment Types</th>
+					<th>Host Groups</th>
+					<th>Placement</th>
+					<th>Minimum</th>
+					<th>Action</th>
+				</tr>
+				<tr ng-repeat="field in fields">
+					<td>{{field.rank}}</td>
+					<td>{{field.name}}</td>
+					<td>{{field.container_types}}</td>
+					<td>{{field.environment_types}}</td>
+					<td>{{field.host_groups}}</td>
+	                <td>{{field.placement}}</td>
+	                <td>{{field.minimum}}</td>
+					<td><button ng-click="deleteResourceSelection(field.rank)"class="btn btn-danger">Delete</button>
+					<button ng-click="updateResourceSelection(field.rank)"class="btn btn-primary">Update</button></td>
+				</tr>
+			</table>
+		</div>
+
+	</div>
+	<script src="../js/resourceselection/resourceselection.js" type="text/javascript"></script>
+
+</body>
+</html>

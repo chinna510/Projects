@@ -1,0 +1,50 @@
+package com.akka.stream;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.CompletionStage;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
+import akka.NotUsed;
+import akka.actor.ActorSystem;
+import akka.event.Logging;
+import akka.event.LoggingAdapter;
+import akka.stream.ActorMaterializer;
+import akka.stream.Materializer;
+import akka.stream.javadsl.Sink;
+import akka.stream.javadsl.Source;
+
+public class DrainSourceToList {
+
+	ActorSystem system = ActorSystem.create("Pipelining");
+	Materializer materializer = ActorMaterializer.create(system);
+
+	LoggingAdapter log = Logging.getLogger(system, this);
+
+	public void drainSourceToList() {
+
+		final Source<String, NotUsed> source = Source.from(Arrays.asList("1", "2", "3"));
+
+		final CompletionStage<List<String>> strings = source.runWith(Sink.seq(), materializer);
+
+		try {
+			strings.toCompletableFuture().get(3, TimeUnit.SECONDS);
+		} catch (InterruptedException | ExecutionException | TimeoutException e) {
+
+			e.printStackTrace();
+		}
+		strings.thenAcceptAsync(f -> {
+			log.info("" + f);
+		});
+
+	}
+
+	public static void main(String[] args) {
+
+		DrainSourceToList drain = new DrainSourceToList();
+
+		drain.drainSourceToList();
+	}
+}

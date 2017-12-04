@@ -1,0 +1,70 @@
+package com.akka.ScanningBus;
+
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+import akka.testkit.JavaTestKit;
+import akka.event.japi.EventBus;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.ClassRule;
+import org.junit.Test;
+
+import akka.actor.ActorSystem;
+import akka.actor.ActorRef;
+import akka.event.japi.*;
+import akka.testkit.AkkaJUnitActorSystemResource;
+import akka.testkit.JavaTestKit;
+import akka.event.japi.EventBus;
+import akka.util.Subclassification;
+import org.junit.ClassRule;
+import org.junit.Test;
+import scala.concurrent.duration.FiniteDuration;
+
+//#lookup-bus
+import akka.event.japi.LookupEventBus;
+import java.util.concurrent.TimeUnit;
+
+//#lookup-bus
+
+//#subchannel-bus
+import akka.event.japi.SubchannelEventBus;
+import akka.util.Subclassification;
+
+//#subchannel-bus
+
+//#scanning-bus
+import akka.event.japi.ScanningEventBus;
+
+//#scanning-bus
+
+//#actor-bus
+import akka.event.japi.ActorEventBus;
+public class ScanningBusTest {
+
+	ActorSystem system = ActorSystem.create("ScanningBus");
+	JavaTestKit probe1 = new JavaTestKit(system);
+
+	public void test() {
+
+		ScanningBusImpl scanningBus = new ScanningBusImpl();
+		scanningBus.subscribe(system.actorOf(Props.create(TestActor.class)), 2);
+		scanningBus.publish("xyzabc");
+		scanningBus.publish("ab");
+		probe1.expectMsgEquals("ab");
+		scanningBus.publish("abc");
+		probe1.expectMsgEquals("abc");
+
+	}
+
+	/*
+	 * private void expectMsgEquals(String string) {
+	 * 
+	 * }
+	 */
+
+	public static void main(String[] args) {
+		ScanningBusTest test = new ScanningBusTest();
+		test.test();
+	}
+}

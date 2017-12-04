@@ -1,0 +1,35 @@
+package com.akka.distribute;
+
+import java.math.BigInteger;
+import java.util.concurrent.Callable;
+
+import akka.actor.UntypedActor;
+import scala.concurrent.Future;
+
+import static akka.dispatch.Futures.future;
+
+
+public class FactorialBackend extends UntypedActor {
+
+	@Override
+	public void onReceive(Object msg) throws Exception {
+
+		if(msg instanceof Integer){
+			final Integer n=(Integer) msg;
+			Future<BigInteger> f1=future(new Callable<BigInteger>() {
+
+				@Override
+				public BigInteger call() throws Exception {
+					return factorial(n);
+				}
+
+				private BigInteger factorial(Integer n) {
+					// TODO Auto-generated method stub
+					return null;
+				}
+			}, getContext().dispatcher());
+		}
+		
+	}
+
+}

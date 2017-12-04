@@ -1,0 +1,13 @@
+package com.akka.reactiveStreams;
+
+public class FlowStream {
+
+	final Flow<Tweet, Author, NotUsed> authors = Flow.of(Tweet.class)
+			  .filter(t -> t.hashtags().contains(AKKA))
+			  .map(t -> t.author);
+			 
+			  Source.fromPublisher(rs.tweets())
+			    .via(authors)
+			    .to(Sink.fromSubscriber(rs.storage()));
+	
+}

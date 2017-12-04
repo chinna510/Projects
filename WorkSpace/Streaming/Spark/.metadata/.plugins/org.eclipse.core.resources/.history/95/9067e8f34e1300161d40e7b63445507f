@@ -1,0 +1,28 @@
+package SparkAccumulator;
+
+import java.util.Random;
+
+public class Test {
+
+	public static final Integer[] keys = { 1, 2, 3, 4, 5, 6, 7, 8 };
+	public static final Random RND = new Random();
+
+	public static final int MIN_ENTRIES = 4000;
+	public static final int MAX_ENTRIES = 10000;
+
+	private static double buildStats(final Integer key) {
+		double v = RND.nextGaussian();
+		v *= key;
+		v += 4 * key;
+		return v;
+	}
+
+	public void test() {
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

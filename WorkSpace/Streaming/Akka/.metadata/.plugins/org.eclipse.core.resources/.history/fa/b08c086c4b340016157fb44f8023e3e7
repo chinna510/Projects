@@ -1,0 +1,19 @@
+package com.akka.distribute;
+
+import akka.actor.UntypedActor;
+
+public class FactorialFrontend extends UntypedActor {
+
+	@Override
+	public void onReceive(Object msg) throws Exception {
+
+	}
+	
+	  void sendJobs() {
+		    log.info("Starting batch of factorials up to [{}]", upToN);
+		    for (int n = 1; n <= upToN; n++) {
+		      backend.tell(n, getSelf());
+		    }
+		  }
+
+}

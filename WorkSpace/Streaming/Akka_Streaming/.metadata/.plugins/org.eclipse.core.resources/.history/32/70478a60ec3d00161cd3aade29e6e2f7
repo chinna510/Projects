@@ -1,0 +1,34 @@
+package com.akka.stream;
+
+import akka.NotUsed;
+import akka.stream.FlowShape;
+import akka.stream.UniformFanInShape;
+import akka.stream.UniformFanOutShape;
+import akka.stream.javadsl.Balance;
+import akka.stream.javadsl.Flow;
+import akka.stream.javadsl.GraphDSL;
+import akka.stream.javadsl.Merge;
+
+public class PipeliningParallelApp {
+
+	public void parellel() {
+
+		Flow<ScoopOfBatter, HalfCookedPancake, NotUsed> fryingPan1 = Flow.of(ScoopOfBatter.class)
+				.map(batter -> new HalfCookedPancake());
+
+		Flow<HalfCookedPancake, Pancake, NotUsed> fryingPan2 = Flow.of(HalfCookedPancake.class)
+				.map(halfCooked -> new Pancake());
+
+		Flow<ScoopOfBatter, Pancake, NotUsed> pancakeChef = Flow.fromGraph(GraphDSL.create(b -> {
+
+			final UniformFanInShape<Pancake, Pancake> mergePancakes = b.add(Merge.create(2));
+			final UniformFanOutShape<ScoopOfBatter, ScoopOfBatter> dispatchBatter = b.add(Balance.create(2));
+
+			
+			
+			return FlowShape.of(dispatchBatter.in(), mergePancakes.out());
+
+		}));
+	}
+
+}

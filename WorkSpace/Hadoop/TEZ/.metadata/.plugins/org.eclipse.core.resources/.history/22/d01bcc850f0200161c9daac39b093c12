@@ -1,0 +1,55 @@
+package com.tez.example;
+
+import java.io.IOException;
+
+import org.apache.hadoop.io.Text;
+import org.apache.tez.mapreduce.processor.SimpleMRProcessor;
+import org.apache.tez.runtime.api.LogicalInput;
+import org.apache.tez.runtime.api.LogicalOutput;
+import org.apache.tez.runtime.api.ProcessorContext;
+import org.apache.tez.runtime.api.Reader;
+import org.apache.tez.runtime.api.Writer;
+import org.apache.tez.runtime.library.api.KeyValueReader;
+import org.apache.tez.runtime.library.api.KeyValueWriter;
+
+import com.google.common.base.Preconditions;
+
+public class SortMergeJoinProcessor extends SimpleMRProcessor {
+
+	private static final String input1 = "input1";
+	private static final String input2 = "input2";
+	private static final String inputFile = "inputFile";
+	private static final String joiner = "joiner";
+	private static final String joinOutput = "joinOutput";
+
+	public SortMergeJoinProcessor(ProcessorContext context) {
+		super(context);
+
+	}
+
+	@Override
+	public void run() throws Exception {
+		Preconditions.checkState(getInputs().size() == 2);
+		Preconditions.checkState(getInputs().size() == 1);
+		LogicalInput logicalinput1 = getInputs().get(input1);
+		LogicalInput logicalinput2 = getInputs().get(input2);
+		Reader reader1 = logicalinput1.getReader();
+		Reader reader2 = logicalinput2.getReader();
+		Preconditions.checkState(reader1 instanceof KeyValueReader);
+		Preconditions.checkState(reader2 instanceof KeyValueReader);
+		LogicalOutput output = getOutputs().get(joinOutput);
+		Preconditions.checkState(output.getWriter() instanceof KeyValueWriter);
+		KeyValueWriter writer = (KeyValueWriter) output.getWriter();
+		join((KeyValueReader) reader1, (KeyValueReader) reader2, writer);
+
+	}
+
+	private void join(KeyValueReader reader1, KeyValueReader reader2, KeyValueWriter writer) throws IOException {
+		if (reader1.next() && reader2.next()) {
+			Text t1 = (Text) reader1.getCurrentKey();
+
+		}
+
+	}
+
+}

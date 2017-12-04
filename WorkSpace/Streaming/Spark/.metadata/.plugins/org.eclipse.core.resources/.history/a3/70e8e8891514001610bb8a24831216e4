@@ -1,0 +1,11 @@
+package com.Spark.SparkStreamingEx;
+
+import org.apache.log4j.Logger;
+
+public class NetworkWordCount {
+	static Logger logger = Logger.getLogger(NetworkWordCount.class);
+
+	public void test() {
+
+	}
+}

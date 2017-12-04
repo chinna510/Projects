@@ -1,0 +1,10 @@
+Sys.setenv(SPARK_HOME = "/usr/local/spark-1.6.1-bin-hadoop2.6")
+library(SparkR, lib.loc = c(file.path(Sys.getenv("SPARK_HOME"), "R", "lib")))
+sc <- sparkR.init(master = "spark://localhost:7077", sparkEnvir = list(spark.driver.memory="2g"))
+hiveContext <- sparkRHive.init(sc)
+sql(hiveContext, "CREATE TABLE IF NOT EXISTS source (key INT, value STRING)")
+sql(hiveContext, "LOAD DATA LOCAL INPATH '/usr/local/spark-1.6.1-bin-hadoop2.6/examples/src/main/resources/kv1.txt' INTO TABLE source")
+results <- sql(hiveContext, "FROM source SELECT key, value")
+print(head(results))
+
+sparkR.stop()

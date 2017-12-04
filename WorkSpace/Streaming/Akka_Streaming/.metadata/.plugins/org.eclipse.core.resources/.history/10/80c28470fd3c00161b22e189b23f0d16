@@ -1,0 +1,49 @@
+package com.akka.integration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import akka.actor.Props;
+import akka.japi.pf.ReceiveBuilder;
+import akka.stream.actor.AbstractActorPublisher;
+import akka.stream.actor.ActorPublisherMessage;
+
+public class JobManager extends AbstractActorPublisher<Job> {
+
+	public static final JobAcceptedMessage JobAccepted = new JobAcceptedMessage();
+
+	public static final JobDeniedMessage JobDenied = new JobDeniedMessage();
+
+	private final List<Job> buf = new ArrayList<>();
+
+	private final int MAX_BUFFER_SIZE = 100;
+
+	public static Props props() {
+
+		return Props.create(JobManager.class);
+
+	}
+
+public JobManager() {
+	
+	receive(ReceiveBuilder.match(Job.class, job ->buf.size() == MAX_BUFFER_SIZE ,job -> {
+		
+		sender().tell(JobDenied,self());
+		
+	}).match(Job.class, job -> {
+		sender().tell(JobAccepted, self());
+	
+		if(buf.isEmpty() && totalDemand()){
+			onNext(job);
+		
+		}
+		else {
+			buf.add(job);
+	          deliverBuf();
+		}
+	}
+	).match(Abstract)
+	
+}
+
+}

@@ -1,0 +1,4 @@
+browser-choice=1
+browsers=<?xml version\="1.0" encoding\="UTF-8"?>\n<web-browsers current\="0">\n<system/>\n<external location\="/usr/bin/firefox" name\="Firefox"/>\n</web-browsers>
+eclipse.preferences.version=1
+internalWebBrowserHistory=http\://localhost\:5555/RestfullWebOperations/Animal.html|*|http\://localhost\:5555/RestfullWebOperations/rest/animals|*|http\://localhost\:5555/RestfullWebOperations/AnimalsResource?id\=5&animalname\=RTYGY&animaltype\=JKGHJ|*|http\://localhost\:5555/RestfullWebOperations/AnimalsResource|*|http\://localhost\:5555/RestfullWebOperations/animalResource|*|http\://localhost\:5555/AnimalResource|*|http\://localhost\:5555/RestfullWebOperations/AnimalResource|*|http\://localhost\:5555/animalResource|*|

@@ -1,0 +1,6 @@
+package com.akka.distribute;
+
+public class Get {
+
+    final public long counterId;	
+}

@@ -1,0 +1,24 @@
+package com.threadGroup;
+
+import org.apache.log4j.Logger;
+
+public class ThreadGroupEx implements Runnable {
+	static Logger logger = Logger.getLogger(ThreadGroupEx.class);
+
+	public void test() {
+		ThreadGroup pgroup = new ThreadGroup("parent");
+		ThreadGroup cGroup = new ThreadGroup(pgroup, "Child");
+		Thread th1 = new Thread(pgroup, this);
+		Thread th2 = new Thread(cGroup, this);
+
+	}
+
+	public void run() {
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

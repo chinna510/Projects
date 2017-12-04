@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>All Host</title>
+
+<link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<link rel="stylesheet" href="../css/table/table.css">
+<link rel="stylesheet" href="../css/hostscallingpolicy/hostscalingpolicy.css">
+
+<style>
+
+.a {
+    display: block;
+    padding: 0px;
+    margin-bottom: 150px; /* SIMPLY SET THIS PROPERTY AS MUCH AS YOU WANT. This changes the space below box1 */
+    text-align: justify;
+}
+
+.b {
+    display: block;
+    padding: 10px;
+    text-align: justify;
+    margin-top: 300px; /* OR ADD THIS LINE AND SET YOUR PROPER SPACE as the space above box2 */
+}
+h2.padding {
+    padding-right:10%;
+}
+
+</style>
+
+</head>
+
+<body ng-app="myApp">
+
+	 <div class="page-header" align="left">
+		<h2 margin-left: 10px;>All Host</h2>
+	</div> 
+
+<div class="a">
+	<table border="1" cellpadding="10">
+		<thead>
+			<tr>
+				<th>Instance Id</th>
+				<th>Host Group</th>
+				<th>Agent Version</th>
+				<th>Docker Version</th>
+				<th>IP Addresses</th>
+				<th>Memory (MB)</th>
+				<th>Containers</th>
+				<th>State</th>
+				<th>Actions</th>
+
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr ng-repeat="field in fields">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td width="15%">
+                   <select class="form-control" ng-model="field.private_cloud">
+                   <option value="pc1">Manage Labels</option>
+						<option value="pc2">View Details</option>
+						<option value="pc2">Enable Host</option>
+						<option value="pc2">Delete Host</option>
+					</select>
+                 
+                </td>
+                
+			</tr>
+
+		</tbody>
+	</table>
+	</div>
+	
+
+ <div class="page-header" align="left">
+		<h2>Containers</h2>
+	</div> 
+	<table border="1" cellpadding="10">
+		<thead>
+			<tr>
+				<th>Instance Id</th>
+				<th>Host Group</th>
+				<th>Agent Version</th>
+				<th>Docker Version</th>
+				<th>IP Addresses</th>
+				<th>Memory (MB)</th>
+				<th>Containers</th>
+				<th>State</th>
+				<th>Actions</th>
+
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr ng-repeat="field in fields">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><button type="button" class="btn btn-default" aria-label="Center Align">
+                  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+                 </button>
+                </td>
+                
+			</tr>
+
+		</tbody>
+</table>
+
+
+</body>
+</html>

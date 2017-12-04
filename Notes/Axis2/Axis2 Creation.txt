@@ -1,0 +1,8 @@
+1. Download Axis2 jars and extract.
+2.Add Axis2 jars to Eclipse
+windows-->preferences-->type Axis2 preferences-->Add Downloaded Axis2 folder 
+3.Create Dynamic web project.
+4.Under Src folder we can create one package and write java class.
+5. Convert the java class into webservice using  Axis2 implementation class.
+file-->other-->webservices-->>webservice-->deploy tomcat
+6. Test wheather the service is deployed in the server or not.

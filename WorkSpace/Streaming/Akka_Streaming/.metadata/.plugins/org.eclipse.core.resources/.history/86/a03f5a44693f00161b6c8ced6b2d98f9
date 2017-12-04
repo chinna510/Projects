@@ -1,0 +1,9 @@
+package com.akka.stream;
+
+import akka.stream.FlowShape;
+import akka.stream.stage.GraphStage;
+import akka.util.ByteString;
+
+public class DigestCalculator extends GraphStage<FlowShape<ByteString, ByteString>>{
+
+}

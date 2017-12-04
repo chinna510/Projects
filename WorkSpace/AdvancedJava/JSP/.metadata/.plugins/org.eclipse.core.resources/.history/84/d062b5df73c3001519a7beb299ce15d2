@@ -1,0 +1,21 @@
+package com.model;
+import java.io.*;
+import java.sql.*;
+import java.util.*;
+/**
+* A software product supported by the Product
+* Support system.
+*/
+public class Product implements Serializable{
+	private String productID;
+	private String name;
+	private String productSupport;
+	private String developer;
+	private String tester;
+	
+	
+	
+	
+	
+	
+	

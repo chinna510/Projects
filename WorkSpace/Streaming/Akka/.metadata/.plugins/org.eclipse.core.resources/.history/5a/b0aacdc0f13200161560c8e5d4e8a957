@@ -1,0 +1,5 @@
+package com.akka.router;
+
+public class StatsMessages {
+
+}

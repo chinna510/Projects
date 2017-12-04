@@ -1,0 +1,33 @@
+package com.graphx.pregel;
+
+import java.io.Serializable;
+import java.util.Arrays;
+import java.util.Collections;
+
+import org.apache.spark.graphx.EdgeTriplet;
+
+import scala.Function1;
+import scala.Tuple2;
+import scala.collection.Iterator;
+import scala.collection.JavaConversions;
+import scala.runtime.AbstractFunction1;
+
+public class SendMessageFunction extends
+		AbstractFunction1<EdgeTriplet<Integer, Integer>, Iterator<Tuple2<Object, Integer>>> implements Serializable {
+
+	@Override
+	public Iterator<Tuple2<Object, Integer>> apply(EdgeTriplet<Integer, Integer> triplet) {
+		
+		System.out.println(triplet);
+
+		Integer srcAttr = (Integer) triplet.srcAttr();
+		Integer attr = (Integer) triplet.attr();
+		Integer dstAttr = (Integer) triplet.dstAttr();
+
+		if (srcAttr + attr < dstAttr)
+			return JavaConversions.asScalaIterator(
+					Arrays.asList(new Tuple2<Object, Integer>((int) triplet.dstId(), srcAttr + dstAttr)).iterator());
+		else
+			return JavaConversions.asScalaIterator(Collections.emptyIterator());
+	}
+}

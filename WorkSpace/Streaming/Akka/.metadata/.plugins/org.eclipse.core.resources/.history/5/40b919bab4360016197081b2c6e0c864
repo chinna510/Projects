@@ -1,0 +1,13 @@
+package com.akka.ActorClassification;
+
+public class Notification {
+
+	public final ActorRef ref;
+	public final int id;
+
+	public Notification(ActorRef ref, int id) {
+		this.ref = ref;
+		this.id = id;
+	}
+
+}

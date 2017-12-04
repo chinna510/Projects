@@ -1,0 +1,11 @@
+package com.akka.EventStream;
+
+import akka.actor.ActorSystem;
+
+public class ExampleApp {
+
+	ActorSystem system=ActorSystem.create("StreamEvent");
+	
+	
+	
+}

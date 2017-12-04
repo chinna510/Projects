@@ -1,0 +1,12 @@
+package com.myudfs;
+
+import java.io.IOException;
+
+import org.apache.pig.data.Tuple;
+import org.apache.pig.data.TupleFactory;
+
+public class Initial {
+	public Tuple exec(Tuple input) throws IOException {
+		return TupleFactory.getInstance().newTuple(count(input));
+	}
+}

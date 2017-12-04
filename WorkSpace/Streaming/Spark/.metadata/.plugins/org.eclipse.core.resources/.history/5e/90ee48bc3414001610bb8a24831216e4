@@ -1,0 +1,29 @@
+package com.Spark.SparkStreamingEx;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+import org.apache.spark.SparkConf;
+import org.apache.spark.streaming.Durations;
+import org.apache.spark.streaming.api.java.JavaStreamingContext;
+
+public class JavaDirectKafkaWordCount {
+	String brokers = null;
+    String topics =null;
+	
+	public void test(){
+		SparkConf conf=new SparkConf().setAppName("JavaDirectKafkaWordCount").setMaster("local[*]");
+		JavaStreamingContext jssc=new JavaStreamingContext(conf,Durations.seconds(2));
+		Set<String> topicSet=new HashSet<String>(Arrays.asList(topics.split(",")));
+		Map<String, String> kafkaparams=new HashMap<String, String>();
+		kafkaparams.put("metadata.brokers.list", "192.168.1.146");
+		
+	}
+public static void main(String[] args) {
+	String brokers = args[0];
+    String topics = args[1];
+}	
+}

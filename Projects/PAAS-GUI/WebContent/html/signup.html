@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SignUp</title>
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css"rel="stylesheet">
+<link href="http://getbootstrap.com/examples/signin/signin.css"rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<script type="text/javascript" src="../js/controller.js"></script>
+<!-- <script type="text/javascript" src="../js/validation/signUpValidation.js"></script> -->
+</head>
+
+<body ng-app="MyApp" ng-controller="MyController">
+	<div class="container">
+		<div id="loginbox" style="margin-top: 50px;"
+			class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-2">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<div class="panel-title" align="center">
+						<b>SignUp to PAAS</b>
+					</div>
+
+				</div>
+
+				<div style="padding-top: 30px" class="panel-body">
+
+					<div style="display: none" id="login-alert"
+						class="alert alert-danger col-sm-12"></div>
+
+
+					<form name="myForm" id="myForm" class="form-horizontal" role="form">
+
+
+						<!-- <div class="form-group">
+							<label for="email" class="col-md-4 control-label">CompanyName</label>
+							<div class="col-md-7">
+								<input type="text" class="form-control" name="cname"
+									placeholder="Company Name" ng-model="fields.company_name">
+							</div>
+						</div> -->
+
+
+						<div class="form-group">
+							<label for="company name" class="col-md-4 control-label">Company
+								Name</label>
+							<div class="col-md-7">
+								<input type="text" class="form-control" id="company_name"
+									name="company_name" placeholder="Company Name"
+									ng-model="fields.company_name" required /> <span
+									ng-show="myForm.company_name.$error.required">required</span>
+							</div>
+						</div>
+
+
+						<!-- <div class="form-group">
+							<label for="email" class="col-md-4 control-label">Company Address</label>
+							<div class="col-md-7">
+								<input type="text" class="form-control" name="caddress"
+									placeholder="Company Address" ng-model="fields.company_address">
+							</div>
+						</div> -->
+
+
+						<div class="form-group">
+							<label for="company address" class="col-md-4 control-label">Company
+								Address</label>
+							<div class="col-md-7">
+								<input type="text" class="form-control" id="company_address"
+									name="company_address" placeholder="Company Address"
+									ng-model="fields.company_address" required /> <span
+									ng-show="myForm.company_address.$error.required && myForm.company_address.$dirty">required</span>
+							</div>
+						</div>
+
+
+
+
+						<!-- 
+						<div class="form-group">
+							<label for="email" class="col-md-4 control-label">Email</label>
+							<div class="col-md-7">
+								<input type="text" class="form-control" name="email"placeholder="Email Address" ng-model="fields.email">
+							</div>
+						</div> -->
+
+
+						<div class="form-group">
+							<label for="email" class="col-md-4 control-label">Email</label>
+							<div class="col-md-7">
+								<input type="email" id="email" name="email" class="form-control"
+									placeholder="Email Address" ng-model="fields.email" required ng-blur="checkemail()"/>
+								<span
+									ng-show="myForm.email.$error.required && myForm.email.$dirty">required</span>
+								<span
+									ng-show="!myForm.email.$error.required && myForm.email.$error.email && myForm.email.$dirty">invalid
+									email</span>
+							</div>
+						</div>
+
+						<!-- 
+						<div class="form-group">
+							<label for="email" class="col-md-4 control-label">Password</label>
+							<div class="col-md-7">
+								<input type="password" class="form-control" name="password"placeholder="Password" ng-model="fields.password">
+							</div>
+						</div> -->
+                     
+						<div class="form-group">
+							<label for="password" class="col-md-4 control-label">Password</label>
+							<div class="col-md-7">
+								<input type="password" id="password" name="password"
+									class="form-control" placeholder="Password"
+									ng-model="fields.password" ng-minlength="8" ng-maxlength="20"
+									ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" required />
+								<span
+									ng-show="myForm.password.$error.required && myForm.password.$dirty">required</span>
+								<span
+									ng-show="!myForm.password.$error.required && (myForm.password.$error.minlength || myForm.password.$error.maxlength) && myForm.password.$dirty">Password
+									must be between 8 and 20 characters.</span> <span
+									ng-show="!myForm.password.$error.required && !myForm.password.$error.minlength && !myForm.password.$error.maxlength && myForm.password.$error.pattern && myForm.password.$dirty">Must
+									contain one lower &amp; uppercase letter, and one non-alpha
+									character (a number or a symbol.)</span>
+							</div>
+						</div>
+
+
+
+
+
+						<!-- <div class="form-group">
+								<label for="email" class="col-md-4 control-label">Re-enter Password</label>
+								<div class="col-md-7">
+									<input type="password" class="form-control" name="repassword"
+										placeholder="Re-enter Password">
+								</div>
+							</div> -->
+
+
+						<div class="form-group">
+							<label for="password_c" class="col-md-4 control-label">Confirm
+								Password</label>
+							<div class="col-md-7">
+
+								<input type="password" id="password_c" name="password_c"
+									class="form-control"
+									placeholder="Confirm Password"
+									valid-password-c required /> <span
+									ng-show="myForm.password_c.$error.required && myForm.password_c.$dirty">Please
+									confirm your password.</span> <span
+									ng-show="!myForm.password_c.$error.required && myForm.password_c.$error.noMatch && myForm.password.$dirty">Passwords
+									do not match.</span>
+							</div>
+						</div>
+
+
+						<!-- <label for="password_c">Confirm Password</label> <input
+							type="password" id="password_c" name="password_c"
+							ng-model="formData.password_c" valid-password-c required /> <span
+							ng-show="myForm.password_c.$error.required && myForm.password_c.$dirty">Please
+							confirm your password.</span> <span
+							ng-show="!myForm.password_c.$error.required && myForm.password_c.$error.noMatch && myForm.password.$dirty">Passwords
+							do not match.</span> -->
+							
+						<div class="form-group">
+							<!-- Button -->
+							<!-- <div class="col-md-offset-7 col-md-9">
+								 <button id="btn-signup" type="button" class="btn btn-info"ng-click="reg()">
+									<i class="icon-hand-right"></i>Sign Up
+								</button>  -->
+
+							<div class="col-md-offset-7 col-md-9">
+							    
+								<button id="btn-signup" type="submit" class="btn btn-info" ng-disabled="!myForm.$valid" ng-click="reg()">Submit</button>
+								<button class="btn btn-primary btn-large center" type="reset"
+									ng-click="reset()">Reset</button>
+
+							</div>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

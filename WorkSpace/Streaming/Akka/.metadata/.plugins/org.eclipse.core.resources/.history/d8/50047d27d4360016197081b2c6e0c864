@@ -1,0 +1,7 @@
+package com.akka.extension;
+
+import akka.actor.AbstractExtensionId;
+
+public class CountExtension extends AbstractExtensionId<CountExtensionImpl>{
+
+}

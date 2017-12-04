@@ -1,0 +1,51 @@
+<%@ page isErrorPage="true" session="false"%>
+<%-- Create a form to submit to Tech Support --%>
+<FORM ACTION="/send_diags.jsp">
+	<INPUT TYPE="submit" VALUE="Please click here">
+	<P>to send this information to our Technical Support department:
+	<P>
+		<%-- Supply date, time, and servlet name --%>
+		<%
+			String dateTime = new java.util.Date().toString();
+			String remoteAddr = request.getRemoteAddr();
+			String servletContext = request.getContextPath();
+		%>
+	
+	<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0">
+		<TR>
+			<TD><B>Date and Time:</B></TD>
+			<TD><%=dateTime%> <INPUT TYPE="hidden" NAME="bug.dateTime"
+				VALUE="<%=dateTime%>">
+				<HTML>
+<HEAD>
+<TITLE>Tracking Error Page</TITLE>
+</HEAD>
+<BODY>
+	<CENTER>
+		<FONT SIZE="+3"> <B><I><U>Monolithic<BR>Technologies
+						Corporation
+				</U></I></B>
+		</FONT>
+		<P>
+			You found a bug we didn't know about: <B><%=exception.getMessage()%></B>
+		<P></TD>
+		</TR>
+		<TR>
+			<TD><B>Web Client:</B></TD>
+			<TD><%=remoteAddr%> <INPUT TYPE="hidden" NAME="bug.remoteAddr"
+				VALUE="<%=remoteAddr%>"></TD>
+		</TR>
+		<TR>
+			<TD><B>Application:</B></TD>
+			<TD><%=servletContext%> <INPUT TYPE="hidden"
+				NAME="bug.servletContext" VALUE="<%=servletContext%>"></TD>
+		</TR>
+	</TABLE>
+	<%-- Include the stack trace as a hidden field --%>
+	<INPUT TYPE="hidden" NAME="bug.stackTrace"
+		VALUE="<%java.io.PrintWriter pw = new java.io.PrintWriter(out);
+			exception.printStackTrace(pw);%>">
+</FORM>
+</CENTER>
+</BODY>
+</HTML>

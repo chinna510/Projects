@@ -1,0 +1,12 @@
+package com.socket;
+
+import org.apache.log4j.Logger;
+
+public class SocketPermissionTest {
+	static Logger logger = Logger.getLogger(SocketPermissionTest.class);
+
+	public static void main(String[] args) {
+
+	}
+
+}

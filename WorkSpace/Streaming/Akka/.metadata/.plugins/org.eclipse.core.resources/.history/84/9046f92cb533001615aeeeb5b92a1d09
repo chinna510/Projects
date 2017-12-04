@@ -1,0 +1,7 @@
+package com.akka.distribute;
+
+import akka.actor.UntypedActor;
+
+public class CounterSupervisor extends UntypedActor {
+
+}

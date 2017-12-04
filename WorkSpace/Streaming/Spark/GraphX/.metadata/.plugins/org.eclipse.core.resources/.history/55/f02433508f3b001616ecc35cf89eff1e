@@ -1,0 +1,19 @@
+package com.spark.graphx;
+
+import java.io.Serializable;
+
+import org.apache.spark.graphx.EdgeTriplet;
+
+import scala.runtime.AbstractFunction1;
+
+public class EdgeFunction2 extends AbstractFunction1<EdgeTriplet<String, String>, Object> implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public Object apply(EdgeTriplet<String, Integer> id) {
+
+		return true;
+	}
+
+}

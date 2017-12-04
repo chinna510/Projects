@@ -1,0 +1,26 @@
+package com.akka.externalserveices;
+
+import java.util.concurrent.Executor;
+
+import akka.actor.ActorSystem;
+import akka.event.Logging;
+import akka.event.LoggingAdapter;
+import akka.stream.ActorMaterializer;
+import akka.stream.ActorMaterializerSettings;
+import akka.stream.Materializer;
+
+public class UsingMapAsync {
+
+	
+	ActorSystem system = ActorSystem.create("External");
+	final Executor blockingEc = system.dispatchers().lookup("blocking-dispatcher");
+
+	final ActorMaterializer mat = ActorMaterializer
+			.create(ActorMaterializerSettings.create(system).withInputBuffer(4, 4), system);
+	LoggingAdapter log = Logging.getLogger(system, this);
+
+	public void slow() {
+
+	}
+
+}

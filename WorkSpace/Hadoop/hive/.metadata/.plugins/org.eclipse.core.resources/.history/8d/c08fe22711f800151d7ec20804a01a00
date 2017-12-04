@@ -1,0 +1,26 @@
+package com.HCataLog;
+
+import java.util.Iterator;
+
+import javax.servlet.jsp.jstl.core.IteratedExpression;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.WritableComparable;
+import org.apache.hadoop.mapreduce.Reducer;
+import org.apache.hive.hcatalog.data.DefaultHCatRecord;
+import org.apache.hive.hcatalog.data.HCatRecord;
+
+public class Reduce extends Reducer<IntWritable, IntWritable, WritableComparable, HCatRecord> {
+
+	protected void reduce(IntWritable key, Iterable<IntWritable> values,
+			Reducer<IntWritable, IntWritable, WritableComparable, HCatRecord>.Context context) {
+		int sum = 0;
+		Iterator<IntWritable> itr = values.iterator();
+		while (itr.hasNext()) {
+			sum++;
+			itr.next();
+		}
+		HCatRecord record = new DefaultHCatRecord(2);
+	}
+
+}

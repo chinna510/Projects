@@ -1,0 +1,12 @@
+package com.akka.remoting;
+
+import akka.actor.UntypedActor;
+
+public class CreationActor extends UntypedActor{
+
+	@Override
+	public void onReceive(Object arg0) throws Exception {
+		
+	}
+
+}

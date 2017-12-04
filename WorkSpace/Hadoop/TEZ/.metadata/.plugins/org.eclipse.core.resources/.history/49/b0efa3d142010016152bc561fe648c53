@@ -1,0 +1,10 @@
+package com.tez.examples;
+
+public class HashJoinsEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

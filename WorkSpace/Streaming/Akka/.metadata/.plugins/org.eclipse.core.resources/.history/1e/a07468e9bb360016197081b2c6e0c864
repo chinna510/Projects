@@ -1,0 +1,19 @@
+package com.akka.logging;
+
+import akka.actor.UntypedActor;
+
+public class MyActor extends UntypedActor {
+
+	LoggingAdapter log = Logging.getLogger(getContext().system(), this);
+
+	@Override
+	public void preStart() throws Exception {
+lo		super.preStart();
+	}
+
+	@Override
+	public void onReceive(Object arg0) throws Exception {
+
+	}
+
+}

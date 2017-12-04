@@ -1,0 +1,30 @@
+package com.Spark;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.api.java.function.Function;
+
+public class FilterExample {
+	static Logger logger = Logger.getLogger(FilterExample.class);
+
+	public void test() {
+		SparkConf conf = new SparkConf().setAppName("FilterExample").setMaster("local");
+		JavaSparkContext sc = new JavaSparkContext(conf);
+		Function<Integer, Boolean> predicate = e -> e % 2 == 0;
+		JavaRDD<Integer> x = sc.parallelize(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 2);
+		JavaRDD<Integer> y = x.filter(predicate);
+		List<Integer> list = y.collect();
+		logger.info("List Of Filter Elements : " + list);
+
+	}
+
+	public static void main(String[] args) {
+		FilterExample ex = new FilterExample();
+		ex.test();
+	}
+}

@@ -1,0 +1,5 @@
+package com.oozie.coordinator;
+
+public class Directory {
+
+}

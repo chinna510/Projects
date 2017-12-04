@@ -1,0 +1,33 @@
+Hi,
+
+        I have Studied These topics yesterday.
+
+Oozie:
+======
+1. Apache Oozie core 4.2.0 API
+2. Practicing
+3. Pig Action
+4. Hive,Hive2 Action
+5. Coordinator Job
+6. Bundle Job
+
+Talend MDM:
+===========
+1. Data Integration 
+2. Load data into the MDM hub 
+3. Standard load 
+4. Checking the data container records via the MDM Server web interface 
+5. Checking the data container records via Talend MDM Studio 
+6. Checking the data container records via your database’s query client 
+7. Bulk load 
+8. Export data from the MDM server 
+
+Tableau:
+========
+1. Watched Videos Of Table
+
+
+---------
+
+Thanks&regards,
+Chinnarao P.

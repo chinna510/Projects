@@ -1,0 +1,71 @@
+html, body
+{
+padding: 0;
+border: 0px none;
+}
+ 
+/* Let's add some style to our fieldset & legend */
+ 
+fieldset
+{
+-moz-border-radius: 7px;
+border: 1px #dddddd solid;
+padding: 10px;
+width: 1000px;
+margin-top: 10px;
+}
+ 
+fieldset legend
+{
+border: 1px #1a6f93 solid;
+color: black;
+ 
+font-family: Verdana;
+font-weight: none;
+font-size: 13px;
+ 
+padding-right: 5px;
+padding-left: 5px;
+padding-top: 2px;
+padding-bottom: 2px;
+ 
+-moz-border-radius: 3px;
+}
+ 
+/* Main DIV */
+.m
+{
+width: 560px;
+padding: 20px;
+height: auto;
+}
+ 
+/* Left DIV */
+.l
+{
+width: 140px;
+margin: 0px;
+padding: 0px;
+ 
+float: left;
+text-align: right;
+}
+ 
+/* Right DIV */
+.r
+{
+width: 150px;
+margin: 0px;
+padding: 0px;
+ 
+float: right;
+ 
+text-align: left;
+}
+ 
+.a
+{
+clear: both;
+width: 470px;
+padding: 10px;
+}

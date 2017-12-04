@@ -1,0 +1,40 @@
+package com.akka.stream.Source;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import akka.NotUsed;
+import akka.actor.ActorSystem;
+import akka.event.Logging;
+import akka.event.LoggingAdapter;
+import akka.stream.ActorMaterializer;
+import akka.stream.Materializer;
+import akka.stream.javadsl.Source;
+import akka.stream.scaladsl.Sink;
+import scala.concurrent.Future;
+
+public class FromIteratorApp {
+
+	ActorSystem system = ActorSystem.create("Pipelining");
+	Materializer mat = ActorMaterializer.create(system);
+
+	LoggingAdapter log = Logging.getLogger(system, this);
+
+	public void iterate() {
+
+		List<Integer> data = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
+
+		Source<Integer, NotUsed> source = Source.fromIterator(() -> data.iterator());
+
+		Future<List<Integer>> result = source.grouped(100).runWith(Sink.head(), mat);
+
+		
+	}
+	public static void main(String[] args) {
+		
+		FromIteratorApp app=new FromIteratorApp();
+		app.iterate();
+	}
+
+}

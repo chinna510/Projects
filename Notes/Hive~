@@ -1,0 +1,497 @@
+
+Hive Installation Steps:
+========================
+1. Install Java
+2. Set Java environment Path in ~/.bashrc File
+        
+        export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+        export PATH=$PATH:$JAVA_HOME/bin
+
+3. source ~/.bashrc
+4. Check wheather Hadoop installed or not. if Not Installed follow Hadoop installation Steps in Hadoop installation Document
+5. Download Latest Hive tar file
+
+   link:    http://mirror.fibergrid.in/apache/hive/hive-2.0.0/apache-hive-2.0.0-bin.tar.gz
+
+6. tar xvzf apache-hive-2.0.0-bin.tar.gz
+7. set The Environment in ~/.bashrc
+        export HIVE_HOME=/home/bizruntime/hadoop-2.7.2/apache-hive-2.0.0-bin
+        export PATH=$PATH:$HIVE_HOME/bin
+        export CLASSPATH=$CLASSPATH:/home/bizruntime/hadoop-2.7.2/lib/*:.
+        export CLASSPATH=$CLASSPATH:/home/bizruntime/hadoop-2.7.2/apache-hive-2.0.0-bin/lib/*:.
+
+8. source ~/.bashrc
+9. inside hive configuration modify hive-env.sh file and add hadoop home env variable
+        export HADOOP_HOME=/home/bizruntime/hadoop-2.7.2
+10. change database configurations in hive-site.xml file by default it is derby change it
+            <property>
+            <name>javax.jdo.option.ConnectionURL</name>
+            <value>jdbc:mysql://localhost/metastore?createDatabaseIfNotExist=true</value>
+            <description>metadata is stored in a MySQL server</description>
+            </property>
+            <property>
+            <name>javax.jdo.option.ConnectionDriverName</name>
+            <value>com.mysql.jdbc.Driver</value>
+            <description>MySQL JDBC driver class</description>
+            </property>
+            <property>
+            <name>javax.jdo.option.ConnectionUserName</name>
+            <value>hiveuser</value>
+            <description>user name for connecting to mysql server </description>
+            </property>
+           <property>
+            <name>javax.jdo.option.ConnectionPassword</name>
+            <value>hivepassword</value>
+            <description>password for connecting to mysql server </description>
+            </property>
+
+10.1  Hive Mysql Setup
+
+mysql -u root -p
+Enter password:
+mysql> CREATE DATABASE metastore;
+mysql> USE metastore;
+mysql> SOURCE $HIVE_HOME/scripts/metastore/upgrade/mysql/hive-schema-2.0.0.mysql.sql; //choose correct version of sql file
+mysql> CREATE USER 'hiveuser'@'%' IDENTIFIED BY 'hivepassword'; 
+mysql> GRANT all on *.* to 'hiveuser'@localhost identified by 'hivepassword';
+mysql>  flush privileges;
+
+
+11. if u want to change metastore details like Port,Host or any other change in hive-site.xml
+12. Main Problem with Security .some times it was not connecting with metastore or Hadoop cluster change configurations in hive-site.xml
+13. Run hive in Command line
+14. Beeline is useful for interacting with JAVA JDBC Drivers . by using this u r simply run ur commands using java api
+15. hiveserver2 is usefull for connecting java drivers with beeline
+
+Creating Tables:
+================
+
+1. Normal Table creation and partition
+
+CREATE TABLE page_view(viewTime INT, userid BIGINT,
+                page_url STRING, referrer_url STRING,
+                ip STRING COMMENT 'IP Address of the User')
+        COMMENT 'This is the page view table'
+        PARTITIONED BY(dt STRING, country STRING)
+        STORED AS SEQUENCEFILE;
+
+2.Table Creation with Row Delimeter 
+
+CREATE TABLE page_view(viewTime INT, userid BIGINT,
+                page_url STRING, referrer_url STRING,
+                ip STRING COMMENT 'IP Address of the User')
+        COMMENT 'This is the page view table'
+        PARTITIONED BY(dt STRING, country STRING)
+        ROW FORMAT DELIMITED
+        FIELDS TERMINATED BY '1'
+        STORED AS SEQUENCEFILE;
+
+3. Table creation With partitioning and bucketing
+
+ CREATE TABLE page_view(viewTime INT, userid BIGINT,
+                page_url STRING, referrer_url STRING,
+                ip STRING COMMENT 'IP Address of the User')
+        COMMENT 'This is the page view table'
+        PARTITIONED BY(dt STRING, country STRING)
+        CLUSTERED BY(userid) SORTED BY(viewTime) INTO 32 BUCKETS
+        ROW FORMAT DELIMITED
+        FIELDS TERMINATED BY '1'
+        COLLECTION ITEMS TERMINATED BY '2'
+        MAP KEYS TERMINATED BY '3'
+        STORED AS SEQUENCEFILE;
+
+Browsing Tables and Partitions:
+-==============================
+
+1. SHOW TABLES;
+2. SHOW TABLES 'page.*';  ---------> Show table with matching regular Expression
+3. SHOW PARTITIONS page_view;  ----->To list partitions of a table.If the table is not a partitioned table then an error is thrown.
+4. DESCRIBE page_view;   ----------->To list columns and column types of table.
+5. DESCRIBE EXTENDED page_view; -----> To list columns and all other properties of table.
+6. DESCRIBE EXTENDED page_view PARTITION (ds='2008-08-08'); ---> To list columns and all other properties of a partition
+
+Altering Tables :
+=================
+
+1. ALTER TABLE old_table_name RENAME TO new_table_name; -------------> To rename the existing table
+2. ALTER TABLE old_table_name REPLACE COLUMNS (col1 TYPE, ...); ------> To replace column names of the Existing table
+3. ALTER TABLE tab1 ADD COLUMNS (c1 INT COMMENT 'a new int column',c2 STRING DEFAULT 'def val');---->To Add columns to Existing table
+
+Dropping Tables and Partitions:
+===============================
+
+1. DROP TABLE pv_users;
+2. ALTER TABLE pv_users DROP PARTITION (ds='2008-08-08')
+
+Loading Data:
+=============
+
+1. Input Format is diff from Table format 
+
+ CREATE EXTERNAL TABLE page_view_stg(viewTime INT, userid BIGINT,page_url STRING, referrer_url STRING, ip STRING COMMENT 'IP Address of the User', country STRING COMMENT 'country of origination') COMMENT 'This is the staging page view table' ROW FORMAT DELIMITED FIELDS TERMINATED BY '44' STORED AS TEXTFILE LOCATION '/user/hive/warehouse/page_view';
+ 
+        hadoop dfs -put /tmp/pv_2008-06-08.txt /user/hive/warehouse/page_view
+ 
+        FROM page_view_stg pvs
+        INSERT OVERWRITE TABLE page_view PARTITION(dt='2008-06-08', country='US')
+        SELECT pvs.viewTime, pvs.userid, pvs.page_url, pvs.referrer_url, null, null, pvs.ip
+        WHERE pvs.country = 'US';
+2. the input data format is the same as the table format from external sources
+
+LOAD DATA LOCAL INPATH /tmp/pv_2008-06-08_us.txt INTO TABLE page_view PARTITION(date='2008-06-08', country='US')
+
+3. From HDFS 
+
+LOAD DATA INPATH '/user/data/pv_2008-06-08_us.txt' INTO TABLE page_view PARTITION(date='2008-06-08', country='US')
+
+Querying and Inserting Data:
+============================
+
+Simple Query :
+--------------
+
+1. For all the active users
+
+        INSERT OVERWRITE TABLE user_active
+        SELECT user.*
+        FROM user
+        WHERE user.active = 1;
+
+2. internally rewritten to some temporary file and displayed to the Hive client side
+   
+        SELECT user.*
+        FROM user
+        WHERE user.active = 1;
+
+Partition Based Query :
+-----------------------
+
+1. in order to get all the page_views in the month of 03/2008 referred from domain xyz.com
+        INSERT OVERWRITE TABLE xyz_com_page_views
+        SELECT page_views.*
+        FROM page_views
+        WHERE page_views.date >= '2008-03-01' AND page_views.date <= '2008-03-31' AND
+        page_views.referrer_url like '%xyz.com';
+Joins:
+======
+
+1. 
+        INSERT OVERWRITE TABLE pv_users
+        SELECT pv.*, u.gender, u.age
+        FROM user u JOIN page_view pv ON (pv.userid = u.id)
+        WHERE pv.date = '2008-03-03';
+
+2. Full Outer Join
+
+        INSERT OVERWRITE TABLE pv_users
+        SELECT pv.*, u.gender, u.age
+        FROM user u FULL OUTER JOIN page_view pv ON (pv.userid = u.id)
+        WHERE pv.date = '2008-03-03';
+3. Left Semi Join--->In order check the existence of a key in another table
+
+        INSERT OVERWRITE TABLE pv_users
+        SELECT u.*
+        FROM user u LEFT SEMI JOIN page_view pv ON (pv.userid = u.id)
+        WHERE pv.date = '2008-03-03';
+
+4. In order to join more than one tables
+
+        INSERT OVERWRITE TABLE pv_friends
+        SELECT pv.*, u.gender, u.age, f.friends
+        FROM page_view pv JOIN user u ON (pv.userid = u.id) JOIN friend_list f ON (u.id = f.uid)
+        WHERE pv.date = '2008-03-03';
+
+Note : Hive only supports equi-joins. Also it is best to put the largest table on the rightmost side of the join to get the best performance.
+
+Aggregations:
+------------
+
+1. In order to count the number of distinct users by gender
+        INSERT OVERWRITE TABLE pv_gender_sum
+        SELECT pv_users.gender, count (DISTINCT pv_users.userid)
+        FROM pv_users
+        GROUP BY pv_users.gender;
+2. Multiple aggregations can be done at the same time, however, no two aggregations can have different DISTINCT columns
+        INSERT OVERWRITE TABLE pv_gender_agg
+        SELECT pv_users.gender, count(DISTINCT pv_users.userid), count(*), sum(DISTINCT pv_users.userid)
+        FROM pv_users
+        GROUP BY pv_users.gender;
+
+Multi Table/File Inserts :
+--------------------------
+
+FROM pv_users
+INSERT OVERWRITE TABLE pv_gender_sum
+    SELECT pv_users.gender, count_distinct(pv_users.userid)
+    GROUP BY pv_users.gender
+ 
+INSERT OVERWRITE DIRECTORY '/user/data/tmp/pv_age_sum'
+    SELECT pv_users.age, count_distinct(pv_users.userid)
+    GROUP BY pv_users.age;
+
+
+Dynamic-Partition Insert :
+--------------------------
+1. Dynamic-Partition Insert with Multi-insert 
+FROM page_view_stg pvs
+INSERT OVERWRITE TABLE page_view PARTITION(dt='2008-06-08', country='US')
+       SELECT pvs.viewTime, pvs.userid, pvs.page_url, pvs.referrer_url, null, null, pvs.ip WHERE pvs.country = 'US'
+INSERT OVERWRITE TABLE page_view PARTITION(dt='2008-06-08', country='CA')
+       SELECT pvs.viewTime, pvs.userid, pvs.page_url, pvs.referrer_url, null, null, pvs.ip WHERE pvs.country = 'CA'
+INSERT OVERWRITE TABLE page_view PARTITION(dt='2008-06-08', country='UK')
+       SELECT pvs.viewTime, pvs.userid, pvs.page_url, pvs.referrer_url, null, null, pvs.ip WHERE pvs.country = 'UK';
+
+2. Dynamic-Partition Insert  0.6.0 onwards
+
+FROM page_view_stg pvs
+INSERT OVERWRITE TABLE page_view PARTITION(dt='2008-06-08', country)
+       SELECT pvs.viewTime, pvs.userid, pvs.page_url, pvs.referrer_url, null, null, pvs.ip, pvs.country
+
+Inserting into Local Files:
+---------------------------
+
+INSERT OVERWRITE LOCAL DIRECTORY '/tmp/pv_gender_sum'
+SELECT pv_gender_sum.*
+FROM pv_gender_sum;
+
+Sampling:
+--------
+INSERT OVERWRITE TABLE pv_gender_sum_sample
+SELECT pv_gender_sum.*
+FROM pv_gender_sum TABLESAMPLE(BUCKET 3 OUT OF 32);
+
+general the TABLESAMPLE syntax looks like:
+----------------------------------------
+
+TABLESAMPLE(BUCKET x OUT OF y)
+
+Union All :
+-----------
+
+INSERT OVERWRITE TABLE actions_users
+SELECT u.id, actions.date
+FROM (
+    SELECT av.uid AS uid
+    FROM action_video av
+    WHERE av.date = '2008-06-03'
+ 
+    UNION ALL
+ 
+    SELECT ac.uid AS uid
+    FROM action_comment ac
+    WHERE ac.date = '2008-06-03'
+    ) actions JOIN users u ON(u.id = actions.uid);
+
+Array Operations :
+------------------
+
+1. CREATE TABLE array_table (int_array_column ARRAY<INT>);
+2. Accessing values of array
+
+SELECT pv.friends[2]
+FROM page_views pv;
+
+3. Length Of Array
+
+SELECT pv.userid, size(pv.friends)
+FROM page_view pv;
+
+Map (Associative Arrays) Operations :
+-------------------------------------
+1. Creation and access
+
+INSERT OVERWRITE page_views_map
+SELECT pv.userid, pv.properties['page type']
+FROM page_views pv;
+
+2. Size of Map
+
+SELECT size(pv.properties)
+FROM page_view pv;
+
+Custom Map/Reduce Scripts:
+---------------------------
+
+FROM (
+     FROM pv_users
+     MAP pv_users.userid, pv_users.date
+     USING 'map_script'
+     AS dt, uid
+     CLUSTER BY dt) map_output
+ 
+ INSERT OVERWRITE TABLE pv_users_reduced
+     REDUCE map_output.dt, map_output.uid
+     USING 'reduce_script'
+     AS date, count;
+
+Sample map script (weekday_mapper.py ):
+--------------------------------------
+import sys
+import datetime
+ 
+for line in sys.stdin:
+  line = line.strip()
+  userid, unixtime = line.split('\t')
+  weekday = datetime.datetime.fromtimestamp(float(unixtime)).isoweekday()
+  print ','.join([userid, str(weekday)])
+
+
+SELECT TRANSFORM(pv_users.userid, pv_users.date) USING 'map_script' AS dt, uid CLUSTER BY dt FROM pv_users;
+
+without knowing Table schema :
+================================
+FROM (
+    FROM pv_users
+    MAP pv_users.userid, pv_users.date
+    USING 'map_script'
+    CLUSTER BY key) map_output
+ 
+INSERT OVERWRITE TABLE pv_users_reduced
+ 
+    REDUCE map_output.dt, map_output.uid
+    USING 'reduce_script'
+    AS date, count;
+
+Distribute By and Sort By:
+--------------------------
+FROM (
+    FROM pv_users
+    MAP pv_users.userid, pv_users.date
+    USING 'map_script'
+    AS c1, c2, c3
+    DISTRIBUTE BY c2
+    SORT BY c2, c1) map_output
+ 
+INSERT OVERWRITE TABLE pv_users_reduced
+ 
+    REDUCE map_output.c1, map_output.c2, map_output.c3
+    USING 'reduce_script'
+    AS date, count;
+
+Co-Groups:
+-----------
+
+FROM (
+     FROM (
+             FROM action_video av
+             SELECT av.uid AS uid, av.id AS id, av.date AS date
+ 
+             UNION ALL
+ 
+             FROM action_comment ac
+             SELECT ac.uid AS uid, ac.id AS id, ac.date AS date
+     ) union_actions
+     SELECT union_actions.uid, union_actions.id, union_actions.date
+     CLUSTER BY union_actions.uid) map
+ 
+ INSERT OVERWRITE TABLE actions_reduced
+     SELECT TRANSFORM(map.uid, map.id, map.date) USING 'reduce_script' AS (uid, id, reduced_val);
+
+
+
+
+
+
+copy files from local to server:
+--------=-----------------------
+
+sudo scp /home/bizruntime/Desktop/Customers.txt  bizruntime@192.168.1.146:/home/bizruntime/Customers.txt
+
+tar -zcvf hadoop-2.7.2.tar.gz hadoop-2.7.2
+
+copy from root to user :
+-------------------------
+cp  /home/streaming/apache-hive-2.0.0-bin.tar.gz /home/streaming/hadoop/
+
+Hive Installation Steps :
+=========================
+
+rm -Rf $HIVE_HOME/metastore_db
+
+load data inpath /home/bizruntime/Desktop/input1.txt into table foo;
+
+hadoop fs -put /home/streaming/hadoop/hadoop-2.7.2/input/input.txt /user/hive/warehouse/input.txt
+
+
+LOAD DATA INPATH '/user/hive/warehouse/input/input.txt' OVERWRITE INTO TABLE Employee PARTITION(dt='Portland', country='USA');
+
+PARTITION(dt='2008-06-08', country='US')
+
+table creation :
+----------------
+
+CREATE TABLE student (id int, name string) row format delimited fields terminated by ',' stored as textfile LOCATION '/user/hive/warehouse/input/input1.txt' ;
+
+CREATE TABLE Employee (CustomerID int, CustomerName string ,ContactName string,	Address string,PostalCode int) PARTITIONED BY(City STRING, country STRING) row format delimited fields terminated by '\t'  stored as textfile LOCATION '/user/hive/warehouse/input/input.txt' ;
+Put the data into HDFS :
+------------------------
+hadoop fs -put /home/bizruntime/Desktop/Customers.txt /user/hive/warehouse/input/input.txt
+
+Load The data into Hive tables:
+-------------------------------
+LOAD DATA INPATH '/user/hive/warehouse/input/input2.txt' OVERWRITE INTO TABLE student;
+
+
+cp  /usr/share/java/mysql-connector-java.jar $HIVE_HOME/lib/mysql-connector-java.jar
+
+
+
+SOURCE /home/bizruntime/hadoop-2.7.2/apache-hive-2.0.0-bin/scripts/metastore/upgrade/mysql/hive-txn-schema-2.0.0.mysql.sql;
+
+<property>
+      <name>javax.jdo.option.ConnectionURL</name>
+      <value>jdbc:mysql://192.168.1.193/metastore?createDatabaseIfNotExist=true</value>
+      <description>metadata is stored in a MySQL server</description>
+   </property>
+   <property>
+      <name>javax.jdo.option.ConnectionDriverName</name>
+      <value>com.mysql.jdbc.Driver</value>
+      <description>MySQL JDBC driver class</description>
+   </property>
+   <property>
+      <name>javax.jdo.option.ConnectionUserName</name>
+      <value>hiveuser</value>
+      <description>user name for connecting to mysql server</description>
+   </property>
+   <property>
+      <name>javax.jdo.option.ConnectionPassword</name>
+      <value>hivepassword</value>
+      <description>password for connecting to mysql server</description>
+   </property>
+
+
+
+export HADOOP_HOME=/home/bizruntime/hadoop-2.7.2
+export HADOOP_INSTALL=$HADOOP_HOME
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+export HADOOP_CONF_DIR=$HADOOP_HOME
+export HADOOP_PREFIX=$HADOOP_HOME
+export HADOOP_LIBEXEC_DIR=$HADOOP_HOME/libexec
+export JAVA_LIBRARY_PATH=$HADOOP_HOME/lib/native:$JAVA_LIBRARY_PATH
+export HADOOP_CONF_DIR=$HADOOP_PREFIX/etc/hadoop
+
+
+
+sudo -u hdfs hadoop fs -chown bizruntime:bizruntime /tmp
+http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.21/mysql-connector-java-5.1.21.jar
+
+ FROM Employee emp INSERT OVERWRITE TABLE Emp_Details PARTITION(City='Finland', country='USA') SELECT emp.CustomerName,emp.ContactName,emp.Address,emp.City,emp.PostalCode WHERE emp.country = 'USA';
+
+INSERT OVERWRITE TABLE JoinTable SELECT emp.*, sal.gender, sal.age FROM Employee emp FULL OUTER JOIN Salaries sal ON (sal.userid = emp.eid) WHERE emp.country = 'USA';
+
+for hive partitioning: https://dzone.com/articles/introduction-hives
+For CSV Data: http://stat-computing.org/dataexpo/2009/the-data.html
+
+
+CREATE TABLE IF NOT EXISTS employee ( eid int, name String,salary String, destination String) COMMENT ‘Employee details’ ROW FORMAT DELIMITED FIELDS TERMINATED BY ‘\t’ LINES TERMINATED BY ‘\n’ STORED AS TEXTFILE;
+
+
+
+LOAD DATA INPATH '/user/hive/student.txt' OVERWRITE INTO TABLE employee;
+
+CREATE TABLE IF NOT EXISTS employee ( eid int, name String, salary String, destination String)

@@ -1,0 +1,67 @@
+package com.akka.integration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import akka.actor.Props;
+import akka.japi.pf.ReceiveBuilder;
+import akka.stream.actor.AbstractActorPublisher;
+import akka.stream.actor.ActorPublisherMessage;
+
+public class JobManager extends AbstractActorPublisher<Job> {
+
+	public static final JobAcceptedMessage JobAccepted = new JobAcceptedMessage();
+
+	public static final JobDeniedMessage JobDenied = new JobDeniedMessage();
+
+	private final List<Job> buf = new ArrayList<>();
+
+	private final int MAX_BUFFER_SIZE = 100;
+
+	public static Props props() {
+
+		return Props.create(JobManager.class);
+
+	}
+
+	public JobManager() {
+
+		receive(ReceiveBuilder.match(Job.class, job -> buf.size() == MAX_BUFFER_SIZE, job -> {
+
+			sender().tell(JobDenied, self());
+
+		}).match(Job.class, job -> {
+			sender().tell(JobAccepted, self());
+
+			if (buf.isEmpty() && totalDemand() > 0) {
+				onNext(job);
+
+			} else {
+				buf.add(job);
+				deliverBuf();
+			}
+		}).match(ActorPublisherMessage.Request.class, request -> deliverBuf())
+				.match(ActorPublisherMessage.Cancel.class, cancel -> context().stop(self())).build());
+	}
+
+	private void deliverBuf() {
+
+		if (totalDemand() > 0) {
+
+			if (totalDemand() <= Integer.MAX_VALUE) {
+
+				List<Job> sublist = buf.subList(0, Math.min(buf.size(), (int) totalDemand()));
+				sublist.forEach(this::onNext);
+				buf.removeAll(sublist);
+				break;
+			} else {
+
+				List<Job> sublist = buf.subList(0, Math.min(buf.size(), Integer.MAX_VALUE));
+				sublist.forEach(this::onNext);
+				buf.removeAll(sublist);
+			}
+
+		}
+	}
+
+}

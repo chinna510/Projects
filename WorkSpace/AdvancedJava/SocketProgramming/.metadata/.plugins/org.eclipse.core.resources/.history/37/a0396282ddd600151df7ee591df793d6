@@ -1,0 +1,24 @@
+package com.datagram;
+
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+
+public class DataSender {
+	public static void main(String[] args) throws IOException {
+		DatagramSocket socket = new DatagramSocket();
+		String str = "welcome to bizruntime ";
+		InetAddress ia = InetAddress.getByName("localhost");
+		DatagramPacket packet = new DatagramPacket(str.getBytes(), str.length(), ia, 3000);
+		socket.send(packet);
+		System.out.println("packet delivered");
+		System.out.println(socket.getBroadcast());
+		System.out.println(socket.getLocalPort());
+		System.out.println(socket.getLocalAddress());
+		System.out.println(socket.getLocalSocketAddress());
+		System.out.println(socket.getSendBufferSize());
+		System.out.println(socket.isConnected());
+		socket.close();
+	}
+}

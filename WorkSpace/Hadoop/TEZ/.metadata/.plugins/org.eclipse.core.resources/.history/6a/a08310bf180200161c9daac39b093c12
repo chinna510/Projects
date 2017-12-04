@@ -1,0 +1,75 @@
+package com.tez.example;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.mapred.InputFormat;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
+import org.apache.tez.client.TezClient;
+import org.apache.tez.dag.api.DAG;
+import org.apache.tez.dag.api.DataSinkDescriptor;
+import org.apache.tez.dag.api.DataSourceDescriptor;
+import org.apache.tez.dag.api.TezConfiguration;
+import org.apache.tez.mapreduce.input.MRInput;
+import org.apache.tez.mapreduce.output.MROutput;
+import org.apache.zookeeper.Op.Create;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class SortMergeJoinEx extends TezExampleBase {
+	private static Logger logger = LoggerFactory.getLogger(SortMergeJoinEx.class);
+
+	@Override
+	protected void printUsage() {
+		logger.error("Usage:sortmergejoin <file1> <file2> <numPartitions> <outPath>");
+	}
+
+	@Override
+	protected int validateArgs(String[] otherArgs) {
+		if (otherArgs.length != 4) {
+			return 2;
+		}
+		return 0;
+	}
+
+	@Override
+	protected int runJob(String[] args, TezConfiguration tezConf, TezClient tezClient) throws Exception {
+		String inputDir1 = args[0];
+		String inputDir2 = args[1];
+		int numPartitions = Integer.parseInt(args[2]);
+		String outputDir = args[3];
+		Path inputpath1 = new Path(inputDir1);
+		Path inputpath2 = new Path(inputDir2);
+		Path outputpath = new Path(outputDir);
+
+		FileSystem fs = FileSystem.get(tezConf);
+		if (fs.exists(outputpath)) {
+			logger.error("Output Directory  " + outputDir + " Already Exists");
+			return 3;
+		}
+		if (numPartitions <= 0) {
+			logger.error("should have partitions <=0");
+			return 4;
+		}
+		DAG dag = createDag(tezConf, inputpath1, inputpath2, numPartitions, outputpath);
+		logger.info("SortMergeJoinExample Running .....");
+		return runDag(dag, isCountersLog(), logger);
+
+	}
+
+	private DAG createDag(TezConfiguration tezConf, Path inputpath1, Path inputpath2, int numPartitions,
+			Path outputpath) {
+		DataSourceDescriptor dataSource1 = MRInput
+				.createConfigBuilder(new Configuration(tezConf), TextInputFormat.class, inputpath1.toUri().toString())
+				.build();
+		DataSourceDescriptor dataSource2 = MRInput
+				.createConfigBuilder(new Configuration(tezConf), TextInputFormat.class, inputpath2.toUri().toString())
+				.build();
+		DataSinkDescriptor dataSink = MROutput
+				.createConfigBuilder(tezConf, TextOutputFormat.class, outputpath.toUri().toString()).build();
+
+		return null;
+	}
+
+}

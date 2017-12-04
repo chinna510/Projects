@@ -1,0 +1,20 @@
+package com.graph.max;
+
+import java.io.Serializable;
+
+import scala.runtime.AbstractFunction3;
+
+public class VertexProgram extends AbstractFunction3<Object, Integer, Integer, Integer> implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public Integer apply(Object id, Integer olddest, Integer newdest) {
+
+		System.out.println("Old Dest : " + olddest);
+		System.out.println("New  Dest : " + newdest);
+
+		return Math.min(olddest, newdest);
+	}
+
+}

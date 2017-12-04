@@ -1,0 +1,27 @@
+package com.akka;
+
+import akka.actor.ActorRef;
+import akka.actor.ActorSelection;
+import akka.actor.Props;
+import akka.actor.UntypedActor;
+import akka.event.Logging;
+import akka.event.LoggingAdapter;
+
+public class Actor1 extends UntypedActor {
+	LoggingAdapter log = Logging.getLogger(getContext().system(), this);
+
+	@Override
+	public void onReceive(Object msg) throws Exception {
+
+		if (msg instanceof String) {
+
+			log.info("Recieved Message From Main Is : " + msg);
+
+			String message = (String) msg;
+
+			// ActorRef actor2 =
+			// getContext().actorOf(Props.create(Actor2.class));
+
+		}
+	}
+}

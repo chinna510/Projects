@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Validating an XML Document</title>
+<script language = "javascript">
+function getData()
+{
+var XMLHttpRequestObject = false;
+XMLHttpRequestObject = new
+ActiveXObject("Microsoft.XMLHTTP");
+if(XMLHttpRequestObject) {
+XMLHttpRequestObject.open("GET", "./party.xml?b=5", true);
+XMLHttpRequestObject.onreadystatechange = function()
+{
+if (XMLHttpRequestObject.readyState == 4 &&
+XMLHttpRequestObject.status == 200) {
+var xmlDocument = XMLHttpRequestObject.responseXML;
+var parser = new ActiveXObject("MSXML2.DOMDocument");
+parser.validateOnParse = true;
+parser.load(XMLHttpRequestObject.responseXML);
+var target = document.getElementById("targetDiv");
+if (parser.parseError.errorCode != 0) {
+target.innerText = "Error in " +
+parser.parseError.url +
+" line " + parser.parseError.line +
+" position " + parser.parseError.linepos +
+".\nError source: " + parser.parseError.srcText +
+"\n" + parser.parseError.reason +
+"\n" + "Error: " +
+parser.parseError.errorCode;
+}
+else {
+displayGuest(xmlDocument);
+}
+}
+}
+XMLHttpRequestObject.send(null);
+}
+}
+function displayGuest(xmldoc)
+{
+var partiesNode, partyNode, peopleNode;
+var firstNameNode, lastNameNode, displayText;
+partiesNode = xmldoc.documentElement;
+partyNode = partiesNode.firstChild;
+peopleNode = partyNode.lastChild;
+personNode = peopleNode.lastChild;
+firstNameNode = personNode.firstChild;
+lastNameNode = firstNameNode.nextSibling;
+displayText = "The third guest was " +
+firstNameNode.firstChild.nodeValue + ' '
++ lastNameNode.firstChild.nodeValue;
+var target = document.getElementById("targetDiv");
+target.innerHTML=displayText;
+}
+</script>
+</head>
+<body>
+<h1>Validating an XML Document</h1>
+<form>
+<input type = "button" value = "Get the third guest"
+onclick = "getData()">
+</form>
+<div id="targetDiv" width =100 height=100>
+Your data will appear here.
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# Create the first data frame.\nemp.data1 <- data.frame(\n  emp_id = c (1:5), \n  emp_name = c(\"Rick\",\"Dan\",\"Michelle\",\"Ryan\",\"Gary\"),\n  salary = c(623.3,515.2,611.0,729.0,843.25), \n  \n  start_date = as.Date(c(\"2012-01-01\", \"2013-09-23\", \"2014-11-15\", \"2014-05-11\",\n                         \"2015-03-27\")),\n  dept = c(\"IT\",\"Operations\",\"IT\",\"HR\",\"Finance\"),\n  stringsAsFactors = FALSE\n)\n\nprint(\"First DataFrame\")\n\nprint(emp.data1)\nprint(\"\")\n# Create the second data frame\nemp.data2 <- \tdata.frame(\n  emp_id = c (6:8), \n  emp_name = c(\"Rasmi\",\"Pranab\",\"Tusar\"),\n  salary = c(578.0,722.5,632.8), \n  start_date = as.Date(c(\"2013-05-21\",\"2013-07-30\",\"2014-06-17\")),\n  dept = c(\"IT\",\"Operations\",\"Fianance\"),\n  stringsAsFactors = FALSE\n)\n\n\nprint(\"Second DataFrame\")\nprint(emp.data2)\nprint(\"\")\n\n\nresult <- rbind(emp.data1,emp.data2)\n\nprint(result)\n\nprint(\"Result DataFrame\")\nprint(result)\n\n",
+    "created" : 1467797469878.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3750094732",
+    "id" : "6D16742",
+    "lastKnownWriteTime" : 1467797892,
+    "last_content_update" : 1467797892855,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R-DataFrames/AddRowToDF.R",
+    "project_path" : "AddRowToDF.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

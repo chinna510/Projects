@@ -1,0 +1,6 @@
+chinna,16
+rich,18
+jothi,17
+narendra,22
+vijay,19
+paul,25

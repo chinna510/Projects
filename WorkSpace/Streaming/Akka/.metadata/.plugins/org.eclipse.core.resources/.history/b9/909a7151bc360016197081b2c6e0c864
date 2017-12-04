@@ -1,0 +1,15 @@
+package com.akka.logging;
+
+import akka.actor.ActorSystem;
+
+public class LoggingActorTest {
+
+	
+	public void test(){
+		
+		ActorSystem system=ActorSystem.create("Logging");
+		
+		
+	}
+	
+}

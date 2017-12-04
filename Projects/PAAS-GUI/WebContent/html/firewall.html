@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>PAAS-Firewall</title>
+
+<link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<script src="../js/firewall/firewall.js" type="text/javascript"></script>
+<link href="../css/table/table.css" rel="stylesheet">
+
+<body>
+
+	<div class="page-header" align="center">
+		<h1>PAAS-Firewall</h1>
+	</div>
+
+	<div ng-app="myfirewall" ng-controller="MainCtrl" ng-init="selectFirewallOutbounds();selectFirewallInbounds()">
+	
+		<div  class="container">
+
+			<!-- Outbound form -->
+
+			<form role="outerform" style="border: 1px solid silver;">
+				<label><h3 style="color: #006666">Outbound rules</h3></label>
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr border="1" cellpadding="10">
+							<th width="200">Type</th>
+							<th width="200">Protocol</th>
+							<th width="200">Port Range</th>
+							<th width="200">Source</th>
+							<th width="200">IP</th>
+							<th>Action</th>
+
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr ng-repeat="field in fields">
+						   <td>{{field.out_type}}</td>
+						   <td>{{field.out_protocol}}</td>
+						   <td>{{field.out_portrange}}</td>
+						   <td>{{field.out_source}}</td>
+						   <td>{{field.out_ip}}</td>
+						   <td><button ng-click="deleteFirewallOutbounds(field.out_type)"
+									class="btn btn-danger">Delete</button></td>
+					</tr>
+
+					</tbody>
+				</table>
+				<div class="modal-footer" style="background: #ccefff">
+					<div class="bootstrap-dialog-footer">
+						<div class="bootstrap-dialog-footer-buttons">
+<!-- 
+							<button class="btn btn-warning btn-nirmata" type="reset"
+								ng-click="reset()">Reset</button>
+							<script>
+								$scope.reset = function() {
+									$scope.list = {};
+								}
+							</script>
+							<button class="btn btn-primary btn-nirmata">Add</button>   ========no need=========-->
+							
+							 <button class="col-xs-1 col-md-1 col-lg-1 btn btn-primary btn-nirmata" ng-click="toggleModal()">Add Rule</button>
+							
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<modal title="Add Outbound Rule" visible="showModal">
+				
+				<form role="outbound">
+
+					<div class="form-group">
+						<label for="out_type">Type</label> <select class="form-control"ng-model="field.out_type">
+							<option value="HTTP">HTTP</option>
+							<option value="HTTPS">HTTPS</option>
+							<option value="All ICMP">All ICMP</option>
+							<option value="All TCP">All TCP</option>
+							<option value="All UDP">All UDP</option>
+						</select>
+					</div>
+
+
+					<div class="form-group">
+						<label for="out_protocol">Protocol</label> <select class="form-control" ng-model="field.out_protocol">
+						<option value="TCP">TCP</option>
+						<option value="ICMP">ICMP</option>
+						<option value="UDP">UDP</option>
+					</select>
+					</div>
+					
+					
+					<div class="form-group">
+						<label for="out_portrange">Port Range</label> <input type="text"
+							class="form-control" id="out_portrange" placeholder="Port Range" ng-model="field.out_portrange"/>
+					</div>
+					
+					
+					<div class="form-group">
+						<label for="out_source">Source</label><select class="form-control" ng-model="field.out_source">
+						<option value="Anywhere">Anywhere</option>
+						<option value="Custome IP">Custome IP</option>
+					</select>
+					</div>
+				
+				
+					<div class="form-group">
+						<label for="out_ip">IP</label> <input type="text"
+							class="form-control" id="out_ip" placeholder="0.0.0.0/0" ng-model="field.out_ip"/>
+					</div>
+					
+					
+					
+					<div class="modal-footer" style="background: #ccefff">
+						<div class="bootstrap-dialog-footer">
+							<div class="bootstrap-dialog-footer-buttons">
+
+								
+
+								<button type="button"class="btn btn-danger btn-nirmata col-xs-2"data-dismiss="modal">Cancel</button>
+							<button class="btn btn-primary btn-nirmata" data-dismiss="modal" ng-click="regFirewallOutbounds()">Add</button>
+							</div>
+						</div>
+					</div>
+				</form>
+				</modal>
+			</form>
+
+
+			<!-- Outbound form -->
+
+			<form role="outerform" style="border: 1px solid silver;">
+				<label><h3 style="color: #006666">Inbound rules</h3></label>
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr border="1" cellpadding="10">
+							<th width="200">Type</th>
+							<th width="200">Protocol</th>
+							<th width="200">Port Range</th>
+							<th width="200">Source</th>
+							<th width="200">IP</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr ng-repeat="field1 in fields1">
+						   <td>{{field1.in_type}}</td>
+						   <td>{{field1.in_protocol}}</td>
+						   <td>{{field1.in_portrange}}</td>
+						   <td>{{field1.in_source}}</td>
+						   <td>{{field1.in_ip}}</td>
+						   <td><button ng-click="deleteImageRegistry(field1.name)"
+									class="btn btn-danger">Delete</button></td>
+
+					   </tr>
+
+					</tbody>
+				</table>
+				
+				<div class="modal-footer" style="background: #ccefff">
+					<div class="bootstrap-dialog-footer">
+						<div class="bootstrap-dialog-footer-buttons">
+							<button class="col-xs-1 col-md-1 col-lg-1 btn btn-primary btn-nirmata"ng-click="toggleModal1()">Add Rule</button>
+						</div>
+					</div>
+				</div>
+
+				<modal title="Add Inbound rules" visible="showModal1">
+				
+				<form role="inbound">
+				
+					<div class="form-group">border="1" cellpadding="10"
+						<label for="in_type">Type</label> <input type="text"
+							class="form-control" id="in_type" placeholder="Inbound Type" ng-model="field1.in_type">
+					</div>
+					
+					<div class="form-group">
+						<label for="in_protocol">Protocol</label> <input type="text"
+							class="form-control" id="in_protocol" placeholder="Protocol" ng-model="field1.in_protocol">
+					</div>
+					
+					<div class="form-group">
+						<label for="in_portrange">Port Range</label> <input type="text"
+							class="form-control" id="in_port_range" pEdit Inbound ruleslaceholder="Port Range" ng-model="field1.in_portrange">
+					</div>
+					
+					<div class="form-group">
+						<label for="in_source">Source</label> <input type="text"
+							class="form-control" id="in_source" placeholder="Source" ng-model="field1.in_source">
+					</div>
+					
+					<div class="form-group">
+						<label for="in_ip">IP</label> <input type="text"
+							class="form-control" id="in_ip" placeholder="0.0.0.0/0" ng-model="field1.in_ip"/>
+					</div>
+
+					<div class="modal-footer" style="background: #ccefff">
+						<div class="bootstrap-dialog-footer">
+							<div class="bootstrap-dialog-footer-buttons">
+								<button type="button"class="btn btn-danger btn-nirmata col-xs-2"data-dismiss="modal">Cancel</button>
+								<button class="btn btn-primary btn-nirmata" data-dismiss="modal" ng-click="regFirewallInbounds()">Add</button>
+							</div>
+						</div>
+					</div>
+					
+				</form>
+				
+				</modal> 
+ 
+			</form>
+
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>

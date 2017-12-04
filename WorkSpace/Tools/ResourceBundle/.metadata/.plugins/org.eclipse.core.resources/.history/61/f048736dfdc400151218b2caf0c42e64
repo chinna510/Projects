@@ -1,0 +1,75 @@
+
+package example;
+
+import java.io.ByteArrayInputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Locale;
+
+import javax.xml.transform.stream.StreamSource;
+
+import org.milyn.Smooks;
+import org.milyn.SmooksException;
+import org.milyn.container.ExecutionContext;
+import org.milyn.io.StreamUtils;
+import org.milyn.payload.StringResult;
+import org.xml.sax.SAXException;
+
+public class Main {
+
+	private static byte[] messageIn = readInputMessage();
+
+	private final Smooks smooks;
+
+	protected Main() throws IOException, SAXException {
+		smooks = new Smooks("src/test/resources/smooks-config.xml");
+	}
+
+	protected String runSmooksTransform(ExecutionContext executionContext)
+			throws IOException, SAXException, SmooksException {
+		try {
+			Locale defaultLocale = Locale.getDefault();
+			Locale.setDefault(new Locale("en", "IE"));
+
+			StringResult result = new StringResult();
+			FileOutputStream fout = new FileOutputStream("src/test/resources/output.java");
+
+			smooks.filterSource(executionContext, new StreamSource(new ByteArrayInputStream(messageIn)),
+					result);
+
+			Locale.setDefault(defaultLocale);
+
+			return result.toString();
+		} finally {
+			smooks.close();
+		}
+	}
+
+	public static void main(String[] args) throws IOException, SAXException, SmooksException {
+
+		System.out.println(new String(messageIn));
+
+		Main smooksMain = new Main();
+		ExecutionContext executionContext = smooksMain.smooks.createExecutionContext();
+
+		System.out.println(smooksMain.runSmooksTransform(executionContext));
+
+		System.out.println(executionContext.getBeanContext().getBean("order"));
+
+	}
+
+	private static byte[] readInputMessage() {
+		try {
+			return StreamUtils.readStream(new FileInputStream("src/test/resources/input-message.jsn"));
+		} catch (IOException e) {
+			e.printStackTrace();
+			return "<no-message/>".getBytes();
+		}
+	}
+
+	public String runSmooksTransform() throws IOException, SAXException {
+		ExecutionContext executionContext = smooks.createExecutionContext();
+		return runSmooksTransform(executionContext);
+	}
+}

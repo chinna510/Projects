@@ -1,0 +1,17 @@
+package com.threadGroup;
+
+public class ThreadGroupEx implements Runnable {
+	public void test() {
+		ThreadGroup pgroup = new ThreadGroup("parent");
+		ThreadGroup cGroup = new ThreadGroup(pgroup, "Child");
+	}
+
+	public void run() {
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

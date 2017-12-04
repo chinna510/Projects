@@ -1,0 +1,21 @@
+package com.tez.examples;
+
+import org.apache.tez.runtime.api.ProcessorContext;
+import org.apache.tez.runtime.library.processor.SimpleProcessor;
+
+import com.google.common.base.Preconditions;
+
+public class ForwardingProcessor extends SimpleProcessor {
+
+	public ForwardingProcessor(ProcessorContext context) {
+		super(context);
+
+	}
+
+	@Override
+	public void run() throws Exception {
+		Preconditions.checkArgument(getInputs().size() == 1);
+		Preconditions.checkArgument(getOutputs().size() == 1);
+	}
+
+}

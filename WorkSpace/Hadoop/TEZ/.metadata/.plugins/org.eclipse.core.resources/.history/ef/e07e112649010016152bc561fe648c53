@@ -1,0 +1,38 @@
+package com.tez.examples;
+
+import org.apache.tez.client.TezClient;
+import org.apache.tez.dag.api.TezConfiguration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class HashJoinsEx extends TezExampleBase {
+	private static final String broadcastOption = "doBroadcast";
+	private static final String streamingSide = "streamingSide";
+	private static final String hashSide = "hashSide";
+	private static final String inputFile = "inputFile";
+	private static final String joiner = "joiner";
+	private static final String joinOutput = "joinOutput";
+	private static final Logger LOG = LoggerFactory.getLogger(HashJoinsEx.class);
+
+	public static void main(String[] args) {
+
+	}
+
+	protected void printUsage() {
+		LOG.error("Usage: " + "hashjoin <file1> <file2> <numPartitions> <outPath> [" + broadcastOption
+				+ "(default false)]");
+	}
+
+	@Override
+	protected int runJob(String[] args, TezConfiguration tezConf, TezClient tezClient) throws Exception {
+		boolean doBroadcast = args.length == 5 && args[4].equals(broadcastOption) ? true : false;
+		LOG.info("Running HashJoinExample" + (doBroadcast ? "-WithBroadcast" : ""));
+		
+		String streamInputDir = args[0];
+		String hashInputDir = args[1];
+		int numPartitions = Integer.parseInt(args[2]);
+		String outputDir = args[3];
+		return 0;
+	}
+
+}

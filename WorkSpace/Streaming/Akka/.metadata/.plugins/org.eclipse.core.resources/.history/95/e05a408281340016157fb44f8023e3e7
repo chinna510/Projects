@@ -1,0 +1,7 @@
+package com.akka.remoting;
+
+import akka.actor.UntypedActor;
+
+public class CreationActor extends UntypedActor{
+
+}

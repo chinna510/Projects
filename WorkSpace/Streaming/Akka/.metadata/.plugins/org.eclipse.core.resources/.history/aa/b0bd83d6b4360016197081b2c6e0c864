@@ -1,0 +1,12 @@
+package com.akka.ActorClassification;
+
+import akka.actor.ActorSystem;
+import akka.event.japi.ManagedActorEventBus;
+
+public class ActorBusImpl extends ManagedActorEventBus<Notification> {
+
+	public ActorBusImpl(ActorSystem system) {
+		super(system);
+	}
+
+}

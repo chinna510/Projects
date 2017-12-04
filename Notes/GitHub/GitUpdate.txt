@@ -1,0 +1,6 @@
+Step1 : Cloning
+Step2 : git init
+Step3 : git add *
+Step4 : git status
+Step5 : git commit -m "message"
+step6 : git push -u origin master

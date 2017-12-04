@@ -1,0 +1,26 @@
+package com.services;
+
+import java.util.List;
+
+import com.pojo.Animal;
+
+public class AnimalService {
+
+	public List<Animal> getAnimalAsList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public char[] getAnimalsCount() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	public void createAnimal(Animal animal) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

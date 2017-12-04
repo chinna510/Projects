@@ -1,0 +1,21 @@
+package com.akka.distribute;
+
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+
+public class PublisherTest {
+
+	public void test() {
+		ActorSystem system = ActorSystem.create("ActorSystem");
+		ActorRef ref = system.actorOf(Props.create(Publisher.class), "publisher");
+		ref.tell("hello", null);
+
+	}
+
+	public static void main(String[] args) {
+		PublisherTest test = new PublisherTest();
+		test.test();
+	}
+
+}

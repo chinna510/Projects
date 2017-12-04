@@ -1,0 +1,31 @@
+package com.biz.akka;
+
+import java.io.Serializable;
+
+import akka.actor.UntypedActor;
+
+public class HelloAkka {
+public static class Greet implements Serializable{}
+public class WhoToGreet implements Serializable{
+	final String who;
+	public WhoToGreet(String who){
+		this.who=who;
+		
+	}
+	
+}
+public static class Greeting implements Serializable{
+	final String message;
+	public Greeting(String message){
+		this.message=message;
+	}
+}
+
+public  static class Greeter extends UntypedActor{
+	final String greeting="";
+	public void onRecieve(){
+		
+	}
+	
+}
+}

@@ -1,0 +1,18 @@
+package com.datagram;
+
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+
+public class DataSender {
+	public static void main(String[] args) throws IOException {
+		DatagramSocket socket = new DatagramSocket(3333);
+		String str = "welcome to bizruntime hkgjjllg";
+		InetAddress ia = InetAddress.getByName("192.168.1.15");
+		DatagramPacket packet = new DatagramPacket(str.getBytes(), str.length(), ia, 3333);
+		socket.send(packet);
+		System.out.println("packet delivered");
+		socket.close();
+	}
+}

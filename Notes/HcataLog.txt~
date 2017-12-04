@@ -1,0 +1,66 @@
+HCataLog Installation:
+======================
+
+1. By default Hcatalog installed with hive so no need of installation again
+2. If u want to run Hcatalog by using big just run this command
+        pig -useHCatalog
+
+
+
+1. export PIG_CLASSPATH=$HCAT_HOME/share/hcatalog/hcatalog-core*.jar:\$HCAT_HOME/share/hcatalog/hcatalog-pig-adapter*.jar:\$HIVE_HOME/lib/hive-metastore-*.jar:$HIVE_HOME/lib/libthrift-*.jar:\$HIVE_HOME/lib/hive-exec-*.jar:$HIVE_HOME/lib/libfb303-*.jar:\$HIVE_HOME/lib/jdo2-api-*-ec.jar:$HIVE_HOME/conf:$HADOOP_HOME/conf:\$HIVE_HOME/lib/slf4j-api-*.jar
+
+
+create external table Static_Partition (EmployeeID Int,FirstName String,Designation  String,Salary Int,Department String) row format delimited fields terminated by ",";
+
+create  table hive_partition (EmployeeID Int,FirstName String,Designation  String,Salary Int) PARTITIONED BY (Department String) row format delimited fields terminated by ","; 
+
+INSERT OVERWRITE TABLE hive_partition PARTITION(department) SELECT EmployeeID, FirstName,Designation,Salary,department FROM static_Partition; 
+
+LOAD DATA INPATH '/user/hive/warehouse/emp.txt'  INTO TABLE Static_Partition;   
+
+FROM static_Partition INSERT OVERWRITE TABLE hive_partition PARTITION(department) SELECT EmployeeID, FirstName,Designation,Salary,department DISTRIBUTE BY department;
+
+INSERT OVERWRITE TABLE Unm_Parti PARTITION(department) SELECT EmployeeID, FirstName,Designation,Salary,department FROM Unm_Dup_Parti; 
+
+
+REGISTER /home/bizruntime/hadoop-2.7.2/apache-hive-2.0.0-bin/hcatalog/share/hcatalog/hive-hcatalog-core-2.0.0.jar;
+REGISTER /home/bizruntime/hadoop-2.7.2/apache-hive-2.0.0-bin/hcatalog/share/hcatalog/hive-hcatalog-server-extensions-2.0.0.jar;
+REGISTER /home/bizruntime/hadoop-2.7.2/apache-hive-2.0.0-bin/hcatalog/share/hcatalog/hive-hcatalog-pig-adapter-2.0.0.jar;
+REGISTER /home/bizruntime/hadoop-2.7.2/apache-hive-2.0.0-bin/hcatalog/share/hcatalog/hive-hcatalog-streaming-2.0.0.jar;
+REGISTER /home/bizruntime/hadoop-2.7.2/apache-hive-2.0.0-bin/lib/slf4j-api-*.jar;
+REGISTER /home/bizruntime/hadoop-2.7.2/apache-hive-2.0.0-bin/hcatalog/lib/hive-hcatalog-hbase-storage-handler-0.13.1.jar;
+
+
+$ hcat -e "create table hcatalogtest(name string,place string,id int) row format delimited fields terminated by ':' stored as textfile"
+hcatalogtest
+hcat -e "desc hcatalogtest"
+
+HCataLog Example link:
+======================
+
+http://saurzcode.in/2015/01/use-hcatalog-pig/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+package com.akka.EventStream;
+
+import akka.actor.UntypedActor;
+
+public class Listener extends UntypedActor {
+
+	@Override
+	public void onReceive(Object msg) throws Exception {
+		if (msg instanceof Jazz) {
+
+		}
+	}
+
+}

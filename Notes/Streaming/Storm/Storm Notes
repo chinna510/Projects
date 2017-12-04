@@ -1,0 +1,35 @@
+Nimbus Service on Master Node - 
+--------------------------------
+1. Nimbus is a daemon that runs on the master node of Storm cluster. 
+2. It is responsible for distributing the code among the worker nodes, assigning input data sets to machines for processing and monitoring for failures.
+3. Nimbus service is an Apache Thrift service enabling you to submit the code in any programming language. 
+4. Nimbus service relies(depend) on Apache ZooKeeper service to monitor the message processing tasks as all the worker nodes update their tasks status in Apache ZooKeeper service.
+
+Supervisor Service on Worker Node -
+------------------------------------
+
+1. All the workers nodes in Storm cluster run a daemon called Supervisor. 
+2. Supervisor service receives the work assigned to a machine by Nimbus service.
+3. Supervisor manages worker processes to complete the tasks assigned by Nimbus. 
+
+Topology - 
+----------
+1. Topology, in simple terms, is a graph of computation. 
+2. Each node in a topology contains processing logic, and links between nodes indicate how data should be passed around between nodes.
+3. A Topology typically runs distributively on multiple workers processes on multiple worker nodes.
+
+Spout -
+--------
+1. A Topology starts with a spout(source of streams). 
+2. A stream is made of unbounded sequence of tuples.
+3. Tuples are sequences, just like lists,The tuples cannot be changed unlike lists. 
+4. A spout may read tuples off a messaging framework and emit(produce) them as stream of messages or it may connect to twitter 
+   API and emit a stream of tweets.
+
+Bolt - 
+-------
+1. A Bolt represents a node in a topology.
+2. It defines smallest processing logic within a topology. Output of a bolt can be fed into another bolt as input in a topology.
+
+
+

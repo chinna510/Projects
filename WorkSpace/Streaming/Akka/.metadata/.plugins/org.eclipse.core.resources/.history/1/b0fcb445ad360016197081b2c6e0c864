@@ -1,0 +1,14 @@
+package com.akka.subchannel;
+
+import akka.actor.ActorSystem;
+
+public class SubChannelTest {
+
+	ActorSystem system=ActorSystem.create("SubChannel");
+	
+	
+	public void test(){
+		
+	}
+	
+}

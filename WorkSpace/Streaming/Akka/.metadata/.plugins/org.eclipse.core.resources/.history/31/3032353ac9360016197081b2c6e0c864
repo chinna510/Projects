@@ -1,0 +1,11 @@
+package com.akka.schedulers;
+
+public class TickerTest {
+
+	public void test(){
+		
+		
+	}
+	
+	
+}

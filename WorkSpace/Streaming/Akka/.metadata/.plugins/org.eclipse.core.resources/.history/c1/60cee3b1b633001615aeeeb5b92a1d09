@@ -1,0 +1,16 @@
+package com.akka.distribute;
+
+import java.io.Serializable;
+
+public class EntityEnvelope implements Serializable{
+
+	public long id;
+	public Object payload;
+
+	public EntityEnvelope(long id, Object payload) {
+		this.id = id;
+		this.payload = payload;
+
+	}
+
+}

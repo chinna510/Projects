@@ -1,0 +1,44 @@
+package com.tez;
+
+import java.util.StringTokenizer;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.tez.mapreduce.input.MRInput;
+import org.apache.tez.mapreduce.processor.SimpleMRProcessor;
+import org.apache.tez.runtime.api.Output;
+import org.apache.tez.runtime.api.ProcessorContext;
+import org.apache.tez.runtime.library.api.KeyValueReader;
+import org.apache.tez.runtime.library.api.KeyValueWriter;
+
+import com.google.common.base.Preconditions;
+
+public class TokenProcessor extends SimpleMRProcessor{
+	IntWritable one = new IntWritable(1); 
+    Text word = new Text(); 
+	public TokenProcessor(ProcessorContext context) {
+		super(context);
+		
+	}
+
+	@Override
+	public void run() throws Exception {
+		Preconditions.checkArgument(getInputs().size() == 1); 
+	      Preconditions.checkArgument(getOutputs().size() == 1); 
+	      MRInput input = (MRInput) getInputs().values().iterator().next(); 
+	      KeyValueReader kvReader = input.getReader(); 
+	      Output output = getOutputs().values().iterator().next(); 
+	      KeyValueWriter kvWriter = (KeyValueWriter) output.getWriter(); 
+	      while (kvReader.next()) { 
+	        StringTokenizer itr = new StringTokenizer(kvReader.getCurrentValue().toString()); 
+	        while (itr.hasMoreTokens()) { 
+	          word.set(itr.nextToken()); 
+	          kvWriter.write(word, one); 
+	        } 
+	      } 
+	    } 
+	 
+		
+	}
+
+}

@@ -1,0 +1,34 @@
+
+Syntax:
+=========
+A= load '/pigdata/user.txt' USING PigStorage('|') AS (uid:int, age:int, gender:chararray, position:chararray, rate:long);
+dump A;
+STORE A INTO '/pigstore.txt' USING org.apache.pig.piggybank.storage.DBStorage('com.mysql.jdbc.Driver', 'jdbc:mysql://192.168.1.146:3306/bizruntime1', 'root', 'root', 'INSERT INTO Users (uid, age, gender, position, rate) VALUES (?, ?,?, ?, ?)');
+
+
+
+
+STORE A INTO 'unused' USING org.apache.pig.piggybank.storage.DBStorage('com.mysql.jdbc.Driver', 'jdbc:mysql://192.168.1.146:3306/bizruntime1', 'root', 'root', 'INSERT INTO Users (uid, age, gender, position, rate) VALUES (?, ?,?, ?, ?)');
+
+STORE relation INTO 'unused' USING org.apache.pig.piggybank.storage.DBStorage('com.mysql.jdbc.Driver', 'jdbc:mysql://<mysqlserver>/<database>', '<login>', '<password>', 'REPLACE INTO <table> (<column1>, <column2>) VALUES (?, ?)');
+
+UDF:
+====
+
+import java.io.IOException;
+import org.apache.pig.PigServer;
+public class idmapreduce{
+    public static void main(String[] args) {
+        try {
+            PigServer pigServer = new PigServer("mapreduce");
+            runIdQuery(pigServer, "passwd");
+        }
+        catch(Exception e) {
+        }
+    }
+    public static void runIdQuery(PigServer pigServer, String inputFile) throws IOException {
+        pigServer.registerQuery("A = load '" + /pigdata/user.txt + "' using PigStorage(':');")
+        pigServer.registerQuery("B = foreach A generate $0 as uid;");
+        pigServer.store("B", "/user/idout.txt");
+    }
+}

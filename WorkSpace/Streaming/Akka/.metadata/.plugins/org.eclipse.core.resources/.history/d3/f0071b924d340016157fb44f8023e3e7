@@ -1,0 +1,15 @@
+package com.akka.distribute;
+
+import akka.actor.UntypedActor;
+import akka.cluster.Cluster;
+
+public class MetricsListener extends UntypedActor {
+
+	Cluster cluster = Cluster.get(getContext().system());
+
+	@Override
+	public void onReceive(Object arg0) throws Exception {
+
+	}
+
+}

@@ -1,0 +1,39 @@
+package com.socket;
+
+import java.net.SocketException;
+import java.net.SocketPermission;
+import java.net.UnknownHostException;
+
+import org.apache.log4j.Logger;
+
+public class SocketPermissionTest {
+	static Logger logger = Logger.getLogger(SocketPermissionTest.class);
+
+	public void h_Socket(SocketPermission perm) {
+		if (Thread.currentThread().getThreadGroup().equals(main) && !isPortException(perm)) {
+
+		}
+		if (perm.getActions().contains("listen")) {
+			if (existsInCallStack("sun.management.jmxremote.*", ".*") != -1)
+				return; // RMI Profiler Routing
+
+			SocketPermission impliee = new SocketPermission("*:5800-5810", "listen");
+			if (!impliee.implies(perm) && !isPortException(perm)) {
+				switch (SecurityPolicy.get()) {
+				case NONE:
+					break;
+				default:
+					SecurityPolicy.log().warn("Socket Port Warning, not within 5800...5810 (FMS will not forward it!): "
+							+ perm.getName());
+					SecurityPolicy.log().exception(new Throwable());
+					break;
+				}
+			}
+		}
+	}
+
+	public static void main(String[] args) throws UnknownHostException, SocketException {
+
+	}
+
+}

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\nx <- c(1,2,5,4,7,3)\nfor (i in x) {\n  \n  print(i)\n}",
+    "created" : 1467039364880.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1048424690",
+    "id" : "B98224A7",
+    "lastKnownWriteTime" : 1467039439,
+    "last_content_update" : 1467039439259,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R-Looping/ForLoop.R",
+    "project_path" : "ForLoop.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

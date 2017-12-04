@@ -1,0 +1,44 @@
+package com.akka.future;
+
+import akka.actor.ActorSystem;
+
+import static akka.dispatch.Futures.future;
+
+import java.util.Arrays;
+import java.util.concurrent.Callable;
+import javax.xml.datatype.DatatypeConstants.Field;
+
+import akka.dispatch.Futures;
+import akka.dispatch.Mapper;
+import akka.dispatch.Recover;
+import akka.pattern.Patterns;
+import scala.Tuple2;
+import scala.concurrent.ExecutionContext;
+import scala.concurrent.Future;
+import scala.concurrent.duration.Duration;
+
+public class Future_After {
+	ActorSystem system = ActorSystem.create("ActorSystem");
+
+	public void test() {
+		final ExecutionContext ec = system.dispatcher();
+		Future<String> fail = Futures.failed(new IllegalStateException("OHNoex"));
+		Future<String> delayed = Patterns.after(Duration.create(200, "millis"), system.scheduler(), ec, fail);
+		Future<String> future = future(new Callable<String>() {
+
+			@Override
+			public String call() throws Exception {
+				Thread.sleep(1000);
+
+				return "Foo";
+			}
+		}, ec);
+		Future<String> f1 = Futures.firstCompletedOf(Arrays.asList(future, delayed), ec);
+	}
+
+	public static void main(String[] args) {
+		Future_After fm = new Future_After();
+		fm.test();
+	}
+
+}

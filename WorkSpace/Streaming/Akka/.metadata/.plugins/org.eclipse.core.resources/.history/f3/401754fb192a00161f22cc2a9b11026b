@@ -1,0 +1,18 @@
+package com.biz.akka;
+
+import akka.actor.ActorRef;
+import akka.actor.Props;
+import akka.actor.UntypedActor;
+
+public class WatchActor extends UntypedActor {
+
+	ActorRef ref=this.getContext().actorOf(Props.empty());
+	@Override
+	public void onReceive(Object message) throws Exception {
+		if(message.equals("kill")){
+			
+		}
+		
+	}
+
+}

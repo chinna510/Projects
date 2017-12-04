@@ -1,0 +1,25 @@
+package SparkAccumulator;
+
+import org.apache.spark.AccumulatorParam;
+
+public class StatisticsAccumulatorParam implements AccumulatorParam{
+
+	@Override
+	public Object addInPlace(Object arg0, Object arg1) {
+		
+		return null;
+	}
+
+	@Override
+	public Object zero(Object arg0) {
+		
+		return null;
+	}
+
+	@Override
+	public Object addAccumulator(Object arg0, Object arg1) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

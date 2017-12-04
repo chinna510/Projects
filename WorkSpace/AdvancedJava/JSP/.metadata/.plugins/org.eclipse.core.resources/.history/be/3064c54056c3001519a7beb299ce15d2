@@ -1,0 +1,104 @@
+
+import java.io.*;
+import java.net.*;
+import java.text.*;
+import java.util.*;
+
+/**
+ * A bean that extracts weather information from the U. S. National Weather
+ * Service web site
+ */
+public class Observation implements Serializable {
+	/**
+	 * The base URL for National Weather Service data
+	 */
+	private static final String BASEURL = "http://weather.noaa.gov/weather/current";
+	/**
+	 * Date format used for parsing observation time
+	 */
+	private static final SimpleDateFormat DATEFMT = new SimpleDateFormat("MMM dd, yyyy - hh:mm aa zzz");
+	/**
+	 * Airport code
+	 */
+	private String airportCode;
+	/**
+	 * Full name of location
+	 */
+	private String location;
+	/**
+	 * Time of observation
+	 */
+	private Date time;
+	/**
+	 * Temperature in degrees Celsius
+	 */
+	private Double temperature;
+
+	/**
+	 * Sets the airport code, which causes the bean to be reloaded.
+	 * 
+	 * @param airportCode
+	 *            the airportCode.
+	 */
+	public void setAirportCode(String airportCode) throws IOException {
+		this.airportCode = airportCode;
+		loadFromURL(getURL());
+	}
+
+	/**
+	 * Returns the location.
+	 */
+	public String getLocation() {
+		return location;
+	}
+
+	/**
+	 * Returns the airport code
+	 */
+	public String getAirportCode() {
+		return airportCode;
+	}
+
+	/**
+	 * Sets the location.
+	 * 
+	 * @param location
+	 *            the location.
+	 */
+	protected void setLocation(String location) {
+		this.location = location;
+	}
+
+	/**
+	 * Returns the time.
+	 */
+	public Date getTime() {
+		return time;
+	}
+
+	/**
+	 * Sets the time.
+	 * 
+	 * @param time
+	 *            the time.
+	 */
+	protected void setTime(Date time) {
+		this.time = time;
+	}
+
+	/**
+	* Returns the temperature.
+	*/
+	public double getTemperature()
+	{
+	return (temperature == null)
+	? 0
+	: temperature.doubleValue();
+	}
+
+/**
+	* Sets the temperature.
+	* @param temperature the temperature.
+	*/
+	protected void setTemperature(double temperature)
+	{

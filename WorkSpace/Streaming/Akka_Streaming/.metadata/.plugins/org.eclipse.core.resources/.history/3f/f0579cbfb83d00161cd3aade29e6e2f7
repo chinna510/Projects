@@ -1,0 +1,10 @@
+package com.akka.stream;
+
+import akka.actor.ActorSystem;
+
+public class SupervisionStrategy {
+
+	ActorSystem system=ActorSystem.create("ErrorHandling");
+	
+	
+}

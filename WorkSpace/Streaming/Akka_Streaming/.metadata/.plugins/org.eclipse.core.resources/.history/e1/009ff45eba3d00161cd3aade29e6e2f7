@@ -1,0 +1,24 @@
+package com.akka.stream;
+
+import akka.actor.ActorSystem;
+import akka.japi.Function;
+import akka.stream.ActorMaterializer;
+import akka.stream.ActorMaterializerSettings;
+import akka.stream.Supervision;
+
+public class SupervisionStrategy {
+
+	ActorSystem system = ActorSystem.create("ErrorHandling");
+
+	Function<Throwable, Supervision.Directive> decider=  exc -> {
+		  if (exc instanceof ArithmeticException)
+			    return Supervision.resume();
+			  else
+			    return Supervision.stop();
+		
+	};
+
+	ActorMaterializer mat = ActorMaterializer.create(ActorMaterializerSettings.create(system).withSupervisionStrategy(),
+			system);
+
+}

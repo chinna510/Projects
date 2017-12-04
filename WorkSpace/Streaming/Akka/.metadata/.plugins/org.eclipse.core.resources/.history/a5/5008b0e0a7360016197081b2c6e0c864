@@ -1,0 +1,15 @@
+package com.akka.utilities;
+
+import akka.actor.ActorSystem;
+
+public class LookUpBusTest {
+
+	ActorSystem system=ActorSystem.create("EventBus");
+	
+	
+	public void test(){
+		
+		
+	}
+	
+}

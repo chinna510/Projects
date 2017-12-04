@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:tns="http://mathUtility.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://mathUtility.com/" version="1.0">
+<xs:element name="addIntegers" type="tns:addIntegers"/>
+<xs:element name="addIntegersResponse" type="tns:addIntegersResponse"/>
+<xs:element name="factorial" type="tns:factorial"/>
+<xs:element name="factorialResponse" type="tns:factorialResponse"/>
+<xs:complexType name="addIntegers">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="addIntegersResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="factorial">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="factorialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

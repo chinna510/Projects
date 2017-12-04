@@ -1,0 +1,68 @@
+package com.graphx.pageRank;
+
+import java.io.Serializable;
+
+import org.apache.log4j.Logger;
+import org.apache.spark.SparkConf;
+import org.apache.spark.SparkContext;
+import org.apache.spark.api.java.JavaPairRDD;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.graphx.Graph;
+import org.apache.spark.graphx.GraphLoader;
+import org.apache.spark.graphx.VertexRDD;
+import org.apache.spark.rdd.RDD;
+import org.apache.spark.storage.StorageLevel;
+
+import org.apache.spark.*;
+import scala.Tuple2;
+
+public class PageRankApp implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	static Logger log = Logger.getLogger(PageRankApp.class);
+
+	SparkConf conf = new SparkConf().setMaster("local").setAppName("PropertyGraph");
+	SparkContext jssc = new SparkContext(conf);
+
+	private void getRank() {
+
+		Graph<Object, Object> graph = GraphLoader.edgeListFile(jssc, "src/main/resources/Followers.txt", true, -1,
+				StorageLevel.MEMORY_AND_DISK(), StorageLevel.MEMORY_AND_DISK());
+
+		graph.vertices().toJavaRDD().foreach(f -> {
+			log.info("" + f);
+		});
+		graph.edges().toJavaRDD().foreach(f -> {
+			log.info("" + f);
+		});
+		VertexRDD<Object> ranks = graph.ops().pageRank(0.001, 0.15).vertices();
+
+		JavaPairRDD<Object, Object> rankrdd = ranks.toJavaRDD().mapToPair(f -> {
+
+			return new Tuple2<Object, Object>(f._1, f._2);
+
+		});
+
+		JavaPairRDD<Object, Object> users = jssc.textFile("src/main/resources/users.txt", 2).toJavaRDD()
+				.mapToPair(lines -> {
+
+					String[] fields = lines.split(",");
+
+					return new Tuple2<Object, Object>(Long.parseLong(fields[0]), fields[1]);
+				});
+
+		users.join(rankrdd).map(f -> {
+
+			System.out.println(f._1 + "" + f._2);
+
+		});
+
+	}
+
+	public static void main(String[] args) {
+
+		PageRankApp app = new PageRankApp();
+		app.getRank();
+	}
+}

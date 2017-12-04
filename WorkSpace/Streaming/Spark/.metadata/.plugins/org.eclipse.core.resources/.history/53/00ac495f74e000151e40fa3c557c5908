@@ -1,0 +1,37 @@
+package com.spark;
+
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaPairRDD;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+
+import scala.Tuple2;
+
+public class SumOfNumbers {
+	static Logger logger = Logger.getLogger(SumOfNumbers.class);
+
+	public void test() {
+		SparkConf conf = new SparkConf().setAppName("Sum").setMaster("local");
+		JavaSparkContext sc = new JavaSparkContext(conf);
+
+		JavaRDD<String> lines = sc.textFile("/home/bizruntime/Desktop/test.txt");
+		JavaPairRDD<String, Integer> pairs = lines.mapToPair(s -> new Tuple2(s, 1));
+		JavaPairRDD<String, Integer> counts = pairs.reduceByKey((a, b) -> a + b);
+
+		pairs.saveAsTextFile("/homle/bizruntime/Desktop/output1.txt");
+
+		List<Tuple2<String, Integer>> dataset = counts.collect();
+
+		logger.info((dataset));
+
+	}
+
+	public static void main(String[] args) {
+		SumOfNumbers num = new SumOfNumbers();
+		num.test();
+	}
+
+}

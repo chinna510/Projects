@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\n# Load the packages required to read XML files.\nlibrary(\"XML\")\nlibrary(\"methods\")\n\n\nparsingFile <- xmlParse(file = \"/home/bizruntime/Chinna/BizRuntime/DataSamples/rinput.xml\")\n\nprint(parsingFile)\n\nrootn <- xmlRoot(parsingFile)\n\nre <- xmlToList(parsingFile)\nprint(re)\n\n\n# Root Of the File\nprint(rootn[1])\n\nsize <- xmlSize(rootn)\nprint(size)\n\n\n\n# Exract the root node form the xml file.\nrootnode <- xmlRoot(parsingFile)\n\n# Get the first element of the first node.\nprint(rootnode[[1]][[1]])\n\n# Get the fifth element of the first node.\nprint(rootnode[[1]][[5]])\n\n# Get the second element of the third node.\nprint(rootnode[[3]][[2]])\n",
+    "created" : 1467890571605.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "672512333",
+    "id" : "13194F7C",
+    "lastKnownWriteTime" : 1467891562,
+    "last_content_update" : 1467891562152,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R-XMLFiles/ReadingXMLFile.R",
+    "project_path" : "ReadingXMLFile.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

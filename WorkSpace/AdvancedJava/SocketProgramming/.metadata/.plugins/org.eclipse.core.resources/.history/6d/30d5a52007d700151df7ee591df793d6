@@ -1,0 +1,19 @@
+package com.socket;
+
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.net.SocketAddress;
+
+public class SocketAddressEx {
+	public static void main(String[] argv) throws Exception {
+		InetAddress addr = InetAddress.getByName("www.bizruntime.com");
+		int port = 80;
+		SocketAddress sockaddr = new InetSocketAddress(addr, port);
+
+		Socket sock = new Socket();
+
+		int timeoutMs = 2000; // 2 seconds
+		sock.connect(sockaddr, timeoutMs);
+	}
+}

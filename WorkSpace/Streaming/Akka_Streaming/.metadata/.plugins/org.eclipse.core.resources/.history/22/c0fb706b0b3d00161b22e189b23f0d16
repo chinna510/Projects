@@ -1,0 +1,52 @@
+package com.akka.integration;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import akka.actor.ActorRef;
+import akka.actor.Props;
+import akka.routing.Routee;
+import akka.routing.Routees;
+import akka.routing.Router;
+import akka.stream.actor.AbstractActorSubscriber;
+import akka.stream.actor.MaxInFlightRequestStrategy;
+import akka.stream.actor.RequestStrategy;
+
+public class WorkPool extends AbstractActorSubscriber {
+
+	final int MAX_QUEUE_SIZE = 10;
+	final Map<Integer, ActorRef> queue = new HashMap<>();
+
+	Props props() {
+		return Props.create(WorkPool.class);
+	}
+
+	Router router;
+	
+	@Override
+	public RequestStrategy requestStrategy() {
+
+		return new MaxInFlightRequestStrategy(MAX_QUEUE_SIZE) {
+
+			@Override
+			public int inFlightInternally() {
+				return queue.size();
+			}
+		};
+	}
+	
+	
+	public WorkPool() {
+
+	List<Routee> list=new ArrayList<>();
+	
+	for(int i =0; i<3;i++){
+		
+	}
+	
+		
+	}
+
+}

@@ -1,0 +1,7 @@
+ 
+  akka.jvm-exit-on-fatal-error = false
+    akka.loglevel = "DEBUG"
+ 
+akka {
+  loggers = ["akka.event.Logging$DefaultLogger"]
+}

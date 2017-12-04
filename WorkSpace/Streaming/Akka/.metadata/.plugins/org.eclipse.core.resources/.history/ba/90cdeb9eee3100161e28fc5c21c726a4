@@ -1,0 +1,26 @@
+package com.akka.future;
+
+import akka.actor.ActorSystem;
+import akka.dispatch.Futures;
+import akka.dispatch.Mapper;
+import scala.Tuple2;
+import scala.concurrent.ExecutionContext;
+import scala.concurrent.Future;
+
+public class Future_Exceptions {
+	ActorSystem system = ActorSystem.create("ActorSystem");
+
+	public void test() {
+		final ExecutionContext ec = system.dispatcher();
+		
+		
+		f4.onSuccess(new PrintResult<String>(), system.dispatcher());
+
+	}
+
+	public static void main(String[] args) {
+		Future_Exceptions fm = new Future_Exceptions();
+		fm.test();
+	}
+
+}

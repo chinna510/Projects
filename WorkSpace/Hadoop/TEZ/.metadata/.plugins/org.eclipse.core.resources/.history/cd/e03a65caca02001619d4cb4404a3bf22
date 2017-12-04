@@ -1,0 +1,18 @@
+package com.tez;
+
+import org.apache.tez.runtime.api.ProcessorContext;
+import org.apache.tez.runtime.library.processor.SimpleProcessor;
+
+public class JoinValidateProcessor extends SimpleProcessor {
+
+	public JoinValidateProcessor(ProcessorContext context) {
+		super(context);
+
+	}
+
+	@Override
+	public void run() throws Exception {
+
+	}
+
+}

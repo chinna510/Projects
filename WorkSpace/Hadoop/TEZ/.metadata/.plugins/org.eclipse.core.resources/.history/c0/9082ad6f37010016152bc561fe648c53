@@ -1,0 +1,88 @@
+package com.tez.example;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.tez.client.TezClient;
+import org.apache.tez.dag.api.DAG;
+import org.apache.tez.dag.api.Edge;
+import org.apache.tez.dag.api.ProcessorDescriptor;
+import org.apache.tez.dag.api.TezConfiguration;
+import org.apache.tez.dag.api.Vertex;
+import org.apache.tez.runtime.library.conf.OrderedPartitionedKVEdgeConfig;
+import org.apache.tez.runtime.library.partitioner.HashPartitioner;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class OrderedWordCount extends TezExampleBase {
+	private static String INPUT = "Input";
+	private static String OUTPUT = "Output";
+	private static String TOKENIZER = "Tokenizer";
+	private static String SUMMATION = "Summation";
+	private static String SORTER = "Sorter";
+	private static final Logger LOG = LoggerFactory.getLogger(OrderedWordCount.class);
+
+	public static DAG createDAG(TezConfiguration tezConf, String inputPath, String outputPath, int numPartitions,
+			boolean disableSplitGrouping, boolean isGenerateSplitInClient, String dagName) throws IOException {
+
+		DataSourceDescriptor dataSource = MRInput
+				.createConfigBuilder(new Configuration(tezConf), TextInputFormat.class, inputPath)
+				.groupSplits(!disableSplitGrouping).generateSplitsInAM(!isGenerateSplitInClient).build();
+
+		DataSinkDescriptor dataSink = MROutput
+				.createConfigBuilder(new Configuration(tezConf), TextOutputFormat.class, outputPath).build();
+
+		Vertex tokenizerVertex = Vertex.create(TOKENIZER, ProcessorDescriptor.create(TokenProcessor.class.getName()));
+		tokenizerVertex.addDataSource(INPUT, dataSource);
+
+		// Use Text key and IntWritable value to bring counts for each word in
+		// the same partition
+		// The setFromConfiguration call is optional and allows overriding the
+		// config options with
+		// command line parameters.
+		OrderedPartitionedKVEdgeConfig summationEdgeConf = OrderedPartitionedKVEdgeConfig
+				.newBuilder(Text.class.getName(), IntWritable.class.getName(), HashPartitioner.class.getName())
+				.setFromConfiguration(tezConf).build();
+
+		// This vertex will be reading intermediate data via an input edge and
+		// writing intermediate data
+		// via an output edge.
+		Vertex summationVertex = Vertex.create(SUMMATION, ProcessorDescriptor.create(SumProcessor.class.getName()),
+				numPartitions);
+
+		// Use IntWritable key and Text value to bring all words with the same
+		// count in the same
+		// partition. The data will be ordered by count and words grouped by
+		// count. The
+		// setFromConfiguration call is optional and allows overriding the
+		// config options with
+		// command line parameters.
+		OrderedPartitionedKVEdgeConfig sorterEdgeConf = OrderedPartitionedKVEdgeConfig
+				.newBuilder(IntWritable.class.getName(), Text.class.getName(), HashPartitioner.class.getName())
+				.setFromConfiguration(tezConf).build();
+		Vertex sorterVertex = Vertex.create(SORTER, ProcessorDescriptor.create(SorterProcessor.class.getName()), 1);
+		sorterVertex.addDataSink(OUTPUT, dataSink);
+		DAG dag = DAG.create(dagName);
+		dag.addVertex(tokenizerVertex).addVertex(summationVertex).addVertex(sorterVertex)
+				.addEdge(Edge.create(tokenizerVertex, summationVertex, summationEdgeConf.createDefaultEdgeProperty()))
+				.addEdge(Edge.create(summationVertex, sorterVertex, sorterEdgeConf.createDefaultEdgeProperty()));
+		return dag;
+	}
+
+	@Override
+	protected void printUsage() {
+
+	}
+
+	@Override
+	protected int validateArgs(String[] otherArgs) {
+
+		return 0;
+	}
+
+	@Override
+	protected int runJob(String[] args, TezConfiguration tezConf, TezClient tezClient) throws Exception {
+
+		return 0;
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.biz.akka;
+
+import akka.actor.UntypedActor;
+
+public class WatchActor extends UntypedActor {
+
+	@Override
+	public void onReceive(Object message) throws Exception {
+		if(message.equals("kill")){
+			
+		}
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.biz.akka;
+
+import akka.actor.ActorSystem;
+
+public class WatchMain {
+public void test(){
+	ActorSystem system=ActorSystem.create("DeathWatch");
+	
+}
+}

@@ -1,0 +1,30 @@
+package com.tez.examples;
+
+import org.apache.tez.client.TezClient;
+import org.apache.tez.dag.api.TezConfiguration;
+
+public class HashJoinsEx extends TezExampleBase{
+	private static final String broadcastOption = "doBroadcast";
+	private static final String streamingSide = "streamingSide";
+	private static final String hashSide = "hashSide";
+	private static final String inputFile = "inputFile";
+	private static final String joiner = "joiner";
+	private static final String joinOutput = "joinOutput";
+	
+	
+	public static void main(String[] args) {
+		
+	}
+
+	protected void printUsage() {
+	    System.err.println("Usage: "
+	        + "hashjoin <file1> <file2> <numPartitions> <outPath> ["
+	        + broadcastOption + "(default false)]");
+	  }
+	@Override
+	protected int runJob(String[] args, TezConfiguration tezConf, TezClient tezClient) throws Exception {
+		
+		return 0;
+	}
+
+}

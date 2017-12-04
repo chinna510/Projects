@@ -1,0 +1,17 @@
+package com.graphx.pregel;
+
+import java.io.Serializable;
+
+import scala.runtime.AbstractFunction2;
+import scala.runtime.AbstractFunction3;
+
+public class VertexProgram extends AbstractFunction3<Object, Integer, Integer, Integer> implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public Integer apply(Integer dist, Integer newdist) {
+
+		return Math.min(dist, newdist);
+	}
+}

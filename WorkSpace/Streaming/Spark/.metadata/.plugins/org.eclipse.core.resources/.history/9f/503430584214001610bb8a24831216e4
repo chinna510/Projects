@@ -1,0 +1,7 @@
+package com.Spark.SparkStreamingEx;
+
+import java.io.Serializable;
+
+public class TwitterHashTags implements Serializable{
+
+}

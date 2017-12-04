@@ -1,0 +1,17 @@
+package com.akka.router;
+
+import akka.actor.ActorRef;
+import akka.actor.Props;
+import akka.actor.UntypedActor;
+import akka.routing.FromConfig;
+
+public class StatsService extends UntypedActor {
+	ActorRef workerRouter = getContext().actorOf(FromConfig.getInstance().props(Props.create(StatsWorker.class)),
+			"workerRouter");
+
+	@Override
+	public void onReceive(Object arg0) throws Exception {
+
+	}
+
+}

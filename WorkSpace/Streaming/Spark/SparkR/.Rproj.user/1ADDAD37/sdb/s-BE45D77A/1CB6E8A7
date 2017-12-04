@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\nSys.setenv(\"HADOOP_PREFIX\"=\"/home/bizruntime/Chinna/BizRuntime/InstallationDir/Installations/hadoop-2.7.2\")\nSys.setenv(\"HADOOP_CMD\"=\"/home/bizruntime/Chinna/BizRuntime/InstallationDir/Installations/hadoop-2.7.2/bin/hadoop\")\nSys.setenv(\"HADOOP_STREAMING\"=\"/home/bizruntime/Chinna/BizRuntime/InstallationDir/Installations/hadoop-2.7.2/share/hadoop/tools/lib/hadoop-streaming-2.7.2.jar\")\n\n\nlibrary(rmr2) \n\n## map function\nmap <- function(k,lines) {\n  words.list <- strsplit(lines, '\\\\s') \n  words <- unlist(words.list)\n  return( keyval(words, 1) )\n}\n\n## reduce function\nreduce <- function(word, counts) { \n  keyval(word, sum(counts))\n}\n\nwordcount <- function (input, output=NULL) { \n  mapreduce(input=input, output=output, input.format=\"text\", \n            map=map, reduce=reduce)\n}\n\n\n## delete previous result if any\nsystem(\"$HADOOP_CMD fs -rmr wordcount/out\")\n\n## Submit job\nhdfs.root <- 'wordcount'\nhdfs.data <- file.path(hdfs.root, 'Status.txt') \nhdfs.out <- file.path(hdfs.root, 'out1') \nout <- wordcount(hdfs.data, hdfs.out)\n\n## Fetch results from HDFS\nresults <- from.dfs(out)\n\n## check top 30 frequent words\nresults.df <- as.data.frame(results, stringsAsFactors=F) \ncolnames(results.df) <- c('word', 'count') \nhead(results.df[order(results.df$count, decreasing=T), ], 30)\n\n",
+    "created" : 1468245553047.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4222263526",
+    "id" : "1CB6E8A7",
+    "lastKnownWriteTime" : 1468316242,
+    "last_content_update" : 1468316242422,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/SparkR/MapReduceJob.R",
+    "project_path" : "MapReduceJob.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

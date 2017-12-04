@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\nprint(sqrt(100))\n\nprint(seq(32,44))\n\nprint(max(34,22))\n\nprint(mean(1:10))\n\nprint(sum(1:10))",
+    "created" : 1467040571773.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3194722481",
+    "id" : "98E16A24",
+    "lastKnownWriteTime" : 1467040690,
+    "last_content_update" : 1467040690786,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R-Functions/Built-InFunctions.R",
+    "project_path" : "Built-InFunctions.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

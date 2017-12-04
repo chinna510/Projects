@@ -1,0 +1,21 @@
+package com.Spark.SparkStreamingEx;
+
+import java.io.Serializable;
+
+import org.apache.spark.SparkConf;
+import org.apache.spark.streaming.Durations;
+import org.apache.spark.streaming.api.java.JavaStreamingContext;
+
+public class TwitterHashTags implements Serializable{
+	private static final long serialVersionUID = 1L;
+
+public void test(){
+	SparkConf conf=new SparkConf().setAppName("TwitterHashTags").setMaster("local[*]");
+	JavaStreamingContext jssc=new JavaStreamingContext(conf,Durations.seconds(5));
+	
+	
+	
+}
+	
+	
+}

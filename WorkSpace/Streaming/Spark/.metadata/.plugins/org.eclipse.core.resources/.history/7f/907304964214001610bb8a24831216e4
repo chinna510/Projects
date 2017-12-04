@@ -1,0 +1,14 @@
+package com.Spark.SparkStreamingEx;
+
+import java.io.Serializable;
+
+import org.apache.spark.SparkConf;
+
+public class TwitterHashTags implements Serializable{
+public void test(){
+	SparkConf conf=new SparkConf().setAppName("TwitterHashTags").setMaster("local[*]");
+	
+}
+	
+	
+}

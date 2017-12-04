@@ -1,0 +1,26 @@
+package com.model;
+
+import java.io.Serializable;
+
+public class Customer implements Serializable
+	{
+	private String customerID;
+	private String name;
+	private String phone;
+	public static Customer load(ResultSet rs)
+			throws SQLException
+			{
+			Customer customer = new Customer();
+			String value = null;
+			value = rs.getString(1);
+			if (value != null)
+			customer.setCustomerID(value);
+			value = rs.getString(2);
+			if (value != null)
+			customer.setName(value);
+			value = rs.getString(3);
+			if (value != null)
+			customer.setPhone(value);
+			return customer;
+			}
+}

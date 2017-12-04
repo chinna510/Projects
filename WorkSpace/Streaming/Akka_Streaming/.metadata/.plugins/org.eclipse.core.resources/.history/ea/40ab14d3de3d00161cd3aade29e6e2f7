@@ -1,0 +1,19 @@
+package com.akka;
+
+import akka.actor.UntypedActor;
+
+public class Actor2 extends UntypedActor {
+
+	@Override
+	public void onReceive(Object msg) throws Exception {
+
+		if (msg instanceof String) {
+			System.out.println(msg);
+
+			String message = (String) msg;
+
+		}
+
+	}
+
+}

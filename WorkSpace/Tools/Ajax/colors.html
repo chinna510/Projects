@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Using Ajax with XML</title>
+<script language = "javascript">
+var colors;
+var XMLHttpRequestObject = false;
+if (window.XMLHttpRequest) {
+XMLHttpRequestObject = new XMLHttpRequest();
+XMLHttpRequestObject.overrideMimeType("text/xml");
+} else if (window.ActiveXObject) {
+XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+}
+function getData(dataSource, divID)
+{
+if(XMLHttpRequestObject) {
+XMLHttpRequestObject.open("GET", dataSource);
+var obj = document.getElementById(divID);
+XMLHttpRequestObject.onreadystatechange = function()
+{
+if (XMLHttpRequestObject.readyState == 4 &&
+XMLHttpRequestObject.status == 200) {
+var xmlDocument = XMLHttpRequestObject.responseXML;
+colors = xmlDocument.getElementsByTagName("color");
+obj.innerHTML = "Here are the fetched colors:<ul>";
+for (loopIndex =0; loopIndex < colors.length; loopIndex++)
+{
+obj.innerHTML += "<li>" +
+colors[loopIndex].firstChild.data + "</li>";
+}
+obj.innerHTML += "</ul>";
+}
+}
+XMLHttpRequestObject.send(null);
+}
+}
+</script>
+</head>
+<body>
+<h1>Using Ajax with XML</h1>
+<form>
+<input type = "button" value = "Fetch the Colors"
+onclick = "getData('./colors.xml', 'targetDiv')">
+</form>
+<div id="targetDiv" width =100 height=100>
+The list of colors will appear here.</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+package com.akka.subchannel;
+
+import com.akka.utilities.MsgEnvelope;
+
+import akka.actor.ActorRef;
+import akka.event.japi.SubchannelEventBus;
+
+public class SubChannelImpl extends SubchannelEventBus<MsgEnvelope, ActorRef, String> {
+
+}

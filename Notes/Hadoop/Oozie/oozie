@@ -1,0 +1,123 @@
+http://gauravkohli.com/category/oozie/
+http://ylzhj02.iteye.com/blog/2035235
+http://link.nalc.com.cn/?q=hadoop+oozie+installation
+http://www.myexception.cn/internet/1747615.html
+http://hadooptutorial.info/apache-oozie-installation-on-ubuntu-14-04/
+http://translate.googleusercontent.com/translate_c?depth=1&hl=en&rurl=translate.google.com&sl=auto&tl=en&u=http://blog.csdn.net/u014729236/article/details/47188631&usg=ALkJrhj1XUtdubUrfCB2uoOiSPUDLcskGQ
+http://www.open-open.com/lib/view/open1453606606995.html
+http://www.coreservlets.com/hadoop-tutorial/
+http://www.thecloudavenue.com/2013/10/executing-oozie-workflow-with-pig-hive.html
+http://jayatiatblogs.blogspot.in/2011/05/oozie-installation-errors.html
+http://doc.mapr.com/display/MapR/Ports+Used+by+MapR
+https://azure.microsoft.com/en-in/documentation/articles/hdinsight-use-oozie-linux-mac/
+https://www.safaribooksonline.com/library/view/apache-oozie/9781449369910/ch04.html
+https://community.hortonworks.com/spaces/64/governance-lifecycle-track.html?topics=Oozie&type=question
+http://www.cnblogs.com/scotoma/archive/2012/09/18/2689902.html
+https://support.pivotal.io/hc/en-us/articles/203355837-How-to-run-a-MapReduce-jar-using-Oozie-workflow
+http://grokbase.com/t/cloudera/cdh-user/136ezqqy2c/error-with-oozie-mapreduce-action-job-jar-not-set
+http://www.alexjf.net/blog/distributed-systems/hadoop-yarn-installation-definitive-guide/
+
+
+
+
+
+
+
+
+
+
+reference
+
+http://ylzhj02.iteye.com/category/308849
+
+
+1.download tar file 
+2.change pom.xml hadoop version 2.7.2
+3.mvn clean ,mvn clean install
+4.change pom.xml 
+	<repository>
+ 	  <id>Codehaus repository</id>
+   	 <url>https://repo1.maven.org/maven2/</url>
+https://repo1.maven.org/maven2/
+   	 <snapshots>
+      	  <enabled>false</enabled>
+   	 </snapshots>
+	</repository>
+5./bin/mkdistro.sh  mvn clean package assembly:single -Dhadoop.version=2.7.2 -DjavaVersion=1.7 -DtargetJavaVersion=1.7 -DskipTests -Dpig.version=0.15.0 -DgenerateDocs -Dsqoop.version=1.4.6 
+========Oozie server installation===
+Oozie Server
+cd ..
+mkdir Oozie
+cp -R oozie-4.0.1/distro/target/oozie-4.0.1-distro/oozie-4.0.1/ Oozie
+cd oozie
+mkdir libext
+cp -R ../oozie-4.0.1/hadooplibs/hadoop-2/target/hadooplibs/hadooplib-2.4.1.oozie-4.0.1/* libext
+wget -P libext http://extjs.com/deploy/ext-2.2.zip
+
+7.Oozie war  file creation--> ./bin/oozie-setup.sh prepare-war
+8.===hadoop/etc/hadoop/.core-site.xml===
+<property>
+  <name>hadoop.proxyuser.richard.hosts</name>
+  <value>*</value>
+</property>
+<property>
+  <name>hadoop.proxyuser.richard.groups</name>
+  <value>*</value>
+</property>
+before start hadoop
+9../bin/oozie-setup.sh sharelib create -fs hdfs://localhost:9000 
+destination path for sharelib is: /user/richard/share/lib/lib_20160401110801.   //oozie created 
+10.copy the all th hadoop share jar into oozie webapp /WEN-INF /lib folder
+11../bin/ooziedb.sh create -sqlfile oozie.sql -run
+12..//bin/oozied.sh start  //stop
+	http: // localhost: 11000 / oozie /
+13..//bin/oozied.sh -run 
+
+
+
+
+
+./bin/oozie admin -oozie http://localhost:11000/oozie -status  //normal
+ ./bin/oozie admin -oozie http://192.168.1.198:11000/oozie -status
+
+http://localhost:19888/jobhistory
+
+bin/mkdistro.sh -DskipTests -Phadoop-2 -Dhadoop.auth.version=2.7.2 -Ddistcp.version=2.7.2  -Dpig.version=0.15.0 -Dtomcat.version=7.0.52 -DjavaVersion=1.7 -DtargetJavaVersion=1.7 -Dsqoop.version=1.4.6
+        
+./mkdistro.sh -Phadoop-2 -DskipTests  -DjavaVersion=1.7 -DtargetJavaVersion=1.7  -Dhadoop.auth.version = 2.7.2 -Ddistcp.version = 2.7.2 -Dsqoop.version = 1.4.6 -Dhive.version = 2.0.0 -Dpig .version = 0.15.0
+
+
+ -e -Puber -Phadoop-2 -DskipTests -Dhadoop.version=2.7.2
+
+mvn clean package assembly:single -Dhadoop.version=2.7.2 -DjavaVersion=1.7 -DtargetJavaVersion=1.7 -DskipTests  -DgenerateDocs
+
+./bin/addtowar.sh -inputwar oozie.war -outputwar oozie- server/webapps/oozie.war -hadoop 2.7.2 /usr/local/hadoop/ -extjs libext/ext-2.2.zip -jars /usr/local/oozie/libext/mysql-connector-java-5.1.38-bin.jar:/usr/local/oozie/libext/htrace-core-3.1.0.jar:/usr/local/oozie/libext/avro-1.7.4.jar
+
+(or)
+
+prepare war
+
+hdfs dfs -put /usr/local/oozie/share /user/richard
+
+
+bin/hdfs dfs -put path-to-oozie-directory/examples examples 
+
+
+delete all catalina in lib folder
+
+then oozie.xml in tomcat put <Loader delegate="true"/> in context tag
+./oozie job -oozie http://localhost:11000/oozie -config /home/bizruntime/Richard-Hadoop/oozie-4.2.0/examples/apps/shell/job.properties -run 
+
+
+./oozie job -oozie http://localhost:11000/oozie -info 0000000-160405213122824-oozie-bizr-W
+
+
+
+From Oozie Directory: ./bin/oozie job -oozie http://localhost:11000/oozie/ -config examples/apps/map-reduce/job.properties  -run
+
+
+====Client Installation=====
+expand the oozie-client TAR.GZ file bundled with the distribution. Add the bin/ directory to the PATH .
+#oozie
+
+

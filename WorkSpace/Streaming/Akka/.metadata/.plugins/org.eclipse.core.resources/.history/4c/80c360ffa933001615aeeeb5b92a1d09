@@ -1,0 +1,8 @@
+package com.akka.distribute;
+
+public class CounterChanged {
+
+	public static int delta;
+	
+	
+}

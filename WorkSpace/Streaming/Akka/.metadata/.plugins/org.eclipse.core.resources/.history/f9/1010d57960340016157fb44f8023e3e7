@@ -1,0 +1,22 @@
+package com.akka.distribute;
+
+import com.typesafe.config.Config;
+import com.typesafe.config.ConfigFactory;
+
+import akka.actor.ActorSystem;
+
+public class ReplicationTest {
+	
+	public void test(){
+		
+		Config config = ConfigFactory.parseString("akka.remote.netty.tcp.port=" + 2551)
+				.withFallback(ConfigFactory.parseString("akka.cluster.roles = [backend]"))
+				.withFallback(ConfigFactory.load());
+		
+		
+		ActorSystem system=ActorSystem.create();
+		
+	}
+	
+
+}

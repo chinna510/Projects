@@ -1,0 +1,20 @@
+package SparkAccumulator;
+
+import java.io.Serializable;
+
+public class Statistics implements Serializable{
+	 public static final StatisticsAccumulatorParam PARAM_INSTANCE = new StatisticsAccumulatorParam();
+	 public static final Statistics ZERO = new Statistics();
+	    private final int number;
+	    private final double sum;
+	    private final double sumsquare;
+	    private final double max;
+	    private final double min;
+	    private Statistics() {
+	        number = 0;
+	        sum = 0;
+	        sumsquare = 0;
+	        max = Double.MIN_VALUE;
+	        min = Double.MAX_VALUE;
+	     }
+}

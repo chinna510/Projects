@@ -1,0 +1,18 @@
+package com.smooks.smooks_CsvToXml;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.milyn.io.StreamUtils;
+
+public class SmooksCSVToXML {
+	private static byte[] messageIn = readInputMessage();
+	private static byte[] readInputMessage() {
+		try {
+			return StreamUtils.readStream(new FileInputStream("src/main/resources/input.csv"));
+		} catch (IOException e) {
+			e.printStackTrace();
+			return "<no-message/>".getBytes();
+		}
+	}
+}

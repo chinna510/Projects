@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="org.apache.kafka.clients.producer.Producer"/>
+<fullyQualifiedTypeName name="kafka.producer.Producer"/>
+<fullyQualifiedTypeName name="kafka.javaapi.producer.Producer"/>
+<fullyQualifiedTypeName name="kafka.producer.ProducerConfig"/>
+<fullyQualifiedTypeName name="org.apache.kafka.clients.producer.Callback"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.util.concurrent.ExecutionException"/>
+<fullyQualifiedTypeName name="org.apache.kafka.clients.producer.ProducerConfig"/>
+<fullyQualifiedTypeName name="org.apache.kafka.common.serialization.StringSerializer"/>
+<fullyQualifiedTypeName name="org.apache.kafka.clients.producer.KafkaProducer"/>
+<fullyQualifiedTypeName name="org.apache.kafka.clients.producer.ProducerRecord"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,8 @@
+To Run WithOut Arguments:
+-------------------------
+1.mvn clean install
+2.mvn exec:java -Dexec.mainClass="com.SparkStreaming.WordsCount.WordCount"  
+
+To run with Arguments:
+-----------------------
+ mvn exec:java -Dexec.mainClass="com.SparkStreaming.WordsCount.WordCount" -Dexec.args="/home/bizruntime/a.txt"

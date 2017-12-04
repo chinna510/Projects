@@ -1,0 +1,21 @@
+package com.akka.stream;
+
+import akka.stream.Attributes;
+import akka.stream.FlowShape;
+import akka.stream.stage.GraphStage;
+import akka.stream.stage.GraphStageLogic;
+import akka.util.ByteString;
+
+public class DigestCalculator extends GraphStage<FlowShape<ByteString, ByteString>>{
+
+	@Override
+	public FlowShape<ByteString, ByteString> shape() {
+		return null;
+	}
+
+	@Override
+	public GraphStageLogic createLogic(Attributes arg0) {
+		return null;
+	}
+
+}

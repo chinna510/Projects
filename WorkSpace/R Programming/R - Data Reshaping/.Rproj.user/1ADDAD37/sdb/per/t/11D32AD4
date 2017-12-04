@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# Create vector objects.\ncity <- c(\"Tampa\",\"Seattle\",\"Hartford\",\"Denver\")\nstate <- c(\"FL\",\"WA\",\"CT\",\"CO\")\nzipcode <- c(33602,98104,06161,80294)\n\n# Combine above three vectors into one data frame.\naddresses <- cbind(city,state,zipcode)\n\n# Print a header.\ncat(\"# # # # The First data frame\\n\") \n\n# Print the data frame.\nprint(addresses)\n\n# Create another data frame with similar columns\nnew.address <- data.frame(\n  city = c(\"Lowry\",\"Charlotte\"),\n  state = c(\"CO\",\"FL\"),\n  zipcode = c(\"80230\",\"33949\"),\n  stringsAsFactors = FALSE\n)\n\n# Print a header.\ncat(\"# # # The Second data frame\\n\") \n\n# Print the data frame.\nprint(new.address)\n\n# Combine rows form both the data frames.\nall.addresses <- rbind(addresses,new.address)\n\n# Print a header.\ncat(\"# # # The combined data frame\\n\") \n\n# Print the result.\nprint(all.addresses)",
+    "created" : 1467799301910.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "542539078",
+    "id" : "11D32AD4",
+    "lastKnownWriteTime" : 1467799370,
+    "last_content_update" : 1467799370631,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R - Data Reshaping/CombiningDataFrames.R",
+    "project_path" : "CombiningDataFrames.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

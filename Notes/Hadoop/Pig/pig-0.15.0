@@ -1,0 +1,67 @@
+
+Syntax:
+=========
+A= load '/pigdata/user.txt' USING PigStorage('|') AS (uid:int, age:int, gender:chararray, position:chararray, rate:long);
+dump A;
+STORE A INTO '/pigstore.txt' USING org.apache.pig.piggybank.storage.DBStorage('com.mysql.jdbc.Driver', 'jdbc:mysql://192.168.1.146:3306/bizruntime1', 'root', 'root', 'INSERT INTO Users (uid, age, gender, position, rate) VALUES (?, ?,?, ?, ?)');
+
+
+
+
+STORE A INTO 'unused' USING org.apache.pig.piggybank.storage.DBStorage('com.mysql.jdbc.Driver', 'jdbc:mysql://192.168.1.146:3306/bizruntime1', 'root', 'root', 'INSERT INTO Users (uid, age, gender, position, rate) VALUES (?, ?,?, ?, ?)');
+
+STORE relation INTO 'unused' USING org.apache.pig.piggybank.storage.DBStorage('com.mysql.jdbc.Driver', 'jdbc:mysql://<mysqlserver>/<database>', '<login>', '<password>', 'REPLACE INTO <table> (<column1>, <column2>) VALUES (?, ?)');
+
+001,Rajiv,Reddy,9848022337,Hyderabad
+002,siddarth,Battacharya,9848022338,Kolkata
+003,Rajesh,Khanna,9848022339,Delhi
+004,Preethi,Agarwal,9848022330,Pune
+005,Trupthi,Mohanthy,9848022336,Bhuwaneshwar
+006,Archana,Mishra,9848022335,Chennai.
+
+
+
+student = LOAD '/pigdata/pigdata1.txt' USING PigStorage(',') as (id:int, firstname:chararray, lastname:chararray, phone:chararray, city:chararray );
+
+student = LOAD 'hdfs://localhost:9000/pig_data/student_data.txt' 
+   USING PigStorage(',')
+   as ( id:int, firstname:chararray, lastname:chararray, phone:chararray, 
+   city:chararray );
+
+A = load 'hdfs://localhost:9000/pig_data/pigdata.txt' using PigStorage(':'); 
+B = foreach A generate $0 as id;
+
+SampleRecord= LOAD '/user/hive/warehouse/pig' using PigStorage(';') AS (Year:chararray);
+STORE student INTO '/user/hive/warehouse/pig1 ' USING PigStorage (',');
+
+bizruntime@123
+B = LOAD '/pigdata/pigdata1.txt' USING PigStorage(',') AS (id:int, firstname:chararray, lastname:chararray, phone:chararray, city:chararray);
+
+X = FOREACH data GENERATE t1.t1a,t2.$0;
+{(3,8,9) (4,5,6)}
+{(1,4,7) (3,7,5)}
+{(2,5,8) (9,5,8)}
+
+A = LOAD '/pigdata/data4.txt' USING PigStorage(',') AS (f1:int,f2:int,f3:int)
+
+
+UDF:
+====
+
+import java.io.IOException;
+import org.apache.pig.PigServer;
+public class idmapreduce{
+    public static void main(String[] args) {
+        try {
+            PigServer pigServer = new PigServer("mapreduce");
+            runIdQuery(pigServer, "passwd");
+        }
+        catch(Exception e) {
+        }
+    }
+    public static void runIdQuery(PigServer pigServer, String inputFile) throws IOException {
+        pigServer.registerQuery("A = load '" + /pigdata/user.txt + "' using PigStorage(':');")
+        pigServer.registerQuery("B = foreach A generate $0 as uid;");
+        pigServer.store("B", "/user/idout.txt");
+    }
+}

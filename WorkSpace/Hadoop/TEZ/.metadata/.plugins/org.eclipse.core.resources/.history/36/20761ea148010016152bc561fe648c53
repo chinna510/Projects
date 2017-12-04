@@ -1,0 +1,16 @@
+package com.tez.examples;
+
+public class HashJoinsEx {
+	private static final String broadcastOption = "doBroadcast";
+	private static final String streamingSide = "streamingSide";
+	private static final String hashSide = "hashSide";
+	private static final String inputFile = "inputFile";
+	private static final String joiner = "joiner";
+	private static final String joinOutput = "joinOutput";
+	
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

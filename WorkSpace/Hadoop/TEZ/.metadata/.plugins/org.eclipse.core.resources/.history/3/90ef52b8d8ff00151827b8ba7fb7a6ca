@@ -1,0 +1,54 @@
+package com.tez.topk;
+
+import java.io.ByteArrayInputStream;
+import java.io.DataInputStream;
+import java.util.List;
+import java.util.Map;
+import static org.apache.commons.lang.StringUtils.join;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.tez.mapreduce.processor.SimpleMRProcessor;
+import org.apache.tez.runtime.api.ProcessorContext;
+import org.apache.tez.runtime.library.api.KeyValueWriter;
+import org.apache.tez.runtime.library.common.readers.UnorderedKVReader;
+
+import com.google.common.base.Preconditions;
+
+public class Writer extends SimpleMRProcessor {
+	private static final String INPUT = "input";
+	private static final String WRITER = "writer";
+	private static final String OUTPUT = "output";
+	private static final String TOKENIZER = "tokenizer";
+	private static final String SUM = "sum";
+	LocalTop localTop;
+
+	public Writer(ProcessorContext context) {
+		super(context);
+
+	}
+
+	public void initialize() throws Exception {
+		byte[] payload = getContext().getUserPayload().deepCopyAsArray();
+		ByteArrayInputStream bis = new ByteArrayInputStream(payload);
+		DataInputStream dis = new DataInputStream(bis);
+		// store the local top K result
+		localTop = new LocalTop(dis.readInt());
+		dis.close();
+		bis.close();
+	}
+
+	@Override
+	public void run() throws Exception {
+		Preconditions.checkArgument(getInputs().size() == 1);
+		Preconditions.checkArgument(getOutputs().size() == 1);
+		KeyValueWriter kvWriter = (KeyValueWriter) getOutputs().get(OUTPUT).getWriter();
+		UnorderedKVReader kReader = (UnorderedKVReader) getInputs().get(SUM);
+		while (kReader.next()) {
+			localTop.store(Integer.valueOf(kReader.getCurrentKey().toString()), kReader.getCurrentValue().toString());
+		}
+		Map<Integer, List<String>> result = localTop.getTopKSorted();
+		for (int top : result.keySet()) {
+			kvWriter.write(new Text(join(result.get(top), ",")), new IntWritable(top));
+		}
+	}
+}

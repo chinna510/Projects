@@ -1,0 +1,33 @@
+package com.spark;
+
+import java.util.List;
+
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaPairRDD;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.api.java.function.Function;
+import org.apache.spark.api.java.function.Function2;
+
+import scala.Tuple2;
+
+public class SumOfNumbers {
+	public void test() {
+		SparkConf conf = new SparkConf().setAppName("Sum").setMaster("local");
+		JavaSparkContext sc = new JavaSparkContext(conf);
+		@SuppressWarnings("serial")
+
+		JavaRDD<String> lines = sc.textFile("/home/bizruntime/Desktop/Status");
+		JavaPairRDD<String, Integer> pairs = lines.mapToPair(s -> new Tuple2(s, 1));
+		JavaPairRDD<String, Integer> counts = pairs.reduceByKey((a, b) -> a + b);
+		List<Tuple2<String, Integer>> som = counts.collect();
+		System.out.println(som);
+		System.out.println(counts.sortByKey());
+	}
+
+	public static void main(String[] args) {
+		SumOfNumbers num = new SumOfNumbers();
+		num.test();
+	}
+
+}

@@ -1,0 +1,135 @@
+
+package com.tez.example;
+
+import javax.annotation.Nullable;
+
+import java.io.IOException;
+import java.io.PrintStream;
+import java.util.Set;
+
+import com.google.common.annotations.VisibleForTesting;
+import com.google.common.collect.Sets;
+
+import org.apache.commons.cli.Options;
+import org.apache.hadoop.yarn.api.records.ApplicationId;
+import org.apache.tez.client.CallerContext;
+import org.apache.tez.common.TezUtilsInternal;
+import org.apache.tez.hadoop.shim.DefaultHadoopShim;
+import org.apache.tez.hadoop.shim.HadoopShim;
+import org.apache.tez.hadoop.shim.HadoopShimsLoader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.apache.hadoop.classification.InterfaceAudience;
+import org.apache.hadoop.classification.InterfaceAudience.Private;
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.security.UserGroupInformation;
+import org.apache.hadoop.util.GenericOptionsParser;
+import org.apache.hadoop.util.Tool;
+import org.apache.hadoop.util.ToolRunner;
+import org.apache.tez.client.TezClient;
+import org.apache.tez.dag.api.DAG;
+import org.apache.tez.dag.api.TezConfiguration;
+import org.apache.tez.dag.api.TezException;
+import org.apache.tez.dag.api.client.DAGClient;
+import org.apache.tez.dag.api.client.DAGStatus;
+import org.apache.tez.dag.api.client.StatusGetOpts;
+import org.apache.tez.runtime.library.api.TezRuntimeConfiguration;
+
+@InterfaceAudience.Private
+public abstract class TezExampleBase extends Configured implements Tool {
+
+	private static final Logger LOG = LoggerFactory.getLogger(TezExampleBase.class);
+
+	private TezClient tezClientInternal;
+	private HadoopShim hadoopShim;
+
+	public final int run(String[] args) throws Exception {
+		Configuration conf = getConf();
+		GenericOptionsParser optionParser = new GenericOptionsParser(conf, args);
+		String[] otherArgs = optionParser.getRemainingArgs();
+
+		hadoopShim = new HadoopShimsLoader(conf).getHadoopShim();
+
+		return _execute(otherArgs, null, null);
+	}
+
+	public int run(TezConfiguration conf, String[] args, @Nullable TezClient tezClient) throws Exception {
+		setConf(conf);
+		hadoopShim = new HadoopShimsLoader(conf).getHadoopShim();
+		GenericOptionsParser optionParser = new GenericOptionsParser(conf, args);
+
+		String[] otherArgs = optionParser.getRemainingArgs();
+		return _execute(otherArgs, conf, tezClient);
+	}
+
+	public int runDag(DAG dag, Logger logger) throws TezException, InterruptedException, IOException {
+		tezClientInternal.waitTillReady();
+
+		CallerContext callerContext = CallerContext.create("TezExamples", "Tez Example DAG: " + dag.getName());
+		LOG.info("####CallerContext : " + callerContext.getCallerId());
+		ApplicationId appId = tezClientInternal.getAppMasterApplicationId();
+		LOG.info("" + appId);
+
+		if (hadoopShim == null) {
+			Configuration conf = (getConf() == null ? new Configuration(false) : getConf());
+			hadoopShim = new HadoopShimsLoader(conf).getHadoopShim();
+		}
+
+		if (appId != null) {
+			TezUtilsInternal.setHadoopCallerContext(hadoopShim, appId);
+			callerContext.setCallerIdAndType(appId.toString(), "TezExampleApplication");
+		}
+		dag.setCallerContext(callerContext);
+
+		DAGClient dagClient = tezClientInternal.submitDAG(dag);
+		Set<StatusGetOpts> getOpts = Sets.newHashSet();
+		DAGStatus dagStatus;
+		dagStatus = dagClient.waitForCompletionWithStatusUpdates(getOpts);
+
+		if (dagStatus.getState() != DAGStatus.State.SUCCEEDED) {
+			logger.info("DAG diagnostics: " + dagStatus.getDiagnostics());
+			return -1;
+		}
+		return 0;
+	}
+
+	private int _execute(String[] otherArgs, TezConfiguration tezConf, TezClient tezClient) throws Exception {
+
+		if (tezConf == null) {
+			tezConf = new TezConfiguration(getConf());
+		}
+		UserGroupInformation.setConfiguration(tezConf);
+		boolean ownTezClient = false;
+		if (tezClient == null) {
+			ownTezClient = true;
+			tezClientInternal = createTezClient(tezConf);
+		} else {
+			tezClientInternal = tezClient;
+		}
+		try {
+			return runJob(otherArgs, tezConf, tezClientInternal);
+		} finally {
+			if (ownTezClient && tezClientInternal != null) {
+				tezClientInternal.stop();
+			}
+		}
+	}
+
+	private TezClient createTezClient(TezConfiguration tezConf) throws IOException, TezException {
+		TezClient tezClient = TezClient.create(getClass().getSimpleName(), tezConf);
+		tezClient.start();
+		return tezClient;
+	}
+	protected abstract int runJob(String[] args, TezConfiguration tezConf, TezClient tezClient) throws Exception;
+
+	@Private
+	@VisibleForTesting
+	public ApplicationId getAppId() {
+		if (tezClientInternal == null) {
+			LOG.warn("TezClient is not initialized, return null for AppId");
+			return null;
+		}
+		return tezClientInternal.getAppMasterApplicationId();
+	}
+}

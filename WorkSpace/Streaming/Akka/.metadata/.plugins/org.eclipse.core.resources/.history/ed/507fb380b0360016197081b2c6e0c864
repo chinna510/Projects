@@ -1,0 +1,10 @@
+package com.akka.ScanningBus;
+
+import com.akka.utilities.MsgEnvelope;
+
+import akka.actor.ActorRef;
+import akka.event.japi.ScanningEventBus;
+
+public class ScanningBusImpl extends ScanningEventBus<MsgEnvelope, ActorRef, String> {
+
+}

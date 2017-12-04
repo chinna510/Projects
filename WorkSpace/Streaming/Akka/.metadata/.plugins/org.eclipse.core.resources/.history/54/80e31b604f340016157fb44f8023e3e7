@@ -1,0 +1,20 @@
+package com.akka.distribute;
+
+import com.typesafe.config.Config;
+import com.typesafe.config.ConfigFactory;
+
+public class FactorialFrontendMain {
+
+	public void test(int port) {
+		Config config = ConfigFactory.parseString("akka.remote.netty.tcp.port=" + port)
+				.withFallback(ConfigFactory.parseString("akka.cluster.roles = [backend]"))
+				.withFallback(ConfigFactory.load("factorial"));
+
+	}
+
+	public static void main(String[] args) {
+		FactorialFrontendMain main = new FactorialFrontendMain();
+		main.test(args[0]);
+	}
+
+}

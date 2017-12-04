@@ -1,0 +1,7 @@
+package com.storm.kafka.mysql;
+
+import backtype.storm.tuple.Tuple;
+
+public interface KafkaTopicSelector {
+	String getTopics(Tuple tuple);
+}

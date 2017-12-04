@@ -1,0 +1,19 @@
+package com.akka.integration;
+
+public class EmailServer {
+
+	public final ActorRef probe;
+
+	public EmailServer(ActorRef probe) {
+		this.probe = probe;
+	}
+
+	// #email-server-send
+	public CompletionStage<Email> send(Email email) {
+		// ...
+		// #email-server-send
+		probe.tell(email.to, ActorRef.noSender());
+		return CompletableFuture.completedFuture(email);
+		// #email-server-send
+	}
+}

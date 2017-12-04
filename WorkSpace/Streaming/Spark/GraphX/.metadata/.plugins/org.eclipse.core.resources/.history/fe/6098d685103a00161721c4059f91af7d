@@ -1,0 +1,39 @@
+package com.graph.max;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.graphx.Edge;
+import org.apache.spark.graphx.EdgeDirection;
+import org.apache.spark.graphx.Graph;
+import org.apache.spark.storage.StorageLevel;
+
+import scala.Tuple2;
+import scala.reflect.ClassTag;
+import scala.reflect.ClassTag$;
+
+public class PregalApp implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	static Logger log = Logger.getLogger(PregalApp.class);
+
+	@SuppressWarnings({ "unchecked", "resource", "rawtypes" })
+	public void get() throws InterruptedException {
+
+		SparkConf conf = new SparkConf().setMaster("local").setAppName("PropertyGraph");
+		JavaSparkContext jssc = new JavaSparkContext(conf);
+
+		
+	}
+
+	public static void main(String[] args) throws InterruptedException {
+		PregalApp pr = new PregalApp();
+		pr.get();
+	}
+
+}

@@ -1,0 +1,119 @@
+<%@ page session="false"%>
+<H3>Number Guess Guesser</H3>
+<%
+	int wayLo = 1 - 1;
+	int wayHi = 100 + 1;
+	int state = 0;
+	String parm = request.getParameter("state");
+	if (parm != null)
+		state = Integer.parseInt(parm);
+	switch (state) {
+	case 0: {
+		// Initial screen
+%>
+<FORM>
+	Think of a number between
+	<%=wayLo + 1%>
+	and
+	<%=wayHi - 1%>, and I'll try to guess it.
+	<P>Click OK when ready.
+	<P>
+		<INPUT TYPE="submit" VALUE="OK"> <INPUT TYPE="hidden"
+			NAME="lo" VALUE="<%=wayLo%>"> <INPUT TYPE="hidden"
+			NAME="hi" VALUE="<%=wayHi%>"> <INPUT TYPE="hidden"
+			NAME="numGuesses" VALUE="0"> <INPUT TYPE="hidden"
+			NAME="state" VALUE="1">
+</FORM>
+<%
+	break;
+	}
+	case 1: {
+		// First guess
+		int numGuesses = 1 + Integer.parseInt(request.getParameter("numGuesses"));
+		int lo = Integer.parseInt(request.getParameter("lo"));
+		int hi = Integer.parseInt(request.getParameter("hi"));
+		int guess = (hi + lo) / 2;
+%>
+<FORM>
+	My first guess is
+	<%=guess%>. How did I do?
+	<P>
+		<INPUT TYPE="radio" NAME="result" VALUE="-1" onClick="submit()">
+		Too low <INPUT TYPE="radio" NAME="result" VALUE="0" onClick="submit()">
+		Exactly right <INPUT TYPE="radio" NAME="result" VALUE="1"
+			onClick="submit()"> Too high
+	<P>
+		<INPUT TYPE="hidden" NAME="lo" VALUE="<%=lo%>"> <INPUT
+			TYPE="hidden" NAME="hi" VALUE="<%=hi%>"> <INPUT
+			TYPE="hidden" NAME="numGuesses" VALUE="<%=numGuesses%>"> <INPUT
+			TYPE="hidden" NAME="state" VALUE="2">
+</FORM>
+<%
+	break;
+	}
+	case 2: {
+		// After first guess
+		int numGuesses = 1 + Integer.parseInt(request.getParameter("numGuesses"));
+		int lo = Integer.parseInt(request.getParameter("lo"));
+		int hi = Integer.parseInt(request.getParameter("hi"));
+		int result = Integer.parseInt(request.getParameter("result"));
+		int guess = (hi + lo) / 2;
+		if (result < 0) {
+			lo = guess;
+			guess = (hi + lo) / 2;
+		} else if (result > 0) {
+			hi = guess;
+			guess = (hi + lo) / 2;
+		}
+		if (result != 0) {
+%>
+<FORM>
+	<%
+		if (lo > wayLo)
+					out.println(lo + " is too low.<BR>");
+				if (hi < wayHi)
+					out.println(hi + " is too high.<BR>");
+				if ((hi - lo) > 1) {
+	%>
+	My next guess is
+	<%=guess%>. How did I do?
+	<P>
+		<INPUT TYPE="radio" NAME="result" VALUE="-1" onClick="submit()">
+		Too low <INPUT TYPE="radio" NAME="result" VALUE="0" onClick="submit()">
+		Exactly right <INPUT TYPE="radio" NAME="result" VALUE="1"
+			onClick="submit()"> Too high
+	<P>
+		<INPUT TYPE="hidden" NAME="lo" VALUE="<%=lo%>"> <INPUT
+			TYPE="hidden" NAME="hi" VALUE="<%=hi%>"> <INPUT
+			TYPE="hidden" NAME="numGuesses" VALUE="<%=numGuesses%>"> <INPUT
+			TYPE="hidden" NAME="state" VALUE="2">
+</FORM>
+<%
+	} else {
+				String[] text = { "Are we cheating?", "Did we forget our number?",
+						"Perhaps we clicked the wrong button?", "What happened?", "What gives?", };
+				String message = text[(int) (Math.random() * text.length)];
+%>
+<FORM>
+	<%=message%><P>
+		<INPUT TYPE="SUBMIT" VALUE="Start Over">
+</FORM>
+<%
+	}
+		} else {
+			numGuesses--;
+%>
+<FORM>
+	I win, and after only
+	<%=numGuesses%>
+	guesses!
+	<P>Do you want to try again?
+	<P>
+		<INPUT TYPE="SUBMIT" VALUE="Start Over">
+</FORM>
+<%
+}
+break;
+}
+}
+%>

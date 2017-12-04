@@ -1,0 +1,5 @@
+package com.storm.kafka.mysql;
+
+public interface fgf {
+
+}

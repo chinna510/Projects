@@ -1,0 +1,57 @@
+package com.akka.stream;
+
+import java.util.concurrent.CompletionStage;
+
+import akka.Done;
+import akka.NotUsed;
+import akka.actor.ActorSystem;
+import akka.event.Logging;
+import akka.event.LoggingAdapter;
+import akka.stream.ActorMaterializer;
+import akka.stream.Materializer;
+import akka.stream.javadsl.Flow;
+import akka.stream.javadsl.Framing;
+import akka.stream.javadsl.FramingTruncation;
+import akka.stream.javadsl.Source;
+import akka.stream.javadsl.Tcp;
+import akka.stream.javadsl.Tcp.IncomingConnection;
+import akka.stream.javadsl.Tcp.OutgoingConnection;
+import akka.stream.javadsl.Tcp.ServerBinding;
+import akka.util.ByteString;
+
+public class ConnectingReplClient {
+
+	ActorSystem system = ActorSystem.create("ConnectingReplClient");
+
+	Materializer mat = ActorMaterializer.create(system);
+
+	LoggingAdapter log = Logging.getLogger(system, this);
+
+	public void accept() {
+
+		Flow<ByteString, ByteString, CompletionStage<OutgoingConnection>> connections = Tcp.get(system)
+				.outgoingConnection("localhost", 8889);
+
+		
+			Flow<ByteString, ByteString, NotUsed> echo = Flow.of(ByteString.class)
+					.via(Framing.delimiter(ByteString.fromString("\n"), 256, FramingTruncation.ALLOW))
+					.map(ByteString::utf8String).map(s -> {
+						System.out.println(s);
+						return s + "!!!\n";
+					}).map(ByteString::fromString);
+
+			
+
+		result.thenAcceptAsync(f -> {
+			log.info("" + f);
+		});
+
+	}
+
+	public static void main(String[] args) {
+		ConnectingReplClient con = new ConnectingReplClient();
+		con.accept();
+
+	}
+
+}

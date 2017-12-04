@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="input.xsd">
+	<staff id="1001">
+		<firstname>Vivek</firstname>
+		<lastname>P</lastname>
+		<nickname>dude</nickname>
+		<salary>25,000</salary>
+	</staff>
+	<staff id="2001">
+		<firstname>Umar</firstname>
+		<lastname>Faraz</lastname>
+		<nickname>story_teller</nickname>
+		<salary>22,000</salary>
+	</staff>
+</company>

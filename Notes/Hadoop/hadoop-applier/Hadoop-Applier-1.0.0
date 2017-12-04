@@ -1,0 +1,134 @@
+Hadoop Applier Installation:
+===========================
+1. 1.install and configure hadoop-2.6.0 ($HADOOP_HOME must be set).
+2. Download Mysql Source Code from 
+ http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.16.tar.gz
+3. tar xf mysql-5.6.16.tar.gz
+4. cd mysql-5.6.16
+5. cmake .
+6. make
+8. make install
+
+Hadoop-applier:
+================
+1. Download mysq-hadoop applier
+        http://downloads.mysql.com/snapshots/pb/hadoop-applier/mysql-hadoop-applier-0.1.0-alpha.tar.gz
+2. tar xvzf mysql-hadoop-applier-0.1.0-alpha.tar.gz
+3. cd mysql-hadoop-applier-0.1.0
+4. cmake . -DENABLE_DOWNLOADS=1
+5. make -j8
+6. make install
+7. cd /examples/mysql2hdfs/
+8. make happlier
+
+
+Set These In ~/.bashrc
+=======================
+Must and should HADOOP_HOME,HADOOP_CLASSPATH are set in ur ~/.bashrc
+export HDFS_LIB_PATHS=/home/bizruntime/hadoop-2.7.2/lib/native
+export HDFS_INCLUDE_DIR=/home/bizruntime/hadoop-2.7.2/include
+export MYSQL_DIR=/home/bizruntime/mysql-5.6.16
+export LD_LIBRARY_PATH=/usr/lib/jvm/java-8-openjdk-amd64/lib/amd64:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server
+export PATH=$HADOOP_HOME/bin:$PATH
+export CLASSPATH=$(hadoop classpath)
+
+setclass.h
+===========
+we need to create this file because hadoop-applier doesn't identify *.jar files
+==============================
+#!/bin/bash
+
+hcp=$(hadoop classpath)
+#echo $hcp
+arr=(${hcp//:/ })
+
+len=${#arr[@]}
+let len-=1
+echo $len
+j=0
+export CLASSPATH=/etc/hadoop/conf
+for i in ${arr[@]}
+do
+#    echo $i
+     if [ $j -eq 0 ]; then
+     export CLASSPATH=$i
+     elif [ $j -eq $len ]; then
+     echo $i
+     else
+     export CLASSPATH=$CLASSPATH:$i
+     fi
+     let j+=1
+done
+
+==================================
+
+
+Running hadoop-applier:
+=======================
+
+1. WE need to start hadoop first
+        >>>> start-all.sh
+2. Hive-metastore
+       >>>>> hive --service metastore
+3. Start Hive 
+      >>> hive
+4. hive database,table name and columns are must be equal to mysql database,table name..only one change is hiva table conains time_stamp column extra.
+5. Start mysql server
+        mysql-5.6.16/mysql-test/
+
+
+
+starting of Mysql-server:
+=========================
+mysql-5.6.16/mysql-test/>>> ./mtr --start --suite=rpl --mysqld=--binlog_format='ROW' --mysqld=--binlog_checksum=NONE
+
+MYSQL Client:
+=============
+mysql-5.6.16/client >>>>./mysql -uroot --socket=/home/bizruntime/mysql-5.6.30/mysql-test/var/tmp/mysqld.1.sock
+
+Running Of Hadoop-Applier:
+==========================
+mysql-hadoop-applier-0.1.0/examples/mysql2hdfs/>>>>./happlier --field-delimiter=, mysql://root@127.0.0.1:13000 hdfs://master:9000
+
+ADD these Two lines in MakeFile if u will get error adding symbols: DSO missing from command line:
+==================================================================================================
+FLAGS    = -L /lib64 
+LIBS     = -lusb-1.0 -l pthread
+
+Referrence :
+===========
+
+http://innovating-technology.blogspot.in/2013/04/mysql-hadoop-applier-part-2.html
+http://www.programgo.com/article/53663377482/
+http://paddy-w.iteye.com/blog/2023656
+
+HIVE TABLE:
+==========
+
+CREATE TABLE IF NOT EXISTS employees (time_stamp INT, eid int, name String, salary INT, destination String)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE;
+
+
+MySql TABLE:
+===========
+
+CREATE TABLE IF NOT EXISTS employees ( eid INT, name VARCHAR(50), salary INT, destination VARCHAR(50));
+
+
+
+
+
+Pig-Mysql:
+=========
+REGISTER mysql-connector-java-5.1.38.jar;
+A = LOAD '/user/bizruntime/inputs/user.txt' using PigStorage(',') AS (id:int, age:int, gender:chararray, position:chararray,pid:int);
+STORE A INTO '/user/bizruntime/out.txt' using org.apache.pig.piggybank.storage.DBStorage('com.mysql.jdbc.Driver', 'jdbc:mysql://localhost/bizruntime', 'root', 'root', 'INSERT into customer(id, age, gender, position, pid) values (?,?,?,?,?)'); 
+
+
+
+create table customer(id int, age int, gender VARCHAR(6), position VARCHAR(50), pid int);
+
+

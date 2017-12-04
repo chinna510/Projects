@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\na <- switch (4,\n  \"one\",\"Two\",\"Three\"\n)\nprint(a)",
+    "created" : 1467039078284.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1494985532",
+    "id" : "F3A74E5E",
+    "lastKnownWriteTime" : 1467039338,
+    "last_content_update" : 1467039338884,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R-DecisionMaking/Switch.R",
+    "project_path" : "Switch.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

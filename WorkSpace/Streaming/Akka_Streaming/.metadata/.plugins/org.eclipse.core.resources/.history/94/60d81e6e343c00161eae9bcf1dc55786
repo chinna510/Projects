@@ -1,0 +1,67 @@
+package com.akka.stream;
+
+import akka.japi.Option;
+import akka.japi.Predicate;
+import akka.stream.Attributes;
+import akka.stream.FlowShape;
+import akka.stream.Inlet;
+import akka.stream.Outlet;
+import akka.stream.stage.AbstractInHandler;
+import akka.stream.stage.AbstractOutHandler;
+import akka.stream.stage.GraphStage;
+import akka.stream.stage.GraphStageLogic;
+
+public class Duplicator<A> extends GraphStage<FlowShape<A, A>> {
+
+	Inlet<A> in = Inlet.create("Filter.in");
+	Outlet<A> out = Outlet.create("Filter.out");
+
+	FlowShape<A, A> shape = FlowShape.of(in, out);
+
+	@Override
+	public FlowShape<A, A> shape() {
+		return shape;
+	}
+
+	@Override
+	public GraphStageLogic createLogic(Attributes inheritedAttributes) {
+		return new GraphStageLogic(shape) {
+
+			Option<A> lastelem = Option.none();
+			{
+				setHandler(in, new AbstractInHandler() {
+
+					@Override
+					public void onPush() throws Exception {
+
+						A elem = grab(in);
+						lastelem = Option.some(elem);
+						push(out, elem);
+					}
+
+					public void onUpstreamFinish() throws Exception {
+
+						if (lastelem.isDefined()) {
+							emit(out, lastelem.get());
+						}
+						complete(out);
+					};
+				});
+
+				setHandler(out, new AbstractOutHandler() {
+
+					@Override
+					public void onPull() throws Exception {
+
+						if (lastelem.isDefined()) {
+							push(out, lastelem.get());
+							
+						}
+						
+					}
+				});
+			}
+		};
+	}
+
+}

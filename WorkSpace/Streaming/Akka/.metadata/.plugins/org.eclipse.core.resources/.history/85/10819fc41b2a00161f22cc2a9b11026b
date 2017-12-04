@@ -1,0 +1,29 @@
+package com.biz.akka;
+
+import akka.actor.ActorRef;
+import akka.actor.Props;
+import akka.actor.Terminated;
+import akka.actor.UntypedActor;
+
+public class WatchActor extends UntypedActor {
+
+	final ActorRef ref=this.getContext().actorOf(Props.empty(),"child");
+	{
+		this.getContext().watch(ref);
+	}
+	ActorRef lastSender=getContext().system().deadLetters();
+	
+	
+	@Override
+	public void onReceive(Object message) throws Exception {
+		if(message.equals("kill")){
+		getContext().stop(ref);
+		lastSender=getSender();
+		}else if(message instanceof Terminated){
+			
+			
+		}
+		
+	}
+
+}

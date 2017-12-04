@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\nxtodf <- xmlToDataFrame(\"/home/bizruntime/Chinna/BizRuntime/DataSamples/rinput.xml\")\n\nprint(xtodf)\n",
+    "created" : 1467891622401.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1920375483",
+    "id" : "A20250D",
+    "lastKnownWriteTime" : 1467891881,
+    "last_content_update" : 1467891881902,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R-XMLFiles/XmlToDataFrame.R",
+    "project_path" : "XmlToDataFrame.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

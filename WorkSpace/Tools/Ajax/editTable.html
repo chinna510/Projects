@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>
+Editing HTML Tables
+</title>
+<script language="javascript">
+function createRow()
+{
+var table1 = document.getElementById("table1");
+var newRow = table1.insertRow(3);
+var newCell = newRow.insertCell(0);
+newCell.innerHTML = "Fe";
+newCell = newRow.insertCell(1);
+newCell.innerHTML = "Fi";
+newCell = newRow.insertCell(2);
+newCell.innerHTML = "Fo";
+newCell = newRow.insertCell(3);
+newCell.innerHTML = "Fum";
+}
+</script>
+</head>
+<body>
+<center>
+<h1>
+Editing HTML Tables
+</h1>
+<table id="table1" border="2">
+<tr>
+<td>Fe</td>
+<td>Fi</td>
+<td>Fo</td>
+<td>Fum</td>
+</tr>
+<tr>
+<td>Fe</td>
+<td>Fi</td>
+<td>Fo</td>
+<td>Fum</td>
+</tr>
+<tr>
+<td>Fe</td>
+<td>Fi</td>
+<td>Fo</td>
+<td>Fum</td>
+</tr>
+</table>
+<br>
+<input type="button" value="Add a new row"
+onclick="createRow()">
+</center>
+</body>
+</html>

@@ -1,0 +1,16 @@
+package com.akka.integration;
+
+import akka.actor.ActorRef;
+
+public class Msg {
+	
+	int id;
+	ActorRef replyTo;
+	public Msg(int id, ActorRef replyTo) {
+		this.id = id;
+		this.replyTo = replyTo;
+	}
+	
+	
+
+}

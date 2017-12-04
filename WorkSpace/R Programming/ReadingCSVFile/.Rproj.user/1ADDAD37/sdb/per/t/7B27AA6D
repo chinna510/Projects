@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "data <- read.csv(\"/home/bizruntime/R/input.csv\")\nprint(data)\n\n#Analyzing the CSV File\nprint(is.data.frame(data))\nprint(ncol(data))\nprint(nrow(data))\n\n# Get The Maximum Salary\nsal <- max(data$salary)\nprint(sal)\n\n# Get the details of the person with max salary\ngetData <- subset(data, salary== max(data$salary))\n\nprint(getData)\n\n# Get all the people working in IT department\nretval <- subset( data, dept == \"IT\")\nprint(retval)\n\n# Get the persons in IT department whose salary is greater than 600\ninfo <- subset(data, salary > 600 & dept == \"IT\")\nprint(info)\n\nretval1 <- subset(data, as.Date(start_date) > as.Date(\"2014-01-01\"))\n\nprint(retval1)\n\n\n\n\n\n\n\n",
+    "created" : 1467801314524.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2950656810",
+    "id" : "7B27AA6D",
+    "lastKnownWriteTime" : 1467884762,
+    "last_content_update" : 1467884762078,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/ReadingCSVFile/ReadingCSV.R",
+    "project_path" : "ReadingCSV.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

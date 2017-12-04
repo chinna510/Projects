@@ -1,0 +1,4 @@
+package com.storm.kafka.mysql;
+
+public interface KafkaTopicSelector {
+	String getTopics(Tuple/TridentTuple tuple); }

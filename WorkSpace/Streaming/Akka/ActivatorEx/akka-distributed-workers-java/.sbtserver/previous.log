@@ -1,0 +1,127 @@
+New log file opened at Thu Jun 16 14:21:32 IST 2016 by 11105@bizruntime-X555LAB
+jvm 11105@bizruntime-X555LAB
+jvm vmName=OpenJDK 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.91-b14
+jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
+jvm arguments: [-Xms256m, -Xmx1024m]
+Starting event engine
+Starting sbt command engine
+Waiting for sbt command engine
+Command engine arguments=List()
+Command engine baseDirectory=/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java
+Command engine initial remaining commands List(--initialize, onFailure load-failed, boot, server-send-ready-for-request, server-handle-next-server-request)
+> --initialize
+> initialize
+> onFailure load-failed
+> boot
+> reload
+[Loading] Scanning directory /home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/project
+[Loading] Found non-root projects 
+[Loading] Done in /home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/project, returning: ()
+deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))))
+  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.JUnitXmlReportPlugin)
+sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin) not found List(sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin) not found List(sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin) not found List(sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin) not found List()
+  :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+[Loading] Done in /home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/project, returning: (akka-distributed-workers-java-build)
+Loading project definition from /home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/project
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@4c65bfcf, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	
+[Loading] Scanning directory /home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java
+[Loading] Found non-root projects 
+[Loading] Done in /home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java, returning: ()
+deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbteclipse.plugin.EclipsePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.BackgroundRunPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(com.typesafe.sbteclipse.plugin.EclipsePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.InteractionServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SendEventServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SerializersPlugin)))))
+  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.SerializersPlugin,sbt.plugins.SendEventServicePlugin,sbt.plugins.InteractionServicePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.BackgroundRunPlugin,com.typesafe.sbteclipse.plugin.EclipsePlugin,sbt.plugins.JUnitXmlReportPlugin)
+sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.InteractionServicePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbteclipse.plugin.EclipsePlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin) not found List(sbt.plugins.SerializersPlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.InteractionServicePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbteclipse.plugin.EclipsePlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.InteractionServicePlugin, sbt.plugins.IvyPlugin) not found List(sbt.plugins.JvmPlugin, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbteclipse.plugin.EclipsePlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.InteractionServicePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin) not found List(sbt.plugins.BackgroundRunPlugin, com.typesafe.sbteclipse.plugin.EclipsePlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.InteractionServicePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbteclipse.plugin.EclipsePlugin, sbt.plugins.JUnitXmlReportPlugin) not found List()
+  :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.InteractionServicePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbteclipse.plugin.EclipsePlugin, sbt.plugins.JUnitXmlReportPlugin)
+[Loading] Done in /home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java, returning: (akka-distributed-workers-java)
+Set current project to akka-distributed-workers-java (in build file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/)
+Reapplying settings...
+Set current project to akka-distributed-workers-java (in build file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/)
+> iflast shell
+> server-send-ready-for-request
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@7ef94ff9, check cycles: false
+Received TaskFinished for a task we don't know about TaskFinished(1,30,None,true,None)
+Received TaskFinished for a task we don't know about TaskFinished(1,30,None,true,None)
+Use 'last' for the full log.
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/}akka-distributed-workers-java/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@491adc1d, check cycles: false
+registered more than once? Task((taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/,akka-distributed-workers-java)),Select(ConfigKey(compile)),Global,Global),compile)))
+registered more than once? Task((taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/,akka-distributed-workers-java)),Select(ConfigKey(compile)),Global,Global),compile)))
+Use 'last' for the full log.
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/}akka-distributed-workers-java/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@39568f78, check cycles: false
+registered more than once? Task((triggeredBy: List(Task((taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/,akka-distributed-workers-java)),Select(ConfigKey(compile)),Global,Global),compile)))), taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/,akka-distributed-workers-java)),Select(ConfigKey(compile)),Global,Global),discoveredMainClasses)))
+registered more than once? Task((triggeredBy: List(Task((taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/,akka-distributed-workers-java)),Select(ConfigKey(compile)),Global,Global),compile)))), taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/,akka-distributed-workers-java)),Select(ConfigKey(compile)),Global,Global),discoveredMainClasses)))
+Use 'last' for the full log.
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/}akka-distributed-workers-java/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@4052e14e, check cycles: false
+registered more than once? Task((triggeredBy: List(Task((taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/,akka-distributed-workers-java)),Select(ConfigKey(compile)),Global,Global),compile)))), taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/,akka-distributed-workers-java)),Select(ConfigKey(compile)),Global,Global),discoveredMainClasses)))
+registered more than once? Task((triggeredBy: List(Task((taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/,akka-distributed-workers-java)),Select(ConfigKey(compile)),Global,Global),compile)))), taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/,akka-distributed-workers-java)),Select(ConfigKey(compile)),Global,Global),discoveredMainClasses)))
+Use 'last' for the full log.
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/}akka-distributed-workers-java/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@59e8b0d0, check cycles: false
+registered more than once? Task((taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/,akka-distributed-workers-java)),Select(ConfigKey(compile)),Global,Global),mainClass)))
+registered more than once? Task((taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/,akka-distributed-workers-java)),Select(ConfigKey(compile)),Global,Global),mainClass)))
+Use 'last' for the full log.
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/}akka-distributed-workers-java/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@3f363122, check cycles: false
+registered more than once? Task((triggeredBy: List(Task((taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/,akka-distributed-workers-java)),Select(ConfigKey(compile)),Global,Global),compile)))), taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/,akka-distributed-workers-java)),Select(ConfigKey(compile)),Global,Global),discoveredMainClasses)))
+registered more than once? Task((triggeredBy: List(Task((taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/,akka-distributed-workers-java)),Select(ConfigKey(compile)),Global,Global),compile)))), taskDefinitionKey: ScopedKey(Scope(Select(ProjectRef(file:/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-distributed-workers-java/,akka-distributed-workers-java)),Select(ConfigKey(compile)),Global,Global),discoveredMainClasses)))
+Use 'last' for the full log.
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+Done executing sbt server engine, result Right(Exit(0))
+Closing listening server socket
+Waiting for socket thread
+Waiting for request processor thread
+Waiting for command engine result
+Returning control to sbt launcher with result Exit(0)
+Closing the 11105@bizruntime-X555LAB logs at Thu Jun 16 14:22:33 IST 2016, goodbye.

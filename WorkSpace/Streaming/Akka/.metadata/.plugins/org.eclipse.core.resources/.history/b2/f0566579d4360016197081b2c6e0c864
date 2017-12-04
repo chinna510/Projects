@@ -1,0 +1,5 @@
+package com.akka.extension;
+
+public class MyActor {
+
+}

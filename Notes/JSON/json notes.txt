@@ -1,0 +1,42 @@
+JSON:
+--------
+1. Java Script Object Notation.
+2.It is Language independent
+3. JSON is used for storing and exchanging data.
+4. It is an alternative for XML.
+
+Example:  JSON example defines an employees object, with an array of 3 employee records:
+
+{"employees":[
+    {"firstName":"John", "lastName":"Doe"},
+    {"firstName":"Anna", "lastName":"Smith"},
+    {"firstName":"Peter", "lastName":"Jones"}
+]}
+
+XML example:
+
+<Employees>
+<Employee>
+<firstname>chinna</firstname>
+<lastname>rao</lastname>
+</Employee>
+<Employee>
+<firstname>mani</firstname>
+<lastname>kanta</lastname>
+</Employee>
+<Employee>
+<firstname>ramu</firstname>
+<lastname>sivvala</lastname>
+</Employee>
+</Employees>
+
+5. JSON uses javascript syntax but format is text only , like XML.Text can be used as a data formatby any 
+    programming language.
+
+6. instead of using a parser (like XML does), a JavaScript program can use standard JavaScript functions 
+    to convert JSON data into native JavaScript objects.
+Example:
+---------------
+
+
+

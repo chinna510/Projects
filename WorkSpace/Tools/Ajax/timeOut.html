@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Handling Ajax Timeouts</title>
+<script language="javascript">
+	function getData(dataSource, divID) {
+		var XMLHttpRequestObject = false;
+		if (window.XMLHttpRequest) {
+			XMLHttpRequestObject = new XMLHttpRequest();
+		} else if (window.ActiveXObject) {
+			XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		if (XMLHttpRequestObject) {
+			var obj = document.getElementById(divID);
+			XMLHttpRequestObject.open("GET", dataSource);
+			var timeoutIsSet = false;
+			var downloadWentOK = false;
+			XMLHttpRequestObject.onreadystatechange = function() {
+				if (XMLHttpRequestObject.readyState == 2) {
+					console.log("if");
+					if (!timeoutIsSet) {
+						window.setTimeout(function() {
+							if (!downloadWentOK) {
+								alert("Sorry, but I timed out.");
+								XMLHttpRequestObject.abort();
+							}
+						}, 100);
+						timeoutIsSet = true;
+					}
+				}
+				if (XMLHttpRequestObject.readyState == 4
+						&& XMLHttpRequestObject.status == 200) {
+					downloadWentOK = true;
+					obj.innerHTML = XMLHttpRequestObject.responseText;
+				}
+			}
+			XMLHttpRequestObject.send(null);
+		}
+	}
+</script>
+</head>
+<body>
+	<H1>Handling Ajax Timeouts</H1>
+	<form>
+		<input type="button" value="Download Message"
+			onclick="getData('./data5.txt', 'targetDiv')">
+	</form>
+	<div id="targetDiv">
+		<p>The fetched data will go here.</p>
+	</div>
+</body>
+</html>

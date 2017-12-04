@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;HiveClient&apos;&#x0A;- Original project: &apos;HiveClient&apos;&#x0A;- Original element: &apos;pom.xml.tar.gz&apos;" description="Delete element" element1="pom.xml.tar.gz" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1459521624135" subPackages="false" version="1.0"/>
+</session>

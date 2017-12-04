@@ -1,0 +1,53 @@
+package com.storm.kafka.mysql;
+
+import java.util.Map;
+import java.util.Properties;
+import com.google.common.collect.Maps;
+
+import backtype.storm.generated.AlreadyAliveException;
+import backtype.storm.generated.InvalidTopologyException;
+import backtype.storm.topology.BasicOutputCollector;
+import backtype.storm.topology.OutputFieldsDeclarer;
+import backtype.storm.topology.TopologyBuilder;
+import backtype.storm.topology.base.BaseBasicBolt;
+import backtype.storm.tuple.Fields;
+import backtype.storm.tuple.Tuple;
+import backtype.storm.tuple.Values;
+import storm.kafka.BrokerHosts;
+import storm.kafka.KafkaSpout;
+import storm.kafka.SpoutConfig;
+import storm.kafka.StringScheme;
+import storm.kafka.ZkHosts;
+import storm.trident.testing.FixedBatchSpout;
+
+public class Integration {
+	public static class PrinterBolt extends BaseBasicBolt {
+		public void declareOutputFields(OutputFieldsDeclarer declarer) {
+		}
+
+		public void execute(Tuple tuple, BasicOutputCollector collector) {
+			System.out.println(tuple.toString());
+		}
+	}
+
+	public static void main(String[] args) throws Exception {
+		List<HostPort> hosts = new ArrayList<HostPort>();
+		hosts.add(new HostPort("127.0.0.1", 9092));
+		LocalCluster cluster = new LocalCluster();
+		TopologyBuilder builder = new TopologyBuilder();
+		SpoutConfig spoutConfig = new SpoutConfig(new KafkaConfig.StaticHosts(hosts, 1), "test", "/zkRootStorm",
+				"STORM-ID");
+		spoutConfig.zkServers = ImmutableList.of("localhost");
+		spoutConfig.zkPort = 2181;
+		// spoutConfig.scheme=new StringScheme();
+		spoutConfig.scheme = new SchemeAsMultiScheme(new StringScheme());
+		builder.setSpout("spout", new KafkaSpout(spoutConfig));
+		builder.setBolt("printer", new PrinterBolt()).shuffleGrouping("spout");
+		Config config = new Config();
+
+		cluster.submitTopology("kafka-test", config, builder.createTopology());
+
+		Thread.sleep(600000);
+	}
+
+}

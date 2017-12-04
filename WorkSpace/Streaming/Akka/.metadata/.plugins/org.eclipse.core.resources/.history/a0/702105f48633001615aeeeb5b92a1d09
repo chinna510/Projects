@@ -1,0 +1,14 @@
+package com.akka.distribute;
+
+import akka.actor.ActorSystem;
+
+public class PublisherTest {
+
+	public void test(){
+		ActorSystem system=ActorSystem.create("ActorSystem");
+		
+		
+	}
+	
+	
+}

@@ -1,0 +1,13 @@
+include "common"
+
+akka {
+  actor {
+    deployment {
+      "/creationActor/*" {
+        remote = "akka.tcp://CalculatorWorkerSystem@192.168.1.1:932552"
+      }
+    }
+  }
+
+  remote.netty.tcp.port = 2554
+}

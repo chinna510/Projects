@@ -1,0 +1,20 @@
+1. Download Tar ball from Apache site
+2. extract that tar ball
+3. change pom.xml file 
+        hadoop version,pig version,etc
+4. run this command in current directory 
+>>>>>  mvn clean package -DskipTests -Dmaven.javadoc.skip=true
+5. before that u need to install git ,protoc compiler,java and maven in your machine
+6. After successful compilation you got jar files in tez-dist directory 
+
+6. create directory in hdfs by using 
+
+>>>>> hadoop dfs -mkdir /apps/tez
+7. you need to copy tez-jar from local to hdfs
+8. hadoop dfs -copyFromLocal tez-0.8.2.tar.gz /apps/tez/
+9. configure that path in tez-site.xml 
+10. ${fs.defaultFS}/apps/tez/tez-0.8.2.tar.gz
+
+
+
+ 

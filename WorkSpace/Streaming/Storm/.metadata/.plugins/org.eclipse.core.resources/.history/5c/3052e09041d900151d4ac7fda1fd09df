@@ -1,0 +1,19 @@
+package com.storm.trident;
+
+import backtype.storm.tuple.Fields;
+import backtype.storm.tuple.Values;
+import storm.trident.TridentTopology;
+import storm.trident.testing.FixedBatchSpout;
+
+public class TridentTopologyTest {
+	@SuppressWarnings("unchecked")
+	FixedBatchSpout spout = new FixedBatchSpout(new Fields("sentence"), 3, new Values("the cow jumped over the moon "),
+			new Values("the man went to the store and bought some candy"),
+			new Values("four score and seven years ago"));
+	TridentTopology topology = new TridentTopology();
+
+	public static void main(String[] args) {
+
+	}
+
+}

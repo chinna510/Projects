@@ -1,0 +1,78 @@
+hbase/con hbase-site.xml..
+<configuration>
+   <property>
+
+<name>hbase.rootdir</name>
+
+<value>file:///usr/local/hbase</value>
+
+</property>
+<property>
+        <name>hbase.master</name>
+        <value>hadoop-master:60000</value>
+        </property>
+<property>
+        <name>hbase.zookeeper.property.dataDir</name>
+        <value>/usr/local/zookeeper</value>
+</property>
+<property>
+        <name>hbase.cluster.distributed</name>
+        <value>true</value>
+    </property>
+     <property>
+        <name>zookeeper.znode.parent</name>
+        <value>/hbase-unsecure</value>
+    </property>
+<property>
+        <name>hbase.zookeeper.property.clientPort</name>
+        <value>2181</value>
+</property>
+
+</configuration>
+
+
+----hbase/conf/ hbase-env.sh
+
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export PATH=$PATH:$HADOOP_HOME/bin:$HBASE_HOME/bin
+ export HBASE_REGIONSERVERS=/usr/local/hbase/conf/regionservers
+export HBASE_MANAGES_ZK=true
+
+
+
+start-all.sh
+root@richard:/usr/local/zookeeper/bin# ./zkServer.sh start
+root@richard:/usr/local/hbase/bin# ./local-master-backup.sh start 1
+root@richard:/usr/local/hbase/bin# ./local-regionservers.sh start 1 2
+root@richard:/usr/local/hbase/bin# hbase shell
+hbase(main):001:0> list
+
+
+http://localhost:16010/master-status
+http://localhost:16030/region-server
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+http://hadooptutorial.info/hbase-integration-with-hive/
+http://www.dummies.com/how-to/content/importing-data-into-hbase-with-sqoop.html
+
+
+
+sqoop import-all-tables --hbase-table testhbaseall --hbase-create-table  --column-family hr  --connect jdbc:mysql://localhost/madha --username root --password sa  --warehouse-dir /user/h40/hr -m 1 --hbase-row-key Id
+
+sqoop import --connect "jdbc:sqlserver://(hostname or IP);database=dbname;username=sa;password=sqlserver" --table DimCustomer --hbase-create-table --hbase-table "HbasetableName" --column-family cf --hbase-row-key "Primary key column of table" -m 1
+
+

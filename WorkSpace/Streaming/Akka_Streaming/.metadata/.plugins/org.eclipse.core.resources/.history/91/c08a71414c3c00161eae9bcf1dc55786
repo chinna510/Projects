@@ -1,0 +1,30 @@
+package com.akka.stream;
+
+import java.util.concurrent.CompletionStage;
+
+import akka.stream.Attributes;
+import akka.stream.FlowShape;
+import akka.stream.Inlet;
+import akka.stream.Outlet;
+import akka.stream.stage.GraphStageLogic;
+import akka.stream.stage.GraphStageWithMaterializedValue;
+import scala.Tuple2;
+
+public class CustomMaterializedValues<A> extends GraphStageWithMaterializedValue<FlowShape<A, A>, CompletionStage<A>> {
+
+	Inlet<A> in = Inlet.create("Filter.in");
+	Outlet<A> out = Outlet.create("Filter.out");
+
+	FlowShape<A, A> shape = FlowShape.of(in, out);
+
+	@Override
+	public FlowShape<A, A> shape() {
+		return null;
+	}
+
+	@Override
+	public Tuple2<GraphStageLogic, CompletionStage<A>> createLogicAndMaterializedValue(Attributes arg0) {
+		return null;
+	}
+
+}

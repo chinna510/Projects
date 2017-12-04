@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form method="post" action="ShowForm.html">
+<table border="1" cellpadding="3" cellspacing=”0”>
+<tr valign="top">
+<td>From:</td>
+<td><input name="from" type="text" size=32></td>
+</tr>
+<tr valign="top">
+<td>To:</td>
+<td>
+<select name="to" size=1>
+<option value="CS">Customer Service
+<option value="EX">Executive
+<option value="FI">Finance
+<option value="HR">Human Resources
+<option value="IT">Information Technology
+<option value="MK">Marketing
+<option value="FA">Facilities
+<option value="PC">Purchasing
+<option value="SP">Shipping
+</select>
+</td>
+</tr>
+<tr valign="top">
+<td>Your e-mail:</td>
+<td><input name="email" type="text" size=20></td>
+</tr>
+<tr valign="top">
+<td>Phone number:</td>
+<td>
+<input name="phone" type="text" size=20>
+<input name="dayphone" type="radio" value="1" checked>Day
+<input name="dayphone" type="radio" value="0">Evening
+</td>
+</tr>
+<tr valign="top">
+<td colspan=2>
+<font size=-1>
+Please check all that apply: <br>
+<input name="category" type="checkbox" value="1">
+Comment only, no response necessary <BR>
+<input name="category" type="checkbox" value="2">
+Please add me to your mailing list
+</font>
+</td>
+</tr>
+<tr valign="top">
+<td>&nbsp;</td>
+<td>
+<input type="submit" value="Send">
+<input type="reset" value="Clear">
+<input type="hidden" name="remoteHost">
+</td>
+</tr>
+
+<tr valign="top">
+<td>Comments:</td>
+<td>
+<textarea name="comments" rows=5 cols=40></textarea>
+</td>
+</tr>
+<tr>
+<td>
+<input type="hidden" name="remoteHost" value="209.170.132.238">
+<input type="hidden" name="userAgent" value="Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)">
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

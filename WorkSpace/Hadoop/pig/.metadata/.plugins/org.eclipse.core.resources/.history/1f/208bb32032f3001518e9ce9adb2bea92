@@ -1,0 +1,32 @@
+package com.myudfs;
+
+import java.io.IOException;
+
+import org.apache.pig.Algebraic;
+import org.apache.pig.EvalFunc;
+import org.apache.pig.data.Tuple;
+
+public class Count extends EvalFunc<Long> implements Algebraic {
+
+	public String getFinal() {
+	
+		return null;
+	}
+
+	public String getInitial() {
+		
+		return null;
+	}
+
+	public String getIntermed() {
+	
+		return null;
+	}
+
+	@Override
+	public Long exec(Tuple arg0) throws IOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

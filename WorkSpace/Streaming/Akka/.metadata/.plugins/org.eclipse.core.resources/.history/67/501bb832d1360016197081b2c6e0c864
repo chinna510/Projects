@@ -1,0 +1,9 @@
+package com.akka.CircuitBreaker;
+
+public class CircuitBreakerTest {
+
+	public void test(){
+		
+	}
+	
+}

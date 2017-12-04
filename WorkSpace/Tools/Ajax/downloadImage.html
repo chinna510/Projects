@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function getData(imageName, callback) {
+
+		var XMLHttpRequestObject = false;
+		if (window.XMLHttpRequest) {
+			XMLHttpRequestObject = new XMLHttpRequest();
+		} else if (window.ActiveXObject) {
+			XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		if (XMLHttpRequestObject) {
+			var obj = document.getElementById(targetDiv);
+			XMLHttpRequestObject.open("GET", imageName);
+			XMLHttpRequestObject.onreadystatechange = function() {
+				if (XMLHttpRequestObject.readyState == 4
+						&& XMLHttpRequestObject.status == 200) {
+					callback(XMLHttpRequestObject.responseText);
+					delete XMLHttpRequestObject;
+					XMLHttpRequestObject = null;
+				}
+			}
+			XMLHttpRequestObject.send(null);
+		}
+	}
+	function callback(imageName) {
+		document.getElementById("targetDiv").innerHTML = "<img border='1' src= " + imageName + ">";
+	}
+</script>
+</head>
+<body>
+	<form>
+		<input type="button" value="download image1"
+			onclick="getData('./imageName1.txt',callback)"> <input
+			type="button" value="download image2"
+			onclick="getData('./imageName2.txt',callback)">
+	</form>
+	<div id="targetDiv"></div>
+</body>
+</html>

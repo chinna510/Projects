@@ -1,0 +1,17 @@
+package com.akka.integration;
+
+import java.util.List;
+
+import akka.actor.AbstractActor;
+import akka.japi.pf.ReceiveBuilder;
+
+public class Worker extends AbstractActor{
+
+	
+	
+	public Worker(){
+		
+		receive(ReceiveBuilder.match(Work.class, apply))
+	}
+	
+}

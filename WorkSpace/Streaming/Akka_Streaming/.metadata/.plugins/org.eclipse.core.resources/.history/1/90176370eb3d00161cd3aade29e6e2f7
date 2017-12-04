@@ -1,0 +1,13 @@
+package com.akka.stream;
+
+public class PipeliningParallelApp {
+
+	Flow<ScoopOfBatter, HalfCookedPancake, NotUsed> fryingPan1 =
+			  Flow.of(ScoopOfBatter.class).map(batter -> new HalfCookedPancake());
+			 
+			Flow<HalfCookedPancake, Pancake, NotUsed> fryingPan2 =
+			  Flow.of(HalfCookedPancake.class).map(halfCooked -> new Pancake());
+
+	
+	
+}

@@ -1,0 +1,36 @@
+package com.Spark.SparkStreamingEx;
+
+import org.apache.spark.SparkConf;
+import org.apache.spark.storage.StorageLevel;
+import org.apache.spark.streaming.receiver.Receiver;
+
+public class JavaCustomReceiver extends Receiver<String>{
+
+	public void test(){
+		
+		SparkConf conf=new SparkConf().setAppName("JavaCustomReciever").setMaster("local[n]");
+		
+		
+	}
+	
+	
+	public JavaCustomReceiver(StorageLevel storageLevel) {
+		super(storageLevel);
+		
+	}
+
+	@Override
+	public void onStart() {
+		
+		
+	}
+
+	@Override
+	public void onStop() {
+		
+		
+	}
+	
+	}
+
+

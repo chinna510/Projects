@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="MyApp">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Login</title>
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css"rel="stylesheet">
+<link href="http://getbootstrap.com/examples/signin/signin.css"rel="stylesheet">
+<!-- <link href="justified-nav.css" rel="stylesheet"> -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="../js/controller.js"></script>
+
+</head>
+
+<body data-ng-controller="MyController">
+	<div class="container">
+
+		<div id="loginbox" style="margin-top: 50px;"
+			class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-2">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<div class="panel-title" align="center">
+						<b>Login to PAAS</b>
+					</div>
+					<div
+						style="float: right; font-size: 80%; position: relative; top: -10px">
+						<a href="#">Forgot password?</a>
+					</div>
+				</div>
+
+				<div style="padding-top: 30px" class="panel-body">
+
+					<div style="display: none" id="login-alert"
+						class="alert alert-danger col-sm-12"></div>
+
+					<form id="loginform" class="form-horizontal" role="form">
+
+
+						<div class="form-group">
+
+							<label for="email" class="col-md-4 control-label">Email</label>
+							<div class="col-md-7">
+								<input type="text" class="form-control" name="email"
+									placeholder="Email Address" ng-model="fields.email">
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<label for="email" class="col-md-4 control-label">Password</label>
+							<div class="col-md-7">
+								<input type="password" class="form-control" name="pasword"
+									placeholder="Password" ng-model="fields.password">
+							</div>
+						</div>
+
+						<div style="margin-top: 10px" class="form-group">
+							<div class="col-sm-11 controls" align="right">
+								<a id="btn-login" href="" class="btn btn-success" ng-click="login()">Login </a>
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<div class="col-md-12 control">
+								<div
+									style="border-top: 1px solid #888; padding-top: 15px; font-size: 85%">
+									Don't have an account! <a href="html/signup.html">Sign Up Here </a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

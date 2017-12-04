@@ -1,0 +1,20 @@
+package com.sqoop;
+
+import org.apache.sqoop.client.SqoopClient;
+
+public class JobCreation extends SqoopClient{
+	String url = "http://localhost:12000/sqoop/";
+
+	SqoopClient client = new SqoopClient(url);
+	public JobCreation(String serverUrl) {
+		super(serverUrl);
+	}
+public void test(){
+	
+}
+	public static void main(String[] args) {
+		
+
+	}
+
+}

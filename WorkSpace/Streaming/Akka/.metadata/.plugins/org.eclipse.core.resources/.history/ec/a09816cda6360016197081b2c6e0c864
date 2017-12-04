@@ -1,0 +1,5 @@
+package com.akka.utilities;
+
+public class MsgEnvelope {
+
+}

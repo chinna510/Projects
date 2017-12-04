@@ -1,0 +1,5 @@
+package com.akka.logging;
+
+public class MyActor {
+
+}

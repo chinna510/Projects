@@ -1,0 +1,76 @@
+create table user_details(age int,position string,count bigint);
+
+SELECT count(gender) FROM users WHERE gender='M';
+
+CREATE EXTERNAL TABLE page_view_stg(viewTime INT, userid BIGINT,
+                page_url STRING, referrer_url STRING,
+                ip STRING COMMENT 'IP Address of the User',
+                country STRING COMMENT 'country of origination')
+COMMENT 'This is the staging page view table'
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '44' LINES TERMINATED BY '12'
+STORED AS TEXTFILE
+LOCATION '/user/data/staging/page_view';
+
+Partitioned Table:
+==================
+create table onTimePerf(DayofMonth INT ,DayOfWeek INT ,DepTime INT ,CRSDepTime INT ,ArrTime INT ,CRSArrTime INT ,UniqueCarrier STRING ,FlightNum INT ,TailNum STRING ,ActualElapsedTime INT ,CRSElapsedTime INT ,AirTime STRING ,ArrDelay INT ,DepDelay INT ,Origin STRING ,Dest STRING ,Distance INT , TaxiIn STRING ,TaxiOut STRING ,Cancelled INT ,CancellationCode STRING ,Diverted INT ,CarrierDelay STRING ,WeatherDelay STRING ,NASDelay STRING ,SecurityDelay STRING ,LateAircraftDelay STRING) PARTITIONED BY (Year INT, Month INT ) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE;
+
+Insert Data From Non-partitioned to Partitioned:
+================================================
+
+INSERT OVERWRITE TABLE airline.flight_info PARTITION(year, month) SELECT DayofMonth, DayOfWeek, DepTime, CRSDepTime, ArrTime, CRSArrTime, UniqueCarrier, FlightNum, TailNum, ActualElapsedTime, CRSElapsedTime, AirTime, ArrDelay, DepDelay, Origin, Dest, Distance, TaxiIn, TaxiOut, Cancelled, CancellationCode, Diverted, CarrierDelay, WeatherDelay, NASDelay, SecurityDelay, LateAircraftDelay, Year, Month FROM stg_airline.stg_flight;
+
+Non-Partitioned Table :
+=======================
+create table stg_flight_info(DayofMonth INT ,DayOfWeek INT ,DepTime INT ,CRSDepTime INT ,ArrTime INT ,CRSArrTime INT ,UniqueCarrier STRING ,FlightNum INT ,TailNum STRING ,ActualElapsedTime INT ,CRSElapsedTime INT ,AirTime STRING ,ArrDelay INT ,DepDelay INT ,Origin STRING ,Dest STRING ,Distance INT , TaxiIn STRING ,TaxiOut STRING ,Cancelled INT ,CancellationCode STRING ,Diverted INT ,CarrierDelay STRING ,WeatherDelay STRING ,NASDelay STRING ,SecurityDelay STRING ,LateAircraftDelay STRING) PARTITIONED BY (Year INT, Month INT ) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE;
+
+scp /home/bizruntime/Desktop/2005.csv.tar.gz bizruntime@192.168.1.146:/home/bizruntime/2005.csv.tar.gz
+
+hadoop fs -put 2005.csv /user/hive/warehouse/input/2005.csv
+LOAD DATA INPATH '/airline/2005.csv' OVERWRITE INTO TABLE stg_flight;
+
+UserRecords:
+=============
+CREATE TABLE partitioned_user(
+	firstname VARCHAR(64),
+	lastname  VARCHAR(64),
+	address   STRING,
+	city 	  VARCHAR(64),
+	post      STRING,
+	phone1    VARCHAR(64),
+	phone2    STRING,
+	email     STRING,
+	web       STRING
+	)
+	PARTITIONED BY (country VARCHAR(64), state VARCHAR(64))
+	STORED AS SEQUENCEFILE;
+
+
+INSERT OVERWRITE TABLE Flight_info PARTITION (Year, Month) SELECT DayofMonth, DayOfWeek, DepTime, CRSDepTime, ArrTime, CRSArrTime, UniqueCarrier, FlightNum, TailNum, ActualElapsedTime, CRSElapsedTime, AirTime, ArrDelay, DepDelay, Origin, Dest, Distance, TaxiIn, TaxiOut, Cancelled, CancellationCode, Diverted, CarrierDelay, WeatherDelay, NASDelay, SecurityDelay, LateAircraftDelay, Year, Month FROM stg_flight_info;
+
+
+
+create table stg_flight(Year INT ,Month INT ,DayofMonth INT ,DayOfWeek INT ,DepTime INT ,CRSDepTime INT ,ArrTime INT ,CRSArrTime INT ,UniqueCarrier STRING ,FlightNum INT ,TailNum STRING ,ActualElapsedTime INT ,CRSElapsedTime INT ,AirTime STRING ,ArrDelay INT ,DepDelay INT ,Origin STRING ,Dest STRING ,Distance INT ,TaxiIn STRING ,TaxiOut STRING ,Cancelled INT ,CancellationCode STRING ,Diverted INT ,CarrierDelay STRING ,WeatherDelay STRING ,NASDelay STRING ,SecurityDelay STRING ,LateAircraftDelay STRING)ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE;
+
+
+
+jdbc:hive2://192.168.1.146:10000/?mapreduce.map.memory.mb=3809;mapreduce.map.java.opts=Xmx3428m;mapreduce.reduce.memory.mb=2560;mapreduce.reduce.java.opts=-Xmx2304m;
+
+
+<property>
+    <name>mapred.tasktracker.map.tasks.maximum</name>
+    <value>8</value>
+  </property>
+<property>
+    <name>mapred.map.child.java.opts</name>
+    <value>-Xmx1024m</value>
+  </property>
+<property>
+    <name>mapred.tasktracker.reduce.tasks.maximum</name>
+    <value>6</value>
+  </property>
+
+<property>
+    <name>mapred.reduce.child.java.opts</name>
+    <value>-Xmx1024m</value>
+  </property>

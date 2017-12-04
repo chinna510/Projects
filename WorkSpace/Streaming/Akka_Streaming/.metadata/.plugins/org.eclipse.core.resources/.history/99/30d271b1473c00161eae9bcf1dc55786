@@ -1,0 +1,40 @@
+package com.akka.stream;
+
+import akka.japi.Option;
+import akka.stream.Attributes;
+import akka.stream.FlowShape;
+import akka.stream.Inlet;
+import akka.stream.Outlet;
+import akka.stream.stage.AbstractInHandler;
+import akka.stream.stage.AbstractOutHandler;
+import akka.stream.stage.GraphStage;
+import akka.stream.stage.GraphStageLogic;
+import akka.stream.stage.TimerGraphStageLogic;
+import scala.concurrent.duration.FiniteDuration;
+
+public class TimerApp<A> extends GraphStage<FlowShape<A, A>> {
+
+	  private final FiniteDuration silencePeriod;
+
+	public TimerApp(FiniteDuration silencePeriod) {
+		this.silencePeriod=silencePeriod;
+	}
+	
+	Inlet<A> in = Inlet.create("Filter.in");
+	Outlet<A> out = Outlet.create("Filter.out");
+
+	FlowShape<A, A> shape = FlowShape.of(in, out);
+
+	@Override
+	public FlowShape<A, A> shape() {
+		return shape;
+	}
+
+	@Override
+	public GraphStageLogic createLogic(Attributes inheritedAttributes) {
+		return new TimerGraphStageLogic(shape) {
+			
+			
+		}
+		}; 
+}

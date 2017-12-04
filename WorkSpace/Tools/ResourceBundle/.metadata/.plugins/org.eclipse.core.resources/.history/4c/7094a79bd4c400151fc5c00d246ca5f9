@@ -1,0 +1,111 @@
+package com.bizruntime.SAXParsing;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import javax.xml.parsers.SAXParser;
+
+import javax.xml.parsers.SAXParserFactory;
+
+import org.apache.log4j.Logger;
+import org.milyn.io.StreamUtils;
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
+
+public class SAXService {
+	static Logger logger = Logger.getLogger(SAXService.class);
+	private static byte[] messageIn = readInputMessage();
+
+	private static byte[] readInputMessage() {
+		try {
+			return StreamUtils.readStream(new FileInputStream("src/main/resources/input.csv"));
+		} catch (IOException e) {
+			logger.error(e.getMessage());
+			return "<no-message/>".getBytes();
+		}
+	}
+	public static void parseXMLFile() {
+		
+		try {
+
+			SAXParserFactory factory = SAXParserFactory.newInstance();
+			SAXParser saxParser = factory.newSAXParser();
+
+			DefaultHandler handler = new DefaultHandler() {
+
+				boolean bfname = false;
+				boolean blname = false;
+				boolean bnname = false;
+				boolean bsalary = false;
+				String filepath=
+
+				public void startElement(String uri, String localName, String qName, Attributes attributes)
+						throws SAXException {
+
+					logger.debug("Start Element :" + qName);
+
+					if (qName.equalsIgnoreCase("FIRSTNAME")) {
+						bfname = true;
+					}
+
+					if (qName.equalsIgnoreCase("LASTNAME")) {
+						blname = true;
+					}
+
+					if (qName.equalsIgnoreCase("NICKNAME")) {
+						bnname = true;
+					}
+
+					if (qName.equalsIgnoreCase("SALARY")) {
+						bsalary = true;
+					}
+
+				}
+
+				public void endElement(String uri, String localName, String qName) throws SAXException {
+
+					logger.debug("End Element :" + qName);
+
+				}
+
+				public void characters(char ch[], int start, int length) throws SAXException {
+
+					if (bfname) {
+						logger.debug("First Name : " + new String(ch, start, length));
+						bfname = false;
+					}
+
+					if (blname) {
+						logger.debug("Last Name : " + new String(ch, start, length));
+						blname = false;
+					}
+
+					if (bnname) {
+						logger.debug("Nick Name : " + new String(ch, start, length));
+						bnname = false;
+					}
+
+					if (bsalary) {
+						logger.debug("Salary : " + new String(ch, start, length));
+						bsalary = false;
+					}
+
+				}
+
+			};
+
+			saxParser.parse(filepath, handler);
+
+		} catch (Exception e) {
+			logger.error(e.getMessage());
+		}
+	}
+
+	public static void main(String[] args) {
+
+		logger.info("Hello World!");
+		SAXService.parseXMLFile();
+
+	}
+}

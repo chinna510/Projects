@@ -1,0 +1,21 @@
+package com.tez;
+
+import org.apache.tez.runtime.api.ProcessorContext;
+import org.apache.tez.runtime.library.processor.SimpleProcessor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class JoinValidateProcessor extends SimpleProcessor {
+	private static final Logger LOG = LoggerFactory.getLogger(JoinValidateProcessor.class);
+
+	public JoinValidateProcessor(ProcessorContext context) {
+		super(context);
+
+	}
+
+	@Override
+	public void run() throws Exception {
+
+	}
+
+}

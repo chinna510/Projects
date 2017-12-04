@@ -1,0 +1,14 @@
+package com.akka.stream;
+
+import akka.stream.Attributes;
+import akka.stream.Outlet;
+import akka.stream.SourceShape;
+import akka.stream.stage.AbstractOutHandler;
+import akka.stream.stage.GraphStage;
+import akka.stream.stage.GraphStageLogic;
+
+public class Map extends GraphStage<SourceShape<Integer>> {
+
+	
+
+}

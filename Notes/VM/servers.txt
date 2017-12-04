@@ -1,0 +1,23 @@
+1.VM ware
+2. XenServer
+sudo:-super machine,it contains all the permissions for accessing the softwares.
+nano:-Edittor
+Esc+i-->Editting
+Esc+e-->deleting
+ssh:-it is used for connecting local system to remote system.
+> ssh username
+ifconfig:for checking ip address of machine
+netstat -antp | 
+Xen Server:
+--------------
+
+for generating ssh key:
+---------------------------
+ssh -keygen -t rsa
+scp-secure copy
+connecting to generating key:
+------------------------------------
+ssh bizruntime@192.168.1.42
+for connecting local system to remote system:
+--------------------------------------------------------
+scp (local system )(remote system)

@@ -1,0 +1,5 @@
+package com.akka.EventStream;
+
+public class ExampleApp {
+
+}

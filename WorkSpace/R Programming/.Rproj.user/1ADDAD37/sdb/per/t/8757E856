@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "mystring=\"Hello World\"\nprint(mystring)",
+    "created" : 1467027607808.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2780575688",
+    "id" : "8757E856",
+    "lastKnownWriteTime" : 1467027308,
+    "last_content_update" : 1467027308,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/script1.R",
+    "project_path" : "script1.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

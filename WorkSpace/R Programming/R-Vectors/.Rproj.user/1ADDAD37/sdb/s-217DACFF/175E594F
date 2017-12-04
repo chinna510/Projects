@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "new_list <- list(matrix(c(12, 13,12,12),nrow = 2,ncol = 2), c(10,22,33,44,55),list(\"chinna\",\"Rich\",\"JP\",\"Naren\"))\n\nnames(new_list) <- c(\"Matrix\", \"Vector\",\"InnerList\")\n\n# Adding Element in Last Index\n\nnew_list[4] <- \"BigData\"\n\nnames(new_list) <- c(\"Matrix\", \"Vector\",\"InnerList\",\"Technology\")\n\nprint(new_list)",
+    "created" : 1467642116292.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "747893617",
+    "id" : "175E594F",
+    "lastKnownWriteTime" : 1467642264,
+    "last_content_update" : 1467642264192,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R-Lists/ManipulatingListElements.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,3 @@
+sbin/start-dfs.sh -----------> HDFS startup
+sbin/start-yarn.sh -----------> Start Yarn
+

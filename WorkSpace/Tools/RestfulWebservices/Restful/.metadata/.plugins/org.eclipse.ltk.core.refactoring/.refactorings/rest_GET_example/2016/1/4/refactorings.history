@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.bizruntime&apos; to &apos;RestEx/src&apos;&#x0A;- Original project: &apos;rest_GET_example&apos;&#x0A;- Destination element: &apos;RestEx/src&apos;&#x0A;- Original element: &apos;rest_GET_example/src/com.bizruntime&apos;" description="Copy package" destination="=RestEx/src" element1="/src&lt;com.bizruntime" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1453206341281" version="1.0"/>
+</session>

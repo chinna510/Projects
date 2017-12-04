@@ -1,0 +1,7 @@
+common.loader=${catalina.base}/lib,${catalina.base}/lib/*.jar,${catalina.home}/lib,${catalina.home}/lib/*.jar,${catalina.home}/../lib/*.jar,/home/bizruntime/hadoop-2.7.2/share/hadoop/common/*.jar,/home/bizruntime/hadoop-2.7.2/share/hadoop/common/lib/*.jar,/home/bizruntime/hadoop-2.7.2/share/hadoop/hdfs/*.jar,/home/bizruntime/hadoop-2.7.2/share/hadoop/hdfs/lib/*.jar,/home/bizruntime/hadoop-2.7.2/share/hadoop/mapreduce/*.jar,/home/bizruntime/hadoop-2.7.2/share/hadoop/mapreduce/lib/*.jar,/home/bizruntime/hadoop-2.7.2/share/hadoop/yarn/*.jar,/home/bizruntime/hadoop-2.7.2/share/hadoop/yarn/lib/*.jar,/home/bizruntime/hadoop-2.7.2/apache-hive-2.0.0-bin/lib/*.jar,/home/bizruntime/hadoop-2.7.2/share/hadoop/httpfs/tomcat/lib/*.jar,/home/bizruntime/hadoop-2.7.2/share/hadoop/tools/lib/*.jar
+
+
+
+common.loader=${catalina.base}/lib,${catalina.base}/lib/*.jar,${catalina.home}/lib,${catalina.home}/lib/*.jar,${catalina.home}/../lib/*.jar,/home/hadoop/share/hadoop/common/*.jar,/home/hadoop/share/hadoop/common/lib/*.jar,/home/hadoop/share/hadoop/hdfs/*.jar,/home/hadoop/share/hadoop/hdfs/lib/*.jar,/home/hadoop/share/hadoop/mapreduce/*.jar,/home/hadoop/share/hadoop/mapreduce/lib/*.jar,/home/hadoop/share/hadoop/tools/lib/*.jar,/home/hadoop/share/hadoop/yarn/*.jar,/home/hadoop/share/hadoop/yarn/lib/*.jar
+
+/home/bizruntime/hadoop-2.7.2/share/hadoop/tools/lib/*.jar

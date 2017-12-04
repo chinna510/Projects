@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.apache.pig.builtin.AlgebraicByteArrayMathBase.Initial"/>
+<fullyQualifiedTypeName name="org.apache.pig.builtin.COR.Intermed"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="com.sun.javafx.collections.MappingChange.Map"/>
+<fullyQualifiedTypeName name="java.lang.Long"/>
+<fullyQualifiedTypeName name="org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigGenericMapReduce.Map"/>
+<fullyQualifiedTypeName name="org.apache.pig.builtin.COUNT.Initial"/>
+<fullyQualifiedTypeName name="org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.PigMapOnly.Map"/>
+<fullyQualifiedTypeName name="org.apache.pig.data.TupleFactory"/>
+<fullyQualifiedTypeName name="org.apache.pig.data.DataBag"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="org.apache.pig.PigException"/>
+<fullyQualifiedTypeName name="org.apache.pig.builtin.AlgebraicBigDecimalMathBase.Final"/>
+<fullyQualifiedTypeName name="org.apache.pig.Algebraic"/>
+<fullyQualifiedTypeName name="org.apache.pig.Accumulator"/>
+<fullyQualifiedTypeName name="org.apache.pig.backend.executionengine.ExecException"/>
+<fullyQualifiedTypeName name="org.apache.pig.impl.logicalLayer.schema.Schema"/>
+<fullyQualifiedTypeName name="org.apache.pig.builtin.DoubleAbs"/>
+<fullyQualifiedTypeName name="org.apache.pig.builtin.FloatAbs"/>
+<fullyQualifiedTypeName name="org.apache.pig.builtin.IntAbs"/>
+<fullyQualifiedTypeName name="org.apache.pig.builtin.LongAbs"/>
+<fullyQualifiedTypeName name="org.apache.pig.EvalFunc"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="org.apache.pig.data.Tuple"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

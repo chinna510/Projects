@@ -1,0 +1,32 @@
+package com.akka.ScanningBus;
+
+import akka.actor.ActorRef;
+import akka.event.japi.ScanningEventBus;
+
+public class ScanningBusImpl extends ScanningEventBus<MsgEnvelope, ActorRef, Integer> {
+
+	@Override
+	public int compareClassifiers(Integer a, Integer b) {
+		return a.compareTo(b);
+	}
+
+	@Override
+	public int compareSubscribers(ActorRef a, ActorRef b) {
+		return a.compareTo(b);
+	}
+
+	
+
+	@Override
+	public void publish(MsgEnvelope a, ActorRef b) {
+
+		
+	}
+
+	@Override
+	public boolean matches(Integer arg0, MsgEnvelope arg1) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

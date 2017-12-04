@@ -1,0 +1,48 @@
+package com.oozie.coordinator;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.apache.oozie.client.OozieClient;
+import org.apache.oozie.client.OozieClientException;
+
+public class CoordinatorSample {
+	OozieClient wc = null;
+
+	public CoordinatorSample(String oozieUrl) {
+		wc = new OozieClient(oozieUrl);
+	}
+
+	public String submitJob(String jobPropertyFilePath)
+			throws FileNotFoundException, IOException, OozieClientException {
+		Properties props = wc.createConfiguration();
+		props.setProperty("user.name", "chinna");
+		props.load(new FileInputStream(jobPropertyFilePath));
+
+		return wc.submit(props);
+	}
+	public String submitJob(Properties workflowProperties) throws OozieClientException, IOException{                        
+
+        // create an empty coordinator job configuration object 
+//with just the USER_NAME set to the JVM user name 
+Properties conf = oozieClient.createConfiguration(); 
+
+        //set the coordinator properties 
+conf.putAll(workflowProperties); 
+
+conf.setProperty("user.name", "training"); 
+
+
+//submit the coordinator job     
+return oozieClient.submit(conf); 
+} 
+	public String runJob(String jobPropertyFilePath) throws OozieClientException, IOException {
+
+		Properties conf = wc.createConfiguration();
+		conf.setProperty("user.name", "chinna");
+		conf.load(new FileInputStream(jobPropertyFilePath));
+		return wc.run(conf);
+	}
+}

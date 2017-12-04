@@ -1,0 +1,14 @@
+package com.akka.distribute;
+
+import akka.actor.ActorSystem;
+
+public class ReplicationTest {
+	
+	public void test(){
+		
+		ActorSystem system=ActorSystem.create();
+		
+	}
+	
+
+}

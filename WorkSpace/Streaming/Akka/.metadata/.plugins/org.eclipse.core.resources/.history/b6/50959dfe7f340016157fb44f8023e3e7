@@ -1,0 +1,10 @@
+package com.akka.remoting;
+
+import java.io.Serializable;
+
+public class Divide implements Serializable{
+
+	
+	
+	
+}

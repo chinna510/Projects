@@ -1,0 +1,6 @@
+akka { LOG-LEVEL=DEBUG }
+
+prio-dispatcher {
+  mailbox-type = "com.akka.MailBox$MyPriorityMailbox"
+  //Other dispatcher configuration goes here
+}

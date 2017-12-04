@@ -1,0 +1,17 @@
+<%@page
+session="false"
+import="java.sql.*,java.text.*"
+contentType="text/xml"
+%><%
+// Define constants for JDBC driver name and
+// database URL
+String DRIVER = "org.enhydra.instantdb.jdbc.idbDriver";
+String DB_URL = "jdbc:idb:"
++ "D:/lyricnote/WEB-INF/database/products/db.prp";
+// Get the product search argument and desired quantity
+String product = request.getParameter("product");
+if (product == null)
+throw new ServletException("No product specified");
+String qstring = request.getParameter("quantity");
+if (qstring == null)
+throw new ServletException("No quantity specified");

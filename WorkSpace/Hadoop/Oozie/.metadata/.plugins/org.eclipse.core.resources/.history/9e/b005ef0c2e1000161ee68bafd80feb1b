@@ -1,0 +1,15 @@
+package com.oozie.coordinator;
+
+import org.apache.oozie.client.OozieClient;
+
+public class CoordinatorSample {
+OozieClient wc=null;
+public CoordinatorSample(String oozieUrl){
+	wc=new OozieClient(oozieUrl);
+}
+	public String submitJob(String jobPropertyFilePath){
+		
+		return null;
+		
+	}
+}

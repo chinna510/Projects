@@ -1,0 +1,10 @@
+package com.akka.subchannel;
+
+public class SubChannelTest {
+
+	
+	public void test(){
+		
+	}
+	
+}

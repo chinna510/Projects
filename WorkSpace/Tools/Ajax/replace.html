@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function getData(number) {
+		var XMLHttpRequestObject = false;
+		if (window.XMLHttpRequest) {
+			XMLHttpRequestObject = new XMLHttpRequest();
+		} else if (window.ActiveXObject) {
+			XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		if (XMLHttpRequestObject) {
+			XMLHttpRequestObject.open("GET", "replace" + number + ".txt");
+			XMLHttpRequestObject.onreadystatechange = function() {
+				if (XMLHttpRequestObject.readyState == 4
+						&& XMLHttpRequestObject.status == 200) {
+					var newPElement = document.createElement("p");
+					var newText = document
+							.createTextNode(XMLHttpRequestObject.responseText);
+					newPElement.setAttribute("id", "text");
+					newPElement.appendChild(newText);
+					var divElement = document.getElementById("targetDiv");
+					var oldPElement = document.getElementById("text");
+					divElement.appendChild(newPElement);
+					divElement.replaceChild(newPElement, oldPElement);
+				}
+			}
+			XMLHttpRequestObject.send(null);
+		}
+	}
+</script>
+</head>
+<body>
+	<form>
+		<input type="button" value="download message" onclick="getData('1')">
+		<input type="button" value="download new message"
+			onclick="getData('2')">
+
+	</form>
+	<div id="targetDiv" width=100 height=100>
+		<p id="text"></p>
+	</div>
+
+</body>
+</html>

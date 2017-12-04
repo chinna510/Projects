@@ -1,0 +1,23 @@
+package com.akka;
+
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+
+public class AkkaMain {
+
+	public void notifier() {
+
+		ActorSystem system = ActorSystem.create("Notifier");
+
+		ActorRef ref = system.actorOf(Props.create(Actor1.class));
+
+		ref.tell("HI", ActorRef.noSender());
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

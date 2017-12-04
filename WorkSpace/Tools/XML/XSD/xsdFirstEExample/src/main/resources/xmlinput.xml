@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="input.xsd">
+<Employee emp_id="BIZ_042">
+<Id>001</Id>
+<First_name>Joydeep</First_name>
+<Last_name>Paul</Last_name>
+<Mobile>9823634215</Mobile>
+</Employee>
+<Employee_parent emp_id="BIZ_042">
+<Mother_name>Panchalee Paul</Mother_name>
+<Father_name>Gopal Chandra Paul</Father_name>
+</Employee_parent>
+</Company>

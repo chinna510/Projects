@@ -1,0 +1,27 @@
+package com.graphx.vertexrdd;
+
+import java.util.Arrays;
+
+import scala.Option;
+import scala.runtime.AbstractFunction0;
+import scala.runtime.AbstractFunction3;
+
+public class JoinFunction extends AbstractFunction3<Object, Integer, Option<Integer>, Integer> {
+
+	@Override
+	public Integer apply(Object id, Integer old, Option<Integer> extra) {
+
+		System.out.println(Arrays.asList(old));
+
+		return old + extra.getOrElse(new F0());
+	}
+
+	class F0 extends AbstractFunction0<Integer> {
+
+		@Override
+		public Integer apply() {
+			return 100;
+		}
+
+	}
+}

@@ -1,0 +1,45 @@
+package com.akka.stream;
+
+import java.util.Arrays;
+
+import akka.NotUsed;
+import akka.actor.ActorSystem;
+import akka.event.Logging;
+import akka.event.LoggingAdapter;
+import akka.japi.Pair;
+import akka.stream.ActorMaterializer;
+import akka.stream.Materializer;
+import akka.stream.impl.fusing.SubSource;
+import akka.stream.javadsl.Source;
+
+public class RecipeReduceByKeyTest {
+
+	ActorSystem system = ActorSystem.create("Pipelining");
+	Materializer materializer = ActorMaterializer.create(system);
+
+	LoggingAdapter log = Logging.getLogger(system, this);
+
+	private void reduceBy() {
+
+		final Source<String, NotUsed> words = Source.from(Arrays.asList("hello", "world", "and", "hello", "akka"));
+
+		final int MAXIMUM_DISTINCT_WORDS = 1000;
+
+		final Source<Pair<String, Integer>, NotUsed> counts = words.groupBy(MAXIMUM_DISTINCT_WORDS, i -> i)
+
+				.map(i -> new Pair<String, Integer>(i, 1))
+				.reduce((left, right) -> new Pair<String, Integer>(left.first(), left.second() + right.second()))
+				.mergeSubstreams();
+
+		
+		
+	}
+
+	public static void main(String[] args) {
+
+		RecipeReduceByKeyTest test = new RecipeReduceByKeyTest();
+		test.reduceBy();
+
+	}
+
+}

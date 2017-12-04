@@ -1,0 +1,5 @@
+package com.akka.stream;
+
+public class StreamingFileIO {
+
+}

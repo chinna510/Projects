@@ -1,0 +1,25 @@
+package com.akka.stream;
+
+import akka.stream.javadsl.Sink;
+import akka.stream.javadsl.Source;
+
+public class ManualTriggerWithZip {
+
+	
+	
+	public void zipWith(){
+	
+	 final Source<Trigger, TestPublisher.Probe<Trigger>> triggerSource = TestSource.probe(system);
+     final Sink<Message, TestSubscriber.Probe<Message>> messageSink = TestSink.probe(system);
+
+	
+	
+	
+	
+	}
+	
+	
+	
+}
+
+class Trigger{}

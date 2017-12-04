@@ -1,0 +1,15 @@
+<%@ page session="false" %>
+<%@ page import="java.util.*" %>
+<%
+String thisURL = HttpUtils.getRequestURL(request).toString();
+thisURL = java.net.URLEncoder.encode(thisURL);
+Object[][] locales =
+{new Locale("en","US"),"English"},
+{new Locale("de","DE"),"Deutsch"},
+{new Locale("es","ES"),"Español"},
+{new Locale("fr","FR"),"Français"},
+{new Locale("it","IT"),"Italiano"},
+};
+{
+
+for (int i = 0; i < locales.length; i++) {

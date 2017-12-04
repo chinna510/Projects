@@ -1,0 +1,13 @@
+package com.HCataLog;
+
+import org.apache.hadoop.hive.contrib.mr.Reducer;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.WritableComparable;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hive.hcatalog.data.HCatRecord;
+
+public class Map extends Mapper<WritableComparable, HCatRecord, IntWritable, IntWritable> {
+	protected void map(WritableComparable key,HCatRecord value,Mapper<WritableComparable, HCatRecord, IntWritable, IntWritable>) {
+
+	}
+}

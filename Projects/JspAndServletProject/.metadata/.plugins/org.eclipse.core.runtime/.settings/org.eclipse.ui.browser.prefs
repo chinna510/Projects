@@ -1,0 +1,4 @@
+browser-choice=1
+browsers=<?xml version\="1.0" encoding\="UTF-8"?>\n<web-browsers current\="0">\n<system/>\n<external location\="/usr/bin/firefox" name\="Firefox"/>\n</web-browsers>
+eclipse.preferences.version=1
+internalWebBrowserHistory=http\://localhost\:5555/RegistrationForm/|*|http\://localhost\:5555/RegistrationForm/registerform.jsp|*|http\://localhost\:5555/RegistrationForm/register.jsp|*|http\://localhost\:5555/RegistrationPage/register.jsp|*|http\://localhost\:5555/RegistrationPage/|*|http\://localhost\:5555/RegistrationPage/WEB-INF/classes/register.jsp|*|

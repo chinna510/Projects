@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;Graph_Filtering&apos;&#x0A;- Original project: &apos;Graph_Filtering&apos;&#x0A;- Original element: &apos;Graph_Filtering/src/main/java/com.spark.graphx.GraphXSample&apos;" description="Delete element" element1="/src\/main\/java&lt;com.spark.graphx.GraphXSample" element2="/src\/main\/java&lt;com.spark.graphx" element3="/src\/main\/java&lt;com.spark" element4="/src\/main\/java&lt;com" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1466174354668" subPackages="false" version="1.0"/>
+</session>

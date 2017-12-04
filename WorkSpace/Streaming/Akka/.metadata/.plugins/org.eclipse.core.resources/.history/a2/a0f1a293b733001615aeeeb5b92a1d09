@@ -1,0 +1,10 @@
+package com.akka.distribute;
+
+import akka.actor.AbstractActor;
+
+public class IllustrateGracefulShutdown extends AbstractActor {
+
+	public IllustrateGracefulShutdown() {
+	}
+	
+}

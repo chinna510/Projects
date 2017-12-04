@@ -1,0 +1,13 @@
+ 
+  akka.jvm-exit-on-fatal-error = false
+    akka.loglevel = "DEBUG"
+ 
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+      <encoder>
+        <pattern>
+          %-5level %logger{36} [req: %X{requestId}, visitor: %X{visitorId}] - %msg%n
+        </pattern>
+      </encoder>
+    </appender>
+
+ 

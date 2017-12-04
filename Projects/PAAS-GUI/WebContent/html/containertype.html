@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Image Registry</title>
+
+<link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<link rel="stylesheet" href="../css/table/table.css">
+</head>
+<body>
+
+<div ng-app="mycontainertype" ng-controller="MainCtrl" ng-init="selectContainerTypes()">
+
+		<div class="container">
+
+
+			<div class="page-header" align="center">
+				<h1>PAAS-Container Type</h1>
+			</div>
+
+
+			<button ng-click="toggleModal()" class="btn btn-primary">Add Container Type</button>
+
+			<modal title="Add Container Type" visible="showModal">
+			
+			<form role="form">
+				<div class="form-group">
+					<label for="name">Name</label> <input type="text"
+						class="form-control" id="name" placeholder="Name" ng-model="field.name"/>
+				</div>
+				<div class="form-group">
+					<label for="VPC Region">CPU shares</label>
+					 <input type="number" class="form-control" id="cpu_shares" value="1" min="0" max="60" ng-model="field.cpu_shares"/>
+				</div>
+
+                <div class="form-group">
+					<label for="ACL">Memory(MB)</label> 
+					 <input type="number" class="form-control" id="memory" value="1" min="0" max="60" ng-model="field.memory"/>
+				</div>
+
+
+                <div class="form-group">
+					<label for="description">Description</label> 
+					<textarea rows="2" cols="10"class="form-control" ng-model="field.description"></textarea>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			 <!--         drop-down menu for version 
+
+				<div class="form-group">
+					<label for="version">Version</label> <select class="form-control"placeholder="------">
+						<option value="A">V1</option>
+						<option value="B">V2</option>
+						<option value="C">V3</option>
+						<option value="D">V4</option>
+					</select>
+				</div>
+
+				end of drop-down menu   
+				
+				<div class="form-group">
+					<label for="ACL">Private Cloud</label> <input type="text"
+						class="form-control" id="ACL" placeholder="Private Cloud" />
+				</div>
+
+				<div class="form-group">
+					<label for="ACL">User Name</label> <input type="text"
+						class="form-control" id="ACL" placeholder="User Name" />
+				</div>
+
+				<div class="form-group">
+					<label for="ACL">Password</label> <input type="password"
+						class="form-control" id="ACL" placeholder="Password" />
+				</div> -->
+				<!-- start function of closing the button -->
+
+
+				<div class="modal-footer" style="background: #ccefff">
+					<div class="bootstrap-dialog-footer">
+						<div class="bootstrap-dialog-footer-buttons">
+							<button type="button"class="btn btn-danger btn-nirmata col-xs-2"data-dismiss="modal">Cancel</button>
+							<button class="btn btn-primary btn-nirmata" data-dismiss="modal" ng-click="regContainerTypes()">Add</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- close the function of closing the button -->
+			</form>
+			</modal>
+		</div>
+
+		<hr />
+
+		<div class="container">
+			<table border="1" cellpadding="5">
+				<thead>
+				<tr>
+					<th>Name</th>
+					<th>CPU Shares</th>
+					<th>Memory(MB)</th>
+					<th>Description</th>
+					<th>Actions</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr ng-repeat="field in fields">
+					<td>{{field.name}}</td>
+					<td>{{field.cpu_shares}}</td>
+					<td>{{field.memory}}</td>
+					<td>{{field.description}}</td>
+					<td><button ng-click="deleteContainerTypes(field.name)"class="btn btn-danger">Delete</button>
+					<button ng-click="updateContainerTypes(field.name)"class="btn btn-primary">Update</button></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+	
+	<script src="../js/containertype/containertype.js" type="text/javascript"></script>
+
+</body>
+</html>

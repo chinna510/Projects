@@ -1,0 +1,69 @@
+<%@ page session="false"%>
+<%@ page import="java.sql.*"%>
+<%@ page import="java.util.*"%>
+<HTML>
+<HEAD>
+<TITLE>Department Managers</TITLE>
+</HEAD>
+<BODY>
+	<p>
+	<hr color="#000000">
+	<H2>Department Managers</H2>
+
+	<%
+		String DRIVER = "com.mysql.jdbc.Driver";
+		String URL = "jdbc:mysql://localhost/bizruntime";
+		// Open a database connection
+		Class.forName(DRIVER);
+		Connection con = null;
+		ResultSet rs = null;
+		Statement stmt = null;
+		try {
+			con = DriverManager.getConnection(URL, "root", "root");
+			// Get department manager information
+			String sql1 = "SELECT deptno,deptname,deptmgr from departments";
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(sql1);
+	%>
+	<DL>
+		<%
+			while (rs.next()) {
+					String deptno = rs.getString(1);
+					String deptname = rs.getString(2);
+					String deptmgr = rs.getString(3);
+
+					{
+		%>
+<table>
+<tr><td><%=deptno%></td></tr>
+<tr><td><%=deptname%></td></tr>
+<tr><td><%=deptmgr%></td></tr>
+</table>
+
+		<DT>
+			<B><%=deptno%></B>
+		</DT>
+	<dt>
+			<br><%=deptname%><br><%=deptmgr%>
+
+</dt>
+		<%
+			}
+
+				}
+			} finally {
+				if (rs != null) {
+					rs.close();
+				}
+				if (stmt != null) {
+					stmt.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+			}
+		%>
+
+	</DL>
+</BODY>
+</HTML>

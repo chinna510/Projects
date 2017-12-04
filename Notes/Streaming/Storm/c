@@ -1,0 +1,15 @@
+wget http://a.mbbsindia.com/storm/apache-storm-0.10.0/apache-storm-0.10.0.tar.gz
+
+tar -xvzf apache-storm-0.10.0.tar.gz
+
+
+
+bin/storm jar /home/bizruntime/Chinna/BizRuntime/workspace/Storm/WordCounter/target/HelloWorld-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.storm.HelloWorld.HelloWorldTopology HelloWorldTopology
+
+
+bin/storm jar /home/bizruntime/Chinna/BizRuntime/workspace/Storm/WordCounter/target/WordCounter-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.storm.wordcount.HelloStorm HelloStorm
+
+
+wget http://download.zeromq.org/zeromq-4.1.3.tar.gz
+
+tar xvzf zeromq-4.1.4.tar.gz

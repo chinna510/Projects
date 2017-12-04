@@ -1,0 +1,23 @@
+package com.akka.distribute;
+
+import com.typesafe.config.Config;
+import com.typesafe.config.ConfigFactory;
+
+import akka.actor.ActorSystem;
+
+public class FactorialFrontendMain {
+
+	public void test(String port) {
+		Config config = ConfigFactory.parseString("akka.remote.netty.tcp.port=" + port)
+				.withFallback(ConfigFactory.parseString("akka.cluster.roles = [backend]"))
+				.withFallback(ConfigFactory.load("factorial"));
+		ActorSystem system = ActorSystem.create("ClusterSystem", config);
+
+	}
+
+	public static void main(String[] args) {
+		FactorialFrontendMain main = new FactorialFrontendMain();
+		main.test(args[0]);
+	}
+
+}

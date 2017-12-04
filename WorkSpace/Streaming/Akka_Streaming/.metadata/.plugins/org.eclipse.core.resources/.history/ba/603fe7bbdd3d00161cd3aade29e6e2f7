@@ -1,0 +1,23 @@
+package com.akka;
+
+import akka.actor.ActorSystem;
+
+public class AkkaMain {
+
+	
+public 	void notifier(){
+	
+	ActorSystem system=ActorSystem.create("Notifier");
+	
+	
+	
+}
+	
+	
+	public static void main(String[] args) {
+
+		
+		
+	}
+
+}

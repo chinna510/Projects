@@ -1,0 +1,6 @@
+To see System info:
+
+sudo dmidecode --type 17
+
+sudo dmidecode --type processor
+

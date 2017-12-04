@@ -1,0 +1,27 @@
+package com.storm.PrimeNumber;
+
+import backtype.storm.Config;
+import backtype.storm.LocalCluster;
+import backtype.storm.topology.TopologyBuilder;
+import backtype.storm.utils.Utils;
+import clojure.main;
+
+public class PrimeNumberTopology {
+	
+	public static void main(String[] args) {
+		
+		TopologyBuilder builder = new TopologyBuilder();
+		builder.setSpout("spout", new NumberSpout());
+		builder.setBolt("prime", new NumberBolt()).shuffleGrouping("spout");
+		Config conf = new Config();
+		conf.setDebug(true);
+		conf.setNumWorkers(3);
+		LocalCluster cluster = new LocalCluster();
+		cluster.submitTopology("word-count", conf, builder.createTopology());
+
+		Utils.sleep(10000);
+
+		cluster.shutdown();
+
+	}
+}

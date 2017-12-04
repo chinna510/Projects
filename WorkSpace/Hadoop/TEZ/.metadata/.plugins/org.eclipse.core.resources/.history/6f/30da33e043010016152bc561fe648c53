@@ -1,0 +1,27 @@
+package com.tez.examples;
+
+import org.apache.tez.runtime.api.LogicalInput;
+import org.apache.tez.runtime.api.ProcessorContext;
+import org.apache.tez.runtime.library.processor.SimpleProcessor;
+
+import com.google.common.base.Preconditions;
+
+
+public class ForwardingProcessor extends SimpleProcessor {
+
+	public ForwardingProcessor(ProcessorContext context) {
+		super(context);
+
+	}
+
+	@Override
+	public void run() throws Exception {
+		Preconditions.checkState(getInputs().size() == 1);
+		Preconditions.checkState(getOutputs().size() == 1);
+		LogicalInput input=getInputs().values().iterator().next();
+		Reader rawReader=input.getReader();
+		
+
+	}
+
+}

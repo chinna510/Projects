@@ -1,0 +1,31 @@
+package com.akka.utilities;
+
+import akka.actor.ActorRef;
+import akka.event.japi.LookupEventBus;
+
+public class LookupBusImpl extends LookupEventBus<MsgEnvelope, ActorRef, String> {
+
+	@Override
+	public String classify(MsgEnvelope arg0) {
+		return null;
+	}
+
+	@Override
+	public int compareSubscribers(ActorRef arg0, ActorRef arg1) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int mapSize() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void publish(MsgEnvelope arg0, ActorRef arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

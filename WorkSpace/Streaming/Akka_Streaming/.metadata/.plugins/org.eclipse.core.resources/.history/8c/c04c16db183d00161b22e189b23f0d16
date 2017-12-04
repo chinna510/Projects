@@ -1,0 +1,6 @@
+package com.akka.integration;
+
+public class EmailServer {
+
+	
+}

@@ -1,0 +1,15 @@
+package com.akka.stream;
+
+import akka.actor.ActorSystem;
+
+public class Pipelining {
+
+	ActorSystem system=ActorSystem.create("Pipelining");
+	
+	
+	public void pipeline() {
+
+		
+	}
+
+}

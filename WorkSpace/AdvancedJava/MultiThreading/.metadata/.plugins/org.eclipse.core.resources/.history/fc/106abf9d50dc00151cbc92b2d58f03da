@@ -1,0 +1,22 @@
+package com.thread;
+
+import org.apache.log4j.Logger;
+
+public class ThreadExample extends Thread {
+	static Logger logger = Logger.getLogger(ThreadExample.class);
+
+	public void run() {
+		logger.info("Thread is Running......");
+
+	}
+
+	public static void main(String[] args) {
+		ThreadExample ex = new ThreadExample();
+		ex.start();
+		logger.info(ex.isAlive());
+		logger.info(ex.isDaemon());
+		logger.info(ex.isInterrupted());
+
+	}
+
+}

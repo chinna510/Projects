@@ -1,0 +1,21 @@
+package com.akka.distribute;
+
+import java.math.BigInteger;
+
+import akka.actor.UntypedActor;
+import static akka.dispatch.Futures.future;
+
+
+public class FactorialBackend extends UntypedActor {
+
+	@Override
+	public void onReceive(Object msg) throws Exception {
+
+		if(msg instanceof Integer){
+			final Integer n=(Integer) msg;
+			Future<BigInteger> f1=future
+		}
+		
+	}
+
+}

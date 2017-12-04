@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;XMLToJavaTransformation/src/main/java&apos;&#x0A;- Original project: &apos;milyn-smooks-example-xml-to-java&apos;&#x0A;- Destination element: &apos;XMLToJavaTransformation/src/main/java&apos;&#x0A;- Original elements:&#x0A;     milyn-smooks-example-xml-to-java/src/main/java/example.model&#x0A;     milyn-smooks-example-xml-to-java/src/main/java/example" description="Copy packages" destination="=XMLToJavaTransformation/src\/main\/java" element1="/src\/main\/java&lt;example.model" element2="/src\/main\/java&lt;example" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1453897788500" version="1.0"/>
+</session>

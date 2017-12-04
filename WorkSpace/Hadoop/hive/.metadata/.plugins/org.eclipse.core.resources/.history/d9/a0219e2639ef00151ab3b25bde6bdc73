@@ -1,0 +1,65 @@
+package com.hive.HiveClient;
+
+import java.sql.SQLException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.DriverManager;
+
+public class HiveClientJdbc {
+	private static String driverName = "org.apache.hive.jdbc.HiveDriver";
+
+	public static void main(String[] args) throws SQLException {
+		try {
+			Class.forName(driverName);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			System.exit(1);
+		}
+
+		Connection con = DriverManager.getConnection("jdbc:hive2://192.168.1.146:10000/bizruntime2", "", "");
+		Statement stmt = con.createStatement();
+		String tableName = "users";
+		String sql = "create table users(uid int,age smallint,position string,regId Bigint) ROW FORMAT DELIMITED FIELDS TERMINATED BY '|' STORED AS TEXTFILE LOCATION '/user/hive/warehouse/output/output.txt'";
+		stmt.execute("drop table if exists " + tableName);
+		stmt.execute(sql);
+
+		String sql1 = "show tables";
+		System.out.println("Running: " + sql1);
+
+		ResultSet res = stmt.executeQuery(sql1);
+		while (res.next()) {
+			System.out.println(res.getString(1));
+		}
+
+		String sql3 = "describe users";
+		System.out.println("Running: " + sql3);
+		res = stmt.executeQuery(sql3);
+		while (res.next()) {
+			System.out.println(
+					res.getString(1) + "\t" + res.getString(2) + "\t" + res.getString(3));
+			
+		}
+			String filepath = "/user/hive/warehouse/input/user.txt";
+			sql = "load data inpath '" + filepath + "' overwrite into table " + tableName;
+			System.out.println("Running: " + sql);
+			stmt.execute(sql);
+
+			sql = "select * from " + tableName;
+
+			System.out.println("Running: " + sql);
+			res = stmt.executeQuery(sql);
+			while (res.next()) {
+				System.out.println(
+						String.valueOf(res.getInt(1) + res.getInt(2) + res.getString(3) + "\t" + res.getInt(4)));
+			}
+
+			sql = "select count(1) from " + tableName;
+			System.out.println("Running: " + sql);
+			res = stmt.executeQuery(sql);
+			while (res.next()) {
+				System.out.println(res.getString(1));
+			}
+		}
+	}
+

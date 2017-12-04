@@ -1,0 +1,9 @@
+package com.akka.distribute;
+
+public class ClusterShardingTest {
+
+	public void test(){
+		
+	}
+	
+}

@@ -1,0 +1,17 @@
+package com.akka.ScanningBus;
+
+import akka.actor.ActorSystem;
+
+public class ScanningBusTest {
+
+	ActorSystem system=ActorSystem.create("ScanningBus");
+	
+	public void test(){
+		
+		
+		
+		
+	}
+	
+	
+}

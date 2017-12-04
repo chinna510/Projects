@@ -1,0 +1,81 @@
+
+package com.tez.example;
+
+import java.io.IOException;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
+import org.apache.hadoop.util.ToolRunner;
+import org.apache.tez.client.TezClient;
+import org.apache.tez.dag.api.DAG;
+import org.apache.tez.dag.api.DataSinkDescriptor;
+import org.apache.tez.dag.api.DataSourceDescriptor;
+import org.apache.tez.dag.api.Edge;
+import org.apache.tez.dag.api.ProcessorDescriptor;
+import org.apache.tez.dag.api.TezConfiguration;
+import org.apache.tez.dag.api.Vertex;
+import org.apache.tez.mapreduce.input.MRInput;
+import org.apache.tez.mapreduce.output.MROutput;
+import org.apache.tez.runtime.library.conf.OrderedPartitionedKVEdgeConfig;
+import org.apache.tez.runtime.library.partitioner.HashPartitioner;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class WordCount extends TezExampleBase {
+	static String INPUT = "Input";
+	static String OUTPUT = "Output";
+	static String TOKENIZER = "Tokenizer";
+	static String SUMMATION = "Summation";
+
+	private static final Logger LOG = LoggerFactory.getLogger(WordCount.class);
+
+	private DAG createDAG(TezConfiguration tezConf, String inputPath, String outputPath, int numPartitions)
+			throws IOException {
+		LOG.info("###### WordCount DAG Creation Starting ######");
+		DataSourceDescriptor dataSource = MRInput
+				.createConfigBuilder(new Configuration(tezConf), TextInputFormat.class, inputPath)
+				.groupSplits(isDisableSplitGrouping()).generateSplitsInAM(isGenerateSplitInClient()).build();
+		DataSinkDescriptor dataSink = MROutput
+				.createConfigBuilder(new Configuration(tezConf), TextOutputFormat.class, outputPath).build();
+		Vertex tokenizerVertex = Vertex.create(TOKENIZER, ProcessorDescriptor.create(TokenProcessor.class.getName()))
+				.addDataSource(INPUT, dataSource);
+		OrderedPartitionedKVEdgeConfig edgeConf = OrderedPartitionedKVEdgeConfig
+				.newBuilder(Text.class.getName(), IntWritable.class.getName(), HashPartitioner.class.getName())
+				.setFromConfiguration(tezConf).build();
+		Vertex summationVertex = Vertex
+				.create(SUMMATION, ProcessorDescriptor.create(SumProcessor.class.getName()), numPartitions)
+				.addDataSink(OUTPUT, dataSink);
+		DAG dag = DAG.create("WordCount");
+		dag.addVertex(tokenizerVertex).addVertex(summationVertex)
+				.addEdge(Edge.create(tokenizerVertex, summationVertex, edgeConf.createDefaultEdgeProperty()));
+		return dag;
+	}
+
+	protected void printUsage() {
+		LOG.error("Usage: " + " wordcount in out [numPartitions]");
+	}
+
+	protected int validateArgs(String[] otherArgs) {
+		if (otherArgs.length < 2 || otherArgs.length > 3) {
+			return 2;
+		}
+		return 0;
+	}
+
+	@Override
+	protected int runJob(String[] args, TezConfiguration tezConf, TezClient tezClient) throws Exception {
+		LOG.info("######## DAG RunJob() Loading ...");
+		DAG dag = createDAG(tezConf, args[0], args[1], args.length == 3 ? Integer.parseInt(args[2]) : 1);
+		LOG.info("##########Running WordCount");
+		return runDag(dag, isCountersLog(), LOG);
+	}
+
+	public static void main(String[] args) throws Exception {
+		LOG.info("############# Main  Loading ...");
+		int res = ToolRunner.run(new Configuration(), new WordCount(), args);
+		System.exit(res);
+	}
+}

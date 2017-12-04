@@ -1,0 +1,5 @@
+package com.akka.future;
+
+public class FactorialResult {
+
+}

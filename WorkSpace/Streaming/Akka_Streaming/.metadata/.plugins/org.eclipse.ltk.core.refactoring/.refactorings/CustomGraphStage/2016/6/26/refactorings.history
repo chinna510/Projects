@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 5 elements from project &apos;CustomGraphStage&apos;&#x0A;- Original project: &apos;CustomGraphStage&apos;&#x0A;- Original elements:&#x0A;     CustomGraphStage/src/main/java/com.akka.stream&#x0A;     com.akka.stream.SharedKillSwitchApp.java&#x0A;     com.akka.stream.SharedKillSwitchApp2.java&#x0A;     com.akka.stream.UniqueKillSwitchApp.java&#x0A;     com.akka.stream.UniqueKillSwitchApp2.java" description="Delete elements" element1="/src\/main\/java&lt;com.akka.stream" element2="/src\/main\/java&lt;com.akka" element3="/src\/main\/java&lt;com" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1466857286749" subPackages="false" version="1.0"/>
+</session>

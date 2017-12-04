@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Subnet</title>
+
+<link rel="stylesheet"href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+
+<link rel="stylesheet"href="../css/table/table.css">
+<script src="../js/subnet/subnet.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+	<div ng-app="mysubnet" ng-controller="SubnetCtrl" ng-init="selectSubnet()">
+		
+			<div class="container">
+			
+				<div class="page-header" align="center">
+					<h1>PAAS-Network Subnet</h1>
+				</div>
+
+
+				<button ng-click="toggleModal()" class="btn btn-primary">Add Subnet</button>
+				
+				<modal title="Add Subnet" visible="showModal">
+
+				<form role="form">
+					<!-- <div class="form-group">
+					<label for="VPC_Name">VPC Name</label> <input type="text"
+						class="form-control" id="VPC_Name" placeholder="VPC Name" />
+				</div> -->
+					<div class="form-group">
+						<label for="VPC_Name">VPC Name</label> <select
+							class="form-control" id="vpc" ng-model="field.vpc_name">
+							<option value="vpc_name1">vpc_name1</option>
+							<option value="vpc_name2">vpc_name2</option>
+							<option value="vpc_name3">vpc_name3</option>
+							<option value="vpc_name4">vpc_name4</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="Subnet_Name">Subnet Name</label> <input type="text"
+							class="form-control" id="Subnet_Name" placeholder="Subnet Name"
+							ng-model="field.subnet_name" />
+					</div>
+					<div class="form-group">
+						<label for="CIDR">CIDR</label> <input type="text"
+							class="form-control" id="CIDR" placeholder="CIDR"
+							ng-model="field.cidr" />
+					</div>
+					<!-- <div class="form-group">fields
+					<label for="ACL">ACL</label> <input type="text"
+						class="form-control" id="ACL" placeholder="ACL" />
+				</div> -->
+					<div class="form-group">
+						<label for="ACL">ACL</label> <select class="form-control" id="ACL"
+							ng-model="field.acl">
+							<option value="acl 1">acl 1</option>
+							<option value="acl 2">acl 2</option>
+							<option value="acl 3">acl 3</option>
+							<option value="acl 4">acl 4</option>
+						</select>
+					</div>
+
+					<div class="modal-footer" style="background: #ccefff">
+						<div class="bootstrap-dialog-footer">
+							<div class="bootstrap-dialog-footer-buttons">
+
+
+
+								<!-- <button class="btn btn-default btn-nirmata">Cancel</button> -->
+								<button type="button"class="btn btn-danger btn-nirmata col-xs-2"data-dismiss="modal">Cancel</button>
+								<button class="btn btn-primary btn-nirmata" data-dismiss="modal"ng-click="regSubnet()">Add</button>
+							</div>
+						</div>
+					</div>
+
+				</form>
+				</modal>
+			</div>
+
+			<hr />
+
+			<div class="container">
+				<table border="1" cellpadding="10">
+					<thead>
+						<tr>
+							<th>Subnet ID</th>
+							<th>Subnet Name</th>
+							<th>VPC ID</th>
+							<th>CIDR</th>
+							<th>ACL ID</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="field in fields">
+							<td></td>
+							<td>{{field.subnet_name}}</td>
+							<td></td>
+							<td>{{field.cidr}}</td>
+							<td></td>
+							<td><button ng-click="deleteSubnet(field.subnet_name)"
+									class="btn btn-danger">Delete</button>
+								<button ng-click="update(field.subnet_name)"
+									class="btn btn-primary">Update</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	
+
+
+</body>
+</html>

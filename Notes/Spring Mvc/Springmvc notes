@@ -1,0 +1,3 @@
+@Controller --->it is for reresenting particular class as Controller class
+@RequestMapping  ---->it is for mapping the class with Jsp's
+

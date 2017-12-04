@@ -1,0 +1,60 @@
+package com.hive.HiveClient;
+
+import java.sql.SQLException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.DriverManager;
+
+public class HiveClientJdbc {
+	private static String driverName = "org.apache.hive.jdbc.HiveDriver";
+
+	public static void main(String[] args) throws SQLException {
+		try {
+			Class.forName(driverName);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+			System.exit(1);
+		}
+		
+		Connection con = DriverManager.getConnection("jdbc:hive2://localhost:10000/bizruntime2", "", "");
+		Statement stmt = con.createStatement();
+		String tableName="users";
+		String sql = "create table users(uid int,age smallint,position string,regId Bigint)";
+
+		stmt.execute(sql);
+		// show tables
+		
+		String sql1 = "show tables";
+		System.out.println("Running: " + sql1);
+		ResultSet res = stmt.executeQuery(sql1);
+		if (res.next()) {
+			System.out.println(res.getInt(1) + res.getInt(2) + res.getString(1) + "\t" + res.getInt(4));
+		}
+		// describe table
+		String sql3 = "describe user";
+		System.out.println("Running: " + sql3);
+		res = stmt.executeQuery(sql3);
+		while (res.next()) {
+			System.out.println(res.getInt(1)+"\t" + res.getInt(2)+"\t" + res.getString(1) + "\t" + res.getInt(4));
+			String filepath = "/tmp/a.txt";
+			sql = "load data local inpath '" + filepath + "' into table " + tableName;
+			System.out.println("Running: " + sql);
+			stmt.execute(sql);
+
+			sql = "select * from " + tableName;
+			System.out.println("Running: " + sql);
+			res = stmt.executeQuery(sql);
+			while (res.next()) {
+				System.out.println(String.valueOf(res.getInt(1)) + "\t" + res.getString(2));
+			}
+
+			sql = "select count(1) from " + tableName;
+			System.out.println("Running: " + sql);
+			res = stmt.executeQuery(sql);
+			while (res.next()) {
+				System.out.println(res.getString(1));
+			}
+		}
+	}
+}

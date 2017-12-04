@@ -1,0 +1,17 @@
+package com.akka.integration;
+
+import akka.actor.Props;
+import akka.stream.actor.AbstractActorPublisher;
+
+public class JobManager extends AbstractActorPublisher<Job> {
+
+	public static final JobAcceptedMessage JobAccepted = new JobAcceptedMessage();
+
+	public static final JobDeniedMessage JobDenied = new JobDeniedMessage();
+
+	public static Props props() {
+		return Props.create(JobManager.class);
+
+	}
+
+}

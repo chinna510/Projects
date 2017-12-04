@@ -1,0 +1,68 @@
+Storm User:
+
+1. useradd -md /home/storm storm
+2. passwd storm
+3. adduser storm sudo
+
+Download and Install Zookeeper: 
+
+1. sudo su - storm
+2. wget http://www.gtlib.gatech.edu/pub/apache/zookeeper/stable/zookeeper-3.4.6.tar.gz
+3. tar xvzf zookeeper-3.4.6.tar.gz
+4. cd zookeeper-3.4.6
+5. cp conf/zoo_sample.cfg conf/zoo.cfg
+
+6. Make sure following lines exists in the zoo.cfg file.:
+
+# The number of milliseconds of each tick
+tickTime=2000
+# The number of ticks that the initial
+# synchronization phase can take
+initLimit=10
+# The number of ticks that can pass between
+# sending a request and getting an acknowledgement
+syncLimit=5
+# the directory where the snapshot is stored.
+# do not use /tmp for storage, /tmp here is just
+# example sakes.
+dataDir=/tmp/zookeeper
+# the port at which the clients will connect
+clientPort=2181
+autopurge.purgeInterval=24
+autopurge.snapRetainCount=5
+
+7. bin/zkServer.sh start
+8. bin/zkServer.sh stop
+9. To test if the Zookeeper is working, one can run four letter commands like ruok, conf or stat using netstat or telnet:\
+
+echo ruok | nc zkserver1 2181
+
+echo stat | nc zkserver1 2181 
+
+echo conf | nc zkserver1 2181
+
+sudo apt-get install libtool autoconf pkg-config gcc g++ make git
+
+ ZeroMQ:
+
+Download Zero MQ & installing using following commands:
+
+$ wget http://download.zeromq.org/zeromq-4.0.4.tar.gz
+$ tar xvzf zeromq-4.0.4.tar.gz
+$ cd zeromq-4.0.4
+$ ./configure
+$ make
+$ sudo make install
+
+4. JZMQ:
+
+Clone the JZMQ code from github & install it using following commands:
+
+$ git clone https://github.com/zeromq/jzmq.git
+$ cd jzmq
+$ ./autogen.sh
+$ ./configure
+$ make
+$ sudo make install
+
+

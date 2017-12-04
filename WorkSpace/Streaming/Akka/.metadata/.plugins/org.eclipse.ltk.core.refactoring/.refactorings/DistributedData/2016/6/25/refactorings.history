@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;DistributedData&apos;&#x0A;- Original project: &apos;DistributedData&apos;&#x0A;- Original elements:&#x0A;     com.akka.distribute.Publisher.java&#x0A;     com.akka.distribute.PublisherTest.java&#x0A;     com.akka.distribute.Subscriber.java&#x0A;     com.akka.distribute.SubscriberTest.java" description="Delete elements" element1="/src\/main\/java&lt;com.akka.distribute{SubscriberTest.java" element2="/src\/main\/java&lt;com.akka.distribute{Publisher.java" element3="/src\/main\/java&lt;com.akka.distribute{PublisherTest.java" element4="/src\/main\/java&lt;com.akka.distribute{Subscriber.java" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1466147509912" subPackages="false" version="1.0"/>
+</session>

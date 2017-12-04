@@ -1,0 +1,10 @@
+package com.akka.utilities;
+
+public class LookUpBusTest {
+
+	public void test(){
+		
+		
+	}
+	
+}

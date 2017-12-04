@@ -1,0 +1,10 @@
+package com.akka.distribute;
+
+public class FactorialFrontendMain {
+
+	public void test(){
+		
+		
+	}
+	
+}

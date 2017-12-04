@@ -1,0 +1,37 @@
+<html>
+<body>
+<center>
+<h1>
+Creating New Elements
+</h1>
+</center>
+<form>
+<input type="button" value="Click here"
+onclick="createNewElements()">
+</form>
+<script language="JavaScript">
+function createNewElements()
+{
+var newDiv, newTextfield, newText, newButton;
+newDiv = document.createElement("div");
+newDiv.id = "NewDIV";
+newTextfield = document.createElement("input");
+newTextfield.type = "text";
+newTextfield.value = "Hello!";
+newButton = document.createElement("input");
+newButton.type = "button";
+newButton.value = "New Button";
+newButton.onclick = sayHello;
+newText = document.createTextNode("Here is the new text.");
+newDiv.insertBefore(newButton, null);
+newDiv.insertBefore(newTextfield, null);
+newDiv.insertBefore(newText, null);
+document.body.insertBefore(newDiv, null);
+}
+function sayHello()
+{
+alert("Hello!");
+}
+</script>
+</body>
+</html>

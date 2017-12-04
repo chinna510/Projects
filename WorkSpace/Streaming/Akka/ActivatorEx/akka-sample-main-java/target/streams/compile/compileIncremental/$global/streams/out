@@ -1,0 +1,18 @@
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mInitial source changes: [0m
+[0m[[0mdebug[0m] [0m	removed:Set()[0m
+[0m[[0mdebug[0m] [0m	added: Set(/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-sample-main-java/src/main/java/sample/hello/Main.java, /home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-sample-main-java/src/main/java/sample/hello/Greeter.java, /home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-sample-main-java/src/main/java/sample/hello/Main2.java, /home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-sample-main-java/src/main/java/sample/hello/HelloWorld.java)[0m
+[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0mRemoved products: Set()[0m
+[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-sample-main-java/src/main/java/sample/hello/Main.java, /home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-sample-main-java/src/main/java/sample/hello/Greeter.java, /home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-sample-main-java/src/main/java/sample/hello/Main2.java, /home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-sample-main-java/src/main/java/sample/hello/HelloWorld.java)[0m
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
+[0m[[0mdebug[0m] [0m	product: Set()[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m	external source: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-sample-main-java/src/main/java/sample/hello/Main.java, /home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-sample-main-java/src/main/java/sample/hello/Greeter.java, /home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-sample-main-java/src/main/java/sample/hello/Main2.java, /home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-sample-main-java/src/main/java/sample/hello/HelloWorld.java)[0m
+[0m[[0mdebug[0m] [0mRecompiling all 4 sources: invalidated sources (4) exceeded 50.0% of all sources[0m
+[0m[[0minfo[0m] [0mCompiling 4 Java sources to /home/bizruntime/Chinna/BizRuntime/workspace/Akka/akka-sample-main-java/target/scala-2.11/classes...[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@5bf7c6cf directly...[0m

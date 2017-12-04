@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;Akka_Remoting&apos;&#x0A;- Original project: &apos;Akka_Remoting&apos;&#x0A;- Original element: &apos;Akka_Remoting/src/main/java/com.akka.distribute&apos;" description="Delete element" element1="/src\/main\/java&lt;com.akka.distribute" element2="/src\/main\/java&lt;com.akka" element3="/src\/main\/java&lt;com" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1466161275251" subPackages="false" version="1.0"/>
+</session>

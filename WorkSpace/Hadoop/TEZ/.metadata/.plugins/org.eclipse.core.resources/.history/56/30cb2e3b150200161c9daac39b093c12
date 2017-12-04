@@ -1,0 +1,32 @@
+package com.tez.example;
+
+import org.apache.tez.client.TezClient;
+import org.apache.tez.dag.api.TezConfiguration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class SortMergeJoinEx extends TezExampleBase {
+	private static Logger logger = LoggerFactory.getLogger(SortMergeJoinEx.class);
+
+	@Override
+	protected void printUsage() {
+		logger.error("Usage:sortmergejoin <file1> <file2> <numPartitions> <outPath>");
+	}
+
+	@Override
+	protected int validateArgs(String[] otherArgs) {
+
+		return 0;
+	}
+
+	@Override
+	protected int runJob(String[] args, TezConfiguration tezConf, TezClient tezClient) throws Exception {
+		String inputDir1 = args[0];
+		String inputDir2 = args[1];
+		int numPartitions = Integer.parseInt(args[2]);
+		String outputDir = args[3];
+
+		return 0;
+	}
+
+}

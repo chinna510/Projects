@@ -1,0 +1,8 @@
+package com.graphx.vertexrdd;
+
+public class Snippet {
+	public static void main(String[] args) {
+		aggregateUsingIndex
+	}
+}
+

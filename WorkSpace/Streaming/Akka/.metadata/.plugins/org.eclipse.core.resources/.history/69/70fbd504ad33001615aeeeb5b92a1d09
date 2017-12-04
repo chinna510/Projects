@@ -1,0 +1,14 @@
+package com.akka.distribute;
+
+public class ClusterShardingTest {
+
+	public void test(){
+	    Option<String> roleOption = Option.none();
+	    ClusterShardingSettings settings = ClusterShardingSettings.create(system);
+	    ActorRef startedCounterRegion = ClusterSharding.get(system).start("Counter",
+	      Props.create(Counter.class), settings, messageExtractor);
+
+
+	}
+	
+}

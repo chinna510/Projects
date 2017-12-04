@@ -1,0 +1,11 @@
+package com.datagram;
+
+import java.net.DatagramSocket;
+
+public class DataSender {
+	public static void main(String[] args) {
+
+		DatagramSocket socket = new DatagramSocket(3000);
+		String str = "welcome to bizruntime";
+	}
+}

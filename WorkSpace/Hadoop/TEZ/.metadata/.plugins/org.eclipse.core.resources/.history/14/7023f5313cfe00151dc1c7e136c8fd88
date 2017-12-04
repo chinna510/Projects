@@ -1,0 +1,22 @@
+package com.tez;
+
+import org.apache.tez.mapreduce.output.MROutput;
+import org.apache.tez.mapreduce.processor.SimpleMRProcessor;
+import org.apache.tez.runtime.api.ProcessorContext;
+
+import com.google.common.base.Preconditions;
+
+public class SumProcessor extends SimpleMRProcessor {
+
+	public SumProcessor(ProcessorContext context) {
+		super(context);
+
+	}
+
+	@Override
+	public void run() throws Exception {
+		Preconditions.checkArgument(getInputs().size() == 1);
+		MROutput out = (MROutput) getOutputs().values().iterator().next();
+	}
+
+}

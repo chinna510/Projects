@@ -1,0 +1,27 @@
+package com.tez.examples;
+
+import org.apache.tez.mapreduce.processor.SimpleMRProcessor;
+import org.apache.tez.runtime.api.LogicalInput;
+import org.apache.tez.runtime.api.ProcessorContext;
+
+import com.google.common.base.Preconditions;
+
+public class HashJoinProcessor extends SimpleMRProcessor{
+	  private static final String broadcastOption = "doBroadcast";
+	  private static final String streamingSide = "streamingSide";
+	  private static final String hashSide = "hashSide";
+	  private static final String inputFile = "inputFile";
+	public HashJoinProcessor(ProcessorContext context) {
+		super(context);
+		
+	}
+
+	@Override
+	public void run() throws Exception {
+		Preconditions.checkState(getInputs().size()==1);
+		Preconditions.checkState(getOutputs().size()==1);
+		LogicalInput input=
+		
+	}
+
+}

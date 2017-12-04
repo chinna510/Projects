@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring accessors="true" comment="Delete element from project &apos;Future_Composing&apos;&#x0A;- Original project: &apos;Future_Composing&apos;&#x0A;- Original element: &apos;com.akka.future.ComposingFuture.java&apos;" description="Delete element" element1="/src\/main\/java&lt;com.akka.future{ComposingFuture.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1465810805313" subPackages="false" version="1.0"/>&#x0A;&#x0A;</session>

@@ -1,0 +1,13 @@
+package com.biz.akka;
+
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+
+public class WatchMain {
+	public void test() {
+		final ActorSystem system = ActorSystem.create("DeathWatch");
+		final ActorRef ref = system.actorOf(Props.create(WatchActor.class), "WatchActor");
+		ref.tell("kill", ActorRef.noSender());
+	}
+}

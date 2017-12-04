@@ -1,0 +1,26 @@
+package com.akka.distribute;
+
+import com.typesafe.config.Config;
+import com.typesafe.config.ConfigFactory;
+
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+
+public class PublisherTest {
+
+	public void test(String port) {
+		Config config = ConfigFactory.parseString("akka.remote.netty.tcp.port=" + port)
+				.withFallback(ConfigFactory.load());
+		ActorSystem system = ActorSystem.create("ActorSystem");
+		ActorRef ref = system.actorOf(Props.create(Publisher.class), "publisher");
+		ref.tell("hello", null);
+
+	}
+
+	public static void main(String[] args) {
+		PublisherTest test = new PublisherTest();
+		test.test(args[0]);
+	}
+
+}

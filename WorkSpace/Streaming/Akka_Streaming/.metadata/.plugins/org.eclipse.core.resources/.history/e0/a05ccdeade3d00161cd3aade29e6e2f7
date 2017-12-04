@@ -1,0 +1,19 @@
+package com.akka;
+
+import akka.actor.ActorRef;
+import akka.actor.Props;
+import akka.actor.UntypedActor;
+
+public class Actor1 extends UntypedActor {
+
+	@Override
+	public void onReceive(Object msg) throws Exception {
+
+		if (msg instanceof String) {
+			System.out.println(msg);
+			String message = (String) msg;
+			ActorRef actor2 = getContext().actorOf(Props.create(Actor2.class));
+			actor2.tell(message, self());
+		}
+	}
+}

@@ -1,0 +1,40 @@
+package com.akka.distribute;
+
+import java.util.concurrent.TimeUnit;
+
+import akka.persistence.UntypedPersistentActor;
+import scala.concurrent.duration.Duration;
+
+public class Counter extends UntypedPersistentActor {
+int count=0;
+	@Override
+	public void preStart() throws Exception {
+		// TODO Auto-generated method stub
+		super.preStart();
+		context().setReceiveTimeout(Duration.create(120, TimeUnit.SECONDS));
+	}
+
+	@Override
+	public String persistenceId() {
+		return "Counter-" + getSelf().path().name();
+	}
+
+	@Override
+	public void onReceiveCommand(Object arg0) throws Exception {
+
+	}
+
+	@Override
+	public void onReceiveRecover(Object msg) throws Exception {
+
+		if(msg instanceof CounterChanged){
+			updateState((CounterChanged) msg);
+		}
+		
+	}
+
+	private void updateState(CounterChanged msg) {
+		
+	}
+
+}

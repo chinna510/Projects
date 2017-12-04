@@ -1,0 +1,9 @@
+package com.akka.utilities;
+
+import akka.actor.ActorRef;
+import akka.event.LookupClassification;
+import akka.event.japi.LookupEventBus;
+
+public class LookupBusImpl extends LookupEventBus<MsgEnvelope, ActorRef, String> {
+
+}

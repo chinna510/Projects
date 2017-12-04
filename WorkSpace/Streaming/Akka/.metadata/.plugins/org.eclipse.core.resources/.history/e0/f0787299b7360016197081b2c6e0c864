@@ -1,0 +1,12 @@
+package com.akka.EventStream;
+
+public class Electronic implements AllKindsOfMusic {
+
+	final public String genre;
+	
+	public Electronic() {
+
+	
+	}
+	
+}

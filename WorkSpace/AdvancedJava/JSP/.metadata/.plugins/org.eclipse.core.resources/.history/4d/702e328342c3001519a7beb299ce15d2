@@ -1,0 +1,22 @@
+<%@ page session="false" %>
+<%@ page import="java.sql.*" %>
+<%@ page import="java.util.*" %>
+<%@ page import="java.lang.reflect.*" %>
+<%
+String driverName = request.getParameter("driverName");
+if (driverName == null)
+driverName = "";
+driverName = driverName.trim();
+if (driverName.equals(""))
+throw new ServletException("No driverName parameter");
+// Get required database URL parameter
+String url = request.getParameter("url");
+if (url == null)
+url = "";
+url = url.trim();
+if (url.equals(""))
+throw new ServletException("No url parameter");
+// Get optional userID parameter
+String userID = request.getParameter("userID");
+if (userID == null)
+userID = "";

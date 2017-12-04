@@ -1,0 +1,21 @@
+package com.akka.integration;
+
+public class JobManagerProtocol {
+
+	final public static class Job {
+		public final String payload;
+
+		public Job(String payload) {
+			this.payload = payload;
+		}
+	}
+
+	public static class JobAcceptedMessage {
+		@Override
+		public String toString() {
+			return "JobAccepted";
+		}
+	}
+
+	
+}

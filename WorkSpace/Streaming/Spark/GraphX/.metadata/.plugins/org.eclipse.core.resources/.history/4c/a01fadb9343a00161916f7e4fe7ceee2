@@ -1,0 +1,15 @@
+package com.graphx.edgerdd;
+
+import org.apache.spark.graphx.Edge;
+
+import scala.runtime.AbstractFunction1;
+
+public class MapFunction extends AbstractFunction1<Edge<Integer>, Edge<Integer>> {
+
+	@Override
+	public Edge<Integer> apply(Edge<Integer> arg0) {
+		return null;
+	}
+
+	
+}

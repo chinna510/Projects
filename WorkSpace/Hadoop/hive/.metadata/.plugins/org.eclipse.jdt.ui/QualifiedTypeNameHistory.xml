@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="org.apache.hadoop.fs.Path"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="org.apache.hadoop.hive.contrib.mr.Reducer"/>
+<fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Mapper"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="org.apache.hadoop.io.WritableComparable"/>
+<fullyQualifiedTypeName name="org.apache.hadoop.io.IntWritable"/>
+<fullyQualifiedTypeName name="java.lang.Iterable"/>
+<fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Reducer"/>
+<fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Reducer.Context"/>
+<fullyQualifiedTypeName name="javax.servlet.jsp.jstl.core.IteratedExpression"/>
+<fullyQualifiedTypeName name="org.apache.hive.hcatalog.data.HCatRecord"/>
+<fullyQualifiedTypeName name="org.apache.hadoop.conf.Configuration"/>
+<fullyQualifiedTypeName name="org.apache.hadoop.util.GenericOptionsParser"/>
+<fullyQualifiedTypeName name="org.apache.hive.hcatalog.common.HCatConstants"/>
+<fullyQualifiedTypeName name="org.apache.hadoop.mapreduce.Job"/>
+<fullyQualifiedTypeName name="org.apache.hive.hcatalog.mapreduce.HCatInputFormat"/>
+<fullyQualifiedTypeName name="org.apache.hadoop.mapred.JobConf"/>
+<fullyQualifiedTypeName name="org.apache.hive.hcatalog.mapreduce.InputJobInfo"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="org.apache.hive.hcatalog.data.DefaultHCatRecord"/>
+<fullyQualifiedTypeName name="org.apache.hive.hcatalog.mapreduce.OutputJobInfo"/>
+<fullyQualifiedTypeName name="org.apache.hive.hcatalog.mapreduce.HCatOutputFormat"/>
+<fullyQualifiedTypeName name="org.apache.hive.hcatalog.data.schema.HCatSchema"/>
+<fullyQualifiedTypeName name="org.apache.hadoop.util.ToolRunner"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,55 @@
+New log file opened at Thu Jun 16 14:22:39 IST 2016 by 11274@bizruntime-X555LAB
+Taking next connection to: 35597
+New client attempting to connect on port: 52904-35597
+  Address = /127.0.1.1:35597
+This client on port 52904 has uuid f6af63cc-c0bb-4bdb-baf5-74a7e8978ab8 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-f6af63cc-c0bb-4bdb-baf5-74a7e8978ab8
+Taking next connection to: 35597
+New client attempting to connect on port: 52906-35597
+  Address = /127.0.1.1:35597
+Handshake exception on socket: 52906
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 35597
+New client attempting to connect on port: 52908-35597
+  Address = /127.0.1.1:35597
+This client on port 52908 has uuid 82f92b2b-cd7b-4e42-9331-c03857531a07 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-f6af63cc-c0bb-4bdb-baf5-74a7e8978ab8, activator-82f92b2b-cd7b-4e42-9331-c03857531a07
+Taking next connection to: 35597
+New client attempting to connect on port: 52910-35597
+  Address = /127.0.1.1:35597
+Handshake exception on socket: 52910
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 35597
+New client attempting to connect on port: 52912-35597
+  Address = /127.0.1.1:35597
+This client on port 52912 has uuid 41adaf84-d517-48f6-a500-d58ad5dd28c5 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-f6af63cc-c0bb-4bdb-baf5-74a7e8978ab8, activator-82f92b2b-cd7b-4e42-9331-c03857531a07, activator-41adaf84-d517-48f6-a500-d58ad5dd28c5
+Taking next connection to: 35597
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 35597
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 35597
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 11274@bizruntime-X555LAB logs at Thu Jun 16 14:32:18 IST 2016, goodbye.

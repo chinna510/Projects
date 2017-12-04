@@ -1,0 +1,50 @@
+package com.spark.graphx.GraphXSample;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.spark.graphx.Edge;
+import org.apache.spark.graphx.EdgeRDD;
+import org.apache.spark.graphx.Graph;
+import org.apache.spark.graphx.VertexRDD;
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.rdd.RDD;
+import org.apache.spark.storage.StorageLevel;
+
+import scala.reflect.ClassTag$;
+
+public class SimplePropertyGraph {
+	@SuppressWarnings("unchecked")
+	public void test() {
+		SparkConf conf = new SparkConf().setMaster("local").setAppName("PropertyGraph");
+		JavaSparkContext jssc = new JavaSparkContext(conf);
+		List<Customer> list = new ArrayList<Customer>();
+		list.add(new Customer(1, "Chinna", "Student"));
+		list.add(new Customer(3, "JP", "Employee"));
+		list.add(new Customer(5, "Richard", "Worker"));
+		list.add(new Customer(7, "Chinna", "Professional"));
+		JavaRDD users = jssc.parallelize(list);
+		List list2 = new ArrayList<Edge>();
+		list2.add(new Edge(3, 7, "collab"));
+		list2.add(new Edge(5, 3, "advisor"));
+		list2.add(new Edge(1, 5, "colleague"));
+		list2.add(new Edge(5, 7, "colleague"));
+		JavaRDD relationships = jssc.parallelize(list2);
+		List list3 = new ArrayList<DefaultUser>();
+		list3.add(new DefaultUser("John Deo", "Missing"));
+		JavaRDD defualt = jssc.parallelize(list3);
+		Graph<VertexRDD, EdgeRDD> graph = Graph.apply(users.rdd(), relationships.rdd(), defualt,
+				StorageLevel.MEMORY_ONLY(), StorageLevel.MEMORY_ONLY(), ClassTag$.MODULE$.apply(String.class),
+				ClassTag$.MODULE$.apply(String.class));
+		System.out.println("NO OF EDGES : "+graph.ops().numEdges());
+		System.out.println("NO OF VERTEXES : "+graph.ops().numVertices());
+
+	}
+	public static void main(String[] args) {
+		SimplePropertuGraph pr=new SimplePropertuGraph();
+		pr.test();
+	}
+
+}

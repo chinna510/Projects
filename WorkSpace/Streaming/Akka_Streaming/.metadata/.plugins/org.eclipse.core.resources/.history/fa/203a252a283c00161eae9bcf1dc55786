@@ -1,0 +1,17 @@
+package com.akka.stream;
+
+import java.io.Serializable;
+
+import akka.actor.ActorSystem;
+
+public class CustomGraphStage implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+
+	ActorSystem system=ActorSystem.create("CustomGraphStage");
+	
+	
+	
+	
+	
+}

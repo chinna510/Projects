@@ -1,0 +1,30 @@
+package com.myudfs;
+
+import java.io.IOException;
+
+import org.apache.pig.Accumulator;
+import org.apache.pig.EvalFunc;
+import org.apache.pig.data.Tuple;
+
+public class IntMax extends EvalFunc<Integer> implements Accumulator<Integer> {
+
+	public void accumulate(Tuple arg0) throws IOException {
+
+	}
+
+	public void cleanup() {
+
+	}
+
+	public Integer getValue() {
+
+		return null;
+	}
+
+	@Override
+	public Integer exec(Tuple arg0) throws IOException {
+	
+		return null;
+	}
+
+}

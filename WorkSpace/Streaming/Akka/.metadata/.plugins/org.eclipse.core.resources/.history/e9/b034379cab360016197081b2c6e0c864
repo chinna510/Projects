@@ -1,0 +1,7 @@
+package com.akka.subchannel;
+
+import akka.util.Subclassification;
+
+public class StartsWithSubclassification implements Subclassification<String>{
+
+}

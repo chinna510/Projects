@@ -1,0 +1,17 @@
+package com.tez;
+
+import org.apache.tez.mapreduce.processor.SimpleMRProcessor;
+import org.apache.tez.runtime.api.ProcessorContext;
+
+public class SumProcessor1 extends SimpleMRProcessor {
+
+	public SumProcessor1(ProcessorContext context) {
+		super(context);
+	}
+
+	@Override
+	public void run() throws Exception {
+
+	}
+
+}

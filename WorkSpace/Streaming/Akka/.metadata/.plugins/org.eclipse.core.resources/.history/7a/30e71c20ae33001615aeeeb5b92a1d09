@@ -1,0 +1,62 @@
+package com.akka.distribute;
+
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+import akka.cluster.sharding.ClusterSharding;
+import akka.cluster.sharding.ClusterShardingSettings;
+import akka.cluster.sharding.ShardRegion;
+import akka.japi.Option;
+
+public class ClusterShardingTest {
+
+	public void test() {
+		Option<String> roleOption = Option.none();
+		ActorSystem system = ActorSystem.create("ActorSystem");
+
+		ClusterShardingSettings settings = ClusterShardingSettings.create(system);
+
+		ShardRegion.MessageExtractor messageExtractor = new ShardRegion.MessageExtractor() {
+
+			@Override
+			public String shardId(Object message) {
+				int numberOfShards = 100;
+				if (message instanceof EntityEnvelope) {
+					long id = ((EntityEnvelope) message).id;
+					return String.valueOf(id % numberOfShards);
+				} else if (message instanceof Get) {
+					long id = ((Get) message).counterId;
+					return String.valueOf(id % numberOfShards);
+				} else {
+					return null;
+				}
+
+			}
+
+			@Override
+			public Object entityMessage(Object message) {
+				if (message instanceof EntityEnvelope)
+					return ((EntityEnvelope) message).payload;
+				else
+					return message;
+			}
+
+			@Override
+			public String entityId(Object message) {
+				if (message instanceof EntityEnvelope)
+					return String.valueOf(((EntityEnvelope) message).id);
+				else if (message instanceof Get)
+					return String.valueOf(((Get) message).counterId);
+				else
+					return null;
+			}
+		};
+		ActorRef startedCounterRegion = ClusterSharding.get(system).start("Counter", Props.create(Counter.class),
+				settings, messageExtractor);
+
+		ActorRef CounerRegion=ClusterSharding.get(system).shardRegion("Counter");
+		counterRegion.tell(new Counter.Get(123), getSelf());
+		
+	}
+
+}

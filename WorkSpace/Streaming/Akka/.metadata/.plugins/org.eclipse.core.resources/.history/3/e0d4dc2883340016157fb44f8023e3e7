@@ -1,0 +1,27 @@
+package com.akka.remoting;
+
+import com.typesafe.config.ConfigFactory;
+
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+
+public class CreationApplication {
+	
+	 public static void startRemoteWorkerSystem() {
+		    ActorSystem.create("CalculatorWorkerSystem",
+		        ConfigFactory.load(("calculator")));
+		    System.out.println("Started CalculatorWorkerSystem");
+		  }
+
+	public static void startRemoteCreationSystem(){
+		final ActorSystem system = ActorSystem.create("CreationSystem",
+		        ConfigFactory.load("remotecreation"));
+		    final ActorRef actor = system.actorOf(Props.create(CreationActor.class),
+		        "creationActor");
+		    
+		    
+		    
+	}
+
+}

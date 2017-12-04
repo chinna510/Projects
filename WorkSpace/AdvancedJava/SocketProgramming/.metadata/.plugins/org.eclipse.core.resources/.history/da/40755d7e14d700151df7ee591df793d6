@@ -1,0 +1,36 @@
+package com.socket;
+
+import java.applet.Applet;
+
+import org.apache.log4j.Logger;
+
+public class SocketPermissionTest extends Applet {
+	static Logger logger = Logger.getLogger(SocketPermissionTest.class);
+
+	public Applet getApplet(String name) {
+		AppletSecurity security = (AppletSecurity) System.getSecurityManager();
+		name = name.toLowerCase();
+		SocketPermission panelSp = new SocketPermission(panel.getCodeBase().getHost(), "connect");
+		for (Enumeration e = appletPanels.elements(); e.hasMoreElements();) {
+			AppletPanel p = (AppletPanel) e.nextElement();
+			String param = p.getParameter("name");
+			if (param != null) {
+				param = param.toLowerCase();
+			}
+			if (name.equals(param) && p.getDocumentBase().equals(panel.getDocumentBase())) {
+
+				SocketPermission sp = new SocketPermission(p.getCodeBase().getHost(), "connect");
+
+				if (panelSp.implies(sp)) {
+					return p.applet;
+				}
+			}
+		}
+		return null;
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

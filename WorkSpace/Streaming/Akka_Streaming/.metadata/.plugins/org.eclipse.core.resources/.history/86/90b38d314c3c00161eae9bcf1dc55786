@@ -1,0 +1,10 @@
+package com.akka.stream;
+
+import java.util.concurrent.CompletionStage;
+
+import akka.stream.FlowShape;
+import akka.stream.stage.GraphStageWithMaterializedValue;
+
+public class CustomMaterializedValues<A> extends GraphStageWithMaterializedValue<FlowShape<A, A>, CompletionStage<A>> {
+
+}

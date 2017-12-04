@@ -1,0 +1,20 @@
+package com.Spark;
+
+import java.util.Arrays;
+
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+
+import scala.Tuple2;
+
+public class MapExample {
+
+	public void test(){
+		SparkConf conf=new SparkConf().setAppName("MapExample").setMaster("local");
+		JavaSparkContext sc=new JavaSparkContext(conf);
+		JavaRDD<String> lines=sc.parallelize(Arrays.asList("spark", "rdd", "example", "sample", "example"));
+		JavaRDD<Tuple2<String, Integer>> y=lines.map(e->new Tuple2<String, Integer>(e,1));
+		
+	}
+}

@@ -1,0 +1,141 @@
+PG Kafka:
+========
+
+U need to install these :
+=========================
+Requirements:
+=============
+
+1. The GNU toolchain
+2. GNU make
+3. pthreads
+4. zlib (optional, for gzip compression support)
+5. libssl-dev (optional, for SSL support)
+6. libsasl2-dev (optional, for SASL support)
+7. cmake
+8. make
+9. gcc
+10.libsnappy
+11.zlib
+
+PostgreSQL installation using source code:
+==========================================
+
+1. https://ftp.postgresql.org/pub/source/v9.5.3/postgresql-9.5.3.tar.gz
+2. tar xvzf postgresql-9.5.3.tar.gz
+3. cd postgresql-9.5.3
+4. ./configure
+5. make 
+6. make install 
+7. ls -l /usr/local/pgsql/
+8. adduser postgres
+9. passwd postgres
+10.mkdir /usr/local/pgsql/data
+11.chown postgres:postgres /usr/local/pgsql/data
+12.ls -ld /usr/local/pgsql/data
+13.su - postgres
+14./usr/local/pgsql/bin/initdb -D /usr/local/pgsql/data/
+15.ls -l /usr/local/pgsql/data
+16./usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data/ -l logfile start
+17.cat logfile
+18./usr/local/pgsql/bin/createdb test
+19./usr/local/pgsql/bin/psql test
+
+Librdkafka Installation:
+========================
+
+1. https://github.com/edenhill/librdkafka/archive/master.zip
+2. unzip master.zip
+3. cd master.zip
+4. ./configure
+5. make
+6. make install
+ 
+Pg_Kafka Installation:
+======================
+
+1. https://github.com/xstevens/pg_kafka/archive/master.zip
+2. tar xvzf master.zip
+3. cd pg_kafka-master
+4. make
+5. >>>>>>>After running make one file created in root directory >>>>>>> pg_kafka.so
+>>>>>>>Add this file to postgres.conf file.
+
+--------------> shared_preload_libraries = 'pg_kafka.so'
+6. Restart PostgresSQL once
+
+Download Kafka:
+==============
+1. http://a.mbbsindia.com/kafka/0.9.0.0/kafka_2.10-0.9.0.0.tgz
+2. tar xvzf kafka_2.10-0.9.0.0.tgz
+3. cd kafka_2.10-0.9.0.0
+4. change configuration files
+
+connecting all:
+===============
+Run Kafka :
+===========
+1. run zookeeper server first
+>> bin/zookeeper-server-start.sh config/zookeeper.properties
+
+2. Run kafka server
+>> bin/kafka-server-start.sh config/server.properties
+
+3.Create topic
+>> bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+
+4. run the producer
+>> bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test1
+
+5. After this command we need to write messages
+
+6. start the consumer who will dumping these messages
+>> bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test --from-beginning
+
+
+Run these commands in Postgres Commandline:
+===========================================
+
+create extension kafka;
+insert into kafka.broker values ('localhost', 9092);
+select kafka.produce('topic_name', 'my message');
+
+
+
+Issues:
+=======
+If u will get this error "configure: error: readline library not found" install these
+=====================================================================================
+>>>sudo apt-get install libreadline6 libreadline6-dev
+
+
+========================================
+Open Kafka Console and see the messages
+========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

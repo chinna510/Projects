@@ -1,0 +1,45 @@
+<workflow-app xmlns="uri:oozie:workflow:0.2" name="map-reduce-wf">
+    <start to="mr-node"/>
+    <action name="mr-node">
+        <map-reduce>
+            <job-tracker>${jobTracker}</job-tracker>
+            <name-node>${nameNode}</name-node>
+            <prepare>
+                <delete path="${nameNode}/user/${wf:user()}/${examplesRoot}/output-data/${outputDir}"/>
+            </prepare>
+            
+            <configuration>
+                <property>
+                    <name>mapred.job.queue.name</name>
+                    <value>default</value>
+                </property>
+                <property>
+                    <name>mapred.mapper.class</name>
+                    <value>com.oozie.OozieExamples.SampleMapper</value>
+                </property>
+                <property>
+                    <name>mapred.reducer.class</name>
+                    <value>com.oozie.oozieExamples.SampleReducer</value>
+                </property>
+                <property>
+                    <name>mapred.map.tasks</name>
+                    <value>1</value>
+                </property>
+                <property>
+                    <name>mapred.input.dir</name>
+                    <value>/user/bizruntime/inputs/input.txt</value>
+                </property>
+                <property>
+                    <name>mapred.output.dir</name>
+                    <value>/user/bizruntime/output-data</value>
+                </property>
+            </configuration>
+        </map-reduce>
+        <ok to="end"/>
+        <error to="fail"/>
+    </action>
+    <kill name="fail">
+        <message>Map/Reduce failed, error message[${wf:errorMessage(wf:lastErrorNode())}]</message>
+    </kill>
+    <end name="end"/>
+</workflow-app>

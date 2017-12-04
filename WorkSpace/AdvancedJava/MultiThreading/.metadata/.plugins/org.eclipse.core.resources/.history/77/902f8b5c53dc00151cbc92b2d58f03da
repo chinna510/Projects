@@ -1,0 +1,18 @@
+package com.thread;
+
+import org.apache.log4j.Logger;
+
+public class ThreadRunnable implements Runnable {
+	static Logger logger = Logger.getLogger(ThreadRunnable.class);
+
+	public void run() {
+		logger.info("Thread Running ...");
+	}
+
+	public static void main(String[] args) {
+		ThreadRunnable tr = new ThreadRunnable();
+		Thread th = new Thread(tr);
+		th.start();
+		logger.info(th.getName());
+	}
+}

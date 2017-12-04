@@ -1,0 +1,46 @@
+package com.tez.topk;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.tez.runtime.api.ProcessorContext;
+import org.apache.tez.runtime.library.api.KeyValuesReader;
+import org.apache.tez.runtime.library.api.KeyValuesWriter;
+import org.apache.tez.runtime.library.processor.SimpleProcessor;
+
+import com.google.common.base.Preconditions;
+
+public class TokenProcessor extends SimpleProcessor{
+
+	private static final String INPUT = "input"; 
+    private static final String WRITER = "writer"; 
+    private static final String OUTPUT = "output"; 
+    private static final String TOKENIZER = "tokenizer"; 
+    private static final String SUM = "sum"; 
+    private Text text= new Text();
+    private static final IntWritable ONE= new IntWritable(1);
+    private int columnIndex;
+	
+	public TokenProcessor(ProcessorContext context) {
+		super(context);
+		
+	}
+
+	@Override
+	public void run() throws Exception {
+		Preconditions.checkArgument(getInputs().size()==1);
+		Preconditions.checkArgument(getOutputs().size()==1);
+		KeyValuesReader kReader=(KeyValuesReader) getInputs().get(INPUT).getReader();
+		KeyValuesWriter kWriter=(KeyValuesWriter) getOutputs().get(TOKENIZER).getWriter();
+		while(kReader.next()){
+			String split[]=kReader.getCurrentValues().toString().split(",");
+			if(split.length>columnIndex){
+				text.set(split[columnIndex]);
+				kWriter.write(text,ONE);
+			}
+		}
+		
+	}
+
+	
+
+}

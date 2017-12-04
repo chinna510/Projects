@@ -1,0 +1,23 @@
+package com.akka.stream;
+
+import java.util.concurrent.CompletionStage;
+
+import akka.stream.Attributes;
+import akka.stream.FlowShape;
+import akka.stream.stage.GraphStageLogic;
+import akka.stream.stage.GraphStageWithMaterializedValue;
+import scala.Tuple2;
+
+public class CustomMaterializedValues<A> extends GraphStageWithMaterializedValue<FlowShape<A, A>, CompletionStage<A>> {
+
+	@Override
+	public FlowShape<A, A> shape() {
+		return null;
+	}
+
+	@Override
+	public Tuple2<GraphStageLogic, CompletionStage<A>> createLogicAndMaterializedValue(Attributes arg0) {
+		return null;
+	}
+
+}

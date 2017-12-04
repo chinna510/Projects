@@ -1,0 +1,34 @@
+package com.tez;
+
+import org.apache.tez.client.TezClient;
+import org.apache.tez.dag.api.TezConfiguration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class JoinValidator extends TezExampleBase {
+	private static final Logger LOG = LoggerFactory.getLogger(JoinValidateProcessor.class);
+	private static final String LHS_INPUT_NAME = "lhsfile";
+	private static final String RHS_INPUT_NAME = "rhsfile";
+
+	private static final String COUNTER_GROUP_NAME = "JOIN_VALIDATE";
+	private static final String MISSING_KEY_COUNTER_NAME = "MISSING_KEY_EXISTS";
+
+	@Override
+	protected void printUsage() {
+		LOG.info("JoinValidator <input1><input2>");
+
+	}
+
+	@Override
+	protected int validateArgs(String[] otherArgs) {
+
+		return 0;
+	}
+
+	@Override
+	protected int runJob(String[] args, TezConfiguration tezConf, TezClient tezClient) throws Exception {
+
+		return 0;
+	}
+
+}

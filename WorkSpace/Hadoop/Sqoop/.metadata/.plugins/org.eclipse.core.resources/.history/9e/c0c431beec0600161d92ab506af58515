@@ -1,0 +1,48 @@
+package com.sqoop;
+
+import org.apache.sqoop.client.SqoopClient;
+import org.apache.sqoop.model.MDriverConfig;
+import org.apache.sqoop.model.MFromConfig;
+import org.apache.sqoop.model.MJob;
+import org.apache.sqoop.model.MToConfig;
+import org.apache.sqoop.validation.Status;
+
+public class JobCreation extends SqoopClient {
+	String url = "http://localhost:12000/sqoop/";
+	SqoopClient client = new SqoopClient(url);
+
+	public JobCreation(String serverUrl) {
+		super(serverUrl);
+	}
+
+	public void test() {
+		long fromLinkId = 1;// for jdbc connector
+		long toLinkId = 2; // for HDFS connector
+		MJob job = client.createJob(fromLinkId, toLinkId);
+		job.setName("Vampire");
+		job.setCreationUser("Buffy");
+		// set the "FROM" link job config values
+		MFromConfig fromJobConfig = job.getFromJobConfig();
+		fromJobConfig.getStringInput("fromJobConfig.schemaName").setValue("sqoop");
+		fromJobConfig.getStringInput("fromJobConfig.tableName").setValue("sqoop");
+		fromJobConfig.getStringInput("fromJobConfig.partitionColumn").setValue("id");
+		// set the "TO" link job config values
+		MToConfig toJobConfig = job.getToJobConfig();
+		toJobConfig.getStringInput("toJobConfig.outputDirectory").setValue("/usr/tmp");
+		// set the driver config values
+		MDriverConfig driverConfig = job.getDriverConfig();
+		driverConfig.getStringInput("throttlingConfig.numExtractors").setValue("3");
+
+		Status status = client.saveJob(job);
+		if (status.canProceed()) {
+			System.out.println("Created Job with Job Id: " + job.getPersistenceId());
+		} else {
+			System.out.println("Something went wrong creating the job");
+		}
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>
+Updating a Page With insertAdjacentHTML
+</title>
+<script language="JavaScript">
+function addHTML()
+{
+targetDiv.insertAdjacentHTML("AfterEnd",
+"<p><input type=text value='Hello there.'> See? A new text
+field.</p>");
+}
+</script>
+</head>
+<body>
+<center>
+<h1>
+Updating a Page With insertAdjacentHTML
+</h1>
+</center>
+<div id="targetDiv">
+<center>
+<form>
+<input type=button value="Click here"
+onclick="addHTML()">
+</form>
+</center>
+</div>
+</body>
+</html>

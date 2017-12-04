@@ -1,0 +1,714 @@
+2016-04-27 10:37:20,902 [Worker-10] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/pom.xml
+2016-04-27 10:37:26,537 [Worker-10] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.oozie:OozieExamples:0.0.1-SNAPSHOT @ /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/pom.xml.
+2016-04-27 10:37:30,975 [Worker-10] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /OozieExamples/src/main/java
+2016-04-27 10:37:30,995 [Worker-10] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /OozieExamples/src/test/java
+2016-04-27 10:37:34,127 [Worker-10] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 13 sec
+2016-04-27 10:37:35,856 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 10:37:35,857 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 10:37:35,878 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 10:37:35,878 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 10:40:11,690 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 10:40:11,800 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 10:40:11,803 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 10:40:11,803 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 10:44:48,618 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.oozie:OozieExamples:0.0.1-SNAPSHOT @ /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/pom.xml.
+2016-04-27 10:44:55,288 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 10:44:55,289 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 10:44:55,293 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 10:44:55,294 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 10:45:08,091 [Worker-0] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.oozie:OozieExamples:0.0.1-SNAPSHOT @ /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/pom.xml.
+2016-04-27 10:45:10,468 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 10:45:10,469 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 10:45:10,497 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 10:45:10,497 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 10:45:19,470 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 10:45:19,471 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 10:45:19,487 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 10:45:19,487 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 11:29:20,538 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 11:29:20,538 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 11:29:20,541 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 11:29:20,542 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 11:29:25,449 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 11:29:25,450 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 11:29:25,456 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 11:29:25,457 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:08:16,322 [Worker-36] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.oozie:OozieExamples:0.0.1-SNAPSHOT @ /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/pom.xml.
+2016-04-27 12:08:18,264 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/oozie/oozie-client/4.2.0/oozie-client-4.2.0.pom
+2016-04-27 12:08:18,558 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/oozie/oozie-client/4.2.0/oozie-client-4.2.0.pom
+2016-04-27 12:08:19,182 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/oozie/oozie-main/4.2.0/oozie-main-4.2.0.pom
+2016-04-27 12:08:20,151 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/oozie/oozie-main/4.2.0/oozie-main-4.2.0.pom
+2016-04-27 12:08:21,140 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/oozie/oozie-hadoop-auth/hadoop-1-4.2.0/oozie-hadoop-auth-hadoop-1-4.2.0.pom
+2016-04-27 12:08:21,411 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/oozie/oozie-hadoop-auth/hadoop-1-4.2.0/oozie-hadoop-auth-hadoop-1-4.2.0.pom
+2016-04-27 12:08:22,564 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/oozie/oozie-client/4.2.0/oozie-client-4.2.0.jar
+2016-04-27 12:08:24,379 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/oozie/oozie-client/4.2.0/oozie-client-4.2.0.jar
+2016-04-27 12:08:24,664 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/activemq/activemq-client/5.8.0/activemq-client-5.8.0.jar
+2016-04-27 12:08:32,398 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/activemq/activemq-client/5.8.0/activemq-client-5.8.0.jar
+2016-04-27 12:08:32,823 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.6.6/slf4j-api-1.6.6.jar
+2016-04-27 12:08:33,114 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.6.6/slf4j-api-1.6.6.jar
+2016-04-27 12:08:33,412 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar
+2016-04-27 12:08:33,723 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar
+2016-04-27 12:08:34,023 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/fusesource/hawtbuf/hawtbuf/1.9/hawtbuf-1.9.jar
+2016-04-27 12:08:34,329 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/fusesource/hawtbuf/hawtbuf/1.9/hawtbuf-1.9.jar
+2016-04-27 12:08:34,608 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/geronimo/specs/geronimo-j2ee-management_1.1_spec/1.0.1/geronimo-j2ee-management_1.1_spec-1.0.1.jar
+2016-04-27 12:08:34,897 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/geronimo/specs/geronimo-j2ee-management_1.1_spec/1.0.1/geronimo-j2ee-management_1.1_spec-1.0.1.jar
+2016-04-27 12:08:35,195 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/oozie/oozie-hadoop-auth/hadoop-1-4.2.0/oozie-hadoop-auth-hadoop-1-4.2.0.jar
+2016-04-27 12:08:35,511 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/oozie/oozie-hadoop-auth/hadoop-1-4.2.0/oozie-hadoop-auth-hadoop-1-4.2.0.jar
+2016-04-27 12:08:35,844 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-simple/1.6.6/slf4j-simple-1.6.6.jar
+2016-04-27 12:08:36,136 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-simple/1.6.6/slf4j-simple-1.6.6.jar
+2016-04-27 12:08:36,430 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/xerces/xercesImpl/2.10.0/xercesImpl-2.10.0.jar
+2016-04-27 12:08:42,020 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/xerces/xercesImpl/2.10.0/xercesImpl-2.10.0.jar
+2016-04-27 12:08:42,327 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar
+2016-04-27 12:08:43,359 [Worker-36] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar
+2016-04-27 12:08:46,978 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:08:46,979 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 12:08:47,016 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:08:47,017 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:08:51,632 [Worker-36] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.oozie:OozieExamples:0.0.1-SNAPSHOT @ /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/pom.xml.
+2016-04-27 12:08:53,350 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:08:53,352 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 12:08:53,357 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:08:53,357 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:12:17,418 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:12:17,437 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 12:12:17,441 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:12:17,441 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:12:40,188 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:12:40,188 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 12:12:40,196 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:12:40,197 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:13:15,986 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:13:15,986 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 12:13:15,999 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:13:15,999 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:13:45,314 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:13:45,314 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 12:13:45,322 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:13:45,322 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:18:47,869 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:18:47,869 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 12:18:47,885 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:18:47,885 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:19:25,815 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:19:25,829 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 12:19:25,831 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:19:25,831 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:21:51,401 [Worker-35] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.oozie:OozieExamples:0.0.1-SNAPSHOT @ /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/pom.xml.
+2016-04-27 12:21:53,344 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:21:53,345 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 12:21:53,348 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:21:53,349 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:21:56,632 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:21:56,633 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 12:21:56,654 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:21:56,654 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:22:50,098 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:22:50,098 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 12:22:50,108 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:22:50,109 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:23:54,741 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:23:54,741 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/main/resources
+2016-04-27 12:23:54,750 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:23:54,751 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:26:03,646 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:26:03,741 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-27 12:26:03,759 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:26:03,760 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:26:08,270 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:26:08,284 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 12:26:08,335 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:26:08,344 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:37:59,921 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:37:59,940 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 12:37:59,962 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:37:59,967 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:40:07,247 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:40:07,255 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-27 12:40:07,298 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:40:07,298 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:40:11,079 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:40:11,080 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 12:40:11,082 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:40:11,083 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:41:54,083 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:41:54,085 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 12:41:54,096 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:41:54,097 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:42:47,416 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:42:47,417 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 12:42:47,431 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:42:47,439 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:43:29,143 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:43:29,145 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 12:43:29,153 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:43:29,153 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 12:44:40,844 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:44:40,845 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 12:44:40,854 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 12:44:40,854 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 13:10:14,262 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:10:14,287 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 13:10:14,289 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:10:14,300 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 13:14:56,793 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:14:56,807 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 13:14:56,812 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:14:56,813 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 13:19:31,403 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:19:31,404 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 13:19:31,416 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:19:31,418 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 13:19:52,723 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:19:52,728 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 13:19:52,734 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:19:52,734 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 13:21:24,130 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:21:24,131 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 13:21:24,142 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:21:24,142 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 13:21:32,050 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:21:32,051 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 13:21:32,068 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:21:32,068 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 13:23:53,297 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:23:53,306 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 13:23:53,314 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:23:53,315 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 13:27:08,686 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:27:08,702 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 13:27:08,704 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:27:08,705 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 13:29:11,399 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:29:11,399 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 13:29:11,401 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:29:11,402 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 13:30:11,044 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:30:11,045 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 13:30:11,051 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:30:11,052 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 13:36:10,245 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:36:10,245 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 13:36:10,248 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:36:10,249 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 13:45:21,641 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:45:21,647 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 13:45:21,650 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:45:21,650 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 13:45:26,675 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:45:26,675 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 13:45:26,677 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 13:45:26,677 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 14:06:46,644 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:06:46,646 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 14:06:46,655 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:06:46,655 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 14:10:28,038 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:10:28,055 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 14:10:28,057 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:10:28,057 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 14:14:21,082 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:14:21,085 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 14:14:21,088 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:14:21,089 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 14:18:22,444 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:18:22,445 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 14:18:22,447 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:18:22,448 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 14:18:30,412 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:18:30,413 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 14:18:30,414 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:18:30,415 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 14:19:07,524 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:19:07,525 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 14:19:07,529 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:19:07,533 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 14:22:36,777 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:22:36,778 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 14:22:36,784 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:22:36,784 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 14:25:36,728 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:25:36,728 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 14:25:36,730 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:25:36,730 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 14:47:38,533 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:47:38,534 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 14:47:38,535 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:47:38,593 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 14:48:25,472 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:48:25,472 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 14:48:25,488 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:48:25,488 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 14:49:35,145 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:49:35,146 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 14:49:35,153 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:49:35,153 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 14:49:53,874 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:49:53,874 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 14:49:53,876 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:49:53,877 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 14:52:20,458 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:52:20,459 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 14:52:20,464 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:52:20,464 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 14:52:41,029 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:52:41,030 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 14:52:41,043 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 14:52:41,044 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 15:24:07,828 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:24:07,829 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 15:24:07,830 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:24:07,831 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 15:25:21,129 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:25:21,129 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 15:25:21,131 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:25:21,132 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 15:25:30,542 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:25:30,543 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 15:25:30,558 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:25:30,564 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 15:25:38,521 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:25:38,521 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 15:25:38,532 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:25:38,532 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 15:26:14,226 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:26:14,226 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-27 15:26:14,242 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:26:14,243 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 15:26:39,712 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:26:39,719 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 15:26:39,732 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:26:39,733 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 15:26:58,177 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:26:58,179 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 15:26:58,181 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:26:58,181 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 15:27:32,352 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:27:32,352 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 15:27:32,354 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:27:32,354 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 15:28:40,995 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:28:40,996 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 15:28:41,003 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:28:41,003 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 15:30:46,360 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:30:46,360 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 15:30:46,362 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:30:46,362 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 15:30:58,504 [Worker-64] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples
+2016-04-27 15:30:58,505 [Worker-64] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2016-04-27 15:31:07,362 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:31:07,364 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 15:31:07,486 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:31:07,487 [Worker-66] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 15:31:14,538 [Worker-64] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples
+2016-04-27 15:31:14,539 [Worker-64] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2016-04-27 15:31:35,305 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:31:35,306 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 15:31:35,308 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:31:35,308 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 15:44:41,424 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:44:41,425 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 15:44:41,439 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 15:44:41,439 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 16:04:57,822 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:04:57,822 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 16:04:57,833 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:04:57,834 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 16:09:54,819 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:09:54,820 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 16:09:54,822 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:09:54,826 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 16:10:01,832 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:10:01,833 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 16:10:01,835 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:10:01,835 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 16:12:57,160 [Worker-67] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/pom.xml
+2016-04-27 16:12:58,022 [Worker-67] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.oozie:WordCount:0.0.1-SNAPSHOT @ /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/pom.xml.
+2016-04-27 16:12:58,466 [Worker-67] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /WordCount/src/main/java
+2016-04-27 16:12:58,479 [Worker-67] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /WordCount/src/test/java
+2016-04-27 16:12:58,725 [Worker-67] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 1 sec
+2016-04-27 16:12:59,401 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:12:59,401 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/main/resources
+2016-04-27 16:12:59,402 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:12:59,403 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/test/resources
+2016-04-27 16:14:09,043 [Worker-64] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.oozie:WordCount:0.0.1-SNAPSHOT @ /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/pom.xml.
+2016-04-27 16:14:20,195 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:14:20,195 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/main/resources
+2016-04-27 16:14:20,208 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:14:20,209 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/test/resources
+2016-04-27 16:14:25,466 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:14:25,473 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/main/resources
+2016-04-27 16:14:25,475 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:14:25,476 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/test/resources
+2016-04-27 16:15:06,860 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:15:06,861 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/main/resources
+2016-04-27 16:15:06,862 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:15:06,862 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/test/resources
+2016-04-27 16:15:17,249 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:15:17,249 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/main/resources
+2016-04-27 16:15:17,251 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:15:17,251 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/test/resources
+2016-04-27 16:15:25,006 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:15:25,006 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/main/resources
+2016-04-27 16:15:25,013 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:15:25,013 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/test/resources
+2016-04-27 16:15:33,430 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:15:33,431 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/main/resources
+2016-04-27 16:15:33,441 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:15:33,441 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/test/resources
+2016-04-27 16:15:41,090 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:15:41,090 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/main/resources
+2016-04-27 16:15:41,107 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:15:41,107 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/test/resources
+2016-04-27 16:16:24,252 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:16:24,253 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-04-27 16:16:24,260 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:16:24,260 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/test/resources
+2016-04-27 16:16:45,960 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:16:45,960 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 16:16:45,962 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:16:45,963 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/WordCount/src/test/resources
+2016-04-27 16:17:46,236 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:17:46,236 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 16:17:46,238 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:17:46,238 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 16:33:44,828 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:33:44,829 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 16:33:44,830 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 16:33:44,831 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 17:17:56,461 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 17:17:56,493 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 17:17:56,495 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 17:17:56,504 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 17:17:58,674 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 17:17:58,675 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 17:17:58,677 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 17:17:58,677 [Worker-72] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 17:18:33,642 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 17:18:33,643 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 17:18:33,644 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 17:18:33,645 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 17:19:30,328 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 17:19:30,329 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 17:19:30,331 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 17:19:30,332 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-04-27 17:19:36,473 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 17:19:36,475 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-27 17:19:36,477 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-27 17:19:36,486 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 10:33:52,787 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 10:33:52,936 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 10:33:53,005 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 10:33:53,021 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 10:39:15,189 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 10:39:15,237 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 10:39:15,248 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 10:39:15,249 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 10:40:10,523 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 10:40:10,524 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 10:40:10,531 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 10:40:10,531 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 10:40:27,730 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 10:40:27,731 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 10:40:27,742 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 10:40:27,743 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 10:40:30,302 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 10:40:30,303 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 10:40:30,316 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 10:40:30,317 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 10:40:55,865 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 10:40:55,866 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 10:40:55,872 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 10:40:55,872 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 10:41:18,201 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 10:41:18,215 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 10:41:18,220 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 10:41:18,221 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 10:42:53,505 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 10:42:53,506 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 10:42:53,548 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 10:42:53,548 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 11:01:42,361 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:01:42,370 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:01:42,395 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:01:42,395 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 11:02:06,840 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:02:06,840 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:02:06,843 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:02:06,844 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 11:03:02,196 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:03:02,201 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:03:02,209 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:03:02,209 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 11:13:59,103 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:13:59,124 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:13:59,130 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:13:59,157 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 11:14:52,489 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:14:52,506 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:14:52,522 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:14:52,522 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 11:22:03,206 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:22:03,219 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:22:03,221 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:22:03,222 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 11:29:22,668 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:29:22,669 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:29:22,686 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:29:22,693 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 11:30:17,028 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:30:17,028 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:30:17,035 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:30:17,036 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 11:31:29,132 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:31:29,133 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:31:29,143 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:31:29,143 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 11:36:39,353 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:36:39,354 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:36:39,364 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:36:39,364 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/OozieExamples/src/test/resources
+2016-05-02 11:41:18,066 [Worker-39] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.oozie:OozieExamples:0.0.1-SNAPSHOT @ /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/pom.xml.
+2016-05-02 11:41:20,458 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:41:20,459 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:41:20,462 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:41:20,462 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:41:21,807 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:41:21,808 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:41:21,810 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:41:21,810 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:42:02,043 [Worker-51] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.oozie:OozieExamples:0.0.1-SNAPSHOT @ /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/pom.xml.
+2016-05-02 11:42:02,751 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:42:02,751 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-02 11:42:02,754 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:42:02,754 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:42:22,164 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:42:22,164 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:42:22,183 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:42:22,183 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:42:41,247 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:42:41,253 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:42:41,259 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:42:41,259 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:43:04,113 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:43:04,124 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:43:04,126 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:43:04,126 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:45:09,687 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:45:09,699 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:45:09,709 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:45:09,709 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:46:36,592 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:46:36,593 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:46:36,613 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:46:36,614 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:51:05,526 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:51:05,543 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:51:05,546 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:51:05,546 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:51:15,392 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:51:15,393 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:51:15,408 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:51:15,408 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:52:33,595 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:52:33,599 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:52:33,613 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:52:33,614 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:52:38,589 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:52:38,590 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:52:38,597 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:52:38,605 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:52:55,629 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:52:55,629 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:52:55,645 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:52:55,645 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:53:03,336 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:53:03,336 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:53:03,351 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:53:03,351 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:54:01,287 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:54:01,294 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:54:01,296 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:54:01,297 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:54:08,423 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:54:08,424 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:54:08,463 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:54:08,464 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:54:10,532 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:54:10,535 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:54:10,544 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:54:10,544 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:54:28,511 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:54:28,514 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:54:28,517 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:54:28,518 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:55:22,812 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:55:22,813 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:55:22,825 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:55:22,825 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:57:33,366 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:57:33,367 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:57:33,369 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:57:33,387 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:57:42,744 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:57:42,747 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:57:42,750 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:57:42,750 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 11:58:59,039 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:58:59,040 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 11:58:59,042 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 11:58:59,042 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:00:02,659 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:00:02,661 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:00:02,669 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:00:02,670 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:00:04,879 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:00:04,880 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:00:04,897 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:00:04,897 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:02:40,060 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:02:40,061 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:02:40,071 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:02:40,072 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:02:42,427 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:02:42,428 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:02:42,430 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:02:42,430 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:02:57,018 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:02:57,018 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:02:57,030 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:02:57,035 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:03:10,623 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:03:10,624 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:03:10,632 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:03:10,649 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:05:59,048 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:05:59,049 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:05:59,051 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:05:59,051 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:13:57,489 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:13:57,507 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:13:57,509 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:13:57,523 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:14:39,026 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:14:39,027 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:14:39,029 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:14:39,029 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:15:55,757 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:15:55,758 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:15:55,760 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:15:55,760 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:16:00,774 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:16:00,779 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:16:00,781 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:16:00,781 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:17:30,370 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:17:30,373 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:17:30,378 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:17:30,378 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:18:15,530 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:18:15,535 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:18:15,536 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:18:15,537 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:28:00,704 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:28:00,755 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:28:00,759 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:28:00,759 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:29:14,604 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:29:14,605 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:29:14,607 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:29:14,608 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:29:35,393 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:29:35,394 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:29:35,406 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:29:35,406 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:30:36,632 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:30:36,632 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:30:36,641 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:30:36,642 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:37:35,492 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:37:35,535 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:37:35,537 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:37:35,537 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-02 12:47:19,770 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:47:19,776 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-02 12:47:19,778 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-02 12:47:19,778 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-03 10:43:31,224 [Worker-23] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.oozie:OozieExamples:0.0.1-SNAPSHOT @ /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/Oozie_Pig/pom.xml.
+2016-05-03 10:43:37,191 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 10:43:37,218 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 10:43:37,276 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 10:43:37,276 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/Oozie_Pig/src/test/resources
+2016-05-03 10:43:39,726 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 10:43:39,881 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 10:43:39,915 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 10:43:39,915 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/Oozie_Pig/src/test/resources
+2016-05-03 10:44:06,810 [Worker-25] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.oozie:Oozie_Pig:0.0.1-SNAPSHOT @ /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/Oozie_Pig/pom.xml.
+2016-05-03 10:44:08,022 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 10:44:08,031 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-03 10:44:08,035 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 10:44:08,036 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/Oozie_Pig/src/test/resources
+2016-05-03 10:44:31,431 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 10:44:31,444 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 10:44:31,491 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 10:44:31,491 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/Oozie_Pig/src/test/resources
+2016-05-03 10:56:54,189 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 10:56:54,190 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 10:56:54,197 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 10:56:54,197 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/Oozie_Pig/src/test/resources
+2016-05-03 14:59:43,593 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 14:59:43,625 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 14:59:43,641 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 14:59:43,642 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-03 15:00:01,171 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:00:01,187 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 15:00:01,224 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:00:01,224 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-03 15:00:05,454 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:00:05,460 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 15:00:05,465 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:00:05,465 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-03 15:00:26,523 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:00:26,528 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 15:00:26,535 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:00:26,536 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-03 15:01:27,883 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:01:27,884 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 15:01:27,889 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:01:27,889 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-03 15:02:57,372 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:02:57,375 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 15:02:57,378 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:02:57,380 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-03 15:18:54,137 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:18:54,138 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 15:18:54,151 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:18:54,155 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-03 15:26:46,075 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:26:46,075 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 15:26:46,098 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:26:46,139 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-03 15:27:10,914 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:27:10,919 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 15:27:10,922 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:27:10,922 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-03 15:27:47,553 [Worker-85] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:27:47,554 [Worker-85] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 15:27:47,564 [Worker-85] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:27:47,565 [Worker-85] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-03 15:28:37,764 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:28:37,773 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 15:28:37,775 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:28:37,776 [Worker-86] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-03 15:28:57,428 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:28:57,432 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 15:28:57,438 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:28:57,438 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-03 15:30:42,827 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:30:42,830 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 15:30:42,837 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:30:42,838 [Worker-83] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources
+2016-05-03 15:30:47,317 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:30:47,318 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-03 15:30:47,320 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-03 15:30:47,320 [Worker-87] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/bizruntime/Chinna/BizRuntime/workspace/Oozie/CoordinatorExample/src/test/resources

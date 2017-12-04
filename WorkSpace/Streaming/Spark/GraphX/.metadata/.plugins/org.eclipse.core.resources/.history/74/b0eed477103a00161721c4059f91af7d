@@ -1,0 +1,21 @@
+package com.graph.max;
+
+import java.io.Serializable;
+
+import scala.runtime.AbstractFunction2;
+
+public class MergeFunction extends AbstractFunction2<Integer, Integer, Integer> implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public Integer apply(Integer a, Integer b) {
+
+		System.out.println("Merge A : " + a.intValue());
+		System.out.println("Merge B: " + b.intValue());
+
+		return Math.min(a, b);
+
+	}
+
+}

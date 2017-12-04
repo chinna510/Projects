@@ -1,0 +1,43 @@
+package com.HCataLog;
+
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.Properties;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.io.WritableComparable;
+import org.apache.hadoop.mapred.JobConf;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
+
+import org.apache.hadoop.util.GenericOptionsParser;
+import org.apache.hadoop.util.Tool;
+import org.apache.hadoop.util.ToolRunner;
+import org.apache.hive.hcatalog.common.HCatConstants;
+import org.apache.hive.hcatalog.data.HCatRecord;
+import org.apache.hive.hcatalog.mapreduce.HCatInputFormat;
+import org.apache.hive.hcatalog.mapreduce.InputJobInfo;
+
+public class GroupByAge extends Configured implements Tool {
+
+	@SuppressWarnings("unused")
+	public int run(String[] args) throws Exception {
+		Configuration conf = getConf();
+		args = new GenericOptionsParser(conf, args).getRemainingArgs();
+		String serverUri = args[0];
+		String inputTableName = args[1];
+		String outputTableName = args[2];
+		String dbName = null;
+		String principalID = System.getProperty(HCatConstants.HCAT_METASTORE_PRINCIPAL);
+		if (principalID != null)
+			conf.set(HCatConstants.HCAT_METASTORE_PRINCIPAL, principalID);
+		Job job = new Job(conf, "GroupByAge");
+		HCatInputFormat.setInput(job, InputJobInfo.create(dbName, inputTableName, null, Properties), inputTableName);
+		return 0;
+	}
+
+}

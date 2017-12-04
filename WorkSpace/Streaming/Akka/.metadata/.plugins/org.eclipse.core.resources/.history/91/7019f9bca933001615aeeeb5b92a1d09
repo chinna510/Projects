@@ -1,0 +1,9 @@
+package com.akka.distribute;
+
+public class EntityEnvelope {
+
+	public long id;
+	public Object payload;
+	
+	
+}

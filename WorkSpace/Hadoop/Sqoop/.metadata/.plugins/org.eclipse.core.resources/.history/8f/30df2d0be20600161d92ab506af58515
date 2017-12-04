@@ -1,0 +1,12 @@
+package com.sqoop;
+
+import org.apache.sqoop.client.SqoopClient;
+import org.apache.sqoop.model.MLink;
+
+public class LinkCreation extends SqoopClient {
+
+	public LinkCreation(String serverUrl) {
+		super(serverUrl);
+		// TODO Auto-generated constructor stub
+	}
+}

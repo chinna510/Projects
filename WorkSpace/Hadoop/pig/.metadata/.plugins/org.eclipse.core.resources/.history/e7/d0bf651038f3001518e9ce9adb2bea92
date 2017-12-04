@@ -1,0 +1,7 @@
+package com.myudfs;
+
+import org.apache.pig.data.TupleFactory;
+
+public class COUNT extends EvalFunc<Long> implements Algebraic {
+	private static TupleFactory mTupleFactory = TupleFactory.getInstance();
+}

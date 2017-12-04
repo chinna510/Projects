@@ -1,0 +1,18 @@
+package com.akka;
+
+public class AkkaMain {
+
+	
+public 	void notify(){
+	
+	
+}
+	
+	
+	public static void main(String[] args) {
+
+		
+		
+	}
+
+}

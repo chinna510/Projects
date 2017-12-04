@@ -1,0 +1,68 @@
+package com.oozie.coordinator;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.apache.oozie.client.OozieClient;
+import org.apache.oozie.client.OozieClientException;
+
+public class CoordinatorSample {
+	OozieClient wc = null;
+
+	public CoordinatorSample(String oozieUrl) {
+		wc = new OozieClient(oozieUrl);
+	}
+
+	public String submitJob(String jobPropertyFilePath)
+			throws FileNotFoundException, IOException, OozieClientException {
+		Properties props = wc.createConfiguration();
+		props.setProperty("user.name", "chinna");
+		props.load(new FileInputStream(jobPropertyFilePath));
+
+		return wc.submit(props);
+	}
+
+	public String submitJob(Properties workflowProperties) throws OozieClientException, IOException {
+		Properties conf = wc.createConfiguration();
+		conf.putAll(workflowProperties);
+		conf.setProperty("user.name", "training");
+		return wc.submit(conf);
+	}
+
+	public String runJob(String jobPropertyFilePath) throws OozieClientException, IOException {
+
+		Properties conf = wc.createConfiguration();
+		conf.setProperty("user.name", "chinna");
+		conf.load(new FileInputStream(jobPropertyFilePath));
+		return wc.run(conf);
+	}
+	public void suspendJob(String jobId) throws OozieClientException {                        
+
+        // start the coordinator job     
+oozieClient.suspend(jobId); 
+} 
+
+//To resume the coordinator job on oozie 
+public void resumeJob(String jobId) throws OozieClientException {                        
+
+        // start the coordinator job     
+oozieClient.resume(jobId); 
+} 
+
+//To kill the coordinator job on oozie 
+*/ 
+public void killJob(String jobId) throws OozieClientException {                        
+
+        // start the coordinator job     
+oozieClient.kill(jobId); 
+} 
+
+//To get the status of the Coordinator Job with id <jobID> 
+public Status getJobStatus(String jobID) throws OozieClientException{  
+CoordinatorJob job = oozieClient.getCoordJobInfo(jobID);                 
+return job.getStatus(); 
+}               
+}
+}

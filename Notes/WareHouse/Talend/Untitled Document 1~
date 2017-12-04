@@ -1,0 +1,9 @@
+Talend MDM Installation:
+========================
+1. Download Talend MDM studio from 
+
+
+
+CREATE TABLE lens_metadata(lens_name VARCHAR(100) , vendor VARCHAR(30) , release_year INT4, lens_category VARCHAR(20), min_focal_length INT4, max_focal_length INT4,min_aperture NUMERIC , max_aperture NUMERIC, min_focus_distance_mm INT4 , filter_size_mm INT2 , talend_mdm_key INT4) ; 
+
+INSERT INTO lens_metadata VALUES('Asahi Optical Co. Super Takumar 28mm f/3.5­22.0', 'Pentax', 1962, 'Wide', 28,28, 3.5, 22, 40, 58, null),('Carl Zeiss Jena Biotar 75mm f/1.5', 'Carl Zeiss Jena', 1951, 'ShortTelephoto', 75, 75, 1.5, 1.5, 80, 58, null); 

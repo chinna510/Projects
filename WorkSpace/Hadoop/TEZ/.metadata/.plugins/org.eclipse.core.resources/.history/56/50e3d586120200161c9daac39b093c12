@@ -1,0 +1,67 @@
+package com.tez.example;
+
+import java.io.IOException;
+
+import org.apache.hadoop.io.NullWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.tez.mapreduce.processor.SimpleMRProcessor;
+import org.apache.tez.runtime.api.LogicalInput;
+import org.apache.tez.runtime.api.LogicalOutput;
+import org.apache.tez.runtime.api.ProcessorContext;
+import org.apache.tez.runtime.api.Reader;
+import org.apache.tez.runtime.api.Writer;
+import org.apache.tez.runtime.library.api.KeyValueReader;
+import org.apache.tez.runtime.library.api.KeyValueWriter;
+import org.apache.tez.runtime.library.api.KeyValuesReader;
+
+import com.google.common.base.Preconditions;
+
+public class SortMergeJoinProcessor extends SimpleMRProcessor {
+
+	private static final String input1 = "input1";
+	private static final String input2 = "input2";
+	private static final String inputFile = "inputFile";
+	private static final String joiner = "joiner";
+	private static final String joinOutput = "joinOutput";
+
+	public SortMergeJoinProcessor(ProcessorContext context) {
+		super(context);
+
+	}
+
+	private void join(KeyValuesReader inputReader1, KeyValuesReader inputReader2, KeyValueWriter writer)
+			throws IOException {
+
+		while (inputReader1.next() && inputReader2.next()) {
+			Text value1 = (Text) inputReader1.getCurrentKey();
+			Text value2 = (Text) inputReader2.getCurrentKey();
+			boolean reachEnd = false;
+			// move the cursor of 2 inputs forward until find the same values or
+			// one
+			// of them reach the end.
+			while (value1.compareTo(value2) != 0) {
+				if (value1.compareTo(value2) > 0) {
+					if (inputReader2.next()) {
+						value2 = (Text) inputReader2.getCurrentKey();
+					} else {
+						reachEnd = true;
+						break;
+					}
+				} else {
+					if (inputReader1.next()) {
+						value1 = (Text) inputReader1.getCurrentKey();
+					} else {
+						reachEnd = true;
+						break;
+					}
+				}
+			}
+
+			if (reachEnd) {
+				break;
+			} else {
+				writer.write(value1, NullWritable.get());
+			}
+		}
+	}
+}

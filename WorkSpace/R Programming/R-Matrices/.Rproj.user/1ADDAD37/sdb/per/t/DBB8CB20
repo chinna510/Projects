@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# Create two 2x3 matrices.\nmatrix1 <- matrix(c(3, 9, -1, 4, 2, 6), nrow = 2)\nprint(matrix1)\n\nmatrix2 <- matrix(c(5, 2, 0, 9, 3, 4), nrow = 2)\nprint(matrix2)\n\n# Multiply the matrices.\nresult <- matrix1 * matrix2\ncat(\"Result of multiplication\",\"\\n\")\nprint(result)\n\n# Divide the matrices\nresult <- matrix1 / matrix2\n\ncat(\"Result of division\",\"\\n\")\nprint(result)\n",
+    "created" : 1467645476889.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1907635581",
+    "id" : "DBB8CB20",
+    "lastKnownWriteTime" : 1467709936,
+    "last_content_update" : 1467709936296,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R-Matrices/MatrixMultiplication&Division.R",
+    "project_path" : "MatrixMultiplication&Division.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

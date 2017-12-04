@@ -1,0 +1,12 @@
+package com.Spark;
+
+import org.apache.log4j.Logger;
+import org.apache.spark.SparkConf;
+
+public class FilterExample {
+static Logger logger=Logger.getLogger(FilterExample.class);
+public void test(){
+	SparkConf conf=new SparkConf().setAppName("FilterExample").setMaster("local");
+	
+}
+}

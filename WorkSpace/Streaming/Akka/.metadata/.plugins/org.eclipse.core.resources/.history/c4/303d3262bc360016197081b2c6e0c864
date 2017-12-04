@@ -1,0 +1,16 @@
+package com.akka.logging;
+
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+
+public class LoggingActorTest {
+
+	public void test() {
+
+		ActorSystem system = ActorSystem.create("Logging");
+		ActorRef logref = system.actorOf(Props.create(MyActor.class));
+
+	}
+
+}

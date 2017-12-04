@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "a <- 39L\nif(is.integer(a)){\n  print(\"A is Integer\")\n}else{\n  print(\"A is Not an Integer\")\n}",
+    "created" : 1467038962985.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3806061735",
+    "id" : "A8F4DF1",
+    "lastKnownWriteTime" : 1467039056,
+    "last_content_update" : 1467039056235,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R-DecisionMaking/If-Else.R",
+    "project_path" : "If-Else.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

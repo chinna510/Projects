@@ -1,0 +1,22 @@
+<parties>
+<party type="winter">
+<party_title>Snow Day</party_title>
+<party_number>63</party_number>
+<subject>No school today!</subject>
+<date>2/2/2009</date>
+<people>
+<person attendance="present">
+<first_name>Ralph</first_name>
+<last_name>Kramden</last_name>
+</person>
+<person attendance="absent">
+<first_name>Alice</first_name>
+<last_name>Kramden</last_name>
+</person>
+<person attendance="present">
+<first_name>Ed</first_name>
+<last_name>Norton</last_name>
+</person>
+</people>
+</party>
+</parties>

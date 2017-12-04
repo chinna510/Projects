@@ -1,0 +1,5 @@
+package com.oozie.OozieExamples;
+
+public class WordCount {
+
+}

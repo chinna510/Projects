@@ -1,0 +1,85 @@
+package com.biz.akka;
+
+import java.io.Serializable;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
+import org.apache.log4j.Logger;
+
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Inbox;
+import akka.actor.Props;
+import akka.actor.UntypedActor;
+import scala.concurrent.duration.Duration;
+
+public class HelloAkka {
+	static Logger logger = Logger.getLogger(HelloAkka.class);
+
+	public static class Greet implements Serializable {
+	}
+
+	public static class WhoToGreet implements Serializable {
+		public final String who;
+
+		public WhoToGreet(String who) {
+			this.who = who;
+
+		}
+
+	}
+
+	public static class Greeting implements Serializable {
+		public final String message;
+
+		public Greeting(String message) {
+			this.message = message;
+		}
+	}
+
+	public static class Greeter extends UntypedActor {
+		public String greeting = "";
+	
+		@Override
+		public void onReceive(Object message) throws Exception {
+			if (message instanceof WhoToGreet)
+				greeting = "Hello , " + ((WhoToGreet) message).who;
+			else if (message instanceof Greet)
+				getSender().tell(new Greeting(greeting), getSelf());
+			else if(message instanceof String){
+				System.out.println(getSender());
+				getSender().tell("Recieved Message Is :", message);
+			}else
+				unhandled(message);
+		}
+	}
+
+	public static void main(String[] args) throws TimeoutException {
+		final ActorSystem as = ActorSystem.create("HelloAkka");
+		final ActorRef ar = as.actorOf(Props.create(Greeter.class),"greeter");
+		final Inbox inbox = Inbox.create(as);
+		ar.tell(new WhoToGreet("Chinna"), ar.noSender());
+		inbox.send(ar, new Greet());
+		final Greeting greet = (Greeting) inbox.receive(Duration.create(5, TimeUnit.SECONDS));
+		logger.info("Greeting : " + greet.message);
+		ar.tell(new WhoToGreet("typesafe"), ActorRef.noSender());
+		inbox.send(ar, new Greet());
+		final Greeting greeting2 = (Greeting) inbox.receive(Duration.create(5, TimeUnit.SECONDS));
+		System.out.println("Greeting: " + greeting2.message);
+		ActorRef greetPrinter = as.actorOf(Props.create(GreetPrinter.class),"Printer");
+		as.scheduler().schedule(Duration.Zero(), Duration.create(5, TimeUnit.SECONDS), ar, new Greet(), as.dispatcher(),
+				greetPrinter);
+
+	}
+
+	public static class GreetPrinter extends UntypedActor {
+
+		@Override
+		public void onReceive(Object message) throws Exception {
+			if (message instanceof Greeting)
+				logger.info(((Greeting) message).message);
+
+		}
+
+	}
+}

@@ -1,0 +1,12 @@
+package com.akka.remoting;
+
+import java.io.Serializable;
+
+public class Operations {
+
+	  public interface MathOp extends Serializable {
+	  }
+
+	  public interface MathResult extends Serializable {
+	  }
+}

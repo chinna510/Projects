@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;PageRankApp&apos;&#x0A;- Original project: &apos;PageRankApp&apos;&#x0A;- Original element: &apos;PageRankApp/src/main/java/com.graphx.pregel&apos;" description="Delete element" element1="/src\/main\/java&lt;com.graphx.pregel" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1466866319707" subPackages="false" version="1.0"/>
+</session>

@@ -1,0 +1,5 @@
+package com.smooks.Smooks_XMLToCSVTransform;
+
+public class XMLToCSVMappings {
+
+}

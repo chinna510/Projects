@@ -1,0 +1,43 @@
+package com.model;
+import java.io.*;
+import java.sql.*;
+import java.util.*;
+/**
+* A software product supported by the Product
+* Support system.
+*/
+public class Product implements Serializable{
+	private String productID;
+	private String name;
+	private String productSupport;
+	private String developer;
+	private String tester;
+	public static Product load(ResultSet rs)
+			throws SQLException
+			{
+			Product product = new Product();
+			String value = null;
+			value = rs.getString(1);
+			if (value != null)
+			product.setProductID(value);
+			value = rs.getString(2);
+			if (value != null)
+			product.setName(value);
+			value = rs.getString(3);
+			if (value != null)
+			product.setProductSupport(value);
+			value = rs.getString(4);
+			if (value != null)
+			product.setDeveloper(value);
+			value = rs.getString(5);
+			if (value != null)
+			product.setTester(value);
+			return product;
+			}
+	
+	
+	
+	
+	
+	
+	

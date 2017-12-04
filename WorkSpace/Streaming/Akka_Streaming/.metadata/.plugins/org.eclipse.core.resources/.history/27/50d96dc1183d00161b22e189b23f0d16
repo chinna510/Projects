@@ -1,0 +1,17 @@
+package com.akka.integration;
+
+public class AddressSystem {
+
+	public CompletionStage<Optional<String>> lookupEmail(String handle)
+    //#email-address-lookup
+    {
+      return CompletableFuture.completedFuture(Optional.of(handle + "@somewhere.com"));
+    }
+
+    //#phone-lookup
+    public CompletionStage<Optional<String>> lookupPhoneNumber(String handle)
+    //#phone-lookup
+    {
+      return CompletableFuture.completedFuture(Optional.of("" + handle.hashCode()));
+    }
+}

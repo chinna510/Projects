@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Graph_InDegree.java&apos; to &apos;Graph_InOutDegrees/src/main/java/com.spark.graphx.GraphXSample&apos;&#x0A;- Original project: &apos;Graph_InOutDegrees&apos;&#x0A;- Destination element: &apos;Graph_InOutDegrees/src/main/java/com.spark.graphx.GraphXSample&apos;&#x0A;- Original element: &apos;com.spark.graphx.GraphXSample.Graph_InDegree.java&apos;" description="Copy compilation unit" destination="/src\/main\/java&lt;com.spark.graphx.GraphXSample" element1="/src\/main\/java&lt;com.spark.graphx.GraphXSample{Graph_InDegree.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1466174703609" units="1" version="1.0"/>
+</session>

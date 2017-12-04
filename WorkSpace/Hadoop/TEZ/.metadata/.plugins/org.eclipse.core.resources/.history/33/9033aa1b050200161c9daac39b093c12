@@ -1,0 +1,22 @@
+package com.tez.example;
+
+import org.apache.tez.mapreduce.processor.SimpleMRProcessor;
+import org.apache.tez.runtime.api.ProcessorContext;
+
+import com.google.common.base.Preconditions;
+
+public class SortMergeJoinProcessor extends SimpleMRProcessor {
+
+	public SortMergeJoinProcessor(ProcessorContext context) {
+		super(context);
+
+	}
+
+	@Override
+	public void run() throws Exception {
+		Preconditions.checkState(getInputs().size() == 2);
+		Preconditions.checkState(getInputs().size() == 1);
+
+	}
+
+}

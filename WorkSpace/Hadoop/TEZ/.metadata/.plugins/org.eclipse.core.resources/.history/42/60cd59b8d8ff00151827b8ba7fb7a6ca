@@ -1,0 +1,50 @@
+package com.tez.topk;
+
+import static java.util.Collections.singletonList;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class LocalTop {
+	private static Map<Integer, List<String>> localTopK = new TreeMap<Integer, List<String>>();
+
+	private static int top;
+
+	public LocalTop(int top) {
+		this.top = top;
+	}
+
+	public Map<Integer, List<String>> getTopK() {
+		return localTopK;
+	}
+
+	public Map<Integer, List<String>> getTopKSorted() {
+		Map<Integer, List<String>> sortedResults = new TreeMap<Integer, List<String>>(Collections.reverseOrder());
+		sortedResults.putAll(localTopK);
+		return sortedResults;
+
+	}
+
+	public void store(int value, String word) {
+		List<String> words = localTopK.get(value);
+		if (words == null) {
+			if (localTopK.size() < top) {
+				localTopK.put(value, new ArrayList<String>(singletonList(word)));
+			} else {
+				Iterator<Integer> iterator = localTopK.keySet().iterator();
+				int lowest = iterator.next();
+				if (lowest < value) {
+					iterator.remove();
+					localTopK.put(value, new ArrayList<String>(singletonList(word)));
+				}
+			}
+		} else {
+
+			words.add(word);
+		}
+	}
+}

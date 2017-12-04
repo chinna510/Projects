@@ -1,0 +1,5 @@
+package com.hive.HiveClient;
+
+public class HiveClientJdbc {
+
+}

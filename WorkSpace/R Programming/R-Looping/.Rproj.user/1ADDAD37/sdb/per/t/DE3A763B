@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\na <- c(1,2,3,4,5,6,7,7,8,9)\ncount <- 2\nwhile (count <= 5) {\n  print(a)\n  count=count+1\n}",
+    "created" : 1467039722184.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1103597108",
+    "id" : "DE3A763B",
+    "lastKnownWriteTime" : 1467040547,
+    "last_content_update" : 1467040547235,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R-Looping/While.R",
+    "project_path" : "While.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

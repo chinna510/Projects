@@ -1,0 +1,12 @@
+package com.datagram;
+
+import java.net.DatagramSocket;
+import java.net.SocketException;
+
+public class DataSender {
+	public static void main(String[] args) throws SocketException {
+
+		DatagramSocket socket = new DatagramSocket();
+		String str = "welcome to bizruntime";
+	}
+}

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(MASS)\n\nmerged.Pima <- merge(x = Pima.te, y = Pima.tr, by.x = c(\"bp\",\"bmi\"), by.y = c(\"bp\",\"bmi\"))\n\nprint(merged.Pima)\n\nnrow(merged.Pima)\n\nprint(ships)\n\n\n# Get and print current working directory.\nprint(getwd())\n\nsetwd(\"/home/bizruntime/R\")\n\nprint(getwd())\n",
+    "created" : 1467799749654.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3599818774",
+    "id" : "FD3F4448",
+    "lastKnownWriteTime" : 1467801077,
+    "last_content_update" : 1467801077780,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R - Data Reshaping/MergingDataFrames.R",
+    "project_path" : "MergingDataFrames.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,177 @@
+1. Kafka is a distributed, partitioned, replicated commit log service. 
+2. It provides the functionality of a messaging system, but with a unique design.
+    First let's review some basic messaging terminology:
+
+> Kafka maintains feeds of messages in categories called topics.
+> We'll call processes that publish messages to a Kafka topic producers.
+> We'll call processes that subscribe to topics and process the feed of published messages consumers..
+> Kafka is run as a cluster comprised of one or more servers each of which is called a broker.
+3. producers send messages over the network to the Kafka cluster.
+4. Communication between the clients and the servers is done with a simple, high-performance, language agnostic TCP protocol. 
+5.
+ Topic:
+   
+a. A topic is a category or feed name to which messages are published. 
+b. For each topic, the Kafka cluster maintains a partitioned log.
+c. Each partition is an ordered, immutable sequence of messages that is continually appended to—a commit log. 
+d. The messages in the partitions are each assigned a sequential id number called the offset that uniquely identifies each message within  the partition.some of its partitions and a follower for others so load is well balanced within the c
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1.Apache Kafka is an open source, distributed publish-subscribe messaging system
+mainly designed with the following characteristics:
+
+> Persistent messaging:
+*. To derive the real value from big data, any kind of information loss cannot be affordable. 
+*. Apache Kafka is designed with O(1) disk structures that provide constant-time performance even with very large volumes of stored messages,      which is in order of TB.
+
+> High throughput: Keeping big data in mind, Kafka is designed to work on commodity hardware and to support millions of messages per second.
+
+> Distributed: 
+               Apache Kafka explicitly supports messages partitioning over Kafka servers and distributing consumption over a cluster of consumer
+ machines while maintaining per-partition ordering semantics.
+
+> Multiple client support: Apache Kafka system supports easy integration of clients from different platforms such as Java,.NET, PHP,Ruby,and Python.
+
+> Real time: Messages produced by the producer threads should be immediately visible to consumer threads; this feature is critical to event-based systems such as Complex Event Processing (CEP) systems.
+
+2. Kafka supports real time publish-support solution which overcomes the challenges of real-time data usage for consumptions,for data volumes that may grow in order of magnitude, larger that the real data.
+
+3. Kafka also supports parallel data loading in the Hadoop systems.
+
+Need for Kafka : 
+
+> Data is one of the newer ingredients in these Internet-basedsystems and typically includes user-activity events corresponding to logins, page visits, clicks, social networking activities such as likes, sharing, and comments, and operational and system metrics.
+> This data is typically handled by logging and traditional log aggregation solutions due to high throughput (millions of messages per second).
+> the solutions are very limiting for building real-time processing systems.
+
+According to the new trends in Internet applications, activity data has become a part of production data and is used to run analytics at real time.
+these activities are : 
+
+•	 Search based on relevance
+•	 Recommendations based on popularity, co-occurrence, or sentimental analysis
+•	 Delivering advertisements to the masses
+•	 Internet application security from spam or unauthorized data scraping
+
+Real-time usage of these multiple sets of data collected from production systems has become a challenge because of the volume of data collected and processed.
+
+> Apache Kafka aims to unify offline and online processing by providing a mechanism for parallel load in Hadoop systems as well as the ability to partition real-time consumption over a cluster of machines.
+
+> Kafka can be compared with Scribe or Flume as it is useful for processing activity stream data; but from the architecture perspective,it is closer to traditional messaging systems such as ActiveMQ or RabitMQ.
+
+Installation steps:
+-------------------
+****For Single Broker ****
+
+1. first Download kafka software 
+
+2. open terminal and go to that kafka path
+
+3. run zookeeper server first
+>> bin/zookeeper-server-start.sh config/zookeeper.properties
+
+4. Run kafka server
+>> bin/kafka-server-start.sh config/server.properties
+
+5.Create topic
+>> bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+
+6. To see the list of kafkatopics using
+>> bin/kafka-topics.sh --list --zookeeper localhost:2181
+
+7. run the producer
+>> bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test1
+
+8. After this command we need to write messages
+
+9. start the consumer who will dumping these messages
+>> bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test --from-beginning
+
+10. and see the messages whatever the producer sent to consumer
+
+
+broker-list: it specifies the brokers to be connected as <node_address:port> , that is, localhost:9092 . 
+
+The topic: 
+          here test is a topic that was created in the Creating a Kafka topic section. The topic name is required for sending a message to a specific group of consumers.
+
+
+Producer API:
+-------------
+kafka producer:
+
+ Properties props = new Properties();
+ props.put("bootstrap.servers", "localhost:4242");
+ props.put("acks", "all");
+ props.put("retries", 0);
+ props.put("batch.size", 16384);
+ props.put("linger.ms", 1);
+ props.put("buffer.memory", 33554432);
+ props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+ props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+
+ Producer<String, String> producer = new KafkaProducer(props);
+ for(int i = 0; i < 100; i++)
+     producer.send(new ProducerRecord<String, String>("my-topic", Integer.toString(i), Integer.toString(i)));
+
+ producer.close();
+
+
+
+1. The producer is thread safe and sharing a single producer instance across threads will generally be faster than having multiple instances.
+
+2.The producer consists of a pool of buffer space that holds records that haven't yet been transmitted to the server as well as a background I/O   thread.
+3. that is responsible for turning these records into requests and transmitting them to the cluster.
+
+4. Failure to close the producer after use will leak these resources.
+
+5. The send() method is asynchronous. When called it adds the record to a buffer of pending record sends and immediately returns.
+   This allows the producer to batch together individual records for efficiency.
+
+6.The acks config controls the criteria under which requests are considered complete.
+  The "all" setting we have specified will result in blocking on the full commit of the record, the slowest but most durable setting.
+
+7.If the request fails, the producer can automatically retry, though since we have specified retries as 0 it won't. Enabling retries also opens up the possibility of duplicates 
+
+8.The producer maintains buffers of unsent records for each partition. These buffers are of a size specified by the batch.size config. Making this larger can result in more batching, but requires more memory 
+
+9. if you want to reduce the number of requests you can set linger.ms to something greater than 0. This will instruct the producer to wait up to that number of milliseconds before sending a request in hope that more records will arrive to fill up the same batch
+
+10. The buffer.memory controls the total amount of memory available to the producer for buffering. If records are sent faster than they can be transmitted to the server then this buffer space will be exhausted. When the buffer space is exhausted additional send calls will block.
+
+11. For uses where you want to avoid any blocking you can set block.on.buffer.full=false which will cause the send call to result in an exception.
+
+12. The key.serializer and value.serializer instruct how to turn the key and value objects the user provides with their ProducerRecord into bytes.
+
+
+
+
+
+
+Kafka Connect:
+
+Running Kafka Connect:
+
+bin/connect-standalone.sh config/connect-standalone.properties connector1.properties [connector2.properties ...]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

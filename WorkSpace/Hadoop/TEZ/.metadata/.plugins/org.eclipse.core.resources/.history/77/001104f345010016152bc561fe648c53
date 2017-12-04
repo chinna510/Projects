@@ -1,0 +1,23 @@
+package com.tez.examples;
+
+import org.apache.tez.mapreduce.processor.SimpleMRProcessor;
+import org.apache.tez.runtime.api.ProcessorContext;
+
+import com.google.common.base.Preconditions;
+
+public class HashJoinProcessor extends SimpleMRProcessor{
+
+	public HashJoinProcessor(ProcessorContext context) {
+		super(context);
+		
+	}
+
+	@Override
+	public void run() throws Exception {
+		Preconditions.checkState(getInputs().size()==1);
+		Preconditions.checkState(getOutputs().size()==1);
+		
+		
+	}
+
+}

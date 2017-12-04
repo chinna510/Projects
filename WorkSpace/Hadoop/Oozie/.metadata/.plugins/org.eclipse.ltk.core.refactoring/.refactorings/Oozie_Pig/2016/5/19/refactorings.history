@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 2 elements from project &apos;Oozie_Pig&apos;&#x0A;- Original project: &apos;Oozie_Pig&apos;&#x0A;- Original elements:&#x0A;     com.oozie.OozieExamples.SampleMapper.java&#x0A;     com.oozie.OozieExamples.SampleReducer.java" description="Delete elements" element1="/src\/main\/java&lt;com.oozie.OozieExamples{SampleMapper.java" element2="/src\/main\/java&lt;com.oozie.OozieExamples{SampleReducer.java" elements="2" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1462252470062" subPackages="false" version="1.0"/>
+</session>

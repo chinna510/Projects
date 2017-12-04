@@ -1,0 +1,5 @@
+package com.graphx.vertexrdd;
+
+public class AggregateFunction {
+
+}

@@ -1,0 +1,66 @@
+package com.tez.topk;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.security.UserGroupInformation;
+import org.apache.hadoop.util.Tool;
+import org.apache.hadoop.util.ToolRunner;
+import org.apache.tez.client.TezClient;
+import org.apache.tez.dag.api.DAG;
+import org.apache.tez.dag.api.TezConfiguration;
+import org.apache.tez.dag.api.client.DAGClient;
+import org.apache.tez.dag.api.client.DAGStatus;
+
+public class TopK extends Configured implements Tool {
+
+	public int run(String[] args) throws Exception {
+		Configuration conf = getConf();
+		TopK job = new TopK();
+		if (args.length < 3) {
+			printUsage();
+			return 2;
+		}
+		if (job.run(args[0], args[1], args[2], args.length > 3 ? args[3] : "1", args.length > 4 ? args[4] : "1",
+				conf)) {
+			return 0;
+		}
+		return 1;
+	}
+
+	private static void printUsage() {
+		System.err.println(
+				"Usage: topk <inputPath> <outputPath> <columnIndex, starting from 0> <K, -1 to all> <partition, default: 1>");
+		ToolRunner.printGenericCommandUsage(System.err);
+	}
+
+	private boolean run(String inputPath, String outputPath, String columnIndex, String K, String numPartitions,
+			Configuration conf) throws Exception {
+		TezConfiguration tezConf;
+		if (conf != null) {
+			tezConf = new TezConfiguration(conf);
+		} else {
+			tezConf = new TezConfiguration();
+		}
+		UserGroupInformation.setConfiguration(tezConf);
+		TezClient tclient = TezClient.create("TopK", tezConf);
+		tclient.start();
+		try {
+			DAG dag = createDAG(tezConf, inputPath, outputPath, columnIndex, K, numPartitions);
+			tclient.waitTillReady();
+			DAGClient dagClient = tclient.submitDAG(dag);
+			DAGStatus dagStatus = dagClient.waitForCompletionWithStatusUpdates(null);
+			if (dagStatus.getState() != DAGStatus.State.SUCCEEDED) {
+				System.out.println("TopK failed with diagnostics: " + dagStatus.getDiagnostics());
+				return false;
+			}
+			return true;
+		} finally {
+			tclient.stop();
+		}
+	}
+
+	private DAG createDAG(TezConfiguration tezConf, String inputPath, String outputPath, String columnIndex, String k,
+			String numPartitions) {
+		return null;
+	}
+}

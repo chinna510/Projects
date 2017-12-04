@@ -1,0 +1,34 @@
+package com.spark;
+
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.api.java.function.Function;
+import org.apache.spark.api.java.function.Function2;
+
+public class SumOfNumbers {
+	public void test() {
+		SparkConf conf = new SparkConf().setAppName("Sum").setMaster("local");
+		JavaSparkContext sc = new JavaSparkContext(conf);
+		class GetLength implements Function<String, Integer> {
+			public Integer call(String s) {
+				return s.length();
+			}
+		}
+		class Sum implements Function2<Integer, Integer, Integer> {
+			public Integer call(Integer a, Integer b) {
+				return a + b;
+			}
+		}
+
+		JavaRDD<String> lines = sc.textFile("data.txt");
+		JavaRDD<Integer> lineLengths = lines.map(new GetLength());
+		int totalLength = lineLengths.reduce(new Sum());
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

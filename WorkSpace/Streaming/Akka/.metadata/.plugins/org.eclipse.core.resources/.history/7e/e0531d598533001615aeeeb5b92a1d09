@@ -1,0 +1,20 @@
+package com.akka.distribute;
+
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+
+public class Test {
+
+	public void test() {
+
+		ActorSystem system = ActorSystem.create("ActorSystem");
+		system.actorOf(Props.create(Subscriber.class), "subscriber1");
+
+	}
+
+	public static void main(String[] args) {
+		Test test = new Test();
+		test.test();
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.myudfs;
+
+import java.io.IOException;3
+import org.apache.pig.EvalFunc;4
+import org.apache.pig.data.Tuple;5 6
+
+public class UpperCase extends EvalFunc<String>7
+{
+8
+
+	public String exec(Tuple input) throws IOException {
+9        if (input == null || input.size() == 0 || input.get(0) == null)
+10            return null;
+11        try{
+12            String str = (String)input.get(0);
+13           return str.toUpperCase();
+14        }catch(Exception e){
+15            throw new IOException("Caught exception processing input row ", e);
+16        }
+17    }18
+}

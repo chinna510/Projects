@@ -1,0 +1,7 @@
+package com.akka.io;
+
+import akka.actor.UntypedActor;
+
+public class EchoHandler extends UntypedActor {
+
+}

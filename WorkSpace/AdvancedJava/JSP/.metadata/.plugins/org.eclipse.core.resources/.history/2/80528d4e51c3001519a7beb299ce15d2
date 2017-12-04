@@ -1,0 +1,43 @@
+<%@ page session="true" %>
+<H3>Number Guess Guesser</H3>
+<%!public static final int WAY_LO = 0;
+public static final int WAY_HI = 101;
+public static final String PARMSKEY
+= "jspcr.sessions.numguess.parameters";
+// Inner class containing state variables
+public class Parameters {
+	int lo;
+	int hi;
+	int numGuesses;
+	int state;
+	}
+%>
+<%
+switch (parms.state) {
+case 0: {
+// Initial screen
+%>
+<FORM>
+Think of a number between
+<%= WAY_LO + 1 %> and <%= WAY_HI - 1 %>,
+and I'll try to guess it.<P>
+Click OK when ready.<P>
+<INPUT TYPE="submit" VALUE="OK">
+</FORM>
+<%
+parms.lo = WAY_LO;
+parms.hi = WAY_HI;
+parms.numGuesses = 0;
+parms.state = 1;
+break;
+}
+case 1: {
+// First guess
+parms.numGuesses++;
+int guess = (parms.hi + parms.lo)/2;
+Parameters parms=(Parameters) session.getAttribute(PARMSKEY);
+if (parms == null) {
+parms = new Parameters();
+parms.state = 0;
+session.setAttribute(PARMSKEY, parms);
+}

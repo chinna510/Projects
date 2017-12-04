@@ -1,0 +1,76 @@
+package com.graph.max;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.graphx.Edge;
+import org.apache.spark.graphx.EdgeDirection;
+import org.apache.spark.graphx.Graph;
+import org.apache.spark.storage.StorageLevel;
+
+import scala.Tuple2;
+import scala.reflect.ClassTag;
+import scala.reflect.ClassTag$;
+
+public class PregalApp implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+	static Logger log = Logger.getLogger(PregalApp.class);
+
+	@SuppressWarnings({ "unchecked", "resource", "rawtypes" })
+	public void get() throws InterruptedException {
+
+		SparkConf conf = new SparkConf().setMaster("local").setAppName("PropertyGraph");
+		JavaSparkContext jssc = new JavaSparkContext(conf);
+
+		List<Tuple2<Object, Integer>> vertexlist = new ArrayList<Tuple2<Object, Integer>>();
+		vertexlist.add(new Tuple2<Object, Integer>(1L, 75));
+		vertexlist.add(new Tuple2<Object, Integer>(2L, 42));
+
+		vertexlist.add(new Tuple2<Object, Integer>(3L, 22));
+
+		vertexlist.add(new Tuple2<Object, Integer>(4L, 12));
+
+		JavaRDD<Tuple2<Object, Integer>> vertexRdd = jssc.parallelize(vertexlist);
+
+		List<Edge> edgeList = new ArrayList<Edge>();
+		edgeList.add(new Edge(1, 2, 4));
+		edgeList.add(new Edge(1, 4, 6));
+		edgeList.add(new Edge(2, 4, 8));
+		edgeList.add(new Edge(3, 1, 10));
+		edgeList.add(new Edge(3, 4, 12));
+
+		JavaRDD edgeRdd = jssc.parallelize(edgeList);
+
+		Integer defaultuser = 5;
+
+		Graph<Integer, Integer> graph = Graph.apply(vertexRdd.rdd(), edgeRdd.rdd(), defaultuser,
+				StorageLevel.MEMORY_ONLY(), StorageLevel.MEMORY_ONLY(), ClassTag$.MODULE$.<Integer>apply(Integer.class),
+				ClassTag$.MODULE$.<String>apply(Integer.class));
+
+		graph.vertices().toJavaRDD().foreach(f -> {
+			System.out.println("Vertex Id : " + f._1 + " Vertex Attribute : " + f._2);
+		});
+
+		Graph<Integer, Integer> pregalGraph = graph.ops().pregel(Integer.MAX_VALUE, Integer.MAX_VALUE,
+				EdgeDirection.Out(), new VertexProgram(), new SendMessageFunction(), new MergeFunction(),
+				ClassTag$.MODULE$.apply(Integer.class));
+
+		pregalGraph.vertices().toJavaRDD().foreach(f -> {
+			log.info("vertexId : " + f._1 + " new Message : " + f._2);
+		});
+		System.out.println("");
+
+	}
+
+	public static void main(String[] args) throws InterruptedException {
+		PregalApp pr = new PregalApp();
+		pr.get();
+	}
+
+}

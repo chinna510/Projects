@@ -1,0 +1,9 @@
+package com.akka.integration;
+
+public class JobAcceptedMessage {
+
+	@Override
+	public String toString() {
+		return "JobAccepted";
+	}
+}

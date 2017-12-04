@@ -1,0 +1,116 @@
+width=device-width : it sets the width of the page to follow the screen-width of the device 
+
+initial-scale=1 : it sets the initial zoom level when the page is first loaded by the browser
+
+.container : class provides a responsive fixed width container
+
+.container-fluid: class provides a full width container
+
+Grids:
+------
+
+xs (for phones)
+sm (for tablets)
+md (for desktops)
+lg (for larger desktops)
+
+<div class="row"> : creation of row
+
+<div class="col-sm-4">.col-sm-4</div>: creation of columns
+
+<small> : element is used to create a lighter, secondary text in any heading
+
+<mark>highlight</mark> : highlights the text between these tags.
+
+<abbr> :The abbr element is used to mark up an abbreviation or acronym
+
+<blockquote>  : The blockquote element is used to present content from another source.
+
+ .blockquote-reverse : To show the quote on the right 
+
+<dl>  : The dl element indicates a description list
+
+<dt>  :
+
+<dd> :
+
+<code> :Inline snippets of code should be embedded in the code element
+
+<kbd>  :To indicate input that is typically entered via the keyboard.
+
+<pre>  :For multiple lines of code
+
+.text-muted,.text-primary,.text-success,.text-info,.text-warning,.text-danger: for text colors
+
+.bg-primary,.bg-success,bg-info,bg-warning,.bg-danger :  for background colors
+
+classes:
+----------
+
+.lead	: Makes a paragraph stand out 
+
+.small	: Indicates smaller text (set to 85% of the size of the parent)
+
+.text-left	Indicates left-aligned text	
+
+.text-center	Indicates center-aligned text
+	
+.text-right	Indicates right-aligned text	
+
+.text-justify	Indicates justified text
+	
+.text-nowrap	Indicates no wrap text	
+
+.text-lowercase	: Indicates lowercased text
+	
+.text-uppercase	: Indicates uppercased text
+	
+.text-capitalize   :	Indicates capitalized text
+	
+.initialism	: Displays the text inside an <abbr> element in a slightly smaller font size
+
+.list-unstyled : Removes the default list-style and left margin on list items (works on both <ul> and <ol>). This class only applies to immediate children list items (to remove the default list-style from any nested lists, apply this class to any nested lists as well)	
+
+.list-inline	Places all list items on a single line.
+
+.dl-horizontal	: Lines up the terms (<dt>) and descriptions (<dd>) in <dl> elements side-by-side. Starts off like default <dl>s, but when  the browser window expands, it will line up side-by-side.
+
+.pre-scrollable	: Makes a <pre> element scrollable	
+
+.table-striped : class adds zebra-stripes to a table
+
+.table-bordered  : class adds borders to a table
+
+.table-hover : class enables a hover state on table rows
+
+.table-condensed : class makes a table more compact by cutting cell padding in half
+
+.active	         Applies the hover color to the table row or table cell
+
+.success	Indicates a successful or positive action
+
+.info	        Indicates a neutral informative change or action
+
+.warning	Indicates a warning that might need attention
+
+.danger	        Indicates a dangerous or potentially negative action
+
+.table-responsive  : class creates a responsive table which will scroll horizontally on small devices (under 768px)
+
+Bootstrap Image Shapes :
+========================
+
+.img-rounded : class adds rounded corners to an image (not available in IE8)
+
+.img-circle  : class shapes the image to a circle 
+
+.img-thumbnail : class shapes the image to a thumbnail
+
+.embed-responsive-item : for creating responsive videos
+
+.well     : class adds a rounded border around an element with a gray background color and some padding
+
+
+
+
+

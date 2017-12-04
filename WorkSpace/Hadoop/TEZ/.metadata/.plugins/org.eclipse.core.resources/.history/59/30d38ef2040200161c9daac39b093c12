@@ -1,0 +1,18 @@
+package com.tez.example;
+
+import org.apache.tez.mapreduce.processor.SimpleMRProcessor;
+import org.apache.tez.runtime.api.ProcessorContext;
+
+public class SortMergeJoinProcessor extends SimpleMRProcessor {
+
+	public SortMergeJoinProcessor(ProcessorContext context) {
+		super(context);
+
+	}
+
+	@Override
+	public void run() throws Exception {
+
+	}
+
+}

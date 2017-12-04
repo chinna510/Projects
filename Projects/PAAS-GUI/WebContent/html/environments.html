@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>Environments</title>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<link rel="stylesheet" href="../css/table/table.css">
+<script src="../js/environmenttype/environmenttype.js"
+	type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+	<div ng-app="myenvironmenttype">
+		<div ng-controller="MainCtrl" class="container">
+
+			<div class="page-headr" align="center">
+				<h1>PAAS-Environments</h1>
+			</div>
+
+			<button ng-click="toggleModal()" class="btn btn-primary">Add
+				Environment</button>
+
+			<modal title="Add Environments" visible="showModal"> <!-- page-header -->
+
+			<div class="container tabs-wrap">
+
+				<ul class="nav nav-tabs col-xs-5" role="tablist">
+
+					<li role="presentation" class="active"><a href="#environment"
+						aria-controls="environment" role="tab" data-toggle="tab"
+						aria-expanded="true">Environment</a></li>
+					<li><a href="#services" aria-controls="services" role="tab"
+						data-toggle="tab" aria-expanded="false">Services</a></li>
+					<li><a href="#environment_variable"
+						aria-controls="environment_variable" role="tab" data-toggle="tab"
+						aria-expanded="false">Environment Variables</a></li>
+					<li><a href="#scaling_policy" aria-controls="scaling_policy"
+						role="tab" data-toggle="tab" aria-expanded="false">Scaling
+							Policy</a></li>
+					<li><a href="#gateway_routes" aria-controls="gateway_routes"
+						role="tab" data-toggle="tab" aria-expanded="false">Gateway
+							Routes</a></li>
+					<li><a href="#routing_policy" aria-controls="routing_policy"
+						role="tab" data-toggle="tab" aria-expanded="false">Routing
+							Policy</a></li>
+
+				</ul>
+
+
+
+
+				<!-- 1st window -->
+
+
+				<div class="tab-content">
+
+					<div class="tab-pane active col-xs-12" id="environment">
+						<form role="form">
+							<div>
+								<p>Enter an environment name, choose an environment type,</p>
+								<p>and select the application to be deployed.</p>
+							</div>
+							<br />
+
+							<div class="form-group ">
+								<label for="name">Name</label> <input style="width: 45%"
+									type="text" class="form-control" id="name" placeholder="Name" />
+							</div>
+
+							<div class="form-group">
+								<label for="out_type">Type</label> <select class="form-control"
+									style="width: 45%" ng-model="field.out_type">
+									<option value="Production">Production</option>
+									<option value="Production 1">Production 1</option>
+								</select>
+							</div>
+
+
+
+							<div class="form-group">
+								<label for="out_application">Application</label> <select
+									class="form-control" style="width: 45%"
+									ng-model="field.out_type">
+									<option value="Tomcat">Tomcat</option>
+									<option value="Tomcat 1">Tomcat 1</option>
+								</select>
+							</div>
+
+
+
+							<div class="form-group">
+								<label for="out_latest">Version</label> <select
+									class="form-control" style="width: 45%"
+									ng-model="field.out_type">
+									<option value="Latest">Latest</option>
+									<option value="Old">Old</option>
+								</select>
+							</div>
+
+
+
+							<br /> <br /> <br />
+							<div class="modal-footer" style="background: #ccefff; width: 45%">
+								<div class="bootstrap-dialog-footer">
+									<div class="bootstrap-dialog-footer-buttons">
+										<button type="button"
+											class="btn btn-danger btn-nirmata col-xs-2"
+											data-dismiss="modal">Cancel</button>
+										<a class="btn btn-primary continue">Next</a>
+										<button class="btn btn-primary btn-nirmata"
+											disabled="disabled">Finish</button>
+									</div>
+								</div>
+							</div>
+
+						</form>
+					</div>
+
+
+
+					<!-- 2nd window -->
+
+
+					<div role="tabpanel" class="tab-pane col-xs-12" id="services">
+						<form role="form">
+							<h5 align="left">
+								Specify which images are accepted into, and promoted from,
+								environments of <br /> this type
+							</h5>
+							<br />
+
+
+							<table style="width: 45%" cellspacing="20"border="1" cellpadding="10">
+								<thead>
+									<tr>
+										<th>Service</th>
+										<th>Tag</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>Tomcat</td>
+										<td><select class="form-control" style="width: 45%"
+											ng-model="field.out_type">
+												<option value="Latest">6.0</option>
+												<option value="Old">7.0</option>
+												<option value="Latest">8.0</option>
+												<option value="Old">9.0</option>
+										</select></td>
+									</tr>
+
+								</tbody>
+							</table>
+
+
+							<br /> <br /> <br /> <br /> <br /> <br /> <br />
+							<div class="modal-footer" style="background: #ccefff; width: 45%">
+								<div class="bootstrap-dialog-footer">
+									<div class="bootstrap-dialog-footer-buttons">
+										<button type="button"
+											class="btn btn-danger btn-nirmata col-xs-2"
+											data-dismiss="modal">Cancel</button>
+										<a class="btn btn-primary back">Previous</a> <a
+											class="btn btn-primary continue">Next</a>
+										<button class="btn btn-success btn-nirmata"
+											disabled="disabled">Finish</button>
+									</div>
+								</div>
+							</div>
+
+						</form>
+					</div>
+
+
+					<!-- 3rd window -->
+
+
+					<div role="tabpanel" class="tab-pane col-xs-12 tab-pane"
+						id="environment_variable">
+						<form role="form">
+							<h5 align="left">(Optional) Configure environment variable
+								values</h5>
+							<br />
+
+							<table style="width: 45%" cellspacing="20"border="1" cellpadding="10">
+								<thead>
+									<tr>
+										<th>Services</th>
+										<th>Key</th>
+										<th>Value</th>
+										<th></th>
+										<br />
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td><input style="width: 55%" type="text"
+											class="form-control" id="name" /></td>
+										<td><input style="width: 55%" type="text"
+											class="form-control" id="name" /></td>
+										<td><input style="width: 55%" type="text"
+											class="form-control" id="name" /></td>
+										<td><span style="color: red"><button type="button"
+													class="glyphicon glyphicon-remove"></button></span></td>
+									</tr>
+
+								</tbody>
+							</table>
+
+
+							<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+							<br />
+							<div class="modal-footer" style="background: #ccefff; width: 45%">
+								<div class="bootstrap-dialog-footer">
+									<div class="bootstrap-dialog-footer-buttons">
+										<button type="button"
+											class="btn btn-danger btn-nirmata col-xs-2"
+											data-dismiss="modal">Cancel</button>
+										<a class="btn btn-primary back">Previous</a> <a
+											class="btn btn-primary continue">Next</a>
+										<button class="btn btn-success btn-nirmata">Finish</button>
+									</div>
+								</div>
+							</div>
+
+						</form>
+					</div>
+
+					<!-- 4th -->
+
+					<div role="tabpanel" class="tab-pane col-xs-12 tab-pane"id="scaling_policy">
+						<form role="form">
+							<h5 align="left">
+								(Optional) Configure scaling default for environment. You can
+								also add rules for <br />specific services
+							</h5>
+
+
+							<table style="width: 45%" cellspacing="20"border="1" cellpadding="10">
+								<thead>
+									<tr>
+										<th></th>
+										<th>Desired Count</th>
+										<th>Auto Recovery</th>
+										<th></th>
+
+									</tr>
+								</thead>
+								<br />
+
+								<tbody>
+									<tr>
+										<td>Environment Defaults</td>
+										<td><input type="number" class="form-control"
+											id="desire_count" value="1" min="0" max="60"
+											ng-model="field.cpu_shares" /></td>
+										<td><input type="checkbox"></td>
+										<td>
+											<!-- <span style="color: red"><button type="button"class="glyphicon glyphicon-remove"></button></span> -->
+										</td>
+									</tr>
+									<tr>
+										<td><input style="width: 65%" type="text"
+											class="form-control" id="name" placeholder="Select Services" /></td>
+										<td><input type="number" class="form-control"
+											id="desire_count1" value="1" min="0" max="60"
+											ng-model="field.cpu_shares" /></td>
+										<td><input type="checkbox"></td>
+										<td><span style="color: red"><button type="button"
+													class="glyphicon glyphicon-remove"></button></span></td>
+									</tr>
+
+								</tbody>
+							</table>
+
+
+
+
+
+							<br /> <br /> <br />
+							<br /> <br /> <br />
+							<div class="modal-footer" style="background: #ccefff; width: 45%">
+								<div class="bootstrap-dialog-footer">
+									<div class="bootstrap-dialog-footer-buttons">
+										<button type="button"
+											class="btn btn-danger btn-nirmata col-xs-2"
+											data-dismiss="modal">Cancel</button>
+										<a class="btn btn-primary back">Previous</a> <a
+											class="btn btn-primary continue">Next</a>
+										<button class="btn btn-success btn-nirmata"
+											disabled="disabled">Finish</button>
+									</div>
+								</div>
+							</div>
+
+						</form>
+					</div>
+
+
+					<!-- 5th -->
+
+					<div role="tabpanel1" class="tab-pane col-xs-12 tab-pane"id="gateway_routes">
+						<form role="form" >
+							<h5 align="left">Manage how image update notifications are
+								handled for environments of this type</h5>
+
+
+
+							<table style="width: 45%" cellspacing="20"border="1" cellpadding="10">
+								<thead>
+									<tr>
+										<th>Type</th>
+										<th>Services</th>
+										<th>Tag</th>
+										<th>Port</th>
+										<th>Route</th>
+										<th>Target URL</th>
+										<th>Sticky</th>
+										<th></th>
+
+									</tr>
+								</thead>
+								<br />
+
+								<tbody>
+									<tr>
+										<td><select class="form-control" style="width: 45%"
+											ng-model="field.out_type">
+												<option value="Production">type 1</option>
+												<option value="Production 1">type 2</option>
+										</select></td>
+										
+										<td><select class="form-control" style="width: 45%"
+											ng-model="field.out_type">
+												<option value="Production">services 1</option>
+												<option value="Production 1">services 2</option>
+										</select></td>
+
+										<td><select class="form-control" style="width: 45%"
+											ng-model="field.out_type">
+												<option value="Production">tag 1</option>
+												<option value="Production 1">tag 2</option>
+										</select></td>
+
+										<td><select class="form-control" style="width: 45%"
+											ng-model="field.out_type">
+												<option value="Production">port 1</option>
+												<option value="Production 1">port 2</option>
+										</select></td>
+										
+										<td><input type="text" class="route" id="route"style="width: 45%" /></td>
+										<td><input type="text" class="target_url" id="target_url"style="width: 45%" /></td>
+										<td><input type="checkbox"></td>
+										<td><span style="color: red"><button type="button"
+													class="glyphicon glyphicon-remove"></button></span></td>
+										
+										
+									</tr>
+
+
+								</tbody>
+							</table>
+
+
+
+
+
+
+							<br /> <br /> <br /><br /> <br /> <br />
+							<div class="modal-footer" style="background: #ccefff; width: 45%">
+								<div class="bootstrap-dialog-footer">
+									<div class="bootstrap-dialog-footer-buttons">
+										<button type="button"
+											class="btn btn-danger btn-nirmata col-xs-2"
+											data-dismiss="modal">Cancel</button>
+										<a class="btn btn-primary back">Previous</a> <a
+											class="btn btn-primary continue">Next</a>
+										<button class="btn btn-success btn-nirmata"
+											disabled="disabled">Finish</button>
+									</div>
+								</div>
+							</div>
+
+						</form>
+					</div>
+
+
+
+					<!-- 6th -->
+
+					<div role="tabpane" class="tab-pane col-xs-12 tab-pane"id="routing_policy">
+						<form role="form">
+							<h5 align="left">Manage how image update notifications are
+								handled for environments of this type</h5>
+
+
+							<table style="width: 45%" cellspacing="20"border="1" cellpadding="10">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>From Service</th>
+										<th>From Tag</th>
+										<th>To Service</th>
+										<th>TO Tag</th>
+										<th>Action</th>
+										<th></th>
+
+									</tr>
+								</thead>
+								<br />
+
+								<tbody>
+									<tr>
+										<td><input type="text" class="route" id="route"
+											style="width: 45%" /></td>
+
+										<td><select class="form-control" style="width: 45%"
+											ng-model="field.out_type">
+												<option value="Production">services 1</option>
+												<option value="Production 1">services 2</option>
+										</select></td>
+
+										<td><select class="form-control" style="width: 45%"
+											ng-model="field.out_type">
+												<option value="Production">tag 1</option>
+												<option value="Production 1">tag 2</option>
+										</select></td>
+
+										<td><select class="form-control" style="width: 45%"
+											ng-model="field.out_type">
+												<option value="Production">port 1</option>
+												<option value="Production 1">port 2</option>
+										</select></td>
+
+										<td><select class="form-control" style="width: 45%"
+											ng-model="field.out_type">
+												<option value="Production">port 1</option>
+												<option value="Production 1">port 2</option>
+										</select></td>
+										<td><select class="form-control" style="width: 45%"
+											ng-model="field.out_type">
+												<option value="Production">port 1</option>
+												<option value="Production 1">port 2</option>
+										</select></td>
+										
+										<td><span style="color: red"><button type="button"
+													class="glyphicon glyphicon-remove"></button></span></td>
+
+
+									</tr>
+
+
+								</tbody>
+							</table>
+
+
+
+
+
+
+
+
+
+							<br /> <br /> <br />
+							<div class="modal-footer" style="background: #ccefff; width: 45%">
+								<div class="bootstrap-dialog-footer">
+									<div class="bootstrap-dialog-footer-buttons">
+										<button type="button"
+											class="btn btn-danger btn-nirmata col-xs-2"
+											data-dismiss="modal">Cancel</button>
+										<a class="btn btn-primary back">Previous</a>
+										<button class="btn btn-success btn-nirmata">Finish</button>
+									</div>
+								</div>
+							</div>
+
+						</form>
+					</div>
+
+
+
+
+				</div>
+
+			</div>
+
+			<div id="push"></div>
+
+			</modal>
+		</div>
+
+		<hr />
+
+		<div class="container">
+			<table border="1" cellpadding="10">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Accept Tag</th>
+						<th>Promote Tag</th>
+						<th>action</th>
+						<th>actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="field in fields">
+						<td>{{}}</td>
+						<td>{{}}</td>
+						<td>{{}}</td>
+						<td>{{}}</td>
+						<td>{{}}</td>
+						<td>{{}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+
+</body>
+</html>

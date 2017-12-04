@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="Employee.xsd">
+	<Employee>
+		<EmpID>101</EmpID>
+		<FirstName>chinna</FirstName>
+		<LastName>Rao</LastName>
+		<MobileNo>7899181292</MobileNo>
+	</Employee>
+	<Emp_parent>
+		<Emp_Father>Durgarao</Emp_Father>
+		<Emp_Mother>Suridu</Emp_Mother>
+	</Emp_parent>
+</Company>

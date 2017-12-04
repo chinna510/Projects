@@ -1,0 +1,14 @@
+To see System info:
+
+sudo dmidecode --type 17
+
+sudo dmidecode --type processor
+
+
+go to root:
+----------
+sudo su
+
+for system info:
+-----------------
+dmidecode | more

@@ -1,0 +1,23 @@
+package com.akka.subchannel;
+
+import akka.actor.ActorSystem;
+
+public class SubChannelTest {
+
+	ActorSystem system=ActorSystem.create("SubChannel");
+	
+	
+	public void test(){
+		
+		SubChannelBusImpl subchannelBus = new SubchannelBusImpl();
+		subchannelBus.subscribe(getTestActor(), "abc");
+		subchannelBus.publish(new MsgEnvelope("xyzabc", "x"));
+		subchannelBus.publish(new MsgEnvelope("bcdef", "b"));
+		subchannelBus.publish(new MsgEnvelope("abc", "c"));
+		expectMsgEquals("c");
+		subchannelBus.publish(new MsgEnvelope("abcdef", "d"));
+		expectMsgEquals("d");
+		
+	}
+	
+}

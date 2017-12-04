@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;VertexFunction.java&apos; to &apos;ExampleApp/src/main/java/com.spark.graphx&apos;&#x0A;- Original project: &apos;OuterJoinVertices&apos;&#x0A;- Destination element: &apos;ExampleApp/src/main/java/com.spark.graphx&apos;&#x0A;- Original element: &apos;com.graphx.withDoubles.VertexFunction.java&apos;" description="Copy compilation unit" destination="=ExampleApp/src\/main\/java&lt;com.spark.graphx" element1="/src\/main\/java&lt;com.graphx.withDoubles{VertexFunction.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1466933963930" units="1" version="1.0"/>
+</session>

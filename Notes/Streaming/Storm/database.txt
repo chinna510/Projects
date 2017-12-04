@@ -1,0 +1,31 @@
+create table 'registration' ( 'fname' VARCHAR( 255 ),'mname' VARCHAR( 255 ),'lname' VARCHAR( 255 ),'pan' VARCHAR( 15 ),'date' VARCHAR( 20 ),'gender' VARCHAR( 5 ),'peradd' VARCHAR( 255 ),'commadd' VARCHAR( 255 ),'maritalstatus' VARCHAR( 10 ),'unique' VARCHAR( 15 ) engine = MYISAM);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE `registration` (`registerID` VARCHAR( 255 ) NULL , `fname` VARCHAR( 25 ) NULL ,`mname` VARCHAR( 10 ) NULL ,`lname` VARCHAR( 10 ) NULL,`unique` VARCHAR( 32 ) NULL ,`date` date NULL,`pan` VARCHAR( 18 ) NULL,`gender` VARCHAR( 8 ) NULL ,`maritalstatus` VARCHAR( 20 ) NULL ,`commadd` VARCHAR( 32 ) NULL,`peradd` VARCHAR( 32 ) NULL ,`course1` VARCHAR( 15 ) NULL ,`univ1` VARCHAR( 32 ) NULL ,`yop1` VARCHAR( 5 ) NULL ,`percentage1` VARCHAR( 5 ) NULL ,`course2` VARCHAR( 15 ) NULL ,`univ2` VARCHAR( 32 ) NULL ,`yop2` VARCHAR( 5 ) NULL ,`percentage2` VARCHAR( 5 ) NULL ,`course3` VARCHAR( 15 ) NULL ,`univ3` VARCHAR( 32 ) NULL ,`yop3` VARCHAR( 5 ) NULL ,`percentage3` VARCHAR( 5 ) NULL ,`course4` VARCHAR( 15 ) NULL ,`univ4` VARCHAR( 32 ) NULL ,`yop4` VARCHAR( 5 ) NULL ,`percentage4` VARCHAR( 5 ) NULL   ) ;
+
+
+
+
+
+
+
+create table 'uniquetable' ('uniqueid' VARCHAR( 255 ) NOT NULL PRIMARY KEY);
+
+CREATE TABLE `Employee` ( `fname` VARCHAR( 32 ) NOT NULL, `lname` VARCHAR( 32 ) NOT NULL, `phone` VARCHAR( 32 ) NOT NULL, `city` VARCHAR( 32 ) NOT NULL, `country` VARCHAR( 32 ) NOT NULL, `email` VARCHAR( 32 ) NOT NULL, `credit` VARCHAR( 32 ) NOT NULL);
+
+
+
+

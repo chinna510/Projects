@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Downloading Text With the Ajax Framework Library Pack</title>
+<script src="ajaxframework.js"></script>
+
+</head>
+<body>
+	<H1>Downloading Text With the Ajax Framework Library Pack</H1>
+	<form>
+		<input type="button" value="Get message 1"
+			onclick="downloadText('/AxisExamples/data', callbackMessage1)">
+		<input type="button" value="Get message 2"
+			onclick="downloadText('/AxisExamples/data2', callbackMessage2)">
+	</form>
+
+
+	<div id="targetDiv">
+		<p>The fetched data will go here.</p>
+	</div>
+	<script>
+	function callbackMessage1(text) {
+		document.getElementById("targetDiv").innerHTML = text;
+	}
+	function callbackMessage2(text) {
+		document.getElementById("targetDiv").innerHTML = text;
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+package SparkAccumulator;
+
+import java.io.Serializable;
+
+import org.apache.spark.AccumulatorParam;
+
+public class StatisticsAccumulatorParam implements AccumulatorParam<Statistics>,Serializable{
+	StatisticsAccumulatorParam() {}
+
+	@Override
+	public Statistics addInPlace(Statistics r, Statistics t) {
+		// TODO Auto-generated method stub
+		return r.add(t);
+		
+	}
+	@Override
+	public Statistics zero(Statistics initialValue) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public Statistics addAccumulator(Statistics r, Statistics t) {
+		// TODO Auto-generated method stub
+		return r.add(t);
+	}
+
+
+}

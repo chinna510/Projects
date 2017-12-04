@@ -1,0 +1,11 @@
+Struts programming:
+------------------
+Steps to create struts web project:
+
+1. Add dependency to pom.xml
+2. Create struts-config.xml   -------->Controller
+3. Start up page    -------->Trigger page
+4. Action class(.java) -----> Modal class----->implement execute() method in action class
+5. JSP's  ---------->Views
+6. place filter in web.xml---->tomcat reads this file and redirects to struts-config.xml file
+

@@ -1,0 +1,7 @@
+package com.akka.ActorClassification;
+
+import akka.event.japi.ManagedActorEventBus;
+
+public class ActorBusImpl extends ManagedActorEventBus<Notification> {
+
+}

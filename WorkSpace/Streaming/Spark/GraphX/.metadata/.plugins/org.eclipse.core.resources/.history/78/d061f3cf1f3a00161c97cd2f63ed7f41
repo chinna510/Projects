@@ -1,0 +1,13 @@
+package com.graphx.vertexrdd;
+
+import scala.runtime.AbstractFunction1;
+
+public class MapValueFunction extends AbstractFunction1<Integer, Integer> {
+
+	@Override
+	public Integer apply(Integer value) {
+
+		return value = 25;
+	}
+
+}

@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Using Stacking Order</title>
+</head>
+<body>
+	<h1 align="center">Using Stacking Order</h1>
+	<div style="position: absolute; left: 40; top: 60;" id="image01">
+		<img src="image01.jpg" width="200" height="100"> <br> Image
+		1
+	</div>
+	<div style="position: absolute; left: 195; top: 90;" id="image02">
+		<img src="image02.jpg" width="200" height="100"> <br> Image
+		2
+	</div>
+	<div style="position: absolute; left: 350; top: 120;" id="image03">
+		<img src="image03.jpg" width="200" height="100"> <br> Image
+		3
+	</div>
+	<center>
+		<form>
+			<input type="button" value="Flip stacking order"
+				style="position: absolute; left: 200; top: 260;"
+				onclick="image01.style.zIndex = '300';
+image02.style.zIndex = '200'; image03.style.zIndex =
+'100'">
+		</form>
+	</center>
+</body>
+</html>

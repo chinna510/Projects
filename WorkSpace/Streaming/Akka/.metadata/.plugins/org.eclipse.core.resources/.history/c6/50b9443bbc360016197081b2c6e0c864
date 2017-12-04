@@ -1,0 +1,12 @@
+package com.akka.logging;
+
+public class LoggingActorTest {
+
+	
+	public void test(){
+		
+		
+		
+	}
+	
+}

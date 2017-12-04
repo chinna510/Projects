@@ -1,0 +1,42 @@
+@(products: List[Product]) 
+@main("Products catalogue") {
+
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h2>All products</h2>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>EAN</th>
+				<th>Name</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			@for(product <- products) {
+			<tr>
+				<td><a href="@routes.Products.details(product.ean)">
+						@product.ean </a></td>
+				<td><a href="@routes.Products.details(product.ean)">
+						@product.name</a></td>
+				<td><a href="@routes.Products.details(product.ean)">
+						@product.name</a></td>
+			</tr>
+			}
+		</tbody>
+	</table>
+
+
+</body>
+</html>
+}

@@ -1,0 +1,8 @@
+package com.akka.externalserveices;
+
+public class SometimesSlowService {
+
+	
+	
+	
+}

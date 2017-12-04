@@ -1,0 +1,11 @@
+package com.akka.EventStream;
+
+public class StreamEventTest {
+
+	public void test(){
+		final ActorSystem system = ActorSystem.create("DeadLetters");
+		final ActorRef actor = system.actorOf(Props.create(DeadLetterActor.class));
+		system.eventStream().subscribe(actor, DeadLetter.class);
+	}
+	
+}

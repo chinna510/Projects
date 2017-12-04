@@ -1,0 +1,12 @@
+package com.akka.distribute;
+
+public class CounterChanged {
+
+	public static int delta;
+
+	public CounterChanged(int delta) {
+		this.delta = delta;
+
+	}
+
+}

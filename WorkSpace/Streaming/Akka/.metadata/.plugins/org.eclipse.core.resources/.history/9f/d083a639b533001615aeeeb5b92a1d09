@@ -1,0 +1,13 @@
+package com.akka.distribute;
+
+import akka.actor.UntypedActor;
+
+public class CounterSupervisor extends UntypedActor {
+
+	@Override
+	public void onReceive(Object arg0) throws Exception {
+		private final ActorRef counter = getContext().actorOf(
+			      Props.create(Counter.class), "theCounter");		
+	}
+
+}

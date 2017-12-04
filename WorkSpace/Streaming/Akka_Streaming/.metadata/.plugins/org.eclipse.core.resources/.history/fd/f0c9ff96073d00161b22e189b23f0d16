@@ -1,0 +1,9 @@
+package com.akka.integration;
+
+import akka.actor.AbstractActor;
+
+public class Worker extends AbstractActor{
+
+	
+	
+}

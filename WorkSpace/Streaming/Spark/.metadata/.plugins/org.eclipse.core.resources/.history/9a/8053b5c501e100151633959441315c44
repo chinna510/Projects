@@ -1,0 +1,13 @@
+package com.spark.Word;
+
+public class HelloWorld {
+	public void test(){
+		System.out.println("Hello World");
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

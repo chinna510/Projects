@@ -1,0 +1,45 @@
+
+package com.tez;
+
+import java.io.IOException;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
+import org.apache.hadoop.util.GenericOptionsParser;
+import org.apache.hadoop.util.Tool;
+import org.apache.hadoop.util.ToolRunner;
+import org.apache.tez.dag.api.DAG;
+import org.apache.tez.dag.api.DataSinkDescriptor;
+import org.apache.tez.dag.api.DataSourceDescriptor;
+import org.apache.tez.dag.api.Edge;
+import org.apache.tez.dag.api.ProcessorDescriptor;
+import org.apache.tez.dag.api.TezConfiguration;
+import org.apache.tez.dag.api.Vertex;
+import org.apache.tez.mapreduce.input.MRInput;
+import org.apache.tez.mapreduce.output.MROutput;
+import org.apache.tez.runtime.library.conf.OrderedPartitionedKVEdgeConfig;
+import org.apache.tez.runtime.library.partitioner.HashPartitioner;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class WordCount extends Configured implements Tool {
+	static String INPUT = "Input";
+	static String OUTPUT = "Output";
+	static String TOKENIZER = "Tokenizer";
+	static String SUMMATION = "Summation";
+
+	private static final Logger LOG = LoggerFactory.getLogger(WordCount.class);
+
+	public int run(String[] args) throws Exception {
+		Configuration conf = getConf();
+		GenericOptionsParser optionParser = new GenericOptionsParser(conf, args);
+		String[] otherArgs = optionParser.getRemainingArgs();
+
+		return 0;
+	}
+
+}

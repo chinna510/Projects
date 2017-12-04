@@ -1,0 +1,8 @@
+package com.akka.stream;
+
+import akka.stream.FlowShape;
+import akka.stream.stage.GraphStage;
+
+public class RateDecoupledGraphStages extends GraphStage<FlowShape<A, A>> {
+
+}

@@ -1,0 +1,22 @@
+package com.akka.subchannel;
+
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+
+public class SubChannelTest {
+
+	ActorSystem system = ActorSystem.create("SubChannel");
+
+	public void test() {
+
+		SubChannelBusImpl subchannelBus = new SubChannelBusImpl();
+		subchannelBus.subscribe(system.actorOf(Props.create(TestActor.class)), "abc");
+		subchannelBus.subscribe(getTestActor(), "abc");
+		subchannelBus.publish(new MsgEnvelope("xyzabc", "x"));
+		subchannelBus.publish(new MsgEnvelope("bcdef", "b"));
+		subchannelBus.publish(new MsgEnvelope("abc", "c"));
+		subchannelBus.publish(new MsgEnvelope("abcdef", "d"));
+
+	}
+
+}

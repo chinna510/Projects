@@ -1,0 +1,54 @@
+package com.myudfs;
+
+import java.io.IOException;
+
+import org.apache.pig.Accumulator;
+import org.apache.pig.EvalFunc;
+import org.apache.pig.data.Tuple;
+
+public class IntMax extends EvalFunc<Integer> implements Accumulator<Integer> {
+
+	public void accumulate(Tuple b) throws IOException {
+		try {
+			Integer curMax = max(b);
+			if (curMax == null) {
+				return;
+			}
+			/*
+			 * if bag is not null, initialize intermediateMax to negative
+			 * infinity
+			 */
+			if (intermediateMax == null) {
+				intermediateMax = Integer.MIN_VALUE;
+			}
+			intermediateMax = java.lang.Math.max(intermediateMax, curMax);
+		} catch (ExecException ee) {
+			throw ee;
+		} catch (Exception e) {
+			int errCode = 2106;
+			String msg = "Error while computing max in " + this.getClass().getSimpleName();
+			throw new ExecException(msg, errCode, PigException.BUG, e);
+		}
+	}
+
+	private Integer max(Tuple b) {
+
+		return null;
+	}
+
+	public void cleanup() {
+
+	}
+
+	public Integer getValue() {
+
+		return null;
+	}
+
+	@Override
+	public Integer exec(Tuple arg0) throws IOException {
+
+		return null;
+	}
+
+}

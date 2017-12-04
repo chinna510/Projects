@@ -1,0 +1,10 @@
+package com.tez.topk;
+
+public class LocalTop {
+	private static int top;
+
+	public LocalTop(int top) {
+		this.top = top;
+	}
+
+}

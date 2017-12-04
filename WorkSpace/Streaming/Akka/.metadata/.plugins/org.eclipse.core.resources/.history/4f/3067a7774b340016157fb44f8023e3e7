@@ -1,0 +1,22 @@
+package com.akka.distribute;
+
+import akka.actor.UntypedActor;
+import akka.event.Logging;
+import akka.event.LoggingAdapter;
+
+public class FactorialFrontend extends UntypedActor {
+	LoggingAdapter log = Logging.getLogger(getContext().system(), this);
+
+	@Override
+	public void onReceive(Object msg) throws Exception {
+
+	}
+
+	void sendJobs() {
+		log.info("Starting batch of factorials up to [{}]", upToN);
+		for (int n = 1; n <= upToN; n++) {
+			backend.tell(n, getSelf());
+		}
+	}
+
+}

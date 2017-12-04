@@ -1,0 +1,18 @@
+package com.graphx.edgerdd;
+
+import java.io.Serializable;
+
+import org.apache.spark.graphx.Edge;
+
+import scala.runtime.AbstractFunction1;
+
+public class MapFunction extends AbstractFunction1<Edge<Integer>, Edge<Integer>> implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public Edge<Integer> apply(Edge<Integer> arg0) {
+		return new Edge<Integer>(4, 7, 55);
+	}
+
+}

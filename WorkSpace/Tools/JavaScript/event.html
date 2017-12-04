@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p onclick="this.innerHTML='GOOD JOB!'">Click me.</p>
+
+</body>
+</html>

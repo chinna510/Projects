@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\nwrite.table(mtcars,\"/home/bizruntime/mtcars.csv\", row.names = FALSE, na=\"\", col.names = TRUE, sep = \",\")\n\ndata <- read.table(\"/home/bizruntime/mtcars.csv\", sep = \",\", header = TRUE, nrows = 5)\n\nwrite.filename = file(\"/home/bizruntime/out.dat\", \"wb\")\n\nwriteBin(colnames(data), write.filename)\n\nwriteBin(c(data$cyl,data$am,data$gear), write.filename)\n\nclose(write.filename)",
+    "created" : 1467888901910.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "33789838",
+    "id" : "D99C5EEA",
+    "lastKnownWriteTime" : 1467889409,
+    "last_content_update" : 1467889409502,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R-BinaryFiles/WritingTheBinaryFile.R",
+    "project_path" : "WritingTheBinaryFile.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

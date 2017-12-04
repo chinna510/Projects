@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "x <- c(1,2,3,4,5,2,34,5)\ncount=1\nrepeat{\n  print(count)\n  count=count+1\n  \n  if(count >500){\n    print(count)\n    break\n  }\n  \n}\n",
+    "created" : 1467039449334.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4271551447",
+    "id" : "FABE4F6D",
+    "lastKnownWriteTime" : 1467039715,
+    "last_content_update" : 1467039715234,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R-Looping/RepeatFor.R",
+    "project_path" : "RepeatFor.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

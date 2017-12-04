@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var form = $("#htmlform");
+		var data1 = $("#id").val();
+		var res = $('#demo');
+		form.submit(function(event) {
+			$.ajax({
+				type : form.attr('method'),
+				url : 'http://localhost:8080/FirstREST/rest/userend/'+data1,
+				data : data1,
+				success : function(data) {
+					/* $('body').append(html);
+					$('#demo').html=data
+					console.log("Success"); */
+					id = $(html).filter('#demo').html();
+	                console.log("Success");
+	                $("#result").html(data);
+				},
+				error : function(data) {
+					//alert('An error occured!'+(errorThrown?errorThrown:xhr.status);)
+					//console.log("Error");
+					console.log("You have an Error"+data);
+				}
+			});
+			event.preventDefault();
+		});
+	});
+</script>
+</head>
+
+</head>
+<body>
+	<form id="htmlform" method="get">
+		<input id="id" type="text"> <input id="submit" type="submit"
+			value="submit">
+	</form><br>
+	<div id="demo">Your id is: </div>
+</body>
+</html>

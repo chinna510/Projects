@@ -1,0 +1,16 @@
+package com.akka.externalserveices;
+
+import java.util.concurrent.Executor;
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class SometimesSlowService {
+
+	private final Executor ec;
+
+	public SometimesSlowService(Executor ec) {
+		this.ec = ec;
+	}
+
+	private final AtomicInteger runningCount = new AtomicInteger();
+
+}

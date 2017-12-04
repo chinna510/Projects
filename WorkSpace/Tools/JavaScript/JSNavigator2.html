@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>What is the name(s) of your browser?</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = 
+    "Name is " + navigator.appName +
+    "<br>Code name is " + navigator.appCodeName;
+}
+</script>
+
+</body>
+</html>

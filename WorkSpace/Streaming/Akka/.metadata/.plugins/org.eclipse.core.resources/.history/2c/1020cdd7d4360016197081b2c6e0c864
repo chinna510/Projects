@@ -1,0 +1,15 @@
+package com.akka.extension;
+
+import akka.actor.ActorSystem;
+
+public class ExtensionTest {
+
+	
+	public void test(){
+		
+		ActorSystem system=ActorSystem.create("AkkaExtensions");
+		
+		
+	}
+	
+}

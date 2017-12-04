@@ -1,0 +1,169 @@
+1. what is Streaming?
+  > streaming is a flow of data.
+example: Sensors,IoT 
+
+2. Spark Streaming:
+
+  >Spark streaming is mainly used in real time usecases like monitoring the flow of users on website and detecting fraud transactions in real time.
+
+  >It is a stateful stream processing system and it updates its state with stream of data . if any node fails,the state shouldnot be lost.
+
+  >Latency(Time interval for processing the data) is very low for streaming the data, i.e; less than half second.
+
+  >By compare to both Hadoop(Batch processing) and Storm streaming(stream processing) it gives scalable,efficient,fault tolerant and high throughput 
+   for live streaming of data.
+ 
+
+
+Scalability :
+            Scalability is the capability of a system, network, or process to handle a growing amount of work, or its potential to be enlarged in order to
+               accommodate that growth.
+
+Fault Tolerant:
+             In case of node failure,the data can be reproduced by using Extraction.
+
+Resilient Distributed DataSets:
+-------------------------------
+ a collection of elements partitioned across the nodes of the cluster that can be operated on in parallel.
+
+abstract class RDD[T] extends Serializable with Logging
+
+> RDD is an abstract and immutable class.
+> it contains basic operations of RDD's like map,filter and persist.
+
+RDD operations:
+-----------------------
+two types of operations done by RDD,
+1.Transformations : which creates a new dataset from existing one.
+example :map is a transformation that passes each dataset element through a function and returns a new RDD representing the results.
+
+2.Actions : it returns a data value to the driver program after running a computation on the dataset.
+example : reduce is an action that aggregates all the elements of the RDD using some function and returns the final result to the driver program.
+
+Internally, each RDD is characterized by five main properties:
+
+1.A list of partitions
+2.A function for computing each split
+3.A list of dependencies on other RDDs
+4.Optionally, a Partitioner for key-value RDDs (e.g. to say that the RDD is hash-partitioned)
+5.Optionally, a list of preferred locations to compute each split on (e.g. block locations for an HDFS file)
+
+
+
+PairRDDFunctions:
+-----------------
+class PairRDDFunctions[K, V] extends Logging with SparkHadoopMapReduceUtil with Serializable
+methods:
+---------
+aggregateByKey()  -Aggregate the values of each key, using given combine functions and a neutral "zero value".
+
+cogroup()              -return a resulting RDD that contains a tuple with the list of values for that key in this.
+
+collectAsMap()     -Return the key-value pairs in this RDD to the master as a Map without duplication of values.
+
+combineByKey()    -combineByKey that hash-partitions the resulting RDD using the existing partitioner/parallelism level.
+
+countApproxDistinctByKey()-Return approximate number of distinct values for each key in this RDD.
+
+countByKey()      -Count the number of elements for each key, collecting the results to a local Map.
+
+countByKeyApprox()-Approximate version of countByKey that can return a partial result if it does not finish within a timeout.
+
+flatMapValues()   -Pass each value in the key-value pair RDD through a flatMap function without changing the keys; this also retains  
+                                the original RDD's partitioning.
+foldByKey()         -Merge the values for each key using an associative function and a neutral "zero value" which may be added to the      
+                             result an arbitrary number of times, and must not change the result (e.g., Nil for list concatenation, 0 for  addition, or 1 for multiplication).
+
+fullOuterJoin()    -Perform a full outer join of this and other.
+
+groupByKey():   -Group the values for each key in the RDD into a single sequence.
+
+groupWith()     -Alias with cogroup.
+
+join()          -Return an RDD containing all pairs of elements with matching keys in this and other.
+
+keys()          -Return an RDD with the keys of each tuple.
+
+leftOuterJoin:  -Perform a left outer join of this and other.
+
+lookup(key: K): -Return the list of values in the RDD for key key.
+
+mapValues()     -Pass each value in the key-value pair RDD through a map function without changing the keys; this also retains the  original RDD's partitioning.
+
+partitionBy()     - Return a copy of the RDD partitioned using the specified partitioner.
+
+reduceByKey()   -Merge the values for each key using an associative reduce function. 
+
+reduceByKeyLocally() -Merge the values for each key using an associative reduce function, but return the results immediately to the  master as a Map. 
+
+sampleByKey()             -Return a subset of this RDD sampled by key (via stratified sampling).
+
+sampleByKeyExact() :  Return a subset of this RDD sampled by key (via stratified sampling) containing exactly math.ceil(numItems * samplingRate) for each stratum (group of pairs with the same key).
+
+saveAsHadoopDataset(conf: JobConf):Output the RDD to any Hadoop-supported storage system, using a Hadoop JobConf object for that storage system. The JobConf should set an OutputFormat and any output paths required (e.g. a table name to write to) in the same way as it would be configured for a Hadoop MapReduce job.
+
+saveAsHadoopFile(path):  Output the RDD to any Hadoop-supported file system, using a Hadoop OutputFormat class supporting the key and value types K and V in this RDD.
+
+saveAsNewAPIHadoopFile(path):Output the RDD to any Hadoop-supported file system, using a new Hadoop API OutputFormat (mapreduce.OutputFormat) object supporting the key and value types K and V in this RDD.
+
+subtractByKey()        -Return an RDD with the pairs from this whose keys are not in other.
+
+values()       -Return an RDD with the values of each tuple.
+
+
+DoubleRDDFunctions:
+---------------------------
+histogram(buckets: Array[Double]) :  Compute a histogram using the provided buckets. The buckets are all open to the right except for the last which is closed.
+
+histogram(bucketCount: Int): Compute a histogram of the data using bucketCount number of buckets evenly spaced between the minimum and maximum of the RDD.
+
+mean()       :  Compute the mean of this RDD's elements.
+
+meanApprox(timeout: Long, confidence: Double = 0.95): Approximate operation to return the mean within a timeout.
+
+sampleStdev():   Compute the sample standard deviation of this RDD's elements .
+
+sampleVariance():    Compute the sample variance of this RDD's elements.
+
+stats() :         Return a org.apache.spark.util.StatCounter object that captures the mean, variance and count of the RDD's elements in one operation.
+
+sum():             Add up the elements in this RDD.
+sumApprox(timeout: Long, confidence: Double = 0.95): Approximate operation to return the sum within a timeout.
+
+variance():       Compute the variance of this RDD's element
+
+
+Programming Terms:
+-------------------------
+1.   SparkConf sparkConf = new SparkConf().setMaster("local[1]").setAppName("TwitterHashtags");
+
+SparkConf   :  Configuration for a Spark application. Used to set various Spark parameters as key-value pairs.Most of the time, you would create a 
+                         SparkConf object with  `new SparkConf()`, which will load values from any `spark.*` Java system properties set in your application as well.
+
+setMaster("local[1]") : The master URL to connect to, such as "local" to run locally with one thread, "local[4]" to run locally with 4 cores, or 
+                                      "spark://master:7077" to run on a Spark standalone cluster.
+
+setAppName("TwitterHashtags") : Set a name for your application. Shown in the Spark web UI.
+
+Note: Note that once a SparkConf object is passed to Spark, it is cloned and can no longer be modified by the user. Spark does not support modifying 
+           the configuration at runtime.
+
+2.   JavaStreamingContext jssc = new JavaStreamingContext(sparkConf, new Duration(2000));
+
+JavaStreamingContext : A Java-friendly version of StreamingContext which is the main entry point for Spark Streaming functionality.
+                                           It provides methods to create JavaDStream and JavaPairDStream from input sources.
+
+new Duration(2000) : batchDuration The time interval at which streaming data will be divided into batches.
+
+Note: The internal JavaSparkContext can be accessed using `context.sparkContext`. After creating and transforming DStreams, the streaming computation 
+            can be started and stopped using `context.start()` and `context.stop()`,  respectively.
+
+3.   JavaReceiverInputDStream<Status> stream = TwitterUtils.createStream(jssc, filters);
+
+       JavaReceiverInputDStream<Status>:  the abstract class for defining any input stream that receives data over the network.
+
+
+4. DStreame : the basic abstraction in Spark Streaming that represents a continuous stream of data.DStreams can either be created from live data 
+                         (such as, data from TCP sockets, Kafka, Flume,etc.) or it can be generated by transforming existing DStreams using operations such as 
+                         `map`, `window`.
+

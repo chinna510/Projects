@@ -1,0 +1,15 @@
+package com.akka.integration;
+
+import akka.actor.ActorRef;
+
+public class WorkerPoolProtocol {
+
+	
+	public static Msg msg(int id, ActorRef replyTo) {
+	    return new Msg(id, replyTo);
+	  }
+	public static Work work(int id) {
+	    return new Work(id);
+	  }
+	
+}

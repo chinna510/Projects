@@ -1,0 +1,12 @@
+package com.akka.CircuitBreaker;
+
+import akka.actor.ActorSystem;
+
+public class CircuitBreakerTest {
+
+	public void test(){
+		ActorSystem system=ActorSystem.create("CircuitBreaker");
+		
+	}
+	
+}

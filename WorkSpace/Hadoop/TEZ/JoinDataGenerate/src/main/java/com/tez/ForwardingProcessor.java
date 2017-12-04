@@ -1,0 +1,39 @@
+package com.tez;
+
+import org.apache.hadoop.io.NullWritable;
+import org.apache.tez.runtime.api.LogicalInput;
+import org.apache.tez.runtime.api.LogicalOutput;
+import org.apache.tez.runtime.api.ProcessorContext;
+import org.apache.tez.runtime.api.Reader;
+import org.apache.tez.runtime.library.api.KeyValueReader;
+import org.apache.tez.runtime.library.api.KeyValueWriter;
+import org.apache.tez.runtime.library.processor.SimpleProcessor;
+
+import com.google.common.base.Preconditions;
+
+public class ForwardingProcessor extends SimpleProcessor {
+
+	public ForwardingProcessor(ProcessorContext context) {
+		super(context);
+	}
+
+	@Override
+	public void run() throws Exception {
+		Preconditions.checkState(getInputs().size() == 1);
+		Preconditions.checkState(getOutputs().size() == 1);
+
+		LogicalInput input = getInputs().values().iterator().next();
+		Reader rawReader = input.getReader();
+		Preconditions.checkState(rawReader instanceof KeyValueReader);
+		LogicalOutput output = getOutputs().values().iterator().next();
+
+		KeyValueReader reader = (KeyValueReader) rawReader;
+		KeyValueWriter writer = (KeyValueWriter) output.getWriter();
+
+		while (reader.next()) {
+			Object val = reader.getCurrentValue();
+			writer.write(val, NullWritable.get());
+		}
+	}
+
+}

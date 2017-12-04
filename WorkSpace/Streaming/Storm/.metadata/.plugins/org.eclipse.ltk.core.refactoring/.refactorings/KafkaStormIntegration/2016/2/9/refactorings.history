@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 2 elements from project &apos;KafkaStormIntegration&apos;&#x0A;- Original project: &apos;KafkaStormIntegration&apos;&#x0A;- Original elements:&#x0A;     hs_err_pid1431.log&#x0A;     hs_err_pid20666.log" description="Delete elements" element1="hs_err_pid1431.log" element2="hs_err_pid20666.log" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="2" stamp="1456398663628" subPackages="false" version="1.0"/>
+</session>

@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "new_list <- list(matrix(c(12, 13,12,12),nrow = 2,ncol = 2), c(10,22,33,44,55),list(\"chinna\",\"Rich\",\"JP\",\"Naren\"))\n\nnames(new_list) <- c(\"Matrix\", \"Vector\",\"InnerList\")\n\nprint(new_list)\n\nprint(new_list[2])\n\nprint(new_list$InnerList)\n",
+    "created" : 1467641700654.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1473807461",
+    "id" : "181499E3",
+    "lastKnownWriteTime" : 1467642109,
+    "last_content_update" : 1467642109743,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R-Lists/NamingListElements.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

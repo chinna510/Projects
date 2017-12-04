@@ -1,0 +1,37 @@
+YARN: Yet Another Resource Negotiator
+
+1. The idea of YARN is to split up the functionalities of resource management and job scheduling/monitoring into separate daemons. 
+
+2. The ResourceManager is the ultimate authority that arbitrates resources among all the applications in the system.
+
+3. The NodeManager is the per-machine framework agent who is responsible for containers, monitoring their resource usage and reporting the 
+   same to the ResourceManager/Scheduler.
+
+4. The per-application ApplicationMaster is a framework specific library and is tasked with obtain resources from the ResourceManager and 
+   working with the NodeManager(s) to execute and monitor the tasks.
+
+5. Resource Manager has two main components:
+1. Scheduler:
+-------------
+*. The Scheduler is responsible for allocating resources to the various running applications subject to familiar constraints of capacities,
+   queues etc. 
+*. The Scheduler is pure scheduler in the sense that it performs no monitoring or tracking of status for the application. 
+*. no guarantees about restarting failed tasks either due to application failure or hardware failures.
+
+2. Application Manager :
+------------------------
+*. The ApplicationsManager is responsible for accepting job-submissions, negotiating the first container for executing the application 
+   specific ApplicationMaster and provides the service for restarting the ApplicationMaster container on failure.
+*. The per-application ApplicationMaster has the responsibility of negotiating appropriate resource containers from the Scheduler, tracking 
+   their status and monitoring for progress.
+
+6. There are two pluggable schedulers for Hadoop
+
+1. Capacity Scheduler:
+----------------------
+*. which allows for multiple-tenants(a single instance of a software application serves multiple customers) to securely share a large
+   cluster such that their applications are allocated resources in a timely  manner under constraints(limitations) of allocated capacities.
+*. 
+
+2. Fair Scheduler
+

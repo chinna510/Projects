@@ -1,0 +1,14 @@
+package com.akka.distribute;
+
+import java.io.Serializable;
+
+public class CounterChanged implements Serializable {
+
+	public static int delta;
+
+	public CounterChanged(int delta) {
+		this.delta = delta;
+
+	}
+
+}

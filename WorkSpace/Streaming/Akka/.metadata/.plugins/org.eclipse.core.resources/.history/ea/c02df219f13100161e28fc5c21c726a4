@@ -1,0 +1,31 @@
+package com.akka.future;
+
+import akka.actor.ActorSystem;
+
+import static akka.dispatch.Futures.future;
+
+import java.util.concurrent.Callable;
+
+import akka.dispatch.Futures;
+import akka.dispatch.Mapper;
+import akka.dispatch.Recover;
+import scala.Tuple2;
+import scala.concurrent.ExecutionContext;
+import scala.concurrent.Future;
+
+public class Future_After {
+	ActorSystem system = ActorSystem.create("ActorSystem");
+
+	public void test() {
+		final ExecutionContext ec = system.dispatcher();
+		Future<String> fail = Futures.failed(new IllegalStateException("OHNoex"));
+		Future<String> delayed=
+
+	}
+
+	public static void main(String[] args) {
+		Future_After fm = new Future_After();
+		fm.test();
+	}
+
+}

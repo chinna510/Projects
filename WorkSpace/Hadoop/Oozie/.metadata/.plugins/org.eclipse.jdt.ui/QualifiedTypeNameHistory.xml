@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.apache.oozie.client.WorkflowJob"/>
+<fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
+<fullyQualifiedTypeName name="org.apache.oozie.BuildInfo"/>
+<fullyQualifiedTypeName name="org.apache.oozie.client.event.message.JobMessage"/>
+<fullyQualifiedTypeName name="org.apache.oozie.cli.OozieCLI"/>
+<fullyQualifiedTypeName name="org.apache.oozie.client.OozieClient"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="org.apache.oozie.client.CoordinatorJob"/>
+<fullyQualifiedTypeName name="org.apache.oozie.client.WorkflowJob.Status"/>
+<fullyQualifiedTypeName name="com.oozie.coordinator.CoordinatorSample"/>
+</qualifiedTypeNameHistroy>

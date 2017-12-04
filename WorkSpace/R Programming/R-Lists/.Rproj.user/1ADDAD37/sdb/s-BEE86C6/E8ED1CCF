@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "new_list <- list(12, 13, c(10,22,33,44,55),list(\"chinna\",\"Rich\",\"JP\",\"Naren\"))\n\n",
+    "created" : 1467641502680.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3939427852",
+    "id" : "E8ED1CCF",
+    "lastKnownWriteTime" : 1467641611,
+    "last_content_update" : 1467641611418,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R-Lists/NamingListElements.R",
+    "project_path" : "NamingListElements.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

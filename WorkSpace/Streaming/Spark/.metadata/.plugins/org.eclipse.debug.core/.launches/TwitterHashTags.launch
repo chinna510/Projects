@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/SparkStreamingEx/src/main/java/com/Spark/SparkStreamingEx/TwitterHashTags.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.Spark.SparkStreamingEx.TwitterHashTags"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="ImBfCvJykCQkh1GQFKZ4KMv8Z 1w56aJWbz3QFR0otdUyTCgcIU5IbeqArB2TiFxbTmf2MTQjF4f 4655467196-5nK7XdBpS0ErnaBHD1uAVv9t8TGYEu9KEUPLaDM sfEEVmjOr6NeRtRXuaG6gXMfh27S9LF6hvcArxrwUhlwN"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="SparkStreamingEx"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
+</launchConfiguration>

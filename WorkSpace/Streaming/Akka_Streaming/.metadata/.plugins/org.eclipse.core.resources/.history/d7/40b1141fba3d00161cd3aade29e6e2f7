@@ -1,0 +1,16 @@
+package com.akka.stream;
+
+import akka.actor.ActorSystem;
+import akka.stream.ActorMaterializer;
+import akka.stream.ActorMaterializerSettings;
+
+public class SupervisionStrategy {
+
+	ActorSystem system=ActorSystem.create("ErrorHandling");
+	
+	
+	
+	ActorMaterializer mat=ActorMaterializer.create(ActorMaterializerSettings.create(system).withSupervisionStrategy(), system);
+	
+	
+}

@@ -1,0 +1,1101 @@
+[0m[[0minfo[0m] [0mUpdating {file:/home/bizruntime/akka-sample-distributed-data-java/}akka-sample-distributed-data-java...[0m
+[0m[[0mdebug[0m] [0m:: resolving dependencies :: akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4[0m
+[0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, multi-jvm, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
+[0m[[0mdebug[0m] [0m	validate = true[0m
+[0m[[0mdebug[0m] [0m	refresh = false[0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@872c65c[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-library;2.11.7[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving com.typesafe.akka#akka-actor_2.11;2.4.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.akka#akka-actor_2.11;2.4.4 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.akka#akka-actor_2.11;2.4.4[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe.akka#akka-actor_2.11;2.4.4 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving com.typesafe#config;1.3.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe#config;1.3.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe#config;1.3.0[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe#config;1.3.0 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang.modules#scala-java8-compat_2.11;0.7.0[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving com.typesafe.akka#akka-remote_2.11;2.4.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.akka#akka-remote_2.11;2.4.4 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.akka#akka-remote_2.11;2.4.4[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe.akka#akka-remote_2.11;2.4.4 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving com.typesafe.akka#akka-protobuf_2.11;2.4.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.akka#akka-protobuf_2.11;2.4.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.akka#akka-protobuf_2.11;2.4.4[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe.akka#akka-protobuf_2.11;2.4.4 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving io.netty#netty;3.10.3.Final ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: io.netty#netty;3.10.3.Final {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: io.netty#netty;3.10.3.Final[0m
+[0m[[0mdebug[0m] [0m	found io.netty#netty;3.10.3.Final in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.uncommons.maths#uncommons-maths;1.2.2a ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.uncommons.maths#uncommons-maths;1.2.2a {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.uncommons.maths#uncommons-maths;1.2.2a[0m
+[0m[[0mdebug[0m] [0m	found org.uncommons.maths#uncommons-maths;1.2.2a in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [compile->compile][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving com.typesafe.akka#akka-cluster_2.11;2.4.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.akka#akka-cluster_2.11;2.4.4 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.akka#akka-cluster_2.11;2.4.4[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe.akka#akka-cluster_2.11;2.4.4 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 {compile=[default(compile)]}[0m
+[0m[[0minfo[0m] [0mResolving com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried /home/bizruntime/.ivy2/local/com.typesafe.akka/akka-distributed-data-experimental_2.11/2.4.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4[0m
+[0m[[0mdebug[0m] [0m		tried /home/bizruntime/.activator/repository/com.typesafe.akka/akka-distributed-data-experimental_2.11/2.4.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4[0m
+[0m[[0mdebug[0m] [0m		tried /home/bizruntime/Chinna/BizRuntime/Installations/activator-dist-1.3.10/repository/com.typesafe.akka/akka-distributed-data-experimental_2.11/2.4.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: no ivy file found for com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/typesafe/akka/akka-distributed-data-experimental_2.11/2.4.4/akka-distributed-data-experimental_2.11-2.4.4.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/typesafe/akka/akka-distributed-data-experimental_2.11/2.4.4/akka-distributed-data-experimental_2.11-2.4.4.pom (2.4.4)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-distributed-data-experimental_2.11/2.4.4/akka-distributed-data-experimental_2.11-2.4.4.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-distributed-data-experimental_2.11/2.4.4/akka-distributed-data-experimental_2.11-2.4.4.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-distributed-data-experimental_2.11/2.4.4/akka-distributed-data-experimental_2.11-2.4.4.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/typesafe/akka/akka-distributed-data-experimental_2.11/2.4.4/akka-distributed-data-experimental_2.11-2.4.4.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4!akka-distributed-data-experimental_2.11.pom(pom.original) (1007ms)[0m
+[0m[[0mdebug[0m] [0m		tried /home/bizruntime/.ivy2/local/com.typesafe.akka/akka-distributed-data-experimental_2.11/2.4.4/jars/akka-distributed-data-experimental_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried /home/bizruntime/.activator/repository/com.typesafe.akka/akka-distributed-data-experimental_2.11/2.4.4/jars/akka-distributed-data-experimental_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried /home/bizruntime/Chinna/BizRuntime/Installations/activator-dist-1.3.10/repository/com.typesafe.akka/akka-distributed-data-experimental_2.11/2.4.4/jars/akka-distributed-data-experimental_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/typesafe/akka/akka-distributed-data-experimental_2.11/2.4.4/akka-distributed-data-experimental_2.11-2.4.4.jar[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 in public[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving com.typesafe.akka#akka-testkit_2.11;2.4.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.akka#akka-testkit_2.11;2.4.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.akka#akka-testkit_2.11;2.4.4[0m
+[0m[[0mdebug[0m] [0m	found com.typesafe.akka#akka-testkit_2.11;2.4.4 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [runtime->compile][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [test][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [runtime->compile][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scalatest#scalatest_2.11;2.2.1 [test->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scalatest#scalatest_2.11;2.2.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalatest#scalatest_2.11;2.2.1 {test=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scalatest#scalatest_2.11;2.2.1[0m
+[0m[[0mdebug[0m] [0m	found org.scalatest#scalatest_2.11;2.2.1 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scalatest#scalatest_2.11;2.2.1 [test->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scalatest#scalatest_2.11;2.2.1 [test->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-reflect;2.11.2 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.11.2 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.11.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.11.2[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.11.2 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m	[2.11.2] org.scala-lang#scala-reflect;2.11.2[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-reflect;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-reflect;2.11.2 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-reflect;2.11.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.2 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.11;1.0.2 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11;1.0.2[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-xml_2.11;1.0.2 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-reflect;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-reflect;2.11.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scalatest#scalatest_2.11;2.2.1 [test->master][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'provided'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [provided][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'optional'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [optional][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'multi-jvm'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [multi-jvm][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [test][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [runtime->compile][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scalatest#scalatest_2.11;2.2.1 [test->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scalatest#scalatest_2.11;2.2.1 [test->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scalatest#scalatest_2.11;2.2.1 [test->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-reflect;2.11.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-reflect;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-reflect;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-reflect;2.11.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scalatest#scalatest_2.11;2.2.1 [test->master][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile-internal'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [compile-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [runtime->compile][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [provided][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [runtime-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [runtime->compile][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [optional][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [test-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [test][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->com.typesafe#config;1.3.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.4.4->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-java8-compat_2.11;0.7.0->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in compile[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->com.typesafe.akka#akka-protobuf_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-protobuf_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->io.netty#netty;3.10.3.Final [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-remote_2.11;2.4.4->org.uncommons.maths#uncommons-maths;1.2.2a [runtime->compile][0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jcommon;1.0.12 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0mexcluding dependency: jfree#jfreechart;1.0.8a {compile=[compile(*), master(compile)], runtime=[runtime(*)]} in runtime[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-cluster_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4->com.typesafe.akka#akka-cluster_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-remote_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4->com.typesafe.akka#akka-testkit_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.4.4->com.typesafe.akka#akka-actor_2.11;2.4.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scalatest#scalatest_2.11;2.2.1 [test->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scalatest#scalatest_2.11;2.2.1 [test->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scalatest#scalatest_2.11;2.2.1 [test->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-reflect;2.11.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-reflect;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang.modules#scala-xml_2.11;1.0.2 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-reflect;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang#scala-reflect;2.11.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalatest#scalatest_2.11;2.2.1->org.scala-lang.modules#scala-xml_2.11;1.0.2 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.2->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scalatest#scalatest_2.11;2.2.1 [test->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [provided][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'plugin'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [plugin][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'sources'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [sources][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'docs'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [docs][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'pom'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [pom][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'scala-tool'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 [scala-tool][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-compiler;2.11.7 [scala-tool->default][0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.11.7 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-compiler;2.11.7 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.11.7[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-compiler;2.11.7 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-compiler;2.11.7 [scala-tool->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-compiler;2.11.7 [scala-tool->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->default][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->optional(default)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-reflect;2.11.7 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.11.7 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.11.7 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.11.7[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.11.7 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-reflect;2.11.7[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-reflect;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-reflect;2.11.7 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-reflect;2.11.7 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.11;1.0.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11;1.0.4[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-xml_2.11;1.0.4 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-reflect;2.11.7 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-reflect;2.11.7 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-xml_2.11;1.0.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-compiler;2.11.7 [scala-tool->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-compiler;2.11.7 [scala-tool->optional(default)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->jline#jline;2.12.1 [optional->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving jline#jline;2.12.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: jline#jline;2.12.1 {optional=[compile(*), master(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: jline#jline;2.12.1[0m
+[0m[[0mdebug[0m] [0m	found jline#jline;2.12.1 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->jline#jline;2.12.1 [optional->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [scala-tool->default][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [scala-tool->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [scala-tool->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [scala-tool->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4->org.scala-lang#scala-library;2.11.7 [scala-tool->optional(default)][0m
+[0m[[0mdebug[0m] [0m	resolved ivy file produced in cache[0m
+[0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.11.7!scala-library.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.11;2.4.4!akka-actor_2.11.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-remote_2.11;2.4.4!akka-remote_2.11.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-cluster_2.11;2.4.4!akka-cluster_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/typesafe/akka/akka-distributed-data-experimental_2.11/2.4.4/akka-distributed-data-experimental_2.11-2.4.4.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-distributed-data-experimental_2.11/2.4.4/akka-distributed-data-experimental_2.11-2.4.4.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-distributed-data-experimental_2.11/2.4.4/akka-distributed-data-experimental_2.11-2.4.4.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/typesafe/akka/akka-distributed-data-experimental_2.11/2.4.4/akka-distributed-data-experimental_2.11-2.4.4.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/typesafe/akka/akka-distributed-data-experimental_2.11/2.4.4/akka-distributed-data-experimental_2.11-2.4.4.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.typesafe.akka#akka-distributed-data-experimental_2.11;2.4.4!akka-distributed-data-experimental_2.11.jar (2558ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-multi-node-testkit_2.11;2.4.4!akka-multi-node-testkit_2.11.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe#config;1.3.0!config.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-java8-compat_2.11;0.7.0!scala-java8-compat_2.11.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-protobuf_2.11;2.4.4!akka-protobuf_2.11.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] io.netty#netty;3.10.3.Final!netty.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.uncommons.maths#uncommons-maths;1.2.2a!uncommons-maths.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.11;2.4.4!akka-testkit_2.11.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalatest#scalatest_2.11;2.2.1!scalatest_2.11.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.2!scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.2!scala-xml_2.11.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.7!scala-compiler.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.7!scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(bundle)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 5712ms :: artifacts dl 2725ms[0m
+[0m[[0mdebug[0m] [0m	report for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 compile produced in /home/bizruntime/akka-sample-distributed-data-java/target/resolution-cache/reports/akka-sample-distributed-data-java-akka-sample-distributed-data-java_2.11-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 runtime produced in /home/bizruntime/akka-sample-distributed-data-java/target/resolution-cache/reports/akka-sample-distributed-data-java-akka-sample-distributed-data-java_2.11-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 test produced in /home/bizruntime/akka-sample-distributed-data-java/target/resolution-cache/reports/akka-sample-distributed-data-java-akka-sample-distributed-data-java_2.11-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 provided produced in /home/bizruntime/akka-sample-distributed-data-java/target/resolution-cache/reports/akka-sample-distributed-data-java-akka-sample-distributed-data-java_2.11-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 optional produced in /home/bizruntime/akka-sample-distributed-data-java/target/resolution-cache/reports/akka-sample-distributed-data-java-akka-sample-distributed-data-java_2.11-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 multi-jvm produced in /home/bizruntime/akka-sample-distributed-data-java/target/resolution-cache/reports/akka-sample-distributed-data-java-akka-sample-distributed-data-java_2.11-multi-jvm.xml[0m
+[0m[[0mdebug[0m] [0m	report for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 compile-internal produced in /home/bizruntime/akka-sample-distributed-data-java/target/resolution-cache/reports/akka-sample-distributed-data-java-akka-sample-distributed-data-java_2.11-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 runtime-internal produced in /home/bizruntime/akka-sample-distributed-data-java/target/resolution-cache/reports/akka-sample-distributed-data-java-akka-sample-distributed-data-java_2.11-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 test-internal produced in /home/bizruntime/akka-sample-distributed-data-java/target/resolution-cache/reports/akka-sample-distributed-data-java-akka-sample-distributed-data-java_2.11-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 plugin produced in /home/bizruntime/akka-sample-distributed-data-java/target/resolution-cache/reports/akka-sample-distributed-data-java-akka-sample-distributed-data-java_2.11-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 sources produced in /home/bizruntime/akka-sample-distributed-data-java/target/resolution-cache/reports/akka-sample-distributed-data-java-akka-sample-distributed-data-java_2.11-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 docs produced in /home/bizruntime/akka-sample-distributed-data-java/target/resolution-cache/reports/akka-sample-distributed-data-java-akka-sample-distributed-data-java_2.11-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 pom produced in /home/bizruntime/akka-sample-distributed-data-java/target/resolution-cache/reports/akka-sample-distributed-data-java-akka-sample-distributed-data-java_2.11-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for akka-sample-distributed-data-java#akka-sample-distributed-data-java_2.11;2.4.4 scala-tool produced in /home/bizruntime/akka-sample-distributed-data-java/target/resolution-cache/reports/akka-sample-distributed-data-java-akka-sample-distributed-data-java_2.11-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (5712ms resolve - 2725ms download)[0m
+[0m[[0minfo[0m] [0mDone updating.[0m

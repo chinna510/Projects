@@ -1,0 +1,21 @@
+New log file opened at Fri Jun 17 16:50:11 IST 2016 by 14694@bizruntime-X555LAB
+Taking next connection to: 46588
+New client attempting to connect on port: 41124-46588
+  Address = /127.0.1.1:46588
+This client on port 41124 has uuid 7339e9af-080d-4ccf-ad9d-a0636800601e configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-7339e9af-080d-4ccf-ad9d-a0636800601e
+Taking next connection to: 46588
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 46588
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 46588
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 46588
+Server socket closed java.net.SocketException: Socket closed
+Server socket thread exiting.
+1 clients open, will close them...
+All client sockets have been closed.
+Closing the 14694@bizruntime-X555LAB logs at Fri Jun 17 17:00:20 IST 2016, goodbye.

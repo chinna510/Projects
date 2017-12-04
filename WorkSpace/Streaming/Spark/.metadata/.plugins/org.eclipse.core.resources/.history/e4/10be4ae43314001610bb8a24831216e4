@@ -1,0 +1,12 @@
+package com.Spark.SparkStreamingEx;
+
+import org.apache.spark.SparkConf;
+
+public class JavaDirectKafkaWordCount {
+
+	public void test(){
+		SparkConf conf=new SparkConf().setAppName("JavaDirectKafkaWordCount").setMaster("local");
+		
+	}
+	
+}

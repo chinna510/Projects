@@ -1,0 +1,59 @@
+package com.biz.akka;
+
+import java.io.Serializable;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Inbox;
+import akka.actor.Props;
+import akka.actor.UntypedActor;
+import scala.concurrent.duration.Duration;
+
+public class HelloAkka {
+	public static class Greet implements Serializable {
+	}
+
+	public static class WhoToGreet implements Serializable {
+		public final String who;
+
+		public WhoToGreet(String who) {
+			this.who = who;
+
+		}
+
+	}
+
+	public static class Greeting implements Serializable {
+		public final String message;
+
+		public Greeting(String message) {
+			this.message = message;
+		}
+	}
+
+	public static class Greeter extends UntypedActor {
+		public String greeting = "";
+
+		@Override
+		public void onReceive(Object message) throws Exception {
+			if (message instanceof WhoToGreet)
+				greeting = "Hello , " + ((WhoToGreet) message).who;
+			if (message instanceof Greet)
+				getSender().tell(greeting, getSelf());
+			else
+				unhandled(message);
+		}
+	}
+	public static void main(String[] args) throws TimeoutException {
+		final ActorSystem as=ActorSystem.create("HelloAkka");
+		final ActorRef ar=as.actorOf(Props.create(Greeter.class, "greeter"));
+		final Inbox inbox=Inbox.create(as);
+		ar.tell(new WhoToGreet("Chinna"), ar.noSender());
+		inbox.send(ar, new Greet());
+		final Greeting greet=(Greeting) inbox.receive(Duration.create(5, TimeUnit.SECONDS));
+		
+		
+	}
+}

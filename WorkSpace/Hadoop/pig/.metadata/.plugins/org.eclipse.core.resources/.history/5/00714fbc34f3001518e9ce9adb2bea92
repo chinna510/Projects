@@ -1,0 +1,71 @@
+package com.myudfs;
+
+import java.io.IOException;
+
+import org.apache.pig.Algebraic;
+import org.apache.pig.EvalFunc;
+import org.apache.pig.backend.executionengine.ExecException;
+import org.apache.pig.builtin.AlgebraicBigDecimalMathBase.Final;
+import org.apache.pig.builtin.AlgebraicByteArrayMathBase.Initial;
+import org.apache.pig.builtin.COR.Intermed;
+import org.apache.pig.data.DataBag;
+import org.apache.pig.data.Tuple;
+import org.apache.pig.data.TupleFactory;
+
+import com.sun.javafx.collections.MappingChange.Map;
+
+public class COUNT extends EvalFunc<Long> implements Algebraic {
+	public Long exec(Tuple input) throws IOException {
+		return count(input);
+	}
+
+	public String getInitial() {
+		return Initial.class.getName();
+	}
+
+	public String getIntermed() {
+		return Intermed.class.getName();
+	}
+
+	public String getFinal() {
+		return Final.class.getName();
+	}
+
+	static public class Initial extends EvalFunc<Tuple> {
+		public Tuple exec(Tuple input) throws IOException {
+			return TupleFactory.getInstance().newTuple(count(input));
+		}
+	}
+
+	static public class Intermed extends EvalFunc<Tuple> {
+		public Tuple exec(Tuple input) throws IOException {
+			return TupleFactory.getInstance().newTuple(sum(input));
+		}
+	}
+
+	static public class Final extends EvalFunc<Long> {
+		public Long exec(Tuple input) throws IOException {
+			return sum(input);
+		}
+	}
+
+	static protected Long count(Tuple input) throws ExecException {
+		Object values = input.get(0);
+		if (values instanceof DataBag)
+			return ((DataBag) values).size();
+		else if (values instanceof Map)
+			return new Long(((Map) values).size());
+	}
+
+	static protected Long sum(Tuple input) throws ExecException, NumberFormatException {
+        DataBag values = (DataBag)input.get(0);
+        long sum = 0;
+       
+        Object it;
+		for (Iterator (Tuple) it = values.iterator(); it.hasNext();) {
+            Tuple t = it.next();
+            sum += (Long)t.get(0);
+        }
+        return sum;
+    }
+}

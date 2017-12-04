@@ -1,0 +1,162 @@
+<html>
+<head>
+<title>Creating an Ajax-enabled Menu System</title>
+<style>
+#targetDiv {
+	color: #00BBBB;
+	font-size: 24pt;
+	font-weight: bold;
+	font-family: arial;
+}
+
+#menu1Div {
+	color: #222222;
+	background-color: #FFCCFF;
+	font-weight: bold;
+	font-family: arial;
+	visibility: hidden;
+	cursor: hand;
+}
+
+#menu2Div {
+	color: #222222;
+	background-color: #FFCCFF;
+	font-weight: bold;
+	font-family: arial;
+	visibility: hidden;
+	cursor: hand;
+}
+</style>
+<script language="javascript">
+	var menuItems;
+	function checkMenu(evt) {
+		var e = new mouseEventCreator(evt);
+		var menuObject = null;
+		var imgObject;
+		imgObject = document.getElementById("image1");
+		if (e.target == imgObject) {
+			getData(1);
+		}
+		imgObject = document.getElementById("image2");
+		if (e.target == imgObject) {
+			getData(2);
+		}
+		menuObject = document.getElementById("menu1Div");
+		imgObject = document.getElementById("image1");
+		if (menuObject.style.visibility == "visible") {
+			if (e.x < parseInt(menuObject.style.left)
+					|| e.y < parseInt(imgObject.style.top)
+					|| e.x > (parseInt(imgObject.style.left) + parseInt(imgObject.style.width))
+					|| e.y > (parseInt(menuObject.style.top) + parseInt(menuObject.style.height))) {
+				hideMenu();
+			}
+		}
+	}
+	function mouseEventCreator(e) {
+		if (e) {
+			this.e = e;
+		} else {
+			this.e = window.event;
+		}
+		if (e.pageX) {
+			this.x = e.pageX;
+		} else {
+			this.x = e.clientX;
+		}
+		if (e.pageY) {
+			this.y = e.pageY;
+		} else {
+			this.y = e.clientY;
+		}
+		if (e.target) {
+			this.target = e.target;
+		} else {
+			this.target = e.srcElement;
+		}
+	}
+	function getData(menuNumber) {
+		var XMLHttpRequestObject = false;
+		if (window.XMLHttpRequest) {
+			XMLHttpRequestObject = new XMLHttpRequest();
+		} else if (window.ActiveXObject) {
+			XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		var itemsSource;
+		if (menuNumber == 1) {
+			itemsSource = "./items1.txt";
+		} else {
+			itemsSource = "./items2.txt";
+		}
+		if (XMLHttpRequestObject) {
+			XMLHttpRequestObject.open("GET", itemsSource);
+			XMLHttpRequestObject.onreadystatechange = function() {
+				if (XMLHttpRequestObject.readyState == 4
+						&& XMLHttpRequestObject.status == 200) {
+					showMenu(menuNumber, XMLHttpRequestObject.responseText);
+				}
+			}
+			XMLHttpRequestObject.send(null);
+		}
+	}
+	function showMenu(menuNumber, itemsString) {
+		var loopIndex;
+		var menuObject;
+		menuItems = itemsString.split(", ");
+		var menuText = "<table width = '100%'>";
+		if (menuItems.length != 0) {
+			for (var loopIndex = 0; loopIndex < menuItems.length; loopIndex++) {
+				var text = "displaySelection(" + loopIndex + ")";
+				menuText += "<tr><td "
++ "onclick='" + text + "'>"
+						+ menuItems[loopIndex] + "</td></tr>";
+			}
+		}
+		menuText += "</table>";
+		if (menuNumber == "1") {
+			menuObject = document.getElementById("menu1Div");
+		}
+		if (menuNumber == "2") {
+			menuObject = document.getElementById("menu2Div");
+		}
+		if (menuObject.style.visibility == "hidden") {
+			menuObject.innerHTML = menuText;
+			menuObject.style.visibility = "visible";
+		}
+	}
+	function hideMenu() {
+		var menu1Div = document.getElementById("menu1Div");
+		if (menu1Div.style.visibility == "visible") {
+			menu1Div.innerHTML = "<div></div>";
+			menu1Div.style.visibility = "hidden";
+		}
+		var menu2Div = document.getElementById("menu2Div");
+		if (menu2Div.style.visibility == "visible") {
+			menu2Div.innerHTML = "<div></div>";
+			menu2Div.style.visibility = "hidden";
+		}
+	}
+	function displaySelection(index) {
+		var targetDiv = document.getElementById("targetDiv");
+		targetDiv.innerHTML = "You chose " + menuItems[index] + ".";
+	}
+</script>
+</head>
+<body onclick="hideMenu()" onmousemove="checkMenu(event)">
+	<H1>Creating an Ajax-enabled Menu System</H1>
+	<img id="image1" src="image1.jpg"
+		style="left: 30; top: 50; width: 200; height: 40;">
+	<div id="menu1Div"
+		style="position: absolute; left: 30; top: 100; width: 100; height: 70; visibility: hidden;">
+		<div></div>
+	</div>
+	<img id="image2" style="left: 270; top: 50; width: 200; height: 40;"
+		src="image2.jpg">
+	<div id="menu2Div"
+		style="position: absolute; left: 270; top: 100; width: 100; height: 70; visibility: hidden;">
+		<div></div>
+	</div>
+	<br>
+	<br>
+	<div id="targetDiv"></div>
+</body>
+</html>

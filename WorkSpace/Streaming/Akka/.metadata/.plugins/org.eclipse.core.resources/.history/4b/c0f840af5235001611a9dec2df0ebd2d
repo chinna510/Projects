@@ -1,0 +1,25 @@
+package com.akka.udp;
+
+import java.net.InetSocketAddress;
+
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+
+public class UnconnectedApp {
+
+	public void getUdpManager() {
+
+		ActorSystem system = ActorSystem.create("UDPExample");
+		InetSocketAddress address = new InetSocketAddress("localhost", 8082);
+		ActorRef sender = system.actorOf(SimpleSender.props(address), "Sender");
+		Thread.sleep(1000);
+		ActorRef listener = system.actorOf(Props.create(Listener.class, sender), "Listener");
+		// sender.tell("Msg from sender... ", null);
+	}
+
+	public static void main(String[] args) {
+		UnconnectedApp app = new UnconnectedApp();
+		app.getUdpManager();
+	}
+}

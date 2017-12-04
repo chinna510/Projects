@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AreaService" targetNamespace="http://tempuri.org/AreaService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://tempuri.org/AreaService/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/AreaService/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="area" type="xsd:float"/>
+      <xsd:element name="parameters" type="tns:dimensions"/>
+      <xsd:complexType name="dimensions">
+      	<xsd:sequence>
+      		<xsd:element name="width" type="xsd:float"/>
+      		<xsd:element name="height" type="xsd:float"/>
+      	</xsd:sequence>
+      </xsd:complexType>
+
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CalculateRectAreaRequest">
+    <wsdl:part name="parameters" element="tns:parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CalculateRectAreaResponse">
+    <wsdl:part name="area" element="tns:area">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AreaService">
+    <wsdl:operation name="CalculateRectArea">
+      <wsdl:input message="tns:CalculateRectAreaRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:CalculateRectAreaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AreaServiceSOAP" type="tns:AreaService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CalculateRectArea">
+      <soap:operation soapAction="http://tempuri.org/AreaService/NewOperation"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AreaService">
+    <wsdl:port name="AreaServiceSOAP" binding="tns:AreaServiceSOAP">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

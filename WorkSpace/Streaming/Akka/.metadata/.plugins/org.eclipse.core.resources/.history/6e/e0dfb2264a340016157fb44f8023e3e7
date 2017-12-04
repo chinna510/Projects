@@ -1,0 +1,16 @@
+package com.akka.distribute;
+
+import akka.actor.UntypedActor;
+
+public class FactorialBackend extends UntypedActor {
+
+	@Override
+	public void onReceive(Object msg) throws Exception {
+
+		if(msg instanceof Integer){
+			
+		}
+		
+	}
+
+}

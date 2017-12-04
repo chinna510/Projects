@@ -1,0 +1,15 @@
+package com.akka.externalserveices;
+
+public interface RS {
+
+	Publisher<Tweet> tweets();
+	// #tweets-publisher
+
+	// #author-storage-subscriber
+	Subscriber<Author> storage();
+	// #author-storage-subscriber
+
+	// #author-alert-subscriber
+	Subscriber<Author> alert();
+
+}

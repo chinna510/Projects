@@ -1,0 +1,27 @@
+sudo chmod -R 777 * -----> for permission
+
+./activator  -------------->activating play server
+
+./activator new myapp  --------->tell to server to create new project
+
+5   -------------------------> for play-java project
+
+sudo chmod -R 777 /Myapp---------->for asking permission for entering into project
+
+sudo chmod -R 777 * -----> for permission
+
+cd Myapp  -------------->for the myapp project path
+
+./activator --------------->for installing play
+
+Myapp --> open  build.sbt --. change scala version to 2.3.3 ---> comment// the last line --->save
+
+myapp--->open routes --->delete .versioned and replace it with .at ----> save
+
+myapp--->project--->plugins.sbt ---> change sbtplugin version to 2.3.3 ---> and comment the last line-->save
+
+./activator compile ---------> for compiling the project
+
+run  -----------------> for running the project
+
+eclipse with-source=true  --------->for import into eclipse

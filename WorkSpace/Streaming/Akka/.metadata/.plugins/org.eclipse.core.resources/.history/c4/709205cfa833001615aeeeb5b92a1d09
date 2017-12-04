@@ -1,0 +1,23 @@
+package com.akka.distribute;
+
+import akka.persistence.UntypedPersistentActor;
+
+public class Counter extends UntypedPersistentActor{
+
+	@Override
+	public String persistenceId() {
+		return null;
+	}
+
+	@Override
+	public void onReceiveCommand(Object arg0) throws Exception {
+		
+	}
+
+	@Override
+	public void onReceiveRecover(Object arg0) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

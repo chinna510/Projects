@@ -1,0 +1,22 @@
+package com.akka.ActorClassification;
+
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.testkit.JavaTestKit;
+
+public class ActorClassifierTest {
+
+	ActorSystem system = ActorSystem.create("ActorClassifier");
+
+	public void test() {
+		ActorRef observer1 = new JavaTestKit(system).getRef();
+		ActorRef observer2 = new JavaTestKit(system).getRef();
+
+		JavaTestKit probe1 = new JavaTestKit(system);
+		JavaTestKit probe2 = new JavaTestKit(system);
+
+		
+		
+	}
+
+}

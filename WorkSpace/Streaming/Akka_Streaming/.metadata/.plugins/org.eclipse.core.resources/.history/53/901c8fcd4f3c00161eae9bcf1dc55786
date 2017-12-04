@@ -1,0 +1,27 @@
+package com.akka.stream;
+
+import akka.stream.Attributes;
+import akka.stream.FlowShape;
+import akka.stream.Inlet;
+import akka.stream.Outlet;
+import akka.stream.stage.GraphStage;
+import akka.stream.stage.GraphStageLogic;
+
+public class RateDecoupledGraphStages<A> extends GraphStage<FlowShape<A, A>> {
+
+	public final Inlet<A> in = Inlet.create("TwoBuffer.in");
+	public final Outlet<A> out = Outlet.create("TwoBuffer.out");
+
+	private final FlowShape<A, A> shape = FlowShape.of(in, out);
+
+	@Override
+	public FlowShape<A, A> shape() {
+		return null;
+	}
+
+	@Override
+	public GraphStageLogic createLogic(Attributes inheritedAttributes) {
+		return null;
+	}
+
+}

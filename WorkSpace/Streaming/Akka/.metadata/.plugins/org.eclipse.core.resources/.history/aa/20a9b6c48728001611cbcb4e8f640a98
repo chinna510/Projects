@@ -1,0 +1,46 @@
+package com.biz.akka;
+
+import java.io.Serializable;
+
+import akka.actor.ActorSystem;
+import akka.actor.UntypedActor;
+
+public class HelloAkka {
+	public static class Greet implements Serializable {
+	}
+
+	public static class WhoToGreet implements Serializable {
+		public final String who;
+
+		public WhoToGreet(String who) {
+			this.who = who;
+
+		}
+
+	}
+
+	public static class Greeting implements Serializable {
+		public final String message;
+
+		public Greeting(String message) {
+			this.message = message;
+		}
+	}
+
+	public static class Greeter extends UntypedActor {
+		public String greeting = "";
+
+		@Override
+		public void onReceive(Object message) throws Exception {
+			if (message instanceof WhoToGreet)
+				greeting = "Hello , " + ((WhoToGreet) message).who;
+			if (message instanceof Greet)
+				getSender().tell(greeting, getSelf());
+			else
+				unhandled(message);
+		}
+	}
+	public static void main(String[] args) {
+		final ActorSystem as=ActorSystem.create("HelloAkka");
+	}
+}

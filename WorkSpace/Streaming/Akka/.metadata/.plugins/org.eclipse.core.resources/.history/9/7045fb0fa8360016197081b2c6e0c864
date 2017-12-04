@@ -1,0 +1,22 @@
+package com.akka.utilities;
+
+import akka.actor.ActorSystem;
+import akka.event.Logging;
+import akka.event.LoggingAdapter;
+
+public class LookUpBusTest {
+
+	ActorSystem system=ActorSystem.create("EventBus");
+	LoggingAdapter log=Logging.getLogger(system, this);
+	
+	
+	public void test(){
+		
+		LookupBusImpl lookupBus = new LookupBusImpl();
+		lookupBus.subscribe(getTestActor(), "greetings");
+		lookupBus.publish(new MsgEnvelope("time", System.currentTimeMillis()));
+		lookupBus.publish(new MsgEnvelope("greetings", "hello"));
+		expectMsgEquals("hello");
+	}
+	
+}

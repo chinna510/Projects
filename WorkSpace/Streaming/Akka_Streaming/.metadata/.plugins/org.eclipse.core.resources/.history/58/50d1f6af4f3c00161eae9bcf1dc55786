@@ -1,0 +1,21 @@
+package com.akka.stream;
+
+import akka.stream.Attributes;
+import akka.stream.FlowShape;
+import akka.stream.stage.GraphStage;
+import akka.stream.stage.GraphStageLogic;
+
+public class RateDecoupledGraphStages<A> extends GraphStage<FlowShape<A, A>> {
+
+	@Override
+	public FlowShape<A, A> shape() {
+		return null;
+	}
+
+	@Override
+	public GraphStageLogic createLogic(Attributes arg0) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

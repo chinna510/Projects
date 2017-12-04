@@ -1,0 +1,13 @@
+package com.graphx.vertexrdd;
+
+import scala.runtime.AbstractFunction3;
+
+public class InnerJoinFunction extends AbstractFunction3<Object, Integer, Integer, Integer> {
+
+	@Override
+	public Integer apply(Object id, Integer old, Integer next) {
+
+		return old + next;
+	}
+
+}

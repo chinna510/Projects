@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "if(FALSE) {\n  \"This is a demo for multi-line comments and it should be put inside either a single\n      OR double quote\"\n}\n\nmyString = \"Hello, World!\"\nprint ( myString)\n\n",
+    "created" : 1467027675190.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3460849817",
+    "id" : "F58674B1",
+    "lastKnownWriteTime" : 1467028067,
+    "last_content_update" : 1467028067309,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/multi-lineComments.R",
+    "project_path" : "multi-lineComments.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

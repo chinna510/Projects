@@ -1,0 +1,138 @@
+package com.tez;
+
+import java.util.Set;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.NullWritable;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
+import org.apache.http.protocol.ExecutionContext;
+import org.apache.tez.client.TezClient;
+import org.apache.tez.common.counters.TezCounter;
+import org.apache.tez.dag.api.DAG;
+import org.apache.tez.dag.api.DataSourceDescriptor;
+import org.apache.tez.dag.api.ProcessorDescriptor;
+import org.apache.tez.dag.api.TezConfiguration;
+import org.apache.tez.dag.api.Vertex;
+import org.apache.tez.dag.api.Vertex.VertexExecutionContext;
+import org.apache.tez.dag.api.client.DAGClient;
+import org.apache.tez.dag.api.client.DAGStatus;
+import org.apache.tez.dag.api.client.StatusGetOpts;
+import org.apache.tez.mapreduce.input.MRInput;
+import org.apache.tez.runtime.library.conf.OrderedPartitionedKVEdgeConfig;
+import org.apache.tez.runtime.library.partitioner.HashPartitioner;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.google.common.collect.Sets;
+import com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider.Text;
+
+public class JoinValidator extends TezExampleBase {
+	private static final Logger LOG = LoggerFactory.getLogger(JoinValidateProcessor.class);
+	private static final String LHS_INPUT_NAME = "lhsfile";
+	private static final String RHS_INPUT_NAME = "rhsfile";
+
+	private static final String COUNTER_GROUP_NAME = "JOIN_VALIDATE";
+	private static final String MISSING_KEY_COUNTER_NAME = "MISSING_KEY_EXISTS";
+
+	@Override
+	protected void printUsage() {
+		LOG.error("JoinValidator <input1><input2>");
+
+	}
+
+	@Override
+	protected int validateArgs(String[] otherArgs) {
+		if (otherArgs.length != 3 && otherArgs.length != 2) {
+			return 2;
+		}
+		return 0;
+	}
+
+	@Override
+	protected int runJob(String[] args, TezConfiguration tezConf, TezClient tezClient) throws Exception {
+		String inputDir1 = args[0];
+		String inputDir2 = args[1];
+		int numPartitions = Integer.parseInt(args[2]);
+		if (numPartitions <= 0) {
+			LOG.error("numPartitions Must be >0");
+			return 3;
+		}
+		Path lhspath = new Path(inputDir1);
+		Path rhspath = new Path(inputDir2);
+		DAG dag = createDag(tezConf, lhspath, rhspath, numPartitions);
+
+		tezClient.waitTillReady();
+		DAGClient dagClient = tezClient.submitDAG(dag);
+		Set<StatusGetOpts> getopts = Sets.newHashSet();
+		if (isCountersLog()) {
+			getopts.add(StatusGetOpts.GET_COUNTERS);
+		}
+		DAGStatus dagStatus = dagClient.waitForCompletionWithStatusUpdates(getopts);
+		if (dagStatus.getState() != DAGStatus.State.SUCCEEDED) {
+			LOG.info("DAG diagnostics: " + dagStatus.getDiagnostics());
+			return -1;
+		} else {
+			dagStatus = dagClient.getDAGStatus(Sets.newHashSet(StatusGetOpts.GET_COUNTERS));
+			TezCounter counter = dagStatus.getDAGCounters().findCounter(COUNTER_GROUP_NAME, MISSING_KEY_COUNTER_NAME);
+			if (counter == null) {
+				LOG.info("Unable to determing equality");
+				return -2;
+			} else {
+				if (counter.getValue() != 0) {
+					LOG.info("Validate failed. The two sides are not equivalent");
+					return -3;
+				} else {
+					LOG.info("Validation successful. The two sides are equivalent");
+					return 0;
+				}
+			}
+		}
+	}
+
+	private DAG createDag(TezConfiguration tezConf, Path lhspath, Path rhspath, int numPartitions) {
+
+		DAG dag = DAG.create("JoinValidator");
+		if (getDefaultExecutionContext() != null) {
+			dag.setExecutionContext(getDefaultExecutionContext());
+		}
+		OrderedPartitionedKVEdgeConfig edgeConf = OrderedPartitionedKVEdgeConfig
+				.newBuilder(Text.class.getName(), NullWritable.class.getName(), HashPartitioner.class.getName())
+				.setFromConfiguration(tezConf).build();
+		DataSourceDescriptor dataSource1 = MRInput
+				.createConfigBuilder(new Configuration(tezConf), TextInputFormat.class, lhspath.toUri().toString())
+				.build();
+		DataSourceDescriptor dataSource2 = MRInput
+				.createConfigBuilder(new Configuration(tezConf), TextInputFormat.class, rhspath.toUri().toString())
+				.build();
+		Vertex lhVertex=Vertex.create(LHS_INPUT_NAME, ProcessorDescriptor.create(ForwardingProcessor.class.getName())).addDataSource("lhs", dataSource1);
+		setVert
+		Vertex rhVertex=Vertex.create(RHS_INPUT_NAME, ProcessorDescriptor.create(ForwardingProcessor.class.getName())).addDataSource("lhs", dataSource2);
+
+		Vertex joinVertex=Vertex.create("joinvalidate", ProcessorDescriptor.create(JoinValidateProcessor.class.getName()),numPartitions);
+		
+		return null;
+	}
+
+	protected VertexExecutionContext getDefaultExecutionContext() {
+		return null;
+	}
+
+	protected VertexExecutionContext getLhsExecutionContext() {
+		return null;
+	}
+	private void setVertexExecutionContext(Vertex vertex, VertexExecutionContext executionContext) {
+	    if (executionContext != null) {
+	      vertex.setExecutionContext(executionContext);
+	    }
+	  }
+	protected VertexExecutionContext getRhsExecutionContext() {
+		return null;
+	}
+
+	protected VertexExecutionContext getValidateExecutionContext() {
+		return null;
+	}
+
+}

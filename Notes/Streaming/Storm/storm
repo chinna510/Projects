@@ -1,0 +1,3 @@
+scp /home/bizruntime/Chinna/BizRuntime/workspace/Storm/Integration/target/Integration-0.0.1-SNAPSHOT-jar-with-dependencies.jar hduser@192.168.1.54:/home/hduser/
+
+bin/storm /home/hadoop/Integration-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.storm.kafka.mysql.App

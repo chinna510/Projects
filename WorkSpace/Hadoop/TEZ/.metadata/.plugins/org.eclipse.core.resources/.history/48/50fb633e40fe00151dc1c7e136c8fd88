@@ -1,0 +1,76 @@
+package com.tez;
+
+import java.io.IOException;
+import java.util.Map;
+import java.util.TreeMap;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.fs.FileAlreadyExistsException;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.security.UserGroupInformation;
+import org.apache.hadoop.util.GenericOptionsParser;
+import org.apache.hadoop.util.Tool;
+import org.apache.hadoop.util.ToolRunner;
+import org.apache.hadoop.yarn.api.records.LocalResource;
+import org.apache.tez.client.TezClient;
+import org.apache.tez.dag.api.TezConfiguration;
+import org.apache.tez.dag.api.TezException;
+import org.apache.tez.dag.api.client.DAGClient;
+
+public class WordCount extends Configured implements Tool {
+
+	public int run(String[] args) throws Exception {
+		System.out.println("Running WordCount");
+
+		Configuration conf = getConf();
+		String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
+
+		if (otherArgs.length != 2) {
+			printUsage();
+			return 2;
+		}
+		WordCount job = new WordCount();
+		job.run(otherArgs[0], otherArgs[1], conf);
+		return 0;
+	}
+
+	private void run(String inputPath, String outputPath, Configuration conf) throws IOException, TezException {
+		System.out.println("Running WordCount");
+		TezConfiguration tezConf;
+		if (conf != null) {
+			tezConf = new TezConfiguration(conf);
+		} else {
+			tezConf = new TezConfiguration();
+
+		}
+		UserGroupInformation.setConfiguration(tezConf);
+		String user = UserGroupInformation.getCurrentUser().getShortUserName();
+		FileSystem fs = FileSystem.get(tezConf);
+		String stagingDirStr = Path.SEPARATOR + "user" + Path.SEPARATOR + user + Path.SEPARATOR + ".staging"
+				+ Path.SEPARATOR + Path.SEPARATOR + Long.toString(System.currentTimeMillis());
+		Path stagingDir = new Path(stagingDirStr);
+		tezConf.set(TezConfiguration.TEZ_AM_STAGING_DIR, stagingDirStr);
+		stagingDir = fs.makeQualified(stagingDir);
+		TezClient tezSession = TezClient.create("WordCountSession", tezConf);
+		tezSession.start();
+
+		DAGClient dagClient = null;
+		try { 
+	        if (fs.exists(new Path(outputPath))) { 
+	          throw new FileAlreadyExistsException("Output directory " 
+	              + outputPath + " already exists"); 
+	        } 
+	         
+	        Map<String, LocalResource> localResources = 
+	          new TreeMap<String, LocalResource>(); 
+
+	}
+
+	private static void printUsage() {
+		System.err.println("Usage: " + " wordcount <in1> <out1>");
+		ToolRunner.printGenericCommandUsage(System.err);
+	}
+
+}

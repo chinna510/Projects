@@ -1,0 +1,24 @@
+package com.akka.stream;
+
+import akka.stream.Attributes;
+import akka.stream.FlowShape;
+import akka.stream.stage.GraphStage;
+import akka.stream.stage.GraphStageLogic;
+
+public class Map<A, B> extends GraphStage<FlowShape<A, B>> {
+
+	
+	
+	
+	
+	@Override
+	public FlowShape<A, B> shape() {
+		return null;
+	}
+
+	@Override
+	public GraphStageLogic createLogic(Attributes arg0) {
+		return null;
+	}
+
+}

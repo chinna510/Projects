@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="MathUtilService" targetNamespace="http://mathUtility.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://mathUtility.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://mathUtility.com/" schemaLocation="mathutil_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="addIntegers">
+    <wsdl:part name="parameters" element="tns:addIntegers">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addIntegersResponse">
+    <wsdl:part name="parameters" element="tns:addIntegersResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="factorial">
+    <wsdl:part name="parameters" element="tns:factorial">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="factorialResponse">
+    <wsdl:part name="parameters" element="tns:factorialResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MathUtil">
+    <wsdl:operation name="addIntegers">
+      <wsdl:input name="addIntegers" message="tns:addIntegers">
+    </wsdl:input>
+      <wsdl:output name="addIntegersResponse" message="tns:addIntegersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="factorial">
+      <wsdl:input name="factorial" message="tns:factorial">
+    </wsdl:input>
+      <wsdl:output name="factorialResponse" message="tns:factorialResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MathUtilServiceSoapBinding" type="tns:MathUtil">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addIntegers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="addIntegers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addIntegersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="factorial">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="factorial">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="factorialResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MathUtilService">
+    <wsdl:port name="MathUtilPort" binding="tns:MathUtilServiceSoapBinding">
+      <soap:address location="http://localhost:8080/MathUtility/services/MathUtilPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

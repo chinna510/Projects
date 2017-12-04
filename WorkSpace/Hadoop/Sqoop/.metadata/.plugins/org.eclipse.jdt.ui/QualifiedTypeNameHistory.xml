@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.apache.sqoop.model.MLink"/>
+<fullyQualifiedTypeName name="org.apache.sqoop.model.MLinkConfig"/>
+<fullyQualifiedTypeName name="com.sqoop.LinkCreation"/>
+<fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
+<fullyQualifiedTypeName name="org.apache.sqoop.client.SqoopClient"/>
+<fullyQualifiedTypeName name="org.apache.sqoop.model.MToConfig"/>
+<fullyQualifiedTypeName name="org.apache.sqoop.model.MFromConfig"/>
+<fullyQualifiedTypeName name="org.apache.sqoop.model.MDriverConfig"/>
+<fullyQualifiedTypeName name="org.apache.sqoop.validation.Status"/>
+<fullyQualifiedTypeName name="org.apache.sqoop.model.MJob"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,3 @@
+Tez example extra options supported are
+-local		run it in tez local mode, currently it can only access local file system in tez local mode, run it in distributed mode without this option
+-disableSplitGrouping		 disable split grouping for MRInput, enable split grouping without this option.

@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Retrieving the Third Guest From party.xml</title>
+<script>
+	function getData() {
+		var XMLHttpRequestObject = false;
+		if (window.XMLHttpRequest) {
+			XMLHttpRequestObject = new XMLHttpRequest();
+			XMLHttpRequestObject.overrideMimeType("text/xml");
+		} else if (window.ActiveXObject) {
+			XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		if (XMLHttpRequestObject) {
+			XMLHttpRequestObject.open("GET", '/AxisExamples/party.xml', true);
+			XMLHttpRequestObject.onreadystatechange = function() {
+				if (XMLHttpRequestObject.readyState == 4
+						&& XMLHttpRequestObject.status == 200) {
+					var xmlDocument = XMLHttpRequestObject.responseXML;
+					displayGuest(xmlDocument);
+				}
+			}
+			XMLHttpRequestObject.send(null);
+		}
+	}
+	function displayGuest(xmldoc)
+	{
+	var partiesNode, partyNode, peopleNode;
+	var personNode, firstNameNode, lastNameNode, displayText;
+	partiesNode = xmldoc.documentElement;
+	partyNode = partiesNode.firstChild.nextSibling;
+	peopleNode = partyNode.lastChild.previousSibling;
+	personNode = peopleNode.firstChild.nextSibling
+	.nextSibling.nextSibling.nextSibling.nextSibling;
+	firstNameNode = personNode.firstChild.nextSibling;
+	lastNameNode = firstNameNode.nextSibling.nextSibling;
+	displayText = "The third guest is: " +
+	firstNameNode.firstChild.nodeValue + ' '
+	+ lastNameNode.firstChild.nodeValue;
+	var target = document.getElementById("targetDiv");
+	target.style.color = "#FF0000";
+	target.innerHTML=displayText;
+	setTimeout(attentionGetter, 1500);
+	}
+	function attentionGetter()
+	{
+	var target = document.getElementById("targetDiv");
+	target.style.color = "#000000";
+	}
+</script>
+</head>
+<body>
+	<h1>Retrieving the Third Guest From party.xml</h1>
+	<form>
+		<input type="button" value="Get the third guest" onclick="getData()">
+	</form>
+	<div id="targetDiv" >Who was the third guest?
+	</div>
+</body>
+</html>

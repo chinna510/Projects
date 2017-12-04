@@ -1,0 +1,15 @@
+package com.sqoop;
+
+import org.apache.sqoop.client.SqoopClient;
+import org.apache.sqoop.model.MLink;
+
+public class LinkCreation extends SqoopClient {
+	String url = "http://localhost:12000/sqoop/";
+	long connectorId = 1;
+	SqoopClient client = new SqoopClient(url);
+	public LinkCreation(String serverUrl) {
+		super(serverUrl);
+	
+	}
+	MLink link=client.createLink(connectorId);
+}

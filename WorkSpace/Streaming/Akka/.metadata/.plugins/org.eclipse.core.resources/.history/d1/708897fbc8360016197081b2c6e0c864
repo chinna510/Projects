@@ -1,0 +1,12 @@
+import akka.actor.UntypedActor;
+
+public class Ticker extends UntypedActor {
+
+	@Override
+	public void onReceive(Object msg) throws Exception {
+		if(msg.equals("Tick")){
+			
+		}
+	}
+
+}

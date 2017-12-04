@@ -1,0 +1,29 @@
+package com.tez.topk;
+
+import org.apache.tez.mapreduce.processor.SimpleMRProcessor;
+import org.apache.tez.runtime.api.ProcessorContext;
+import org.apache.tez.runtime.library.processor.SimpleProcessor;
+
+public class TokenProcessor extends SimpleProcessor{
+
+	private static final String INPUT = "input"; 
+    private static final String WRITER = "writer"; 
+    private static final String OUTPUT = "output"; 
+    private static final String TOKENIZER = "tokenizer"; 
+    private static final String SUM = "sum"; 
+	
+	
+	public TokenProcessor(ProcessorContext context) {
+		super(context);
+		
+	}
+
+	@Override
+	public void run() throws Exception {
+		
+		
+	}
+
+	
+
+}

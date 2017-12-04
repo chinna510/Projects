@@ -1,0 +1,27 @@
+package com.akka.ScanningBus;
+
+import akka.actor.ActorSystem;
+
+public class ScanningBusTest {
+
+	ActorSystem system=ActorSystem.create("ScanningBus");
+	
+	public void test(){
+		
+		ScanningBusImpl scanningBus = new ScanningBusImpl();
+		scanningBus.subscribe(getTestActor(), 3);
+		scanningBus.publish("xyzabc");
+		scanningBus.publish("ab");
+		expectMsgEquals("ab");
+		scanningBus.publish("abc");
+		expectMsgEquals("abc");
+		
+		
+	}
+
+	private void expectMsgEquals(String string) {
+		
+	}
+	
+	
+}

@@ -1,0 +1,38 @@
+package com.tez;
+
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+
+import org.apache.tez.mapreduce.processor.SimpleMRProcessor;
+import org.apache.tez.runtime.api.ProcessorContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class JoinDataProcessor extends SimpleMRProcessor {
+	public static Logger logger = LoggerFactory.getLogger(JoinDataProcessor.class);
+	long streamOutputFileSize;
+	long hashOutputFileSize;
+	float overlapApprox = 0.2f;
+
+	public JoinDataProcessor(ProcessorContext context) {
+		super(context);
+
+	}
+
+	public static byte[] createConfiguration(long streamOutputFileSize, long hashOutputFileSize) throws IOException {
+		ByteArrayOutputStream bos = new ByteArrayOutputStream();
+		DataOutputStream dos = new DataOutputStream(bos);
+		dos.writeLong(streamOutputFileSize);
+		dos.writeLong(hashOutputFileSize);
+		dos.close();
+		bos.close();
+		return bos.toByteArray();
+	}
+
+	@Override
+	public void run() throws Exception {
+
+	}
+
+}

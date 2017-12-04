@@ -1,0 +1,16 @@
+package com.socket;
+
+import java.applet.Applet;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+
+import org.apache.log4j.Logger;
+
+public class SocketPermissionTest extends Applet {
+	static Logger logger = Logger.getLogger(SocketPermissionTest.class);
+
+	public static void main(String[] args) throws UnknownHostException, SocketException {
+
+	}
+
+}

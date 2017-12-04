@@ -1,0 +1,26 @@
+package com.akka.distribute;
+
+import akka.actor.ActorRef;
+import akka.actor.UntypedActor;
+import akka.cluster.pubsub.DistributedPubSub;
+import akka.event.Logging;
+import akka.event.LoggingAdapter;
+
+public class Subscriber extends UntypedActor {
+
+	LoggingAdapter log = Logging.getLogger(getContext().system(), this);
+
+	public Subscriber() {
+
+		ActorRef mediater = DistributedPubSub.get(getContext().system()).mediator();
+
+	}
+
+	@Override
+	public void onReceive(Object msg) throws Exception {
+
+		if(msg instanceof)
+		
+	}
+
+}

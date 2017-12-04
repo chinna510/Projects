@@ -1,0 +1,19 @@
+package com.tez;
+
+import org.apache.tez.mapreduce.processor.SimpleMRProcessor;
+import org.apache.tez.runtime.api.ProcessorContext;
+
+public class JoinValidateProcessor extends SimpleProcessor{
+
+	public JoinValidateProcessor(ProcessorContext context) {
+		super(context);
+		
+	}
+
+	@Override
+	public void run() throws Exception {
+	
+		
+	}
+
+}

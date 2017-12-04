@@ -1,0 +1,16 @@
+package com.graphx.pregel;
+
+import scala.Function1;
+import scala.Function3;
+
+public class VertexProgram extends AbstractFunction2<Object, Object, Object> implements Serializable {
+	@Override
+	public Object apply(Object id, Object attr) {
+		System.out.println("id -> " + id + " attr -> " + attr);
+		System.out.println(id instanceof Long);
+		if ((long) id == 42)
+			return 0l;
+		else
+			return Long.MAX_VALUE;
+	}
+}

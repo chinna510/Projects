@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\nread.file <- file(\"/home/bizruntime/out.dat\", \"rb\")\n\ncolumn.names <- readBin(read.file, character(),n=3)\n\nprint(column.names)\n\ndata <- readBin(read.file, integer(),n=30)\n\nprint(data)\n\nclose(read.file)\n\n\n# Read the values from 4th byte to 8th byte which represents \"cyl\".\ncyldata = data[4:8]\nprint(cyldata)\n\n\n# Read the values form 9th byte to 13th byte which represents \"am\".\namdata =data[9:13]\nprint(amdata)\n\n# Read the values form 9th byte to 13th byte which represents \"gear\".\ngeardata = data[14:18]\nprint(geardata)\n\n# Combine all the read values to a dat frame.\nfinaldata = cbind(cyldata, amdata, geardata)\ncolnames(finaldata) = column.names\nprint(finaldata)\n\n",
+    "created" : 1467889795777.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3837986356",
+    "id" : "A8E53B6B",
+    "lastKnownWriteTime" : 1467890546,
+    "last_content_update" : 1467890546255,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R-BinaryFiles/ReadingTheBinaryFile.R",
+    "project_path" : "ReadingTheBinaryFile.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

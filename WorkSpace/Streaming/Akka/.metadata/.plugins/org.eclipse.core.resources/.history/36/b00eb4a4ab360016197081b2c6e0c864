@@ -1,0 +1,17 @@
+package com.akka.subchannel;
+
+import akka.util.Subclassification;
+
+public class StartsWithSubclassification implements Subclassification<String>{
+
+	@Override
+	public boolean isEqual(String arg0, String arg1) {
+		return false;
+	}
+
+	@Override
+	public boolean isSubclass(String arg0, String arg1) {
+		return false;
+	}
+
+}

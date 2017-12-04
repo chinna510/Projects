@@ -1,0 +1,9 @@
+package com.akka.integration;
+
+public class JobManagerProtocol {
+
+	  public static final JobAcceptedMessage JobAccepted = new JobAcceptedMessage();
+	  public static final JobDeniedMessage JobDenied = new JobDeniedMessage();
+
+
+}

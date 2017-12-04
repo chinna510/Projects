@@ -1,0 +1,22 @@
+<Schema name="Foodmart">
+  <Dimension type="StandardDimension" visible="true" foreignKey="product_id" highCardinality="false" name="Products">
+    <Hierarchy name="default" visible="true" hasAll="true">
+      <Table name="product">
+      </Table>
+      <Level name="Brand" visible="true" table="product" column="brand_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Name" visible="true" table="product" column="product_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="SKU" visible="true" table="product" column="SKU" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Products" visible="true" cache="true" enabled="true">
+    <Table name="product">
+    </Table>
+    <Measure name="product number" column="product_id" aggregator="distinct-count" visible="true">
+    </Measure>
+    <Measure name="class number " aggregator="distinct-count" visible="true">
+    </Measure>
+  </Cube>
+</Schema>

@@ -1,0 +1,7 @@
+New log file opened at Wed Jun 15 13:11:23 IST 2016 by 8952@bizruntime-X555LAB
+Taking next connection to: 37068
+New client attempting to connect on port: 53322-37068
+  Address = /127.0.1.1:37068
+This client on port 53322 has uuid 43df3a3f-f0d7-4aa6-aa4f-59f5b85e9ef6 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-43df3a3f-f0d7-4aa6-aa4f-59f5b85e9ef6
+Taking next connection to: 37068

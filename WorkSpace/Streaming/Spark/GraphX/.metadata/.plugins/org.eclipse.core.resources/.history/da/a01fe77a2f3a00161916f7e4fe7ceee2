@@ -1,0 +1,14 @@
+package com.graphx.vertexrdd;
+
+import scala.Option;
+import scala.runtime.AbstractFunction3;
+
+public class JoinFunction extends AbstractFunction3<Object, Integer, Option<Integer>, Integer> {
+
+	@Override
+	public Integer apply(Object arg0, Integer arg1, Option<Integer> arg2) {
+
+		return null;
+	}
+
+}

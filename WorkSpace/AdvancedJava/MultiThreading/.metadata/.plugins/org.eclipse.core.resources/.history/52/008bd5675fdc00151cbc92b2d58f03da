@@ -1,0 +1,16 @@
+package com.ThreadLocal;
+
+import org.apache.log4j.Logger;
+
+import com.threadGroup.ThreadGroupEx;
+
+public class ThreadLocalEx {
+	static Logger logger = Logger.getLogger(ThreadGroupEx.class);
+
+	public static void main(String[] args) {
+		ThreadLocal<Integer> tl = new ThreadLocal<Integer>();
+		tl.set(100);
+		logger.info("Value of variable is : " + tl.get());
+	}
+
+}

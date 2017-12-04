@@ -1,0 +1,36 @@
+package com.tez;
+
+import org.apache.hadoop.io.Text;
+import org.apache.tez.mapreduce.output.MROutput;
+import org.apache.tez.mapreduce.processor.SimpleMRProcessor;
+import org.apache.tez.runtime.api.ProcessorContext;
+import org.apache.tez.runtime.library.api.KeyValueWriter;
+import org.apache.tez.runtime.library.api.KeyValuesReader;
+
+import com.google.common.base.Preconditions;
+
+public class SumProcessor extends SimpleMRProcessor {
+
+	public SumProcessor(ProcessorContext context) {
+		super(context);
+
+	}
+
+	@Override
+	public void run() throws Exception {
+		Preconditions.checkArgument(getInputs().size() == 1);
+		MROutput out = (MROutput) getOutputs().values().iterator().next();
+		KeyValueWriter kWriter=out.getWriter();
+		KeyValuesReader kReader=(KeyValuesReader) getInputs().values().iterator().next().getReader();
+		while(kReader.next()){
+			Text word=(Text) kReader.getCurrentKey();
+			for(Object values:kReader.getCurrentValues()){
+				
+			}
+
+int sum=0;
+		}
+		
+	}
+
+}

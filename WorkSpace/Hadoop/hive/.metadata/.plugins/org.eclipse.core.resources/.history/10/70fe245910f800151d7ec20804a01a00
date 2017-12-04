@@ -1,0 +1,10 @@
+package com.HCataLog;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.WritableComparable;
+import org.apache.hadoop.mapreduce.Reducer;
+import org.apache.hive.hcatalog.data.HCatRecord;
+
+public class Reduce extends Reducer<IntWritable, IntWritable, WritableComparable, HCatRecord> {
+
+}

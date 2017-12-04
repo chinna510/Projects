@@ -1,0 +1,10 @@
+package com.datagram;
+
+public class DataReciever {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

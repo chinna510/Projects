@@ -1,0 +1,12 @@
+package com.akka.ActorClassification;
+
+public class ActorClassifierTest {
+
+	
+	public void test(){
+		
+		
+		
+	}
+	
+}

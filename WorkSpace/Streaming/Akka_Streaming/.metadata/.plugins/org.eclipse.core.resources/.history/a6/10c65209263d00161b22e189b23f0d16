@@ -1,0 +1,5 @@
+package com.akka.externalserveices;
+
+public interface RS {
+
+}

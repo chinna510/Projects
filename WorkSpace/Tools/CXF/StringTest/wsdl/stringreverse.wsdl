@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="StringReverseService" targetNamespace="http://string.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://string.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://string.com/" schemaLocation="stringreverse_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="reverseResponse">
+    <wsdl:part name="parameters" element="tns:reverseResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reverse">
+    <wsdl:part name="parameters" element="tns:reverse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="StringReverse">
+    <wsdl:operation name="reverse">
+      <wsdl:input name="reverse" message="tns:reverse">
+    </wsdl:input>
+      <wsdl:output name="reverseResponse" message="tns:reverseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="StringReverseServiceSoapBinding" type="tns:StringReverse">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="reverse">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="reverse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="reverseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StringReverseService">
+    <wsdl:port name="StringReversePort" binding="tns:StringReverseServiceSoapBinding">
+      <soap:address location="http://localhost:5555/Strings/services/StringReversePort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

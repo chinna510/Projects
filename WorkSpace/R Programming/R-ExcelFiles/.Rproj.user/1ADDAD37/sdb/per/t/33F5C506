@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\n\nxlRead <-read.xlsx(\"/home/bizruntime/Chinna/BizRuntime/DataSamples/data.xls\",sheetIndex = 1)\n\nprint(xlRead)",
+    "created" : 1467885697966.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3187627029",
+    "id" : "33F5C506",
+    "lastKnownWriteTime" : 1467888878,
+    "last_content_update" : 1467888878552,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R-ExcelFiles/ReadingFromXlFile.R",
+    "project_path" : "ReadingFromXlFile.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

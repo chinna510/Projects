@@ -1,0 +1,15 @@
+package com.storm.trident;
+
+public class ExpandList extends BaseFunction {
+
+    @Override
+    public void execute(TridentTuple tuple, TridentCollector collector) {
+      List l = (List) tuple.getValue(0);
+      if (l != null) {
+        for (Object o : l) {
+          collector.emit(new Values(o));
+        }
+      }
+    }
+
+  }

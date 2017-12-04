@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+   $("button").click(function(){
+	   var d=$("#sid").val();
+        $.ajax({
+             type:'GET',
+             url: 'http://localhost:8080/rest_GET_example/rest/userget/'+d,
+             dataType: 'text',
+             success:function(result){
+                 $("#did").html(result);
+             },
+             error:function(){
+                 $("#did").html("error");
+             }
+        });
+   });    
+});
+</script>
+</head>
+<body>
+
+<div id="did"></div>
+id:<input id="sid" type="text" name="sid">
+<button>Submit</button>
+</body>
+
+</body>
+</html>

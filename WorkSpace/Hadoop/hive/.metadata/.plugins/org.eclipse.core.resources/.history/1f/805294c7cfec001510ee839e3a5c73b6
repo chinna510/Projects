@@ -1,0 +1,31 @@
+package com.hive.HiveClient;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import org.apache.log4j.Logger;
+
+public class HiveDatabaseCreation {
+	Connection con;
+	Statement st;
+	private static String driverName = "org.apache.hadoop.hive.jdbc.HiveDriver";
+	static Logger logger = Logger.getLogger(HiveDatabaseCreation.class);
+
+	public void test() throws ClassNotFoundException, SQLException {
+		Class.forName(driverName);
+		con = DriverManager.getConnection("jdbc:hive://192.168.1.146:21050/default", "", "");
+		String sql = "create database bizruntime;";
+		st = con.createStatement();
+		st.executeQuery(sql);
+		logger.info("Database bizruntime created successfully.");
+		con.close();
+	}
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		HiveDatabaseCreation db = new HiveDatabaseCreation();
+		db.test();
+	}
+
+}

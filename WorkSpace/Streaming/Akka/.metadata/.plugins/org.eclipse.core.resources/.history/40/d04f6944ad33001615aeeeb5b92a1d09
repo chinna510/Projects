@@ -1,0 +1,41 @@
+package com.akka.distribute;
+
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+import akka.cluster.sharding.ClusterSharding;
+import akka.cluster.sharding.ClusterShardingSettings;
+import akka.cluster.sharding.ShardRegion;
+import akka.japi.Option;
+
+public class ClusterShardingTest {
+
+	public void test() {
+		Option<String> roleOption = Option.none();
+		ActorSystem system = ActorSystem.create("ActorSystem");
+
+		ClusterShardingSettings settings = ClusterShardingSettings.create(system);
+		//ActorRef startedCounterRegion = ClusterSharding.get(system).start("Counter", Props.create(Counter.class),
+			//	settings, messageExtractor);
+		
+		ShardRegion.MessageExtractor messageExtractor=new ShardRegion.MessageExtractor() {
+			
+			@Override
+			public String shardId(Object arg0) {
+				return null;
+			}
+			
+			@Override
+			public Object entityMessage(Object arg0) {
+				return null;
+			}
+			
+			@Override
+			public String entityId(Object arg0) {
+				return null;
+			}
+		};
+
+	}
+
+}

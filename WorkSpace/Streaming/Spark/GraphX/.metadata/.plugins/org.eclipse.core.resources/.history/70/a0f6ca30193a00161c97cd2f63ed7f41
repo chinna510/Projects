@@ -1,0 +1,26 @@
+package com.graphx.pregel;
+
+import scala.Function1;
+import scala.Function3;
+
+public class VertexProgram implements Function3 {
+
+	@Override
+	public Object apply(Object arg0, Object arg1, Object arg2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Function1 curried() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Function1 tupled() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

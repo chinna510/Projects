@@ -1,0 +1,5 @@
+package com.akka.distribute;
+
+public class CounterSupervisor {
+
+}

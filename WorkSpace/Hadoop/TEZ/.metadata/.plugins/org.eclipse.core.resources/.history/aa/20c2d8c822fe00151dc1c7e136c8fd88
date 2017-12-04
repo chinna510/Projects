@@ -1,0 +1,27 @@
+package com.tez.topk;
+
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class LocalTop {
+	private static Map<Integer, List<String>> localTopK=new TreeMap<Integer, List<String>>();
+	
+	
+	private static int top;
+
+	public LocalTop(int top) {
+		this.top = top;
+	}
+public Map<Integer, List<String>> getTopK(){
+	return localTopK;
+}
+
+public Map<Integer, List<String>> getTopKSorted(){
+	
+	
+	
+	return null;
+	
+}
+}

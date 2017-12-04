@@ -1,0 +1,12 @@
+package com.akka.integration;
+
+import akka.actor.UntypedActor;
+
+public class ReplyTo extends UntypedActor{
+
+	@Override
+	public void onReceive(Object arg0) throws Exception {
+		
+	}
+
+}

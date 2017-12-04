@@ -1,0 +1,14 @@
+package com.akka.schedulers;
+
+import akka.actor.ActorSystem;
+
+public class TickerTest {
+
+	public void test(){
+		
+		ActorSystem system=ActorSystem.create("Schedulers");
+		
+	}
+	
+	
+}

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# Using =\nvar.1= c(1,2,3)\n\n# Using LeftForward <-\n\nvar.2 <- c(\"Biz\",\"Runtime\")\n\n# Using Right Forward ->\n\nc('a','b','c') -> var.3\n\nprint(var.1)\n\ncat(var.1,\"\\n\")\n\nprint(var.2)\n\ncat(var.2,\"\\n\")\n\nprint(var.3)\n\n# It will Combine The Strings\ncat(var.3,\"\\n\")\n\n# List All of The Variables In the Current WorkSpace\nprint(ls())\ncat(\"List Of Variables : \",ls())\n\nprint(ls(pattern = \"var\"))\n\nprint(ls(all.names = TRUE))\n\nv= 1:100\nprint(v)\n",
+    "created" : 1467036536009.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2901896259",
+    "id" : "3ECB0C87",
+    "lastKnownWriteTime" : 1467038269,
+    "last_content_update" : 1467038269309,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R - Data Types/VariableAssignment.R",
+    "project_path" : "VariableAssignment.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 7,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

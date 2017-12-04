@@ -1,0 +1,22 @@
+command=/usr/lib/jvm/java-8-oracle/bin/javadoc
+content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.recommenders.calls.rcp.proposalCategory.templates\u0000org.eclipse.mylyn.java.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.recommenders.chain.rcp.proposalCategory.chain\u0000
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.lang.Iterable"><rhs name\="backtype.storm.tuple.Fields"/><rhs name\="backtype.storm.tuple.Values"/></lhs><lhs name\="backtype.storm.tuple.Fields"><rhs name\="backtype.storm.tuple.Fields"/></lhs><lhs name\="backtype.storm.topology.TopologyBuilder"><rhs name\="backtype.storm.topology.TopologyBuilder"/></lhs><lhs name\="backtype.storm.spout.ISpout"><rhs name\="com.storm.PrimeNumber.NumberSpout"/></lhs><lhs name\="backtype.storm.topology.IComponent"><rhs name\="com.storm.PrimeNumber.NumberSpout"/><rhs name\="com.storm.PrimeNumber.NumberBolt"/><rhs name\="com.storm.wordcount.WordSpitterBolt"/><rhs name\="com.storm.wordcount.WordCounterBolt"/></lhs><lhs name\="backtype.storm.topology.IRichSpout"><rhs name\="com.storm.PrimeNumber.NumberSpout"/></lhs><lhs name\="backtype.storm.task.IBolt"><rhs name\="com.storm.PrimeNumber.NumberBolt"/><rhs name\="com.storm.wordcount.WordSpitterBolt"/><rhs name\="com.storm.wordcount.WordCounterBolt"/></lhs><lhs name\="backtype.storm.topology.IRichBolt"><rhs name\="com.storm.PrimeNumber.NumberBolt"/><rhs name\="com.storm.wordcount.WordSpitterBolt"/><rhs name\="com.storm.wordcount.WordCounterBolt"/></lhs><lhs name\="java.util.HashMap"><rhs name\="backtype.storm.Config"/></lhs><lhs name\="java.util.Map"><rhs name\="backtype.storm.Config"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="backtype.storm.Config"/><rhs name\="backtype.storm.tuple.Values"/></lhs><lhs name\="java.util.AbstractMap"><rhs name\="backtype.storm.Config"/></lhs><lhs name\="backtype.storm.Config"><rhs name\="backtype.storm.Config"/></lhs><lhs name\="backtype.storm.ILocalCluster"><rhs name\="backtype.storm.LocalCluster"/></lhs><lhs name\="backtype.storm.LocalCluster"><rhs name\="backtype.storm.LocalCluster"/></lhs><lhs name\="java.io.Reader"><rhs name\="java.io.BufferedReader"/></lhs><lhs name\="java.lang.Readable"><rhs name\="java.io.BufferedReader"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.io.BufferedReader"/></lhs><lhs name\="java.lang.AutoCloseable"><rhs name\="java.io.BufferedReader"/></lhs><lhs name\="java.io.BufferedReader"><rhs name\="java.io.BufferedReader"/></lhs><lhs name\="java.util.ArrayList"><rhs name\="backtype.storm.tuple.Values"/></lhs><lhs name\="java.util.List"><rhs name\="backtype.storm.tuple.Values"/></lhs><lhs name\="java.util.RandomAccess"><rhs name\="backtype.storm.tuple.Values"/></lhs><lhs name\="java.util.Collection"><rhs name\="backtype.storm.tuple.Values"/></lhs><lhs name\="java.util.AbstractList"><rhs name\="backtype.storm.tuple.Values"/></lhs><lhs name\="java.util.AbstractCollection"><rhs name\="backtype.storm.tuple.Values"/></lhs><lhs name\="backtype.storm.tuple.Values"><rhs name\="backtype.storm.tuple.Values"/></lhs></history>
+content_assist_number_of_computers=24
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=60,60,60
+eclipse.preferences.version=1
+fontPropagated=true
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.ui.editor.tab.width=
+org.eclipse.jdt.ui.formatterprofiles.version=12
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.templates_migrated=true
+org.eclipse.jface.textfont=1|Monospace|10.0|0|GTK|1|;
+proposalOrderMigrated=true
+spelling_locale_initialized=true
+tabWidthPropagated=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PrimeNumberService" targetNamespace="http://numbers.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://numbers.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://numbers.com/" schemaLocation="primenumber_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="primeResponse">
+    <wsdl:part name="parameters" element="tns:primeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="prime">
+    <wsdl:part name="parameters" element="tns:prime">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PrimeNumber">
+    <wsdl:operation name="prime">
+      <wsdl:input name="prime" message="tns:prime">
+    </wsdl:input>
+      <wsdl:output name="primeResponse" message="tns:primeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PrimeNumberServiceSoapBinding" type="tns:PrimeNumber">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="prime">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="prime">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="primeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PrimeNumberService">
+    <wsdl:port name="PrimeNumberPort" binding="tns:PrimeNumberServiceSoapBinding">
+      <soap:address location="http://localhost:5555/Numbers/services/PrimeNumberPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

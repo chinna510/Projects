@@ -1,0 +1,91 @@
+1. CXF is a open source service framework.
+2. it is helps you to build and develop services using frontend programming API's ,like JAX-WS and JAX-RS.
+3.These services can speak variety of protocals like SOAP,Restful HTTP etc..and it works variety of transports like HTTP,JMS(Java Message Service) and 
+    JBI(Java Business Integration).
+4. Goals Of CXF are
+                 Embeddable
+           	High performance
+	Easy configuration
+	Intuitive and easy to use
+	Clean separation of front-ends from the core code
+	Data formats support
+	Data bindings support
+	Protocol bindings support
+	Multiple transports support
+	Multiple Programming Languages Support
+	WS-* and related specifications support
+	Tools for code generation and WSDL validation
+	Flexible deployment
+5. Differences between Axis2 and CXF
+
+Apache AXIS2:
+------------------
+Advantages:
+--------------
+1. Most Commonly Used, Matured & Stable Web Services Development Framework
+
+2. Supports Multiple Languages (C++, Java)
+
+3. Supports both Contract-first & Contract-last Approach
+
+4.  In context of Orchestration & Web Services Transaction (long-running transactions) it supports wide variety of related WS-* specifications:
+WS-Atomic Transaction, WS-Business Activity, WS-Coordination, WS-Eventing, WS-Transfer
+Compatible with Spring Framework
+
+DisAdvantages:
+------------------
+1. Comparatively More Code Required/Generated w.r.t. Spring WS/CXF
+
+2. Is being phased out gradually (mostly by Apache CXF)
+
+3. It is not fully compliant for JAX-WS JAX-RS
+
+Apache CXF:
+-----------------
+Advantages:
+---------------
+1.  Most widely used Web Services Standard Now; Improvement over AXIS2, which is now gradually being replaced by Apache CXF
+
+2.  Intuitive & Easy to Use (less coding required as compared to AXIS2)
+
+3. Clean separation of front-ends, like JAX-WS, from the core code
+
+4.  Fully compliant with JAX-WS, JAX-RS & others
+
+5. Best Performance across all available framework with minimum computation overhead
+
+6. Supports wide variety of front-end models
+
+7. Supports both JAX-WS & JAX-RS (for Restful Services)
+
+8. Supports JBI & SDO (not supported in AXIS2)
+
+9. Compatible with Spring Framework
+
+DisAdvantages:
+--------------------
+1. Does not support Orchestration & WS Transactions yet
+
+2. Does not support WSDL 2.0 yet
+Spring WS:
+---------------
+Advantages:
+---------------
+1. Best in terms of supporting Contract-first Web Services Development Approach
+
+2. Enforces Standards & Best Practices by Framework Constraints (no way out of it & hence limitation as well)
+
+3. Supports Spring Annotations as well as JAX-WS
+
+4. Least code from developer’s perspective
+
+5. Best Aligned with Spring Technology Stack (also similar architectural stack as Spring MVC) including Spring Security
+
+DisAdvantages:
+-------------------
+
+1. Least number of WS-* Specifications supported (does not fully compliant with JAX-WS)
+
+2. Spring offers itself as standard & hence other Java-compliant frameworks support better standards support
+
+3. Only support Contract-first Web Services Development Model.

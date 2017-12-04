@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\n\n# Function Creation\nf <- function(a){\n  \n  for(i in 1:a){\n    b <- i^i\n    print(b)\n  }\n}\n\n\n\n# Calling Function\nf(5)\n\n# Create a function with arguments.\nnew.function <- function(a,b,c) {\n  result <- a * b + c\n  print(result)\n}\n\n# Call the function by position of arguments.\nnew.function(5,3,11)\n\n# Call the function by names of the arguments.\nnew.function(a = 11, b = 5, c = 3)\n\n\n# Lazy Evaluation of Function\n# Create a function with arguments.\nnew.function <- function(a, b) {\n  print(a^2)\n  print(a)\n\n}\n\n# Evaluate the function without supplying one of the arguments.\nnew.function(6)\n\n\n# Calling a Function with Default Argument\n\nnew.function <- function(a = 3, b = 6) {\n  result <- a * b\n  print(result)\n}\n\n# Call the function without giving any argument.\nnew.function()\n\n# Call the function with giving new values of the argument.\nnew.function(9,5)\n\n#Calling a Function with Argument Values (by position and by name)\n\n# Create a function with arguments.\nnew.function <- function(a,b,c) {\n  result <- a * b + c\n  print(result)\n}\n\n# Call the function by position of arguments.\nnew.function(5,3,11)\n\n# Call the function by names of the arguments.\nnew.function(a = 11, b = 5, c = 3)\n\n\n\n",
+    "created" : 1467040708955.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1317670085",
+    "id" : "93F816DA",
+    "lastKnownWriteTime" : 1467041214,
+    "last_content_update" : 1467041214834,
+    "path" : "~/Chinna/BizRuntime/workspace/R Programming/R-Functions/UserDefined.R",
+    "project_path" : "UserDefined.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,12 @@
+package com.biz.akka;
+
+import akka.actor.ActorRef;
+import akka.actor.ActorSystem;
+import akka.actor.Props;
+
+public class CreateMain {
+
+	final ActorSystem system=ActorSystem.create("MySyatem");
+	final ActorRef ref=system.actorOf(Props.create(ActorCreation.class));
+	
+}

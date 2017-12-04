@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Meta Data Explorer</title>
+</head>
+<body>
+	<form action="metadata.jsp">
+		Driver Name: <input type="text" name="drivername"
+			placeholder="enter driver name" /> URL: <input type="text" name="url"
+			placeholder="enter url here" /> User Name: <input type="text"
+			name="userID" placeholder="Enter username " /> PassWord: <input
+			type="password" name="password" placeholder="Enter password " /> <input
+			type="submit" value="Submit" />
+
+	</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+package com.tez.topk;
+
+import java.io.ByteArrayInputStream;
+import java.io.DataInputStream;
+
+import org.apache.tez.mapreduce.processor.SimpleMRProcessor;
+import org.apache.tez.runtime.api.ProcessorContext;
+
+public class Writer extends SimpleMRProcessor {
+	LocalTop localTop;
+
+	public Writer(ProcessorContext context) {
+		super(context);
+
+	}
+
+	public void initialize() throws Exception {
+		byte[] payload = getContext().getUserPayload().deepCopyAsArray();
+		ByteArrayInputStream bis = new ByteArrayInputStream(payload);
+		DataInputStream dis = new DataInputStream(bis);
+		// store the local top K result
+		localTop = new LocalTop(dis.readInt());
+		dis.close();
+		bis.close();
+	}
+
+	@Override
+	public void run() throws Exception {
+
+	}
+
+}
